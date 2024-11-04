@@ -1,0 +1,261 @@
+  html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: white;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .navigation {
+      padding-top: 23px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-weight: 500;
+    }
+
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      /* Ensures it spans the full viewport width */
+      z-index: 1000;
+    }
+
+    nav img {
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      padding: 0 20px;
+      /* Убираем лишние вертикальные отступы */
+      height: 60px;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background-color: rgb(163, 165, 164);
+      display: flex;
+      color: white;
+      height: 70px;
+      box-sizing: border-box;
+    }
+
+    nav a {
+      position: relative;
+    }
+
+    nav ul a::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul a:hover::after {
+      transform: scaleX(1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      margin: 0;
+      margin-left: auto;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 12px;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      /* Позиция под родительским элементом */
+      left: 0;
+      background-color: #f9f9f9;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Показываем выпадающее меню при наведении */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+
+
+    .card-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .course-details {
+      list-style-type: disc;
+      color: #000000;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+
+      width: 250px;
+      max-height: 200px;
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+
+    .container {
+      width: 850px;
+
+      margin-top: 80px;
+    }
+
+    .container h2 {
+      text-align: center;
+    }
+
+    .welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .welcome-logo {
+      width: 200px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .welcome-img {
+      width: 1220px;
+      align-self: center;
+    }
+
+    .text-container {
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    .text-container h4 {
+      font-weight: 500;
+    }
+
+    .purpose {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .large-icon {
+      width: 60px;
+      height: 60px;
+
+      margin-right: 8px;
+    }
+
+    .small-icon {
+      width: 30px;
+      height: 30px;
+
+      margin-right: 8px;
+    }
+
+    .describe-course-item {
+      display: flex;
+      align-items: center;
+      margin: 30px 30px;
+    }
+
+    .describe-course-item img {
+      filter: brightness(0);
+    }
+
+    .purpose-item {
+      display: flex;
+      align-items: center;
+      margin: 30px 30px;
+    }
+
+    .purpose-item img {
+      filter: brightness(0);
+    }
+
+    .goals-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .button-start {
+      margin: 30px 30px;
+      padding: 12px 24px;
+      border-radius: 50px;
+      background-color: #000000;
+      color: white;
+      border-color: black;
+    }
+
+    .button-start:hover {
+      color: black;
+      background-color: white;
+      border-color: black;
+    }
+
+    .info-courses {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      justify-content: center;
+
+
+    }
+
+    .nameCourse {
+      margin-top: 50px;
+      width: 350px;
+      text-align: center;
+    }
+
+    .about {
+      margin-top: 50px;
+      width: 500px;
+    }
+
+    .about ul li {
+      margin-bottom: 10px;
+    }

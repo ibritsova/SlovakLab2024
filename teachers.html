@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers</title>
+    <link rel="stylesheet" href="styleLoading.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .teacher {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin-top: 100px;
+
+        }
+
+        .teacher img {
+            display: block;
+            width: 203px;
+            height: 195px;
+            border-radius: 150px;
+            margin-bottom: 20px;
+        }
+
+        .teacher p {
+            width: 400px;
+            font-family: 'Roboto', sans-serif;
+            /* Apply the new font */
+            font-size: 18px;
+            /* Adjust font size as needed */
+            line-height: 1.5;
+            /* Improve readability */
+            color: #333;
+            /* Change text color if desired */
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data)
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+
+    <div class="teacher">
+        <img src="Teachers/Polina.jpg" alt="">
+        <p>My name is Julia, and I am a student of Slovak studies. I lived and studied in Slovakia for several years, so
+            I can not
+            only teach you to speak fluently but also share all the nuances of Slovak culture. I will help with any
+            questions
+            regarding admission to schools or universities, providing an individual approach based on the student’s
+            knowledge. My
+            lessons will be held in a friendly atmosphere, I promise! I offer a flexible schedule. I have experience in
+            translation
+            and two years of teaching Slovak.</p>
+        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button> </a>
+    </div>
+
+    <div class="teacher">
+        <img src="Teachers/Julia.jpg" alt="">
+        <p>My name is Julia, and I am a student of Slovak studies. I lived and studied in Slovakia for several years, so
+            I can not
+            only teach you to speak fluently but also share all the nuances of Slovak culture. I will help with any
+            questions
+            regarding admission to schools or universities, providing an individual approach based on the student’s
+            knowledge. My
+            lessons will be held in a friendly atmosphere, I promise! I offer a flexible schedule. I have experience in
+            translation
+            and two years of teaching Slovak.</p>
+        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button> </a>
+    </div>
+
+
+    <div class="teacher">
+        <img src="Teachers/Peto.jpg" alt="">
+        <p>My name is Julia, and I am a student of Slovak studies. I lived and studied in Slovakia for several years, so
+            I can not
+            only teach you to speak fluently but also share all the nuances of Slovak culture. I will help with any
+            questions
+            regarding admission to schools or universities, providing an individual approach based on the student’s
+            knowledge. My
+            lessons will be held in a friendly atmosphere, I promise! I offer a flexible schedule. I have experience in
+            translation
+            and two years of teaching Slovak.</p>
+        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button> </a>
+    </div>
+
+</body>
+
+</html>
