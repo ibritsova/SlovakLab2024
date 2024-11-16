@@ -163,7 +163,7 @@
     }
 
     .welcome-img {
-      width: 1220px;
+      width: 100%;
       align-self: center;
     }
 
@@ -239,6 +239,7 @@
     .info-courses {
       display: flex;
       align-items: center;
+      width: 100%;
       margin-top: 10px;
       justify-content: center;
 
