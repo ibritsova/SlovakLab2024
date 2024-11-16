@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            display: none;
+            /* Скрыть ошибку по умолчанию */
+        }
+
+        .success {
+            color: green;
+            font-size: 1em;
+            display: none;
+            /* Скрыть сообщение об успехе по умолчанию */
+        }
+    </style>
+</head>
+
+<body>
+
+    <form name="registration-form" id="registration-form" action="" method="post">
+        <p class="success send-success" id="success-message">Form successfully sent!</p>
+
+        <label class="required" for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        <p class="error name-error">Please enter your full name.</p>
+
+        <label for="email" class="required">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        <p class="error email-error">Please enter a valid email address.</p>
+
+        <label class="required" for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+        <p class="error tel-error">Please enter your phone number.</p>
+
+        <label for="level" class="required">Select the course you're applying for</label>
+        <select id="level" name="level" required>
+            <option value="" disabled selected>Select a course</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="speaking-club">Speaking Club</option>
+        </select>
+        <p class="error level-error">Please select a course.</p>
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any additional information..."></textarea>
+
+        <input type="submit" name="send-submission" value="Send">
+    </form>
+
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Останавливаем отправку формы
+
+            let isValid = true; // Флаг для проверки всех полей
+
+            // Очистка предыдущих сообщений об ошибках
+            document.querySelectorAll('.error').forEach(error => error.style.display = 'none');
+            document.getElementById('success-message').style.display = 'none';
+
+            // Проверка каждого поля
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const phoneField = document.getElementById('phone');
+            const levelField = document.getElementById('level');
+
+            if (!nameField.value.trim()) {
+                document.querySelector('.name-error').style.display = 'block';
+                isValid = false;
+            }
+
+            if (!emailField.value.trim()) {
+                document.querySelector('.email-error').style.display = 'block';
+                isValid = false;
+            }
+
+            if (!phoneField.value.trim()) {
+                document.querySelector('.tel-error').style.display = 'block';
+                isValid = false;
+            }
+
+            if (!levelField.value) {
+                document.querySelector('.level-error').style.display = 'block';
+                isValid = false;
+            }
+
+            // Если форма валидна, выводим сообщение об успехе
+            if (isValid) {
+                document.getElementById('success-message').style.display = 'block';
+                // Здесь можно отправить форму через AJAX или другой метод
+            }
+        });
+    </script>
+
+</body>
+
+</html>

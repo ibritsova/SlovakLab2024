@@ -1,0 +1,101 @@
+ html {
+      scroll-behavior: smooth;
+    }
+
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            
+           
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: none;
+            padding: 90px;
+            border-radius: 8px;
+           
+            width: 100%;
+            max-width: 600px;
+            justify-self: center;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 39px;
+            margin-top: 19px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight:500;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: black;
+            color: white;
+            border-color: black;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .required::after{
+            content: " *";
+            color: rgb(234, 13, 13);
+            font-size: medium;
+        }
+        .error {
+      color: red;
+      font-size: 12px;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    /* Success message styles */
+    .success-message {
+      display: none;
+     
+      color:black;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .success-under{
+       
+        color: black;
+        font-weight:normal;
+        font-size: 15px;
+        margin-top: 20px;
+
+
+    }
+
+    /* Hide the form when it's submitted */
+    .form-hidden {
+      display: none;
+    }
+
+
+        

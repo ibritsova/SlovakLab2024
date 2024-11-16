@@ -6,16 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="styleLoading.css" />
+  <link rel="stylesheet" href="teachers.css" />
   <!-- linking google fonts for ikon-->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
   <!-- linking Swiper JS CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!--Link icons-->
+  <script src="https://kit.fontawesome.com/3be9aeb56a.js" crossorigin="anonymous"></script>
 
   <title>SlovakLab</title>
-  <style>
-
-  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "cNHZ2vQvSg-FOUfu_",
+      });
+    })();
+  </script>
 </head>
 
 <body>
@@ -29,7 +38,10 @@
 
 
   <div class="welcome">
-    <img class="welcome-logo" src="Welcome.png" alt="logo" />
+    <video autoplay muted playsinline width="600" height="300">
+      <source src="logo.mp4" type="video/mp4">
+      video of logo
+    </video>
     <div class="text-container">
       <h4>
         It is a community of skilled teachers offering Slovak language
@@ -42,7 +54,7 @@
     </div>
   </div>
   <div class="purpose">
-    <h2>Slovak with us for various goals</h2>
+    <h2>Learn Slovak with us for various goals</h2>
     <div class="goals-container">
       <p class="purpose-item">
         <img src="GoalItems/work.png" alt="img" class="large-icon" />
@@ -170,6 +182,11 @@
         </li>
 
       </ul>
+      <div class="apply-course">
+        <a href="#target-section-apply">
+          <button class="button-start">Apply for this course</button>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -207,6 +224,11 @@
         </li>
 
       </ul>
+      <div class="apply-course">
+        <a href="#target-section-apply">
+          <button class="button-start">Apply for this course</button>
+        </a>
+      </div>
     </div>
     <div class="nameCourse">
       <h1>Intermediate</h1>
@@ -247,6 +269,11 @@
         </li>
 
       </ul>
+      <div class="apply-course">
+        <a href="#target-section-apply">
+          <button class="button-start">Apply for this course</button>
+        </a>
+      </div>
     </div>
 
   </div>
@@ -282,19 +309,219 @@
         </li>
 
       </ul>
+      <div class="apply-course">
+        <a href="#target-section-apply">
+          <button class="button-start">Apply for this course</button>
+        </a>
+      </div>
     </div>
     <div class="nameCourse">
       <h1>Speaking Club</h1>
     </div>
 
   </div>
+  <div id="target-section-team" class="team">
+    <h2>Team</h2>
+  </div>
+  <div class="main-info">
+    <div class="grid-container">
+      <div class="teacher" style="grid-area: item1;">
+
+        <img src="Teachers/founder3.jpg" alt="" class="teacher-img">
+        <h4>Iryna</h4>
+        <h3>Founder</h3>
+        <ul>
+
+          <li class="teacher-item">
+            <p>I believe that language is a key to new opportunities, which is why we offer courses that
+              help you
+              speak Slovak with
+              confidence, understand local traditions and culture, and adapt to life with native speakers.
+            </p>
+          </li>
+
+          <li class="teacher-item">
+            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
+            Comenius University
+          </li>
+        </ul>
+
+
+        </a>
+      </div>
+      <div class="teacher" style="grid-area: item2;">
+        <img src="Teachers/Polina.jpg" alt="" class="teacher-img">
+        <h4>Polina</h4>
+        <h3>Teacher</h3>
+        <ul>
+
+          <li class="teacher-item">
+            <p>A mentor, helper, and a "magic wand" that starts making dreams come true just by seeing the
+              effort, feedback, and
+              dedication of the student.
+            </p>
+          </li>
+
+          <li class="teacher-item">
+            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
+            University of Presov
+          </li>
+        </ul>
+        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button>
+        </a>
+      </div>
+
+      <div class="teacher" style="grid-area: item3;">
+        <img src="Teachers/Peto.jpg" alt="" class="teacher-img">
+        <h4>Pe'to</h4>
+        <h3>Native Speaker</h3>
+        <ul>
+
+          <li class="teacher-item">
+            <p>I am an open and positive person who will not only
+              teach you Slovak slang but also recommend great places to visit for a
+              weekend in Slovakia. I’ll share insights about real life in Slovakia
+              and help you understand Slovaks (all the
+              abbreviations, ambiguous words, and language constructions)
+            </p>
+          </li>
+
+          <li class="teacher-item">
+            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
+            Comenius University
+          </li>
+        </ul>
+        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button>
+        </a>
+      </div>
+
+      <div class="teacher" style="grid-area: item4;">
+        <img src="Teachers/Julia.jpg" alt="" class="teacher-img">
+        <h4>Julia</h4>
+        <h3>Teacher</h3>
+        <ul>
+
+          <li class="teacher-item">
+            <p>The lesson takes place in a friendly atmosphere, and with me, you definitely
+              won’t have to worry about homework.The
+              lesson is never boring, I promise to keep you engaged! I take an individual approach to each
+              student.
+            </p>
+          </li>
+
+          <li class="teacher-item">
+            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
+            Comenius University
+          </li>
+        </ul>
+        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button>
+        </a>
+      </div>
 
 
 
+    </div>
+  </div>
+
+  <section class="feedback">
+    <div class="content">
+      <h2>Why Choose Us?</h2>
+      <p>
+        Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our
+        interactive
+        lessons are tailored to your level and schedule, helping you achieve your goals quickly and confidently. Join us
+        and
+        start speaking Slovak today!
+      </p>
+    </div>
+    <div class="feedback-container">
+      <div class="box">
+        <i class="fas fa-quote-left"></i>
+        <p>The teachers are fantastic! They explain everything clearly and make learning fun. Highly recommend these
+          courses.</p>
+        <div class="person">
+          <div class="person-img">
+            <img src="Teachers/Peto.jpg" alt="">
+          </div>
+          <div class="author">Peter Horvath</div>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fas fa-quote-left"></i>
+        <p>Great experience! The personalized approach and flexible schedule made it easy to fit learning Slovak into my
+          busy life.</p>
+        <div class="person">
+          <div class="person-img">
+            <img src="Teachers/Peto.jpg" alt="">
+          </div>
+          <div class="author">Peter Horvath</div>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fas fa-quote-left"></i>
+        <p>These courses are perfect for beginners! The lessons are well-structured, and the practical approach helped
+          me use
+          Slovak in everyday situations quickly.</p>
+        <div class="person">
+          <div class="person-img">
+            <img src="Teachers/Peto.jpg" alt="">
+          </div>
+          <div class="author">Peter Horvath</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="form-container" id="target-section-apply">
+    <h2 id="registration-title">Apply for SlovakLab Courses</h2>
+    <form name="registrationForm" id="registrationForm" action="" method="post">
+      <p class="success send-success"></p>
+
+      <label class="required" for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="John Doe">
+      <div class="error" id="usernameError"></div>
+
+
+      <label for="email" class="required">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="smth@example.com">
+      <div class="error" id="emailError"></div>
+
+      <label class="required" for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+38 (0XX) XXX XX XX">
+      <div class="error" id="phoneError"></div>
+
+      <label for="level" class="required">Select the course you're applying for</label>
+      <select id="level" name="level" required>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+        <option value="speaking-club">Speaking Club</option>
+      </select>
+
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any additional information..."></textarea>
+
+
+
+      <button type="submit" onclick="validateForm()">Send</button>
+      <div class="form-footer">
+        <p>By sending, you agree to our <a href="#">Terms and Conditions</a>.</p>
+      </div>
+    </form>
+    <div class="success-message" id="successMessage">
+      Your application has been successfully completed. Thank you!
+      <div class="success-under">You will receive a response within 2 days.</div>
+    </div>
+
+
+  </div>
   <!--Linking Swiper JS script-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!--linking custom script-->
   <script src="script.js"></script>
+  <script src="scriptContact.js"></script>
+
 </body>
 
 </html>
