@@ -14,6 +14,7 @@
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
       font-weight: 500;
+      
     }
 
     .nav-bar {
@@ -21,7 +22,7 @@
       top: 0;
       width: 100%;
       /* Ensures it spans the full viewport width */
-      z-index: 1000;
+      /*z-index: 1000;*/
     }
 
     nav img {
@@ -444,6 +445,130 @@
   font-size: 1rem;
   color: black;
 }
+@media screen and (max-width: 768px) {
+    .navigation {
+        width: 50%;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul {
+       display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0px;
+    margin-top: 1%;
+    padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .welcome {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .welcome video {
+        width: 100%;
+        height: auto;
+    }
+
+    .text-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .goals-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .purpose-item {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .card-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .card-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .info-courses {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .nameCourse, .about {
+        width: 100%;
+        text-align: center;
+    }
+
+    .apply-course {
+        justify-content: center;
+    }
+
+    .form-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .feedback {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .feedback .content {
+        max-width: 100%;
+    }
+
+    .feedback .feedback-container {
+        max-width: 100%;
+    }
+
+    .feedback .feedback-container .box {
+        margin-bottom: 15px;
+    }
+}
+
+/* Для устройств с очень маленьким экраном */
+@media screen and (max-width: 480px) {
+    .button-start {
+        width: 100%;
+        padding: 10зч;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .nav-bar {
+        height: auto;
+        padding: 0;
+    }
+
+    nav img {
+        height: 50px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .welcome video {
+        height: auto;
+    }
+}
+
 
 
 
