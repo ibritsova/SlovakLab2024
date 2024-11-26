@@ -14,8 +14,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!--Link icons-->
   <script src="https://kit.fontawesome.com/3be9aeb56a.js" crossorigin="anonymous"></script>
-  <!--link bootstrap-->
-
 
   <title>SlovakLab</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -30,13 +28,45 @@
 </head>
 
 <body>
-  <div id="navbar-container"></div>
+  <nav>
+    <ul class="sidebar">
+      <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960"
+            width="26">
+            <path
+              d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+          </svg></a></li>
+      <li onclick=hideSidebar()><a href="index.html">About</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-courses">Courses</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-team">Teachers</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-apply">Contacts</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-feedback">Feedback</a></li>
+    </ul>
+    <ul class="normal">
+      <li><a href="#" class="logo">
+          <img src="Logo.png" alt="SlovakLab logo" />
+        </a></li>
+      <li class="hideOnMobile line"><a href="index.html">About</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-courses">Courses</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-team">Teachers</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-apply">Contacts</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-feedback">Feedback</a></li>
+      <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
+            viewBox="0 96 960 960" width="26">
+            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+          </svg></a></li>
+    </ul>
+  </nav>
   <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('navbar-container').innerHTML = data)
-      .catch(error => console.error('Error loading navbar:', error));
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
   </script>
+
 
 
   <div class="welcome">
@@ -453,8 +483,9 @@
       </div>
       <div class="box">
         <i class="fas fa-quote-left"></i>
-        <p>Great experience! The personalized approach and flexible schedule made it easy to fit learning Slovak into my
-          busy life.</p>
+        <p>I’m very pleased with the SlovakLab language courses. My son has made great progress thanks to the skilled
+          and
+          supportive teachers. The program is well-structured and engaging—I highly recommend it!</p>
         <div class="person">
           <div class="person-img">
             <img src="FeedbackImg/Georgy.jpg" alt="">
@@ -526,7 +557,6 @@
   <!--linking custom script-->
   <script src="script.js"></script>
   <script src="scriptContact.js"></script>
-
 
 </body>
 

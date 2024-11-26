@@ -1,128 +1,137 @@
   html {
       scroll-behavior: smooth;
     }
+     
 
-    body {
-      background-color: white;
-      height: 100vh;
-      margin: 0;
-    }
+        body {
+            min-height: 100vh;
+            background-repeat: no-repeat;
+        }
 
-    .navigation {
-      padding-top: 23px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-      font-weight: 500;
-      
-    }
+     nav {
+            background-color: rgb(255, 255, 255);
+            height: 60px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+                sans-serif;
+            font-weight: 500;
+            align-items: center;
+            position: fixed;
+            width:100%;
+            margin-bottom: 50px;
+            z-index: 1000;
+        }
 
-    .nav-bar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      /* Ensures it spans the full viewport width */
-      /*z-index: 1000;*/
-    }
+        nav ul {
+            width: 100%;
 
-    nav img {
-      padding: 0;
-      margin: 0;
-      align-items: center;
-      padding: 0 20px;
-      /* Убираем лишние вертикальные отступы */
-      height: 60px;
-      box-sizing: border-box;
-    }
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
 
-    nav {
-      background-color:black;
-      display: flex;
-      color: white;
-      height: 70px;
-      box-sizing: border-box;
-    }
+        nav li {
+            height: 50px;
+            margin: 0 8px;
+        }
 
-    nav a {
-      position: relative;
-    }
+        nav a {
+            height: 100%;
+            position: relative;
+            padding: 12px 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: rgb(0, 0, 0);
+        }
 
-    nav ul a::after {
-      content: "";
-      position: absolute;
-      height: 2px;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      background-color: white;
-      transform: scaleX(0);
-      transition: transform 0.3s ease-in-out;
-    }
+        nav ul.normal a::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
 
-    nav ul a:hover::after {
-      transform: scaleX(1);
-    }
+        nav ul.normal li:not(:first-child) a:hover::after {
+            transform: scaleX(1);
+        }
 
-    nav ul {
-      display: flex;
-      justify-content: flex-end;
-      list-style-type: none;
-      margin: 0;
-      margin-left: auto;
-      padding: 0;
-    }
+        
+        
+        
 
-    nav ul li {
-      display: inline-block;
-      margin: 0 15px;
-    }
+        nav li:first-child {
+            margin-right: auto;
+        }
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      padding: 8px 12px;
-      transition: background-color 0.3s;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      /* Позиция под родительским элементом */
-      left: 0;
-      background-color: #f9f9f9;
-      min-width: 100px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 10px 15px;
-      display: block;
-      text-decoration: none;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #ddd;
-    }
-
-    /* Показываем выпадающее меню при наведении */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+        nav img {
+            padding: 0;
+           margin-top: 11px;
+            align-items: center;
+            padding: 0 20px;
+            /* Убираем лишние вертикальные отступы */
+            height: 60px;
+            box-sizing: border-box;
+        }
 
 
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar li {
+            width: 100%;
+        }
+
+        .sidebar a {
+            width: 100%;
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        @media(max-width: 800px) {
+            .hideOnMobile {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
+
+        @media(max-width: 400px) {
+            .sidebar {
+                width: 100%;
+            }
+        }
+    
 
     .card-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
 
     .course-details {
@@ -140,7 +149,7 @@
     }
 
     .container {
-      width: 850px;
+      width: 70%;
 
       margin-top: 80px;
     }
@@ -151,10 +160,12 @@
 
     .welcome {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 61px;
+    margin-top: 0px;
+    width: 100%;
     }
 
     .welcome-logo {
@@ -444,129 +455,6 @@
 .feedback .feedback-container .box .author {
   font-size: 1rem;
   color: black;
-}
-@media screen and (max-width: 768px) {
-    .navigation {
-        width: 50%;
-        padding: 0;
-        text-align: center;
-    }
-
-    nav ul {
-       display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    margin: 0px;
-    margin-top: 1%;
-    padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .welcome {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .welcome video {
-        width: 100%;
-        height: auto;
-    }
-
-    .text-container {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    .goals-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .purpose-item {
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    .card-wrapper {
-        flex-wrap: wrap;
-    }
-
-    .card-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .info-courses {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .nameCourse, .about {
-        width: 100%;
-        text-align: center;
-    }
-
-    .apply-course {
-        justify-content: center;
-    }
-
-    .form-container {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .feedback {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .feedback .content {
-        max-width: 100%;
-    }
-
-    .feedback .feedback-container {
-        max-width: 100%;
-    }
-
-    .feedback .feedback-container .box {
-        margin-bottom: 15px;
-    }
-}
-
-/* Для устройств с очень маленьким экраном */
-@media screen and (max-width: 480px) {
-    .button-start {
-        width: 100%;
-        padding: 10зч;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .nav-bar {
-        height: auto;
-        padding: 0;
-    }
-
-    nav img {
-        height: 50px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-    .welcome video {
-        height: auto;
-    }
 }
 
 
