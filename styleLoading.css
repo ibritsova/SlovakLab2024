@@ -47,7 +47,7 @@
             color: rgb(0, 0, 0);
         }
 
-        nav ul.normal a::after {
+        nav ul.normal li:not(:first-child ) a::after {
             content: "";
             position: absolute;
             height: 2px;
@@ -319,6 +319,7 @@
     .form-container {
             background-color: none;
            padding: 20px;
+           margin-top: 50px;
             border-radius: 8px;
            
             width: 100%;
@@ -407,90 +408,51 @@
       display: none;
     }
 
-   .feedback {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-color: white;
-  display: flex;
-  justify-content: space-between; /* Распределяем контент по сторонам */
-  align-items: center; /* Выравнивание по верхнему краю */
-  flex-wrap: nowrap; /* Не разрешаем перенос строк */
-  padding: 2rem 3rem;
-}
+   
 
-.feedback .content {
-  flex: 1 1 40%; /* Фиксируем ширину контента на 40% */
-  padding: -1rem 1rem;
-  max-width: 40%; /* Чтобы не растягивалось */
-}
 
-.feedback .content h2 {
-  font-size: 2.5rem;
-  color: black;
-  text-align: center; /* Выравниваем текст по левому краю */
-  margin-bottom: 2rem;
-}
-
-.feedback .content p {
-  font-size: 1.1rem;
-  color: black;
-  margin-bottom: 2.5rem;
-  text-align: justify;
-}
-
-.feedback .feedback-container {
-  flex: 1 1 55%; /* Контейнер для отзывов занимает 55% */
-  max-width: 55%; /* Чтобы не растягивался */
-  padding: 0rem 2rem;
-  display: flex;
-  flex-direction: column; /* Размещаем отзывы один под другим */
-  gap: 1rem; /* Отступ между отзывами */
-}
-
-.feedback .feedback-container .box {
+.feedback-container .box {
   padding: 1rem 1rem;
   border-radius: 1.5rem;
   transition: 0.5s;
   background-color: rgb(235, 235, 235);
 }
 
-.feedback .feedback-container .box:hover {
+.feedback-container .box:hover {
   transform: translateY(-0.8rem);
 }
 
-.feedback .feedback-container .box .fas {
+ .feedback-container .box .fas {
   color: #000000;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.feedback .feedback-container .box p {
+ .feedback-container .box p {
   color: black;
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.feedback .feedback-container .box .person {
+ .feedback-container .box .person {
   display: flex;
   align-items: center;
 }
 
-.feedback .feedback-container .box .person-img {
+.feedback-container .box .person-img {
   width: 3rem;
   height: 3rem;
   margin-right: 1rem;
 }
 
-.feedback .feedback-container .box .person-img img {
+ .feedback-container .box .person-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.feedback .feedback-container .box .author {
+ .feedback-container .box .author {
   font-size: 1rem;
   color: black;
 }

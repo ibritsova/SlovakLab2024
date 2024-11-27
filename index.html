@@ -77,6 +77,16 @@
       logoImg.style.display = 'flex';
     }
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const video = document.querySelector("video");
+      if (video) {
+        video.play().catch((error) => {
+          console.warn("Autoplay failed:", error);
+        });
+      }
+    });
+  </script>
 
 
 
@@ -385,161 +395,189 @@
   </div>
 
   <div id="target-section-team" class="team">
-    <h2>Team</h2>
+    <h2 class="text-center mb-4">Team</h2>
   </div>
-  <div class="main-info">
-    <div class="grid-container">
-      <div class="teacher" style="grid-area: item1;">
-
-        <img src="Teachers/founder3.jpg" alt="" class="teacher-img">
-        <h4>Iryna</h4>
-        <h3>Founder</h3>
-        <ul>
-
-          <li class="teacher-item">
-            <p>I believe that language is a key to new opportunities, which is why we offer courses that
-              help you
-              speak Slovak with
-              confidence, understand local traditions and culture, and adapt to life with native speakers.
-            </p>
-          </li>
-
-          <li class="teacher-item">
-            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
-            Comenius University
-          </li>
-        </ul>
-
-
-        </a>
+  <div class="main-info container">
+    <!-- Founder -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-12">
+        <div class="teacher text-center">
+          <img src="Teachers/founder3.jpg" alt="" class="teacher-img mb-3">
+          <h4>Iryna</h4>
+          <h3>Founder</h3>
+          <ul class="list-unstyled">
+            <li class="teacher-item mb-0 mt-0">
+              <p>
+                I believe that language is a key to new opportunities, which is why we offer courses that
+                help you speak Slovak with confidence, understand local traditions and culture, and adapt to life with
+                native speakers.
+              </p>
+            </li>
+            <div class="row mt-0">
+              <li class="teacher-item d-flex align-items-center justify-content-center mt-0">
+                <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
+                <span>Comenius University</span>
+              </li>
+            </div>
+          </ul>
+        </div>
       </div>
-      <div class="teacher" style="grid-area: item2;">
-        <img src="Teachers/Polina.jpg" alt="" class="teacher-img">
-        <h4>Polina</h4>
-        <h3>Teacher</h3>
-        <ul>
+    </div>
 
-          <li class="teacher-item">
-            <p>A mentor, helper, and a "magic wand" that starts making dreams come true just by seeing the
-              effort, feedback, and
-              dedication of the student.
-            </p>
-          </li>
+    <!-- Other Teachers -->
+    <div class="row justify-content-center">
+      <!-- Teacher 1 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center">
+        <div class="teacher text-center">
+          <img src="Teachers/Polina.jpg" alt="" class="teacher-img mb-3">
+          <h4>Polina</h4>
+          <h3>Teacher</h3>
+          <ul class="list-unstyled">
+            <li class="teacher-item mb-3">
+              <p>A mentor, helper, and a "magic wand" that starts making dreams come true just by seeing the effort,
+                feedback, and dedication of the student.</p>
+            </li>
 
-          <li class="teacher-item">
-            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
-            University of Presov
-          </li>
-        </ul>
-        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button>
-        </a>
-      </div>
+            <li class="teacher-item d-flex align-items-center justify-content-center mt-4">
+              <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
+              <span>University of Presov</span>
+            </li>
 
-      <div class="teacher" style="grid-area: item3;">
-        <img src="Teachers/Peto.jpg" alt="" class="teacher-img">
-        <h4>Pe'to</h4>
-        <h3>Native Speaker</h3>
-        <ul>
-
-          <li class="teacher-item">
-            <p>I am an open and positive person who will not only
-              teach you Slovak slang but also recommend great places to visit for a
-              weekend in Slovakia. I’ll share insights about real life in Slovakia
-              and help you understand Slovaks (all the
-              abbreviations, ambiguous words, and language constructions)
-            </p>
-          </li>
-
-          <li class="teacher-item">
-            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
-            Comenius University
-          </li>
-        </ul>
-        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button>
-        </a>
+          </ul>
+          <a href="loadingPage.html#target-section-courses">
+            <button class="button-start">Book a lesson</button>
+          </a>
+        </div>
       </div>
 
-      <div class="teacher" style="grid-area: item4;">
-        <img src="Teachers/Julia.jpg" alt="" class="teacher-img">
-        <h4>Julia</h4>
-        <h3>Teacher</h3>
-        <ul>
+      <!-- Teacher 2 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center">
+        <div class="teacher text-center">
+          <img src="Teachers/Peto.jpg" alt="" class="teacher-img mb-3">
+          <h4>Pe'to</h4>
+          <h3>Native Speaker</h3>
+          <ul class="list-unstyled">
+            <li class="teacher-item mb-3">
+              <p>
+                I am an open and positive person who will not only teach you Slovak slang but also recommend great
+                places
+                to visit for a weekend in Slovakia. I’ll share insights about real life in Slovakia and help you
+                understand Slovaks (all the abbreviations, ambiguous words, and language constructions).
+              </p>
+            </li>
 
-          <li class="teacher-item">
-            <p>The lesson takes place in a friendly atmosphere, and with me, you definitely
-              won’t have to worry about homework.The
-              lesson is never boring, I promise to keep you engaged! I take an individual approach to each
-              student.
-            </p>
-          </li>
+            <li class="teacher-item d-flex align-items-center justify-content-center mt-4">
+              <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
+              <span>Comenius University</span>
+            </li>
 
-          <li class="teacher-item">
-            <img src="DescribeTeachers/graduation.png" alt="" class="small-icon">
-            Comenius University
-          </li>
-        </ul>
-        <a href="loadingPage.html#target-section-courses"> <button class="button-start">Book a lesson</button>
-        </a>
+          </ul>
+          <a href="loadingPage.html#target-section-courses">
+            <button class="button-start">Book a lesson</button>
+          </a>
+        </div>
       </div>
 
+      <!-- Teacher 3 -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center">
+        <div class="teacher text-center">
+          <img src="Teachers/Julia.jpg" alt="" class="teacher-img mb-3">
+          <h4>Julia</h4>
+          <h3>Teacher</h3>
+          <ul class="list-unstyled">
+            <li class="teacher-item mb-3">
+              <p>The lesson takes place in a friendly atmosphere, and with me, you definitely won’t have to worry about
+                homework. The lesson is never boring, I promise to keep you engaged! I take an individual approach to
+                each
+                student.</p>
+            </li>
 
 
+            <li class="teacher-item d-flex align-items-center justify-content-center mt-4">
+              <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
+              <span>Comenius University</span>
+            </li>
+
+          </ul>
+          <a href="loadingPage.html#target-section-courses">
+            <button class="button-start">Book a lesson</button>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <section class="feedback" id="target-section-feedback">
-    <div class="content">
-      <h2>Why Choose Us?</h2>
-      <p>
-        Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our
-        interactive
-        lessons are tailored to your level and schedule, helping you achieve your goals quickly and confidently. Join
-        us
-        and
-        start speaking Slovak today!
-      </p>
-      <p>Whether you’re preparing for work, study, or travel, our structured yet flexible approach helps you achieve
-        your goals
-        quickly and confidently. Join us today and take the first step towards mastering Slovak!</p>
-    </div>
-    <div class="feedback-container">
-      <div class="box">
-        <i class="fas fa-quote-left"></i>
-        <p>The teachers are fantastic! They explain everything clearly and make learning fun. Highly recommend these
-          courses.</p>
-        <div class="person">
-          <div class="person-img">
-            <img src="FeedbackImg/Max.jpg" alt="">
+
+  <section id="target-section-feedback">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Why Choose Us Section -->
+        <div class="col-lg-6 mb-4 justify-content-center">
+          <div class="content w-100">
+            <h2>Why Choose Us?</h2>
+            <p>
+              Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our
+              interactive lessons are tailored to your level and schedule, helping you achieve your goals quickly and
+              confidently.
+              Join us and start speaking Slovak today!
+            </p>
+            <p>
+              Whether you’re preparing for work, study, or travel, our structured yet flexible approach helps you
+              achieve
+              your goals
+              quickly and confidently. Join us today and take the first step towards mastering Slovak!
+            </p>
           </div>
-          <div class="author">Anastasia</div>
         </div>
-      </div>
-      <div class="box">
-        <i class="fas fa-quote-left"></i>
-        <p>I’m very pleased with the SlovakLab language courses. My son has made great progress thanks to the skilled
-          and
-          supportive teachers. The program is well-structured and engaging—I highly recommend it!</p>
-        <div class="person">
-          <div class="person-img">
-            <img src="FeedbackImg/Georgy.jpg" alt="">
+
+        <!-- Feedback Section -->
+        <div class="col-lg-6">
+          <div class="feedback-container">
+            <!-- Feedback Box 1 -->
+            <div class="box mb-4">
+              <i class="fas fa-quote-left"></i>
+              <p>The teachers are fantastic! They explain everything clearly and make learning fun. Highly recommend
+                these
+                courses.</p>
+              <div class="person d-flex align-items-center">
+                <div class="person-img me-3">
+                  <img src="FeedbackImg/Max.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
+                </div>
+                <div class="author">Anastasia</div>
+              </div>
+            </div>
+            <!-- Feedback Box 2 -->
+            <div class="box mb-4">
+              <i class="fas fa-quote-left"></i>
+              <p>I’m very pleased with the SlovakLab language courses. My son has made great progress thanks to the
+                skilled
+                and supportive teachers. The program is well-structured and engaging—I highly recommend it!</p>
+              <div class="person d-flex align-items-center">
+                <div class="person-img me-3">
+                  <img src="FeedbackImg/Georgy.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
+                </div>
+                <div class="author">Georgy</div>
+              </div>
+            </div>
+            <!-- Feedback Box 3 -->
+            <div class="box">
+              <i class="fas fa-quote-left"></i>
+              <p>These courses are perfect for beginners! The lessons are well-structured, and the practical approach
+                helped
+                me use Slovak in everyday situations quickly.</p>
+              <div class="person d-flex align-items-center">
+                <div class="person-img me-3">
+                  <img src="FeedbackImg/Anastasia.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
+                </div>
+                <div class="author">Max</div>
+              </div>
+            </div>
           </div>
-          <div class="author">Georgy</div>
-        </div>
-      </div>
-      <div class="box">
-        <i class="fas fa-quote-left"></i>
-        <p>These courses are perfect for beginners! The lessons are well-structured, and the practical approach helped
-          me use
-          Slovak in everyday situations quickly.</p>
-        <div class="person">
-          <div class="person-img">
-            <img src="FeedbackImg/Anastasia.jpg" alt="">
-          </div>
-          <div class="author">Max</div>
         </div>
       </div>
     </div>
   </section>
+
 
   <div class="form-container" id="target-section-apply">
     <h2 id="registration-title">Apply for SlovakLab Courses</h2>
@@ -573,9 +611,9 @@
 
 
 
-      <button type="submit" onclick="validateForm()">Send</button>
-      <div class="form-footer">
 
+      <div class="row justify-content-center">
+        <button type="submit" onclick="validateForm()">Send</button>
       </div>
     </form>
     <div class="success-message" id="successMessage">
