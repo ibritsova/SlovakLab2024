@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!--Link icons-->
   <script src="https://kit.fontawesome.com/3be9aeb56a.js" crossorigin="anonymous"></script>
+  <!--link css bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
   <title>SlovakLab</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -25,6 +28,10 @@
       });
     })();
   </script>
+  <!--link js bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -74,42 +81,66 @@
 
 
   <div class="welcome">
-    <video autoplay muted playsinline width="600" height="300">
-      <source src="logo.mp4" type="video/mp4">
-      video of logo
-    </video>
-    <div class="text-container">
-      <h4>
-        It is a community of skilled teachers offering Slovak language
-        courses with innovative methods.Join us to explore the language with
-        ease and enjoyment!
-      </h4>
-      <a href="#target-section-courses">
-        <button class="button-start">Start lessons</button>
-      </a>
+    <div class="container">
+      <div class="row justify-content-center">
+        <video autoplay muted playsinline>
+          <source src="logo.mp4" type="video/mp4">
+          video of logo
+        </video>
+      </div>
+      <div class="row justify-content-center">
+        <div class="text-container col-9">
+          <h5>
+            It is a community of skilled teachers offering Slovak language
+            courses with innovative methods.Join us to explore the language with
+            ease and enjoyment!
+          </h5>
+          <a href="#target-section-courses">
+            <button class="button-start">Start lessons</button>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="purpose">
-    <h2>Learn Slovak with us for various goals</h2>
-    <div class="goals-container">
-      <p class="purpose-item">
-        <img src="GoalItems/work.png" alt="img" class="large-icon" />
-        For occupation
-      </p>
-      <p class="purpose-item">
-        <img src="GoalItems/travel.png" alt="img" class="large-icon" />
-        For migration
-      </p>
-      <p class="purpose-item">
-        <img src="GoalItems/school.png" alt="img" class="large-icon" />
-        For studing
-      </p>
-      <p class="purpose-item">
-        <img src="GoalItems/flight.png" alt="img" class="large-icon" />
-        For traveling
-      </p>
+    <div class="container text-center ">
+      <div class="row justify-content-center">
+        <h2>Learn Slovak with us for various goals</h2>
+      </div>
+      <div class="row justify-content-center">
+        <!-- Элемент 1 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="purpose-item ">
+            <img src="GoalItems/work.png" alt="For occupation" class="large-icon mb-3" />
+            <p>For occupation</p>
+          </div>
+        </div>
+        <!-- Элемент 2 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="purpose-item ">
+            <img src="GoalItems/travel.png" alt="For migration" class="large-icon mb-3" />
+            <p>For migration</p>
+          </div>
+        </div>
+        <!-- Элемент 3 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="purpose-item">
+            <img src="GoalItems/school.png" alt="For studying" class="large-icon mb-3" />
+            <p>For studying</p>
+          </div>
+        </div>
+        <!-- Элемент 4 -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+          <div class="purpose-item">
+            <img src="GoalItems/flight.png" alt="For traveling" class="large-icon mb-3" />
+            <p>For traveling</p>
+          </div>
+        </div>
+      </div>
     </div>
+
     <img class="welcome-img" src="welcomeimg.jpg" alt="" />
+
   </div>
   <div class="container swiper" id="target-section-courses">
     <h2>Courses</h2>
@@ -465,7 +496,8 @@
       <p>
         Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our
         interactive
-        lessons are tailored to your level and schedule, helping you achieve your goals quickly and confidently. Join us
+        lessons are tailored to your level and schedule, helping you achieve your goals quickly and confidently. Join
+        us
         and
         start speaking Slovak today!
       </p>

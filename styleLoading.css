@@ -87,9 +87,9 @@
             top: 0;
             right: 0;
             height: 100vh;
-            width: 250px;
-            background-color: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(12px);
+            width: max-content;
+            background-color: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(50px);
             box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
             list-style: none;
             display: none;
@@ -118,12 +118,22 @@
             .menu-button {
                 display: block;
             }
+           video {
+        width: 100vw; /* Ширина видимой области */
+        height: 100vh; /* Высота видимой области */
+        object-fit: cover; /* Делает так, чтобы видео масштабировалось, не теряя пропорций */
+    }
         }
 
         @media(max-width: 400px) {
             .sidebar {
                 width: 100%;
             }
+            video {
+        width: 100vw; /* Ширина видимой области */
+        height: 100vh; /* Высота видимой области */
+        object-fit: cover; /* Делает так, чтобы видео масштабировалось, не теряя пропорций */
+    }
         }
     
 
@@ -163,9 +173,14 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 61px;
+    padding-top: 0px;
+    padding-bottom: 61px;
     margin-top: 0px;
     width: 100%;
+    }
+    .welcome video{
+     width: 600px;
+     height: 300px;
     }
 
     .welcome-logo {
@@ -184,8 +199,13 @@
       padding: 0 20px;
     }
 
-    .text-container h4 {
+    .text-container h5 {
       font-weight: 500;
+      margin-top: 12px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--bs-heading-color);
     }
 
     .purpose {
