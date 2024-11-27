@@ -59,7 +59,7 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        nav ul.normal li:not(:first-child) a:hover::after {
+        nav ul.normal li:not(:first-child .menu-button) a:hover::after {
             transform: scaleX(1);
         }
 

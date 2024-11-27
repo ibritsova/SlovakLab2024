@@ -45,7 +45,7 @@
       <li><a href="#" class="logo">
           <img src="Logo.png" alt="SlovakLab logo" />
         </a></li>
-      <li class="hideOnMobile line"><a href="index.html">About</a></li>
+      <li class="hideOnMobile"><a href="index.html">About</a></li>
       <li class="hideOnMobile"><a href="index.html#target-section-courses">Courses</a></li>
       <li class="hideOnMobile"><a href="index.html#target-section-team">Teachers</a></li>
       <li class="hideOnMobile"><a href="index.html#target-section-apply">Contacts</a></li>
@@ -59,11 +59,15 @@
   <script>
     function showSidebar() {
       const sidebar = document.querySelector('.sidebar')
+      const logoImg = document.querySelector('.logo')
       sidebar.style.display = 'flex'
+      logoImg.style.display = 'none';
     }
     function hideSidebar() {
       const sidebar = document.querySelector('.sidebar')
+      const logoImg = document.querySelector('.logo')
       sidebar.style.display = 'none'
+      logoImg.style.display = 'flex';
     }
   </script>
 
