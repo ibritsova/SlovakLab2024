@@ -178,10 +178,28 @@
     margin-top: 0px;
     width: 100%;
     }
-    .welcome video{
-     width: 600px;
-     height: 300px;
-    }
+    .welcome video {
+  width: 600px; /* Стандартна ширина */
+  height: 300px; /* Стандартна висота */
+  max-width: 100%; /* Адаптація до ширини екрану */
+  height: auto; /* Автоматична висота для збереження пропорцій */
+}
+
+@media (max-width: 768px) {
+  .welcome video {
+    width: 100%; /* Відео займає всю ширину */
+    height: auto; /* Пропорційна висота */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome video {
+    width: 100%; /* Відео займає всю ширину */
+    height: auto; /* Пропорційна висота */
+    border-radius: 10px; /* Наприклад, скруглені кути для стилю */
+  }
+}
+
 
     .welcome-logo {
       width: 200px;
@@ -285,7 +303,7 @@
     }
 
     .about {
-      margin-top: 50px;
+      margin-bottom: 100px;
       width: 500px;
     }
 
