@@ -1,0 +1,316 @@
+{
+  "en": {
+    "li1": "About",
+    "li2": "Courses",
+    "li3": "Teachers",
+    "li4": "Contacts",
+    "li5": "Feedback",
+    "wel-text": "It is a community of skilled teachers offering Slovak language courses with innovative methods.Join us to explore the language with ease and enjoyment!",
+
+
+    "button-start":"Start lessons",
+    "purpose": "Learn Slovak with us for various goals",
+    "p1": "For occupation",
+    "p2": "For migration",
+    "p3": "For studying",
+    "p4": "For traveling",
+    "courses":"Courses",
+    
+
+    "levelCourse": "Level:",
+    "infolevel1": " no prior knowledge required",
+    "infolevel2": " basic knowledge required",
+  "infolevel3": " fluent communication skills required",
+    "infolevel4":" conversational skills needed",
+    
+
+    "duration": "Duration:",
+    "infoDurationBeginner":" 1 year",
+  "infoDurationIntermediate":" 2 years",
+  "infoDurationAdvanced": " 2 years",
+  "infoDurationSpeakingClub": " unlimited",
+
+    
+    "course-level-beginner": "Course is designed for individuals with little to no prior experience in the Slovak language",
+    "course-content-beginner": "Participants will learn basic Slovak vocabulary, essential grammatical structures, everyday phrases for common situations, proper pronunciation, and the construction of simple sentences.",
+    "course-methods-beginner":"Interactive lessons, encouraging active participation through conversational practice and role-playing. Multimedia resources will be utilized to enhance learning.",
+    "course-record-beginner":"All sessions will be recorded, allowing students to review materials.",
+    "course-teacher-beginner":"The course is led by an experienced Ukrainian teacher only.",
+    "course-duration-beginner":"The course runs for one year, with classes scheduled twice a week.",
+    "apply-button": "Apply for this course",
+
+    
+    "course-level-intermediate":"For learners who have a foundational understanding of the Slovak language and wish to expand their skills.",
+"course-content-intermediate": "Students will learn more advanced grammar, increase their vocabulary, practice speaking in everyday situations, and learn about Slovak culture.",
+"course-methods-intermediate":"The course includes discussions, group activities, and real-life scenarios to help students use the language more effectively.",
+"course-recordings-intermediate":"All sessions will be recorded, allowing students to review materials.",
+"course-teacher-intermediate": "The course is led by an experienced Ukrainian teacher, and from the middle of the course, course will begin to include lessons with native speaker.",
+"course-duration-intermediate": "Classes are held twice a week for one year.",
+
+
+"course-level-advanced": " For students who already speak Slovak well and want to improve further.",
+"course-content-advanced": "Students will learn advanced grammar, idioms, and vocabulary. The course will also include discussions about culture and current events.",
+"course-methods-advanced": "Classes will involve discussions, presentations, and analysis of texts.",
+"course-recordings-advanced": "All sessions will be recorded, allowing students to review materials.",
+"course-teacher-advanced": "The course is led by an experienced Ukrainian teacher and a native Slovak speaker.",
+"course-duration-advanced": "Classes are held twice a week for one year.",
+
+
+"course-level-speakingClub":"For students who already speak Slovak well and want to improve further.",
+"course-content-speakingClub": "Participants will engage in conversations on various topics, practice vocabulary, play games, and discuss popular movies and series. They will also learn everyday language used in daily conversations.",
+"course-methods-speakingClub":"The club uses interactive discussions and real-life scenarios to promote speaking confidence.",
+"course-recordings-speakingClub":"All sessions will be recorded, allowing students to review materials.",
+"course-teacher-speakingClub":"The course is led by a native Slovak speaker.",
+"course-duration-speakingClub": "Classes are held twice a week.",
+
+"team":"Team",
+"nameFounder":"Iryna",
+"founder":"Founder",
+"aboutFounder": "I believe that language is a key to new opportunities, which is why we offer courses that help you speak Slovak with confidence, understand local traditions and culture, and adapt to life with native speakers.",
+"educationFounder":"Comenius University",
+
+"teacher1":"Polina",
+"teacher":"Teacher",
+"aboutTeacher1":"A mentor, helper, and a 'magic wand' that starts making dreams come true just by seeing the effort, feedback, and dedication of the student.",
+"eduTeacher1":"University of Presov",
+"bookleasson":"Book a lesson",
+
+"teacher2":"Pe'to",
+"nativeSpeaker":"Native Speaker",
+"aboutTeacher2":"I am an open and positive person who will not only teach you Slovak slang but also recommend great places to visit for a weekend in Slovakia. I’ll share insights about real life in Slovakia and help you understand Slovaks (all the abbreviations, ambiguous words, and language constructions).",
+"eduTeacher2":"Comenius University",
+
+"teacher3":"Julia",
+"aboutTeacher3":"The lesson takes place in a friendly atmosphere, and with me, you definitely won’t have to worry about homework. The lesson is never boring, I promise to keep you engaged! I take an individual approach to each student.",
+"eduTeacher3":"UComenius University",
+
+"whyUs": "Why Choose Us?",
+"whyAnsw1":"Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our interactive lessons are tailored to your level and schedule, helping you achieve your goals quickly and confidently. Join us and start speaking Slovak today!",
+"whyAnsw2":"Whether you’re preparing for work, study, or travel, our structured yet flexible approach helps you achieve your goals quickly and confidently. Join us today and take the first step towards mastering Slovak!",
+
+"comment1":"The teachers are fantastic! They explain everything clearly and make learning fun. Highly recommend these courses.",
+"person1":"Anastasia",
+"comment2":"I’m very pleased with the SlovakLab language courses. My son has made great progress thanks to the skilled and supportive teachers. The program is well-structured and engaging—I highly recommend it!",
+"person2":"Georgy",
+"comment3":"These courses are perfect for beginners! The lessons are well-structured, and the practical approach helped me use Slovak in everyday situations quickly.",
+"person3":"Max",
+
+"registration-title":"Apply for SlovakLab Courses",
+"fullName":"Full Name",
+"emailAddress": "Email Address",
+"phoneNumber": "Phone Number",
+"selectlevel":"Select the course you're applying for",
+"additional": "Additional Notes",
+"sendButton":"Send",
+"message1":"Your application has been successfully completed. Thank you!",
+"message2":"You will receive a response within 2 days."
+
+
+  },
+  "ukr": {
+    "li1": "Про нас",
+    "li2": "Курси",
+    "li3": "Вчителі",
+    "li4": "Контакти",
+    "li5": "Відгуки",
+    "wel-text": "Це спільнота кваліфікованих викладачів, які пропонують курси словацької мови за інноваційними методами. Приєднуйтесь до нас, щоб вивчати мову легко та із задоволенням!",
+    "levelCourse":"Рівень:",
+
+    
+  "button-start": "Розпочати уроки",
+  "purpose": "Вивчайте словацьку мову з нами для різних цілей",
+  "p1": "Для роботи",
+  "p2": "Для міграції",
+  "p3": "Для навчання",
+  "p4": "Для подорожей",
+  "courses": "Курси",
+
+
+  "infolevel1": " знання не потрібні",
+  "infolevel2": " потрібні базові знання",
+  "infolevel3": " потрібні навички вільного спілкування",
+  "infolevel4": " потрібні розмовні навички",
+
+  "duration" : "Тривалість:",
+  "infoDurationBeginner": " 1 рік",
+  "infoDurationIntermediate": " 2 роки",
+  "infoDurationAdvanced": " 2 роки",
+  "infoDurationSpeakingClub": " необмежено",
+
+
+  "course-level-beginner": "Курс призначений для тих, хто не має досвіду у вивченні словацької мови",
+  "course-content-beginner": "Студенти вивчать базові слова та словосполучення, основні граматичні структури, щоденні фрази для повсякденних ситуацій, правильну вимову та побудову простих речень.",
+  "course-methods-beginner": "Інтерактивні уроки, що заохочують активну участь через розмовну практику та ігри. Використовуються мультимедійні ресурси для покращення навчання.",
+  "course-record-beginner": "Усі заняття записуються, що дозволяє студентам переглядати матеріали.",
+  "course-teacher-beginner": "Курс веде досвідчений викладач з України.",
+  "course-duration-beginner": "Курс триває один рік, заняття проводяться двічі на тиждень.",
+  "apply-button": "Подати заявку на курс",
+
+  "course-level-intermediate": "Для тих, хто має базові знання словацької мови та бажає їх розширити.",
+  "course-content-intermediate": "Студенти вивчатимуть складнішу граматику, розширять словниковий запас, практикуватимуть розмовні навички та ознайомляться з культурою Словаччини.",
+  "course-methods-intermediate": "Курс включає практику обговорення повсякденних ситуацій, щоб допомогти студентам ефективніше використовувати мову.",
+  "course-recordings-intermediate": "Усі заняття записуються, що дозволяє студентам переглядати матеріали.",
+  "course-teacher-intermediate": "Курс веде досвідчений викладач з України, а з середини курсу додаються уроки з носієм мови.",
+  "course-duration-intermediate": "Заняття проводяться двічі на тиждень протягом року.",
+
+  "course-level-advanced": "Для студентів, які вже добре володіють словацькою мовою та хочуть удосконалити свої знання.",
+  "course-content-advanced": "Студенти вивчатимуть складну граматику, ідіоми, сленг, словацькі скорочення та поповнюватимуть словниковий запас. Також курс включає обговорення культури та актуальних подій.",
+  "course-methods-advanced": "Заняття передбачають обговорення, презентації та аналіз текстів.",
+  "course-recordings-advanced": "Усі заняття записуються, що дозволяє студентам переглядати матеріали.",
+  "course-teacher-advanced": "Курс веде досвідчений викладач з України та носій словацької мови.",
+  "course-duration-advanced": "Заняття проводяться двічі на тиждень протягом року.",
+
+  "course-level-speakingClub": "Для студентів, які вже добре володіють словацькою мовою та хочуть покращити свої навички.",
+  "course-content-speakingClub": "Учасники братимуть участь у бесідах на різні теми, практикуватимуть словниковий запас, грати в ігри та обговорювати популярні фільми й серіали. Вони також вивчать мову, що використовується в побутовому житті.",
+  "course-methods-speakingClub": "Клуб використовує інтерактивні обговорення та реальні сценарії для розвитку впевненості у спілкуванні.",
+  "course-recordings-speakingClub": "Усі заняття записуються, що дозволяє студентам переглядати матеріали.",
+  "course-teacher-speakingClub": "Курс веде носій словацької мови.",
+  "course-duration-speakingClub": "Заняття проводяться двічі на тиждень.",
+
+  "team": "Команда",
+  "nameFounder": "Ірина",
+  "founder": "Засновниця",
+  "aboutFounder": "Я вірю, що мова — це ключ до нових можливостей, тому ми пропонуємо курси, які допоможуть вам впевнено розмовляти словацькою, розуміти місцеві традиції та культуру, а також адаптуватися до життя у Словаччині.",
+  "educationFounder": "Університет Коменського",
+
+  "teacher1": "Поліна",
+  "teacher": "Викладач",
+  "aboutTeacher1": "Ментор, помічник та 'чарівна паличка', яка починає здійснювати мрії, тільки-но бачить старання, зворотній зв'язок і відданість студента.",
+  "eduTeacher1": "Пряшівський університет",
+  "bookleasson": "Записатися на урок",
+
+  "teacher2": "Петьо",
+  "nativeSpeaker": "Носій мови",
+  "aboutTeacher2": "Я відкритий і позитивний, навчу вас не тільки словацькому сленгу, а й порекомендую чудові місця для відпочинку на вихідних у Словаччині. Поділюся реаліями життя в Словаччині та допоможу зрозуміти словаків (усі скорочення, неоднозначні слова та мовні конструкції).",
+  "eduTeacher2": "Університет Коменського",
+
+  "teacher3": "Юлія",
+  "aboutTeacher3": "Уроки проходять у дружній атмосфері, і зі мною вам точно не доведеться хвилюватися за домашні завдання. На уроках не буває нудно, обіцяю тримати вас у тонусі! До кожного учня підходжу індивідуально.",
+  "eduTeacher3": "Університет Коменського",
+
+  "whyUs": "Чому SlovakLab?",
+  "whyAnsw1": "Вивчайте словацьку мову з досвідченими викладачами, які акцентують увагу на практичних, реальних розмовних навичках. Наші інтерактивні уроки адаптовані до вашого рівня та розкладу, що допоможе швидко та впевнено досягти своїх цілей. Приєднуйтесь до нас і починайте говорити словацькою вже сьогодні!",
+  "whyAnsw2": "Незалежно від того, чи готуєтесь ви до роботи, навчання або подорожей, наша структурована, але гнучка методика допоможе вам швидко та впевнено досягти своїх цілей. Приєднуйтесь до нас уже сьогодні та зробіть перший крок до вивчення словацької мови!",
+
+  "comment1": "Чудові викладачі! Вони все чітко пояснюють і роблять навчання цікавим. Дуже рекомендую ці курси.",
+  "person1": "Анастасія",
+  "comment2": "Я дуже задоволений курсами SlovakLab. Мій син комфортно почуває себе у Словаччині завдяки чудовим викладачам. Програма добре структурована та цікава — дуже рекомендую!",
+  "person2": "Георгій",
+  "comment3": "Я починав з нуля і завдяки спілкуванню з носієм мови дуже швидко вивчив мову. Уроки дуже цікаві, саме практичний підхід допоміг мені швидко заговорити словацькою",
+  "person3":"Максим",
+
+  "registration-title": "Подати заявку на курси SlovakLab",
+  "fullName": "Повне ім'я",
+  "emailAdress": "Електронна адреса",
+  "phoneNumber": "Номер телефону",
+  "selectlevel": "Виберіть курс, на який ви подаєте заявку",
+  "additional": "Додаткові примітки",
+  "sendButton": "Надіслати",
+  "message1": "Ваша заявка успішно надіслана. Дякуємо!",
+  "message2": "Ви отримаєте відповідь протягом 2 днів."
+
+
+  }, 
+
+  "sk": {
+    "li1": "O nás",
+    "li2": "Kurzy",
+    "li3": "Učitelia",
+    "li4": "Kontakty",
+    "li5": "Spätná väzba",
+    "wel-text": "Je to komunita skúsených učiteľov, ktorí ponúkajú kurzy slovenského jazyka pomocou inovatívnych metód. Pridajte sa k nám a objavujte jazyk ľahko a s radosťou!",
+
+    
+    "button-start": "Začať lekcie",
+    "purpose": "Učte sa slovenčinu s nami na rôzne účely",
+  "p1": "Pre prácu",
+  "p2": "Pre migráciu",
+  "p3": "Pre štúdium",
+  "p4": "Pre cestovanie",
+  "courses": "Kurzy",
+
+  "infolevel1": " žiadne predchádzajúce znalosti nie sú potrebné",
+  "infolevel2": " potrebné základné znalosti",
+  "infolevel3": " potrebné plynulé komunikačné schopnosti",
+  "infolevel4": " potrebné konverzačné schopnosti",
+
+  "duration": "Trvanie:",
+  "infoDurationBeginner": " 1 rok",
+  "infoDurationIntermediate": " 2 roky",
+  "infoDurationAdvanced": " 2 roky",
+  "infoDurationSpeakingClub": " neobmedzene",
+
+  "course-level-beginner": "Kurz je určený pre tých, ktorí nemajú skúsenosti so štúdiom slovenského jazyka.",
+  "course-content-beginner": "Študenti sa naučia základnú slovnú zásobu a frázy, základné gramatické štruktúry, každodenné výrazy pre bežné situácie, správnu výslovnosť a tvorbu jednoduchých viet.",
+  "course-methods-beginner": "Interaktívne lekcie, ktoré podporujú aktívnu účasť prostredníctvom konverzačnej praxe a hier. Na zlepšenie učenia sa využívajú multimediálne zdroje.",
+  "course-record-beginner": "Všetky hodiny sa nahrávajú, čo umožňuje študentom opätovne si prezerať materiály.",
+  "course-teacher-beginner": "Kurz vedie skúsený učiteľ z Ukrajiny.",
+  "course-duration-beginner": "Kurz trvá jeden rok, lekcie sa konajú dvakrát týždenne.",
+  "apply-button": "Prihlásiť sa na kurz",
+
+  "course-level-intermediate": "Pre tých, ktorí majú základné znalosti slovenského jazyka a chcú ich rozšíriť.",
+  "course-content-intermediate": "Študenti budú študovať pokročilejšiu gramatiku, rozšíria si slovnú zásobu, budú cvičiť konverzačné schopnosti a spoznávať slovenskú kultúru.",
+  "course-methods-intermediate": "Kurz zahŕňa praktické diskusie o každodenných situáciách, ktoré pomáhajú študentom efektívnejšie používať jazyk.",
+  "course-recordings-intermediate": "Všetky hodiny sa nahrávajú, čo umožňuje študentom opätovne si prezerať materiály.",
+  "course-teacher-intermediate": "Kurz vedie skúsený učiteľ z Ukrajiny, a od polovice kurzu sú zahrnuté lekcie s rodeným hovorcom.",
+  "course-duration-intermediate": "Lekcie sa konajú dvakrát týždenne počas jedného roka.",
+
+  "course-level-advanced": "Pre študentov, ktorí už dobre ovládajú slovenčinu a chcú si svoje znalosti zdokonaliť.",
+  "course-content-advanced": "Študenti budú študovať pokročilú gramatiku, idiómy, slang, slovenské skratky a rozšíria si slovnú zásobu. Kurz tiež zahŕňa diskusie o kultúre a aktuálnych udalostiach.",
+  "course-methods-advanced": "Lekcie zahŕňajú diskusie, prezentácie a analýzu textov.",
+  "course-recordings-advanced": "Všetky hodiny sa nahrávajú, čo umožňuje študentom opätovne si prezerať materiály.",
+  "course-teacher-advanced": "Kurz vedie skúsený učiteľ z Ukrajiny a rodený hovorca slovenského jazyka.",
+  "course-duration-advanced": "Lekcie sa konajú dvakrát týždenne počas jedného roka.",
+
+  "course-level-speakingClub": "Pre študentov, ktorí už dobre ovládajú slovenčinu a chcú si svoje schopnosti zlepšiť.",
+  "course-content-speakingClub": "Účastníci sa budú zapájať do rozhovorov na rôzne témy, cvičiť slovnú zásobu, hrať hry a diskutovať o populárnych filmoch a seriáloch. Tiež sa naučia jazyk používaný v každodennom živote.",
+  "course-methods-speakingClub": "Klub využíva interaktívne diskusie a reálne scenáre na rozvoj dôvery pri rozprávaní.",
+  "course-recordings-speakingClub": "Všetky hodiny sa nahrávajú, čo umožňuje študentom opätovne si prezerať materiály.",
+  "course-teacher-speakingClub": "Kurz vedie rodený hovorca slovenského jazyka.",
+  "course-duration-speakingClub": "Lekcie sa konajú dvakrát týždenne.",
+
+  "team": "Tím",
+  "nameFounder": "Iryna",
+  "founder": "Zakladateľka",
+  "aboutFounder": "Verím, že jazyk je kľúčom k novým príležitostiam, preto ponúkame kurzy, ktoré vám pomôžu sebavedomo hovoriť po slovensky, pochopiť miestne tradície a kultúru a prispôsobiť sa životu na Slovensku.",
+  "educationFounder": "Univerzita Komenského",
+
+  "teacher1": "Polina",
+  "teacher": "Učiteľ",
+  "aboutTeacher1": "Mentorka, pomocníčka a 'čarovná palička', ktorá začína plniť sny, akonáhle vidí snahu, spätnú väzbu a oddanosť študenta.",
+  "eduTeacher1": "Prešovská univerzita",
+  "bookleasson": "Rezervovať lekciu",
+
+  "teacher2": "Peťo",
+  "nativeSpeaker": "Rodný hovorca",
+  "aboutTeacher2": "Som otvorený a pozitívny človek, ktorý vás naučí nielen slovenský slang, ale aj odporučí skvelé miesta na víkend na Slovensku. Podelím sa o reálny život na Slovensku a pomôžem vám pochopiť Slovákov (všetky skratky, dvojzmyselné slová a jazykové konštrukcie).",
+  "eduTeacher2": "Univerzita Komenského",
+
+  "teacher3": "Julia",
+  "aboutTeacher3": "Hodiny prebiehajú v priateľskej atmosfére, a so mnou sa určite nemusíte báť domácich úloh. Na hodinách sa nikdy nebudete nudiť, sľubujem, že vás zapojím! Ku každému študentovi mám individuálny prístup.",
+  "eduTeacher3": "Univerzita Komenského",
+
+  "whyUs": "Prečo SlovakLab?",
+  "whyAnsw1": "Učte sa slovenčinu so skúsenými učiteľmi, ktorí sa zameriavajú na praktické, reálne komunikačné schopnosti. Naše interaktívne hodiny sú prispôsobené vašej úrovni a rozvrhu, čo vám pomôže rýchlo a sebavedomo dosiahnuť vaše ciele. Pridajte sa k nám a začnite hovoriť po slovensky už dnes!",
+  "whyAnsw2": "Či už sa pripravujete na prácu, štúdium alebo cestovanie, naša štruktúrovaná, no flexibilná metodika vám pomôže rýchlo a sebavedomo dosiahnuť vaše ciele. Pridajte sa k nám už dnes a urobte prvý krok k osvojeniu si slovenčiny!",
+
+  "comment1": "Úžasní učitelia! Všetko jasne vysvetlia a robia učenie zábavným. Veľmi odporúčam tieto kurzy.",
+  "person1": "Anastasia",
+  "comment2": "Som veľmi spokojný s kurzami SlovakLab. Môj syn sa cíti pohodlne na Slovensku vďaka skvelým učiteľom. Program je dobre štruktúrovaný a zaujímavý — veľmi odporúčam!",
+  "person2": "Georgy",
+  "comment3": "Začínal som od nuly a vďaka hodinám s rodeným hovorcom som veľmi rýchlo zvládol jazyk. Hodiny sú veľmi zaujímavé a praktický prístup mi pomohol rýchlo rozprávať po slovensky.",
+  "person3": "Maxim",
+
+  "registration-title": "Prihlásiť sa na kurzy SlovakLab",
+  "fullName": "Celé meno",
+  "emailAdress": "Emailová adresa",
+  "phoneNumber": "Telefónne číslo",
+  "selectlevel": "Vyberte kurz, na ktorý sa hlásite",
+  "additional": "Ďalšie poznámky",
+  "sendButton": "Odoslať",
+  "message1": "Vaša prihláška bola úspešne odoslaná. Ďakujeme!",
+  "message2": "Odpoveď dostanete do 2 dní."
+
+
+  }
+}

@@ -38,3 +38,42 @@ new Swiper(".card-wrapper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//LANGUAGES
+
+
+async function loadTranslations() {
+    const response = await fetch('translations.json');
+    return response.json();
+}
+
+function applyTranslations(translations, language) {
+    const elements = document.querySelectorAll('[id]');
+    elements.forEach(element => {
+        const key = element.id; 
+        if (translations[language][key]) {
+            element.textContent = translations[language][key];
+        }
+    });
+}
+
+// Основная логика
+document.addEventListener('DOMContentLoaded', async () => {
+    const translations = await loadTranslations(); // Загрузка переводов
+    const languageSwitcher = document.getElementById('languageSwitcher');
+
+    // Установка языка по умолчанию
+    let currentLanguage = 'en';
+    applyTranslations(translations, currentLanguage);
+
+    // Переключение языка
+    languageSwitcher.addEventListener('change', (event) => {
+        currentLanguage = event.target.value;
+        applyTranslations(translations, currentLanguage);
+    });
+});
+
+
+
+
+

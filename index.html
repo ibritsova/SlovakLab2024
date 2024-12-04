@@ -42,25 +42,32 @@
             <path
               d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
           </svg></a></li>
-      <li onclick=hideSidebar()><a href="index.html">About</a></li>
-      <li onclick=hideSidebar()><a href="index.html#target-section-courses">Courses</a></li>
-      <li onclick=hideSidebar()><a href="index.html#target-section-team">Teachers</a></li>
-      <li onclick=hideSidebar()><a href="index.html#target-section-apply">Contacts</a></li>
-      <li onclick=hideSidebar()><a href="index.html#target-section-feedback">Feedback</a></li>
+      <li onclick=hideSidebar()><a href="index.html" id="li1">About</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-courses" id="li2">Courses</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-team" id="li3">Teachers</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-apply" id="li4">Contacts</a></li>
+      <li onclick=hideSidebar()><a href="index.html#target-section-feedback" id="li5">Feedback</a></li>
+
     </ul>
     <ul class="normal">
       <li><a href="#" class="logo">
           <img src="Logo.png" alt="SlovakLab logo" />
         </a></li>
-      <li class="hideOnMobile"><a href="index.html">About</a></li>
-      <li class="hideOnMobile"><a href="index.html#target-section-courses">Courses</a></li>
-      <li class="hideOnMobile"><a href="index.html#target-section-team">Teachers</a></li>
-      <li class="hideOnMobile"><a href="index.html#target-section-apply">Contacts</a></li>
-      <li class="hideOnMobile"><a href="index.html#target-section-feedback">Feedback</a></li>
+      <li class="hideOnMobile"><a href="index.html" id="li1">About</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-courses" id="li2">Courses</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-team" id="li3">Teachers</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-apply" id="li4">Contacts</a></li>
+      <li class="hideOnMobile"><a href="index.html#target-section-feedback" id="li5">Feedback</a></li>
+      <li class="language"><select id="languageSwitcher">
+          <option value="en">EN</option>
+          <option value="ukr">UKR</option>
+          <option value="sk">SK</option>
+        </select></li>
       <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26"
             viewBox="0 96 960 960" width="26">
             <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
           </svg></a></li>
+
     </ul>
   </nav>
   <script>
@@ -100,13 +107,13 @@
       </div>
       <div class="row justify-content-center">
         <div class="text-container col-9">
-          <h5>
+          <h5 id="wel-text">
             It is a community of skilled teachers offering Slovak language
             courses with innovative methods.Join us to explore the language with
             ease and enjoyment!
           </h5>
           <a href="#target-section-courses">
-            <button class="button-start">Start lessons</button>
+            <button class="button-start" id="button-start">Start lessons</button>
           </a>
         </div>
       </div>
@@ -115,35 +122,35 @@
   <div class="purpose">
     <div class="container text-center ">
       <div class="row justify-content-center">
-        <h2>Learn Slovak with us for various goals</h2>
+        <h2 id="purpose">Learn Slovak with us for various goals</h2>
       </div>
       <div class="row justify-content-center">
         <!-- Элемент 1 -->
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
           <div class="purpose-item ">
             <img src="GoalItems/work.png" alt="For occupation" class="large-icon mb-3" />
-            <p>For occupation</p>
+            <p id="p1">For occupation</p>
           </div>
         </div>
         <!-- Элемент 2 -->
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
           <div class="purpose-item ">
             <img src="GoalItems/travel.png" alt="For migration" class="large-icon mb-3" />
-            <p>For migration</p>
+            <p id="p2">For migration</p>
           </div>
         </div>
         <!-- Элемент 3 -->
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
           <div class="purpose-item">
             <img src="GoalItems/school.png" alt="For studying" class="large-icon mb-3" />
-            <p>For studying</p>
+            <p id="p3">For studying</p>
           </div>
         </div>
         <!-- Элемент 4 -->
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
           <div class="purpose-item">
             <img src="GoalItems/flight.png" alt="For traveling" class="large-icon mb-3" />
-            <p>For traveling</p>
+            <p id="p4">For traveling</p>
           </div>
         </div>
       </div>
@@ -153,16 +160,16 @@
 
   </div>
   <div class="container swiper" id="target-section-courses">
-    <h2>Courses</h2>
+    <h2 id="courses">Courses</h2>
     <div class="card-wrapper justify-content-center">
       <ul class="card-list swiper-wrapper">
         <li class="card-item swiper-slide">
           <a href="#target-section-beginner" class="card-link">
             <img src="CourseImages/A12.webp" alt="Beginners" class="card-image" />
-            <p class="badge">Beginner</p>
+            <p class="badge" id="level1">Beginner</p>
             <ul class="course-details">
-              <li><strong>Level:</strong> no prior knowledge required</li>
-              <li><strong>Duration:</strong> 1 year</li>
+              <li><strong id="levelCourse">Level:</strong> <span id="infolevel1">no prior knowledge required</span></li>
+              <li><strong id="duration">Duration:</strong><span id="infoDurationBeginner">1 year</span></li>
             </ul>
 
             <button class="card-button material-symbols-rounded">
@@ -174,10 +181,10 @@
         <li class="card-item swiper-slide">
           <a href="#target-section-intermediate" class="card-link">
             <img src="CourseImages/B1.jpg" alt="Intermediate" class="card-image" />
-            <p class="badge">Intermediate</p>
+            <p class="badge" id="level2">Intermediate</p>
             <ul class="course-details">
-              <li><strong>Level:</strong> basic knowledge required</li>
-              <li><strong>Duration:</strong> 2 year</li>
+              <li><strong id="levelCourse">Level:</strong> <span id="infolevel2">basic knowledge required </span></li>
+              <li><strong id="duration">Duration:</strong><span id="infoDurationIntermediate">2 year</span> </li>
             </ul>
 
             <button class="card-button material-symbols-rounded">
@@ -188,12 +195,12 @@
         <li class="card-item swiper-slide">
           <a href="#target-section-advanced" class="card-link">
             <img src="CourseImages/C1.jpeg" alt="Advanced" class="card-image" />
-            <p class="badge">Advanced</p>
+            <p class="badge" id="level3">Advanced</p>
             <ul class="course-details">
               <li>
-                <strong>Level:</strong> fluent communication skills required
+                <strong id="levelCourse">Level:</strong> <span id="infolevel3">fluent communication skills required </span>
               </li>
-              <li><strong>Duration:</strong> 2 year</li>
+              <li><strong id="duration">Duration:</strong><span id="infoDurationAdvanced">2 year</span></li>
             </ul>
 
             <button class="card-button material-symbols-rounded">
@@ -204,10 +211,10 @@
         <li class="card-item swiper-slide">
           <a href="#target-section-speaking" class="card-link">
             <img src="CourseImages/Speaking2.jpg" alt="Speaking" class="card-image" />
-            <p class="badge">Speaking Club</p>
+            <p class="badge" id="level4">Speaking Club</p>
             <ul class="course-details">
-              <li><strong>Level:</strong> conversational skills needed</li>
-              <li><strong>Duration:</strong> unlimited</li>
+              <li><strong id="levelCourse">Level:</strong> <span id="infolevel4">conversational skills needed </span></li>
+              <li><strong id="duration">Duration:</strong> <span id="infoDurationSpeakingClub">unlimited</span></li>
             </ul>
 
             <button class="card-button material-symbols-rounded">
@@ -229,41 +236,46 @@
     <!-- Beginner Course -->
     <div class="row info-courses" id="target-section-beginner">
       <div class="col-lg-6 order-lg-1 justify-content-center align-items-center text-center nameCourse ">
-        <h1>Beginner</h1>
+        <h1 id="aboutBeginner">Beginner</h1>
       </div>
       <div class="col-lg-6 order-lg-2 about">
         <ul>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/level.png" class="small-icon" alt="">
-            Course is designed for individuals with little to no prior experience in the Slovak language
+            <span id="course-level-beginner"> Course is designed for individuals with little to no prior experience in
+              the Slovak language</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="">
-            Participants will learn basic Slovak vocabulary, essential grammatical structures, everyday phrases for
-            common
-            situations, proper pronunciation, and the construction of simple sentences.
+            <span id="course-content-beginner">Participants will learn basic Slovak vocabulary, essential grammatical
+              structures, everyday phrases for
+              common
+              situations, proper pronunciation, and the construction of simple sentences.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="">
-            Interactive lessons, encouraging active participation through conversational practice and role-playing.
-            Multimedia resources will be utilized to enhance learning.
+            <span id="course-methods-beginner">Interactive lessons, encouraging active participation through
+              conversational practice and role-playing.
+              Multimedia resources will be utilized to enhance learning.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="">
-            All sessions will be recorded, allowing students to review materials.
+            <span id="course-record-beginner">All sessions will be recorded, allowing students to review
+              materials.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="">
-            The course is led by an experienced Ukrainian teacher only.
+            <span id="course-teacher-beginner">The course is led by an experienced Ukrainian teacher only.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="">
-            The course runs for one year, with classes scheduled twice a week.
+            <span id="course-duration-beginner"> The course runs for one year, with classes scheduled twice a week.
+            </span>
           </li>
         </ul>
         <div class="apply-course">
           <a href="#target-section-apply">
-            <button class="button-start">Apply for this course</button>
+            <button class="button-start" id="apply-button">Apply for this course</button>
           </a>
         </div>
       </div>
@@ -272,41 +284,50 @@
     <!-- Intermediate Course -->
     <div class="row info-courses" id="target-section-intermediate">
       <div class="col-lg-6 order-lg-2 justify-content-center align-items-center text-center nameCourse">
-        <h1>Intermediate</h1>
+        <h1 id="aboutIntermediate">Intermediate</h1>
       </div>
       <div class="col-lg-6 order-lg-1 about">
         <ul>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/level.png" class="small-icon" alt="">
-            For learners who have a foundational understanding of the Slovak language and wish to expand their skills.
+            <span id="course-level-intermediate">For learners who have a foundational understanding of the Slovak
+              language and wish to expand their skills.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="">
-            Students will learn more advanced grammar, increase their vocabulary, practice speaking in everyday
-            situations, and learn about Slovak culture.
+            <span id="course-content-intermediate">Students will learn more advanced grammar, increase their vocabulary,
+              practice speaking in everyday
+              situations, and
+              learn about Slovak culture. </span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="">
-            The course includes discussions, group activities, and real-life scenarios to help students use the language
-            more effectively.
+            <span id="course-methods-intermediate">The course includes discussions, group activities, and real-life
+              scenarios to help students use the language
+              more
+              effectively.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="">
-            All sessions will be recorded, allowing students to review materials.
+            <span id="course-recordings-intermediate">All sessions will be recorded, allowing students to review
+              materials.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="">
-            The course is led by an experienced Ukrainian teacher, and from the middle of the course, course will begin
-            to include lessons with native speaker.
+            <span id="course-teacher-intermediate">The course is led by an experienced Ukrainian teacher, and from the
+              middle of the course, course will begin
+              to
+              include lessons with native speaker.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="">
-            Classes are held twice a week for one year.
+            <span id="course-duration-intermediate">Classes are held twice a week for one year.</span>
           </li>
         </ul>
+
         <div class="apply-course">
           <a href="#target-section-apply">
-            <button class="button-start">Apply for this course</button>
+            <button class="button-start" id="apply-button">Apply for this course</button>
           </a>
         </div>
       </div>
@@ -315,39 +336,46 @@
     <!-- Advanced Course -->
     <div class="row info-courses" id="target-section-advanced">
       <div class="col-lg-6 order-lg-1 justify-content-center align-items-center text-center nameCourse">
-        <h1>Advanced</h1>
+        <h1 id="aboutAdvanced">Advanced</h1>
       </div>
       <div class="col-lg-6 order-lg-2 about">
         <ul>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/level.png" class="small-icon" alt="">
-            For students who already speak Slovak well and want to improve further.
+            <span id="course-level-advanced">For students who already speak Slovak well and want to improve
+              further.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="">
-            Students will learn advanced grammar, idioms, and vocabulary. The course will also include discussions about
-            culture and current events.
+            <span id="course-content-advanced">Students will learn advanced grammar, idioms, and vocabulary. The course
+              will also include discussions about
+              culture
+              and current events.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="">
-            Classes will involve discussions, presentations, and analysis of texts.
+            <span id="course-methods-advanced">Classes will involve discussions, presentations, and analysis of texts.
+            </span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="">
-            All sessions will be recorded, allowing students to review materials.
+            <span id="course-recordings-advanced">All sessions will be recorded, allowing students to review
+              materials.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="">
-            The course is led by an experienced Ukrainian teacher and a native Slovak speaker.
+            <span id="course-teacher-advanced">The course is led by an experienced Ukrainian teacher and a native Slovak
+              speaker.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="">
-            Classes are held twice a week for one year.
+            <span id="course-duration-advanced">Classes are held twice a week for one year.</span>
           </li>
         </ul>
+
         <div class="apply-course">
           <a href="#target-section-apply">
-            <button class="button-start">Apply for this course</button>
+            <button class="button-start" id="apply-button">Apply for this course</button>
           </a>
         </div>
       </div>
@@ -355,39 +383,45 @@
     <!-- Speaking Club -->
     <div class="row info-courses" id="target-section-speaking">
       <div class="col-lg-6 order-lg-2 justify-content-center align-items-center text-center nameCourse">
-        <h1>Speaking Club</h1>
+        <h1 id="aboutSpeakingClub">Speaking Club</h1>
       </div>
       <div class="col-lg-6 order-lg-1 about">
         <ul>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/level.png" class="small-icon" alt="">
-            For students who already speak Slovak well and want to improve further.
+            <span id="course-level-speakingClub">For students who already speak Slovak well and want to improve
+              further.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="">
-            Participants will engage in conversations on various topics, practice vocabulary, play games, and discuss
-            popular movies and series. They will also learn everyday language used in daily conversations.
+            <span id="course-content-speakingClub"> Participants will engage in conversations on various topics,
+              practice vocabulary, play games, and discuss
+              popular
+              movies and series. They will also learn everyday language used in daily conversations.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="">
-            The club uses interactive discussions and real-life scenarios to promote speaking confidence.
+            <span id="course-methods-speakingClub">The club uses interactive discussions and real-life scenarios to
+              promote speaking confidence. </span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="">
-            All sessions will be recorded, allowing students to review materials.
+            <span id="course-recordings-speakingClub">All sessions will be recorded, allowing students to review
+              materials.</span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="">
-            The course is led by a native Slovak speaker.
+            <span id="course-teacher-speakingClub">The course is led by a native Slovak speaker. </span>
           </li>
           <li class="describe-course-item">
             <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="">
-            Classes are held twice a week.
+            <span id="course-duration-speakingClub">Classes are held twice a week. </span>
           </li>
         </ul>
+
         <div class="apply-course">
           <a href="#target-section-apply">
-            <button class="button-start">Apply for this course</button>
+            <button class="button-start" id="apply-button">Apply for this course</button>
           </a>
         </div>
       </div>
@@ -395,7 +429,7 @@
   </div>
 
   <div id="target-section-team" class="team">
-    <h2 class="text-center mb-4">Team</h2>
+    <h2 class="text-center mb-4" id="team">Team</h2>
   </div>
   <div class="main-info container">
     <!-- Founder -->
@@ -403,11 +437,11 @@
       <div class="col-12">
         <div class="teacher text-center">
           <img src="Teachers/founder3.jpg" alt="" class="teacher-img mb-3">
-          <h4>Iryna</h4>
-          <h3>Founder</h3>
+          <h4 id="nameFounder">Iryna</h4>
+          <h3 id="founder">Founder</h3>
           <ul class="list-unstyled">
             <li class="teacher-item mb-0 mt-0">
-              <p>
+              <p id="aboutFounder">
                 I believe that language is a key to new opportunities, which is why we offer courses that
                 help you speak Slovak with confidence, understand local traditions and culture, and adapt to life with
                 native speakers.
@@ -416,7 +450,7 @@
             <div class="row mt-0">
               <li class="teacher-item d-flex align-items-center justify-content-center mt-0">
                 <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
-                <span>Comenius University</span>
+                <span id="educationFounder">Comenius University</span>
               </li>
             </div>
           </ul>
@@ -430,22 +464,23 @@
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center">
         <div class="teacher text-center">
           <img src="Teachers/Polina.jpg" alt="" class="teacher-img mb-3">
-          <h4>Polina</h4>
-          <h3>Teacher</h3>
+          <h4 id="teacher1">Polina</h4>
+          <h3 id="teacher">Teacher</h3>
           <ul class="list-unstyled">
             <li class="teacher-item mb-3">
-              <p>A mentor, helper, and a "magic wand" that starts making dreams come true just by seeing the effort,
+              <p id="aboutTeacher1">A mentor, helper, and a "magic wand" that starts making dreams come true just by
+                seeing the effort,
                 feedback, and dedication of the student.</p>
             </li>
 
             <li class="teacher-item d-flex align-items-center justify-content-center mt-4">
               <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
-              <span>University of Presov</span>
+              <span id="eduTeacher1">University of Presov</span>
             </li>
 
           </ul>
           <a href="loadingPage.html#target-section-courses">
-            <button class="button-start">Book a lesson</button>
+            <button class="button-start" id="bookleasson">Book a lesson</button>
           </a>
         </div>
       </div>
@@ -454,11 +489,11 @@
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center">
         <div class="teacher text-center">
           <img src="Teachers/Peto.jpg" alt="" class="teacher-img mb-3">
-          <h4>Pe'to</h4>
-          <h3>Native Speaker</h3>
+          <h4 id="teacher2">Pe'to</h4>
+          <h3 id="nativeSpeaker">Native Speaker</h3>
           <ul class="list-unstyled">
             <li class="teacher-item mb-3">
-              <p>
+              <p id="aboutTeacher2">
                 I am an open and positive person who will not only teach you Slovak slang but also recommend great
                 places
                 to visit for a weekend in Slovakia. I’ll share insights about real life in Slovakia and help you
@@ -468,12 +503,12 @@
 
             <li class="teacher-item d-flex align-items-center justify-content-center mt-4">
               <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
-              <span>Comenius University</span>
+              <span id="eduTeacher2">Comenius University</span>
             </li>
 
           </ul>
           <a href="loadingPage.html#target-section-courses">
-            <button class="button-start">Book a lesson</button>
+            <button class="button-start" id="bookleasson">Book a lesson</button>
           </a>
         </div>
       </div>
@@ -482,11 +517,12 @@
       <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex justify-content-center">
         <div class="teacher text-center">
           <img src="Teachers/Julia.jpg" alt="" class="teacher-img mb-3">
-          <h4>Julia</h4>
-          <h3>Teacher</h3>
+          <h4 id="teacher3">Julia</h4>
+          <h3 id="teacher">Teacher</h3>
           <ul class="list-unstyled">
             <li class="teacher-item mb-3">
-              <p>The lesson takes place in a friendly atmosphere, and with me, you definitely won’t have to worry about
+              <p id="aboutTeacher3">The lesson takes place in a friendly atmosphere, and with me, you definitely won’t
+                have to worry about
                 homework. The lesson is never boring, I promise to keep you engaged! I take an individual approach to
                 each
                 student.</p>
@@ -495,12 +531,12 @@
 
             <li class="teacher-item d-flex align-items-center justify-content-center mt-4">
               <img src="DescribeTeachers/graduation.png" alt="" class="small-icon me-2">
-              <span>Comenius University</span>
+              <span id="eduTeacher3">Comenius University</span>
             </li>
 
           </ul>
           <a href="loadingPage.html#target-section-courses">
-            <button class="button-start">Book a lesson</button>
+            <button class="button-start" id="bookleasson">Book a lesson</button>
           </a>
         </div>
       </div>
@@ -514,14 +550,14 @@
         <!-- Why Choose Us Section -->
         <div class="col-lg-6 mb-4 justify-content-center">
           <div class="content w-100">
-            <h2>Why Choose Us?</h2>
-            <p>
+            <h2 id="whyUs">Why Choose Us?</h2>
+            <p id="whyAnsw1">
               Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our
               interactive lessons are tailored to your level and schedule, helping you achieve your goals quickly and
               confidently.
               Join us and start speaking Slovak today!
             </p>
-            <p>
+            <p id="whyAnsw2">
               Whether you’re preparing for work, study, or travel, our structured yet flexible approach helps you
               achieve
               your goals
@@ -536,40 +572,43 @@
             <!-- Feedback Box 1 -->
             <div class="box mb-4">
               <i class="fas fa-quote-left"></i>
-              <p>The teachers are fantastic! They explain everything clearly and make learning fun. Highly recommend
+              <p id="comment1">The teachers are fantastic! They explain everything clearly and make learning fun. Highly
+                recommend
                 these
                 courses.</p>
               <div class="person d-flex align-items-center">
                 <div class="person-img me-3">
                   <img src="FeedbackImg/Max.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
                 </div>
-                <div class="author">Anastasia</div>
+                <div class="author" id="person1">Anastasia</div>
               </div>
             </div>
             <!-- Feedback Box 2 -->
             <div class="box mb-4">
               <i class="fas fa-quote-left"></i>
-              <p>I’m very pleased with the SlovakLab language courses. My son has made great progress thanks to the
+              <p id="comment2">I’m very pleased with the SlovakLab language courses. My son has made great progress
+                thanks to the
                 skilled
                 and supportive teachers. The program is well-structured and engaging—I highly recommend it!</p>
               <div class="person d-flex align-items-center">
                 <div class="person-img me-3">
                   <img src="FeedbackImg/Georgy.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
                 </div>
-                <div class="author">Georgy</div>
+                <div class="author" id="person2">Georgy</div>
               </div>
             </div>
             <!-- Feedback Box 3 -->
             <div class="box">
               <i class="fas fa-quote-left"></i>
-              <p>These courses are perfect for beginners! The lessons are well-structured, and the practical approach
+              <p id="comment3">These courses are perfect for beginners! The lessons are well-structured, and the
+                practical approach
                 helped
                 me use Slovak in everyday situations quickly.</p>
               <div class="person d-flex align-items-center">
                 <div class="person-img me-3">
                   <img src="FeedbackImg/Anastasia.jpg" alt="" class="rounded-circle" style="width: 50px; height: 50px;">
                 </div>
-                <div class="author">Max</div>
+                <div class="author" id="person3">Max</div>
               </div>
             </div>
           </div>
@@ -584,20 +623,20 @@
     <form name="registrationForm" id="registrationForm" action="" method="post">
       <p class="success send-success"></p>
 
-      <label class="required" for="name">Full Name</label>
+      <label class="required" for="name" id="fullName">Full Name</label>
       <input type="text" id="name" name="name" placeholder="John Doe">
       <div class="error" id="usernameError"></div>
 
 
-      <label for="email" class="required">Email Address</label>
+      <label for="email" class="required" id="emailAdress">Email Address</label>
       <input type="email" id="email" name="email" placeholder="smth@example.com">
       <div class="error" id="emailError"></div>
 
-      <label class="required" for="phone">Phone Number</label>
+      <label class="required" for="phone" id="phoneNumber">Phone Number</label>
       <input type="tel" id="phone" name="phone" placeholder="+38 (0XX) XXX XX XX">
       <div class="error" id="phoneError"></div>
 
-      <label for="level" class="required">Select the course you're applying for</label>
+      <label for="level" class="required" > <span id="selectlevel">Select the course you're applying for </span></label>
       <select id="level" name="level" required>
         <option value="beginner">Beginner</option>
         <option value="intermediate">Intermediate</option>
@@ -606,19 +645,19 @@
       </select>
 
 
-      <label for="notes">Additional Notes</label>
+      <label for="notes" id="additional">Additional Notes</label>
       <textarea id="notes" name="notes" rows="4" placeholder="Any additional information..."></textarea>
 
 
 
 
       <div class="row justify-content-center">
-        <button type="submit" onclick="validateForm()">Send</button>
+        <button type="submit" onclick="validateForm()" id="sendButton">Send</button>
       </div>
     </form>
-    <div class="success-message" id="successMessage">
+    <div class="success-message" id="successMessage" id="message1">
       Your application has been successfully completed. Thank you!
-      <div class="success-under">You will receive a response within 2 days.</div>
+      <div class="success-under" id="message2">You will receive a response within 2 days.</div>
     </div>
 
 

@@ -88,7 +88,7 @@
             right: 0;
             height: 100vh;
             width: max-content;
-            background-color: rgba(255, 255, 255, 0);
+            background-color: rgba(186, 0, 0, 0);
             backdrop-filter: blur(50px);
             box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
             list-style: none;
