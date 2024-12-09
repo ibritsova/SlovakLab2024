@@ -135,6 +135,48 @@
         object-fit: cover; /* Делает так, чтобы видео масштабировалось, не теряя пропорций */
     }
         }
+        .language {
+  display: inline-block;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+#languageSwitcher {
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  
+}
+@media (max-width: 600px) {
+    #languageSwitcher {
+       padding: 0px;
+        font-size: 15px;
+        margin: 15px;
+    }
+}
+
+#languageSwitcher:hover {
+  background-color: #e6e6e6;
+  border-color: #aaa;
+}
+
+#languageSwitcher:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#languageSwitcher option {
+  padding: 5px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
     
 
     .card-wrapper {

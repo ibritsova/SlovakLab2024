@@ -40,8 +40,6 @@ new Swiper(".card-wrapper", {
 });
 
 //LANGUAGES
-
-
 async function loadTranslations() {
     const response = await fetch('translations.json');
     return response.json();
@@ -63,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const languageSwitcher = document.getElementById('languageSwitcher');
 
     // Установка языка по умолчанию
-    let currentLanguage = 'en';
+    let currentLanguage = 'ukr';
     applyTranslations(translations, currentLanguage);
 
     // Переключение языка
