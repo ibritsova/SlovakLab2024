@@ -118,10 +118,10 @@
             .menu-button {
                 display: block;
             }
-           .logoWelcom {
-        width: 100vw; /* Ширина видимой области */
-        height: 100vh; /* Высота видимой области */
-        object-fit: cover; /* Делает так, чтобы видео масштабировалось, не теряя пропорций */
+           .logo2 {
+        width: 496px !important;
+        height: 260px !important; 
+        object-fit: cover; 
     }
         }
 
@@ -129,22 +129,16 @@
             .sidebar {
                 width: 100%;
             }
-            .logoWelcom {
-        width: 100vw; /* Ширина видимой области */
-        height: 100vh; /* Высота видимой области */
-        object-fit: cover; /* Делает так, чтобы видео масштабировалось, не теряя пропорций */
+            .logo2 {
+        width: 347px !important;
+        height: 237px !important;
+        object-fit: contain; 
+        margin: 0 auto; 
+        
     }
     
         }
-        .logo2 {
-    width: 700px !important;
-    height: 382px !important;
-    object-fit: cover; 
-    max-width: 100%; /* Чтобы избежать выхода за границы */
-    max-height: 100%;
-    margin-top: -58px !important;
-    
-  }
+        
         .language {
   display: inline-block;
   position: relative;
