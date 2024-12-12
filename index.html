@@ -94,16 +94,25 @@
       }
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const gif = document.getElementById("animated-logo");
+      const src = gif.src; // Сохраняем исходный URL
+
+      // Принудительно перезагружаем GIF, чтобы он начинал воспроизводиться с начала
+      gif.src = ""; // Очищаем источник
+      gif.src = src; // Устанавливаем обратно
+    });
+  </script>
 
 
 
   <div class="welcome">
     <div class="container">
       <div class="row justify-content-center">
-        <video autoplay muted playsinline>
-          <source src="logo.mp4" type="video/mp4">
-          video of logo
-        </video>
+
+        <img id="animated-logo" src="logo.gif" alt="Animated logo" class="logo2" />
+
       </div>
       <div class="row justify-content-center">
         <div class="text-container col-9">
@@ -649,10 +658,6 @@
 
       <label for="notes" id="additional">Additional Notes</label>
       <textarea id="notes" name="notes" rows="4" placeholder="Any additional information..."></textarea>
-
-
-
-
       <div class="row justify-content-center">
         <button type="submit" onclick="validateForm()" id="sendButton">Send</button>
       </div>
@@ -661,8 +666,92 @@
       Your application has been successfully completed. Thank you!
       <div class="success-under" id="message2">You will receive a response within 2 days.</div>
     </div>
+  </div>
 
+  <div class="row-md-2 justify-content-center px-5 py-5" id="FQA">
+    <h4 class="text-center pb-4" id="FreqAskedquestions">Frequently Asked Questions</h4>
+    <div class="accordion mx-auto" id="faqAccordion" style="width: 95%; font-size: small;">
 
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <span id="question1">Do you offer individual lessons?</span>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer1">No, we only provide classes in small groups of up to 6 people.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <span id="question2">What age groups do you teach?</span>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer2">We have courses for both adults and children. Classes are divided into age-appropriate
+              groups to ensure a comfortable
+              learning environment.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTree">
+            <span id="question3">What is the schedule for the classes?</span>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer3">The schedule is coordinated together with the entire group and the teacher to ensure it
+              works for everyone as much as
+              possible.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <span id="question4">How long does the lesson last?</span>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer4">The lesson takes 90 minutes.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <span id="question5">What is the way the student should pay for classes?</span>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer5">Community works via payment in advance: for 4 lessons, or for a full month according to
+              the schedule.</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <!--Linking Swiper JS script-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -118,7 +118,7 @@
             .menu-button {
                 display: block;
             }
-           video {
+           .logoWelcom {
         width: 100vw; /* Ширина видимой области */
         height: 100vh; /* Высота видимой области */
         object-fit: cover; /* Делает так, чтобы видео масштабировалось, не теряя пропорций */
@@ -129,12 +129,22 @@
             .sidebar {
                 width: 100%;
             }
-            video {
+            .logoWelcom {
         width: 100vw; /* Ширина видимой области */
         height: 100vh; /* Высота видимой области */
         object-fit: cover; /* Делает так, чтобы видео масштабировалось, не теряя пропорций */
     }
+    
         }
+        .logo2 {
+    width: 700px !important;
+    height: 382px !important;
+    object-fit: cover; 
+    max-width: 100%; /* Чтобы избежать выхода за границы */
+    max-height: 100%;
+    margin-top: -58px !important;
+    
+  }
         .language {
   display: inline-block;
   position: relative;

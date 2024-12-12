@@ -103,7 +103,19 @@
 "additional": "Additional Notes",
 "sendButton":"Send",
 "message1":"Your application has been successfully completed. Thank you!",
-"message2":"You will receive a response within 2 days."
+"message2":"You will receive a response within 2 days.",
+
+"FreqAskedquestions": "Frequently Asked Questions",
+"question1":"Do you offer individual lessons?",
+"answer1":"No, we only provide classes in small groups of up to 6 people.",
+"question2": "What age groups do you teach?",
+"answer2": "We have courses for both adults and children. Classes are divided into age-appropriate groups to ensure a comfortable learning environment.",
+"question3": "What is the schedule for the classes?",
+"answer3": "The schedule is coordinated together with the entire group and the teacher to ensure it works for everyone as much as possible.",
+"question4": "How long does the lesson last?",
+"answer4": "The lesson takes 90 minutes.",
+"question5" : "What is the way the student should pay for classes?",
+"answer5": "Community works via payment in advance: for 4 lessons, or for a full month according to the schedule."
 
 
   },
@@ -207,7 +219,23 @@
   "additional": "Додаткові примітки",
   "sendButton": "Надіслати",
   "message1": "Ваша заявка успішно надіслана. Дякуємо!",
-  "message2": "Ви отримаєте відповідь протягом 2 днів."
+  "message2": "Ви отримаєте відповідь протягом 2 днів.",
+
+
+  
+  "FreqAskedquestions": "Часті запитання",
+  "question1": "Чи маєте індивідуальні уроки?",
+  "answer1": "Ні, ми проводимо заняття лише в невеликих групах до 6 осіб.",
+  "question2": "Які вікові групи ви навчаєте?",
+  "answer2": "Ми пропонуємо курси як для дорослих, так і для дітей-підлітків( 13+ років). Заняття проводяться у вікових групах, щоб забезпечити комфортне навчальне середовище.",
+  "question3": "Який розклад занять?",
+  "answer3": "Розклад узгоджується разом з усією групою та викладачем, щоб максимально підходив усім учасникам.",
+  "question4": "Скільки триває урок?",
+  "answer4": "Урок триває 90 хвилин.",
+  "question5": "Який спосіб оплати за заняття?",
+  "answer5": "Оплата здійснюється наперед: за 4 уроки або за повний місяць відповідно до розкладу."
+
+
 
 
   }, 
@@ -309,7 +337,22 @@
   "additional": "Ďalšie poznámky",
   "sendButton": "Odoslať",
   "message1": "Vaša prihláška bola úspešne odoslaná. Ďakujeme!",
-  "message2": "Odpoveď dostanete do 2 dní."
+  "message2": "Odpoveď dostanete do 2 dní.",
+
+
+  "FreqAskedquestions": "Často kladené otázky",
+  "question1": "Ponúkate individuálne lekcie?",
+  "answer1": "Nie, ponúkame lekcie iba v malých skupinách do 6 osôb.",
+  "question2": "Aké vekové skupiny učíte?",
+  "answer2": "Máme kurzy pre dospelých aj deti. Lekcie sú rozdelené do vekovo vhodných skupín, aby sa zabezpečilo pohodlné prostredie na učenie.",
+  "question3": "Aký je rozvrh hodín?",
+  "answer3": "Rozvrh sa koordinuje spoločne so všetkými členmi skupiny a učiteľom, aby vyhovoval všetkým čo najviac.",
+  "question4": "Ako dlho trvá lekcia?",
+  "answer4": "Lekcia trvá 90 minút.",
+  "question5": "Akým spôsobom by mal študent zaplatiť za lekcie?",
+  "answer5": "Platba sa uskutočňuje vopred: za 4 lekcie alebo za celý mesiac podľa rozvrhu."
+
+
 
 
   }
