@@ -109,6 +109,11 @@
         .menu-button {
             display: none;
         }
+        .logo2 {
+        width: 622px !important;
+    height: 334px !important;
+        object-fit: cover; 
+    }
 
         @media(max-width: 800px) {
             .hideOnMobile {
@@ -119,8 +124,8 @@
                 display: block;
             }
            .logo2 {
-        width: 496px !important;
-        height: 260px !important; 
+        width: 389px !important;
+        height: 203px !important;
         object-fit: cover; 
     }
         }
