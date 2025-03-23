@@ -408,6 +408,8 @@
             display: flex;
     justify-self: center;
     justify-content: center;
+    margin-bottom: 69px;
+    margin-top: 17px;
 
            
         }
@@ -506,6 +508,10 @@
  .feedback-container .box .author {
   font-size: 1rem;
   color: black;
+}
+
+.questions{
+  margin-bottom: 73px;
 }
 
 
