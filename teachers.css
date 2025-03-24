@@ -48,7 +48,7 @@
             /* Use flexbox to center content inside .teacher */
             flex-direction: column;
             /* Stack the content vertically */
-            align-items: center;
+            align-items: center !important;
             /* Center content horizontally */
             justify-content: center;
             /* Center content vertically */
@@ -57,7 +57,7 @@
             width: 100%;
             /* Make sure each teacher item takes up full available space */
             padding: 0;
-            margin-bottom: 30px;
+           
         }
 
 

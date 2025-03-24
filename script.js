@@ -1,6 +1,6 @@
 new Swiper(".card-wrapper", {
   loop: true,
-  slidesPerView: 3, // Базова кількість слайдів
+  slidesPerView: 1, // Базова кількість слайдів
   spaceBetween: 20,
   centeredSlides: true,
   
@@ -10,7 +10,7 @@ new Swiper(".card-wrapper", {
     // Мобільні екрани
     0: {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 15,
     },
     // Планшети
     768: {

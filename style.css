@@ -9,12 +9,26 @@
 }
 .card-wrapper {
   max-width: 1100px;
-  margin: 0 60px 35px;
+  margin: 0 60px 35px 60px;
   padding: 20px 10px;
   overflow: hidden;
+  align-self: center;
+  justify-self: center;
+  justify-items: center;
+
 }
+.card-wrapper .card-list{
+  align-self: center;
+  justify-self: center;
+  justify-items: center;
+}
+
 .card-list .card-item {
   list-style: none;
+  min-width: 335px;
+  
+  max-width: 335px;
+  
 }
 .card-list .card-item .card-link {
   user-select: none;
