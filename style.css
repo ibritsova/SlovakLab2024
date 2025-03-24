@@ -17,11 +17,7 @@
   justify-items: center;
 
 }
-.card-wrapper .card-list{
-  align-self: center;
-  justify-self: center;
-  justify-items: center;
-}
+
 
 .card-list .card-item {
   list-style: none;
