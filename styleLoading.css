@@ -214,6 +214,7 @@
 
       margin-top: 80px;
     }
+    
 
     .container h2 {
       text-align: center;
@@ -346,6 +347,15 @@
 
 
     }
+    .teacher p {
+  display: -webkit-box;
+  -webkit-line-clamp: 7; 
+  min-height: 200px; 
+  max-height: 200px; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 
     .nameCourse {
       margin-top: 50px;
@@ -512,6 +522,10 @@
 
 .questions{
   margin-bottom: 73px;
+}
+.container.swiper {
+  width: 100%;
+  padding: 0 20px; /* Добавим немного отступов с боков */
 }
 
 

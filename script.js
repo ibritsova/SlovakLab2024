@@ -1,8 +1,9 @@
 new Swiper(".card-wrapper", {
   loop: true,
-  slidesPerView: 2, // Базова кількість слайдів
+  slidesPerView: 3, // Базова кількість слайдів
   spaceBetween: 20,
   centeredSlides: true,
+  
 
   // Адаптивні налаштування
   breakpoints: {
@@ -19,7 +20,7 @@ new Swiper(".card-wrapper", {
     },
     // Десктопи
     1024: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 20,
       centeredSlides: false,
     },
