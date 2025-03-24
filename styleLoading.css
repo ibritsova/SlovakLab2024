@@ -348,14 +348,15 @@
 
     }
     .teacher p {
-  display: -webkit-box;
   
-  min-height: 270px; 
-  max-height: 270px; 
- 
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  min-height: 270px;
+  max-height: 270px;
+  min-width: auto;
+  margin-left: 25px;
+  margin-right: 25px;
+  
 }
+
 
 
     .nameCourse {

@@ -9,8 +9,9 @@ new Swiper(".card-wrapper", {
   breakpoints: {
     // Мобільні екрани
     0: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+      slidesPerView: 'auto',  // Автоматическое отображение слайдов по ширине контейнера
+      spaceBetween: 0, // Убираем отступы между слайдами
+      centeredSlides: true, 
     },
     // Планшети
     768: {

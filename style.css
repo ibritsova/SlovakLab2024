@@ -98,6 +98,11 @@
 @media screen and (max-width: 768px) {
   .card-wrapper {
     margin: 0 10px 25px;
+    padding: 0;
+  }
+  .card-list .card-item {
+    max-width: 100%; /* Убедитесь, что карточки занимают всю ширину */
+    width: 100%; /* Принудительно устанавливаем ширину 100% */
   }
   .card-wrapper .swiper-slides-button {
     display: none;
