@@ -59,10 +59,28 @@
               d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
           </svg></a></li>
       <li onclick=hideSidebar()><a href="index.html" id="li1">About</a></li>
-      <li onclick=hideSidebar()><a href="index.html#target-section-courses" id="li2">Courses</a></li>
+      <li onclick=hideSidebar()><a href="javascript:void(0);" id="li2" onclick="scrollToSection()">Courses</a></li>
       <li onclick=hideSidebar()><a href="index.html#target-section-team" id="li3">Teachers</a></li>
       <li onclick=hideSidebar()><a href="index.html#target-section-apply" id="li4">Contacts</a></li>
       <li onclick=hideSidebar()><a href="index.html#target-section-feedback" id="li5">Feedback</a></li>
+      <script>
+        function scrollToSection(event) {
+          // Отменяем стандартное поведение ссылки
+          event.preventDefault();
+
+          // Находим элемент с id "target-section-courses"
+          var section = document.querySelector("#target-section-courses");
+
+          if (section) {
+            // Плавная прокрутка к секции
+            section.scrollIntoView({ behavior: 'smooth' });
+
+            // Изменяем URL в адресной строке, но не перезагружаем страницу
+            window.history.replaceState(null, null, "index.html");
+            console.log("URL изменен на: " + window.location.href);
+          }
+        }
+      </script>
 
     </ul>
     <ul class="normal">
@@ -475,6 +493,10 @@
                 I believe that language is a key to new opportunities, which is why we offer courses that
                 help you speak Slovak with confidence, understand local traditions and culture, and adapt to life with
                 native speakers.
+
+                Our courses are tailored to the requirements of higher education in Slovakia and include thematic
+                lessons related to
+                student life.
               </p>
             </li>
             <div class="row mt-0">
@@ -491,8 +513,8 @@
 
 
   <div class="container swiper" id="target-section-teachers">
-    <div class="card-wrapper justify-content-center">
-      <ul class="card-list swiper-wrapper">
+    <div class="card-wrapper justify-content-center align-items-center">
+      <ul class="card-list swiper-wrapper ">
 
         <li class="card-item swiper-slide">
           <div class="teacher text-center">
