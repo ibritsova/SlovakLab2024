@@ -107,15 +107,19 @@
   <script>
     function showSidebar() {
       const sidebar = document.querySelector('.sidebar')
+      const languages = document.querySelector('.language')
       const logoImg = document.querySelector('.logo')
       sidebar.style.display = 'flex'
+      languages.style.display = 'none'
       logoImg.style.display = 'none';
     }
     function hideSidebar() {
       const sidebar = document.querySelector('.sidebar')
       const logoImg = document.querySelector('.logo')
+      const languages = document.querySelector('.language')
       sidebar.style.display = 'none'
-      logoImg.style.display = 'flex';
+      logoImg.style.display = 'flex'
+      languages.style.display = 'flex';
     }
   </script>
   <script>
