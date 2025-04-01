@@ -9,7 +9,7 @@
         }
 
      nav {
-            background-color: rgb(255, 255, 255);
+            background-color: rgb(250, 250, 250);
             height: 60px;
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -44,7 +44,7 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            color: rgb(0, 0, 0);
+            color: rgb(16, 16, 16);
         }
 
         nav ul.normal li:not(:first-child ) a::after {
@@ -82,14 +82,14 @@
         }
 
 
-        .sidebar {
+         nav .sidebar {
             position: fixed;
             top: 0;
             right: 0;
             height: 100vh;
             width: max-content;
-            background-color: rgba(186, 0, 0, 0);
-            backdrop-filter: blur(50px);
+            /*background-color: rgba(255, 255, 255, 0) !important;*/
+            backdrop-filter: blur(50px) !important;
             box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
             list-style: none;
             display: none;
