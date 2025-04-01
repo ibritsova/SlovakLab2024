@@ -109,7 +109,8 @@
       const sidebar = document.querySelector('.sidebar')
       const languages = document.querySelector('.language')
       const logoImg = document.querySelector('.logo')
-      sidebar.style.display = 'flex'
+      sidebar.style.opacity = '1'
+      sidebar.style.visibility = 'visible'
       languages.style.display = 'none'
       logoImg.style.display = 'none';
     }
@@ -117,7 +118,9 @@
       const sidebar = document.querySelector('.sidebar')
       const logoImg = document.querySelector('.logo')
       const languages = document.querySelector('.language')
-      sidebar.style.display = 'none'
+      /*sidebar.style.display = 'none'*/
+      sidebar.style.opacity = '0'
+      sidebar.style.visibility = 'hidden'
       logoImg.style.display = 'flex'
       languages.style.display = 'flex';
     }
