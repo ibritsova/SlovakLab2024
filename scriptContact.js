@@ -52,7 +52,7 @@
         const successMessage = document.getElementById("successMessage");
         successMessage.style.display = "block";
 
-        history.pushState(null, '', window.location.pathname + '#thank-you');
+        history.pushState(null, '', '#thank-you');
 
       }
     }
