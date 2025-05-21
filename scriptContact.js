@@ -51,6 +51,8 @@
 
         const successMessage = document.getElementById("successMessage");
         successMessage.style.display = "block";
+
+        history.pushState(null, '', '/thank-you');
       }
     }
 
