@@ -113,3 +113,61 @@
   font-weight: 600 !important;
 }
 
+.bot-test-section {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: #f9f9ff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.bot-test-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.bot-test-section p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.bot-test-section .checklist {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.bot-test-section .checklist p::before {
+  content: "✅";
+  margin-right: 8px;
+  color: green;
+}
+
+.bot-test-section .note {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.bot-test-button {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border-color: white;
+}
+
+.bot-test-button:hover {
+  background-color: #fcfcfc;
+  color:black;
+  border-color: #000000;
+}
+
