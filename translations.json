@@ -15,6 +15,21 @@
     "p3": "For studying",
     "p4": "For traveling",
     "courses":"Courses",
+    "pricing-title": "Lesson Prices",
+    "pricing-individual-title": "Individual Lessons",
+    "pricing-individual-price": "15€ / lesson",
+    "pricing-individual-teacher": "Ukrainian or Slovak teacher",
+    "pricing-individual-recording": "Lesson recordings available",
+
+    "pricing-group-title": "Group Lessons",
+    "pricing-group-price": "50€ / 8 lessons",
+    "pricing-group-teacher": "Ukrainian and Slovak teachers",
+    "pricing-group-recording": "Lesson recordings available",
+
+    "pricing-pair-title": "Pair Lessons",
+    "pricing-pair-price": "75€ / 8 lessons",
+    "pricing-pair-teacher": "Ukrainian teacher only",
+    "pricing-pair-recording": "Lesson recordings available",
     
 
     "levelCourse": "Level:",
@@ -146,6 +161,22 @@
   "p4": "Для подорожей",
   "courses": "Курси",
 
+  "pricing-title": "Ціни на заняття",
+
+    "pricing-individual-title": "Індивідуальні заняття",
+    "pricing-individual-price": "15€ / урок",
+    "pricing-individual-teacher": "Український або словацький викладач",
+    "pricing-individual-recording": "Присутній запис уроків",
+
+    "pricing-group-title": "Групові заняття",
+    "pricing-group-price": "50€ / 8 занять",
+    "pricing-group-teacher": "Український викладач та словацький",
+    "pricing-group-recording": "Присутній запис уроків",
+
+    "pricing-pair-title": "Парні заняття",
+    "pricing-pair-price": "75€ / 8 занять",
+    "pricing-pair-teacher": "Лише український викладач",
+
 
   "infolevel1": " знання не потрібні",
   "infolevel2": " потрібні базові знання",
@@ -165,7 +196,7 @@
   "course-record-beginner": "Усі заняття записуються, що дозволяє студентам переглядати матеріали.",
   "course-teacher-beginner": "Курс веде досвідчений викладач з України.",
   "course-duration-beginner": "Курс триває один рік, заняття проводяться двічі на тиждень.",
-  "apply-button": "Подати заявку на курс",
+  "apply-button": "Записатись",
 
   "course-level-intermediate": "Для тих, хто має базові знання словацької мови та бажає їх розширити.",
   "course-content-intermediate": "Студенти вивчатимуть складнішу граматику, розширять словниковий запас, практикуватимуть розмовні навички та ознайомляться з культурою Словаччини.",
@@ -272,6 +303,22 @@
   "p2": "Pre migráciu",
   "p3": "Pre štúdium",
   "p4": "Pre cestovanie",
+  "pricing-title": "Ceny lekcií",
+
+    "pricing-individual-title": "Individuálne lekcie",
+    "pricing-individual-price": "15€ / lekcia",
+    "pricing-individual-teacher": "Ukrajinský alebo slovenský učiteľ",
+    "pricing-individual-recording": "K dispozícii je záznam lekcií",
+
+    "pricing-group-title": "Skupinové lekcie",
+    "pricing-group-price": "50€ / 8 lekcií",
+    "pricing-group-teacher": "Ukrajinský a slovenský učiteľ",
+    "pricing-group-recording": "K dispozícii je záznam lekcií",
+
+    "pricing-pair-title": "Párové lekcie",
+    "pricing-pair-price": "75€ / 8 lekcií",
+    "pricing-pair-teacher": "Len ukrajinský učiteľ",
+    "pricing-pair-recording": "K dispozícii je záznam lekcií",
   "courses": "Kurzy",
 
   "infolevel1": " žiadne predchádzajúce znalosti nie sú potrebné",
