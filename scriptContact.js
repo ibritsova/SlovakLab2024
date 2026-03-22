@@ -51,7 +51,7 @@
 
         const successMessage = document.getElementById("successMessage");
         successMessage.style.display = "block";
-
+        fbq('track', 'Lead');
         history.pushState(null, '', '#thank-you');
 
       }
