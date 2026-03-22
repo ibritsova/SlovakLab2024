@@ -43,7 +43,7 @@
         message: document.getElementById("notes").value,
         level: document.getElementById("level").value
       }
-       emailjs.send("service_l1xnl8i", "template_w7m91ya", params)
+       emailjs.send("service_jgex8hj", "template_w7m91ya", params)
 
         document.getElementById("registrationForm").classList.add("form-hidden");
         document.getElementById("registration-title").classList.add("form-hidden");
