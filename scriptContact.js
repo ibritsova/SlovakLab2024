@@ -1,61 +1,66 @@
- function validateForm(event) {
-      event.preventDefault();
+function validateForm(event) {
+  event.preventDefault();
 
-      let valid = true;
+  // Clear previous errors
+  document.getElementById("usernameError").textContent = "";
+  document.getElementById("emailError").textContent  = "";
+  document.getElementById("phoneError").textContent  = "";
 
-      document.getElementById("usernameError").textContent = "";
-      document.getElementById("emailError").textContent = "";
-      document.getElementById("phoneError").textContent = "";
+  let valid = true;
 
+  const username = document.getElementById("name").value.trim();
+  if (!username) {
+    document.getElementById("usernameError").textContent = "Введіть ваше ім'я.";
+    valid = false;
+  }
 
-      const username = document.getElementById("name").value;
-      if (username.trim() === "") {
-        document.getElementById("usernameError").textContent = "Username is required.";
-        valid = false;
-      }
+  const email = document.getElementById("email").value.trim();
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (!emailPattern.test(email)) {
+    document.getElementById("emailError").textContent = "Введіть коректну email-адресу.";
+    valid = false;
+  }
 
-      const phone = document.getElementById("phone").value;
-      const phonePattern = /^(\+?\d{1,4})?\d{9}$/;
-      if (!phonePattern.test(phone)) {
-        document.getElementById("phoneError").textContent = "Please enter a valid phone number in the format: +380XXXXXXXXX";
-        valid = false;
-      }
+  // Allow spaces, dashes, parentheses — strip them before checking digits
+  const phone = document.getElementById("phone").value.trim();
+  const phoneDigits = phone.replace(/[\s\-().+]/g, "");
+  if (!/^\d{7,15}$/.test(phoneDigits)) {
+    document.getElementById("phoneError").textContent = "Введіть коректний номер телефону.";
+    valid = false;
+  }
 
-      const email = document.getElementById("email").value;
-      const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-      if (!emailPattern.test(email)) {
-        document.getElementById("emailError").textContent = "Please enter a valid email.";
-        valid = false;
-      }
+  if (!valid) return;
 
+  const sendButton = document.getElementById("sendButton");
+  sendButton.disabled = true;
+  sendButton.textContent = "Надсилаємо…";
 
+  const params = {
+    name:    username,
+    email:   email,
+    phone:   phone,
+    message: document.getElementById("notes").value,
+    level:   document.getElementById("level").value
+  };
 
-      if (valid) {
-        const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value
-      const phone = document.getElementById("phone").value
+  emailjs.send("service_jgex8hj", "template_w7m91ya", params)
+    .then(function () {
+      // Success
+      document.getElementById("registrationForm").classList.add("form-hidden");
+      document.getElementById("registration-title").classList.add("form-hidden");
+      document.getElementById("successMessage").style.display = "block";
+      history.pushState(null, "", "#thank-you");
+    })
+    .catch(function (err) {
+      // Visible error so the user knows something went wrong
+      console.error("EmailJS error:", err);
+      sendButton.disabled = false;
+      sendButton.textContent = "Надіслати";
+      alert("Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com\n\nДеталі: " + JSON.stringify(err));
+    });
+}
 
-
-      let params = {
-        name: name,
-        email: email,
-        phone: phone,
-        message: document.getElementById("notes").value,
-        level: document.getElementById("level").value
-      }
-       emailjs.send("service_l1xnl8i", "template_w7m91ya", params)
-
-        document.getElementById("registrationForm").classList.add("form-hidden");
-        document.getElementById("registration-title").classList.add("form-hidden");
-
-
-        const successMessage = document.getElementById("successMessage");
-        successMessage.style.display = "block";
-
-        history.pushState(null, '', '#thank-you');
-
-      }
-    }
-
-
-    document.getElementById("registrationForm").addEventListener("submit", validateForm);
+// Single event listener — no onclick attribute needed on the button
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("registrationForm").addEventListener("submit", validateForm);
+});
