@@ -44,15 +44,18 @@ function validateForm(event) {
   };
 
   emailjs.send("service_jgex8hj", "template_w7m91ya", params)
-    .then(function () {
-      // Success
+    .then(function (response) {
+      console.log("Email sent successfully", response);
+
+      // Facebook Pixel conversion event
+      if (typeof fbq === "function") fbq("track", "Lead");
+
       document.getElementById("registrationForm").classList.add("form-hidden");
       document.getElementById("registration-title").classList.add("form-hidden");
       document.getElementById("successMessage").style.display = "block";
       history.pushState(null, "", "#thank-you");
     })
     .catch(function (err) {
-      // Visible error so the user knows something went wrong
       console.error("EmailJS error:", err);
       sendButton.disabled = false;
       sendButton.textContent = "Надіслати";
@@ -60,7 +63,7 @@ function validateForm(event) {
     });
 }
 
-// Single event listener — no onclick attribute needed on the button
+// Single event listener — no onclick needed on the button
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("registrationForm").addEventListener("submit", validateForm);
 });
