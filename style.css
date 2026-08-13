@@ -255,11 +255,16 @@ nav ul.sidebar {
 /* Ghost button */
 .sl-btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: 16px; color: var(--ink);
-  text-decoration: none;
-  transition: color .2s;
+  font-size: 16px; color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  transition: color .2s, text-decoration-color .2s;
 }
-.sl-btn-ghost:hover { color: var(--accent); }
+.sl-btn-ghost:hover {
+  color: var(--ink);
+  text-decoration-color: color-mix(in srgb, var(--ink) 40%, transparent);
+}
 
 /* Hero stats sidebar */
 .sl-hero-side {
@@ -469,13 +474,17 @@ nav ul.sidebar {
 }
 .sl-photo {
   width: 100%;
-  aspect-ratio: 3/4;
+  position: relative;
+  padding-bottom: 133.33%; /* 3:4 ratio — guaranteed equal height across all browsers */
+  height: 0;
   background: var(--paper-2);
   border: 1px solid var(--line);
   overflow: hidden;
   margin-bottom: 14px;
 }
 .sl-photo img {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: top;
@@ -493,6 +502,7 @@ nav ul.sidebar {
 .sl-member {
   display: flex;
   flex-direction: column;
+  min-width: 0; /* prevent grid blowout — keeps both columns truly equal */
 }
 .sl-member > a:last-child { margin-top: auto; padding-top: 14px; }
 
@@ -942,10 +952,10 @@ footer h5 {
 /* ── ≤ 600px  середні телефони ── */
 @media (max-width: 600px) {
   .sl-wrap { padding: 0 16px; }
-  .sl-hero { padding: 32px 0 28px; }
-  .sl-block { padding: 44px 0; }
-  .sl-pricing { padding: 44px 0; }
-  .questions { padding: 44px 0; }
+  .sl-hero { padding: 52px 0 40px; }
+  .sl-block { padding: 52px 0; }
+  .sl-pricing { padding: 52px 0; }
+  .questions { padding: 52px 0; }
 
   /* Hero h1 трохи менший */
   .sl-hero h1 { font-size: clamp(38px, 10vw, 54px); }
@@ -972,8 +982,8 @@ footer h5 {
   /* Ціни */
   .sl-price-amount  { font-size: 36px; }
 
-  /* Форма */
-  .form-container   { padding: 44px 0; }
+  /* Форма — зберігаємо горизонтальний відступ щоб поля не впирались у краї */
+  .form-container   { padding: 44px 20px; }
   button[type="submit"] { width: 100%; }
 }
 
