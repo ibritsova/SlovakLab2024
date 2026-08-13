@@ -468,6 +468,7 @@ nav ul.sidebar {
   gap: 24px;
 }
 .sl-photo {
+  width: 100%;
   aspect-ratio: 3/4;
   background: var(--paper-2);
   border: 1px solid var(--line);
@@ -873,39 +874,128 @@ footer h5 {
 /* ════════════════════════════════════
    RESPONSIVE
    ════════════════════════════════════ */
+
+/* ── ≤ 860px  tablet / великий телефон ── */
 @media (max-width: 860px) {
-  .why-quotes-row { grid-template-columns: 1fr !important; gap: 36px !important; }
-  .sl-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  /* Layout */
+  .why-quotes-row    { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .sl-hero-grid      { grid-template-columns: 1fr; gap: 28px; }
+  .sl-hero           { padding: 44px 0 36px; }
+  .sl-block          { padding: 56px 0; }
+  .sl-pricing        { padding: 56px 0; }
+  .questions         { padding: 56px 0; }
+
+  /* Hero stats — горизонтальна смуга замість колонки */
   .sl-hero-side {
     border-left: none;
     border-top: 1px solid var(--line);
     padding-left: 0;
-    padding-top: 20px;
+    padding-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
+  .sl-stat { border-bottom: none; border-right: 1px solid var(--line); padding: 12px 16px 12px 0; }
+  .sl-stat:nth-child(even) { border-right: none; padding-left: 16px; }
+  .sl-stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+
+  /* Goals */
   .sl-goals-row { grid-template-columns: repeat(2, 1fr); }
   .sl-goal { border-left: none; border-top: 1px solid var(--line); }
   .sl-goal:nth-child(odd) { padding-left: 0; }
+
+  /* Grids */
   .sl-courses-grid { grid-template-columns: repeat(2, 1fr); }
-  .sl-prices-grid { grid-template-columns: 1fr; }
-  .sl-team-grid { grid-template-columns: repeat(2, 1fr); }
-  .sl-quotes-grid { grid-template-columns: 1fr; gap: 28px; }
-  .sl-foot-grid { grid-template-columns: 1fr; gap: 28px; }
+  .sl-prices-grid  { grid-template-columns: 1fr; }
+  .sl-quotes-grid  { grid-template-columns: 1fr; gap: 28px; }
+  .sl-foot-grid    { grid-template-columns: 1fr; gap: 28px; }
+
+  /* Team — 2 колонки, однаковий gap */
+  .sl-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  /* Остання непарна картка — по центру, ширина = колонка */
+  .sl-member:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 8px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Founder — обмежуємо ширину фото щоб не розтягувалось на весь екран */
+  .sl-founder-row { grid-template-columns: 1fr; }
+  .sl-founder-photo {
+    max-width: 200px;
+  }
+
+  /* Course detail */
   .info-courses { flex-direction: column; }
   .nameCourse, .about { width: 100%; padding: 0 20px; }
-  .sl-founder-row { grid-template-columns: 1fr; }
 }
 
+/* ── ≤ 800px  навігація — бургер ── */
 @media (max-width: 800px) {
   .hideOnMobile { display: none; }
-  .menu-button { display: block; }
+  .menu-button  { display: block; }
 }
 
-@media (max-width: 480px) {
+/* ── ≤ 600px  середні телефони ── */
+@media (max-width: 600px) {
+  .sl-wrap { padding: 0 16px; }
+  .sl-hero { padding: 32px 0 28px; }
+  .sl-block { padding: 44px 0; }
+  .sl-pricing { padding: 44px 0; }
+  .questions { padding: 44px 0; }
+
+  /* Hero h1 трохи менший */
+  .sl-hero h1 { font-size: clamp(38px, 10vw, 54px); }
+
+  /* Hero кнопки — в стовпчик на вузьких */
+  .sl-hero-actions { flex-direction: column; align-items: flex-start; gap: 14px; }
+
+  /* Goals — 1 колонка */
+  .sl-goals-row { grid-template-columns: 1fr; }
+  .sl-goal { border-left: none; border-top: 1px solid var(--line); padding: 14px 0; }
+  .sl-goal:first-child { border-top: none; }
+
+  /* Courses — 1 колонка */
   .sl-courses-grid { grid-template-columns: 1fr; }
-  .sl-team-grid { grid-template-columns: repeat(2, 1fr); }
-  .card-wrapper { margin: 0 8px 25px; padding: 0; }
+
+  /* Team — gap менший */
+  .sl-team-grid { gap: 12px; }
+  .sl-member:last-child:nth-child(odd) { max-width: calc(50% - 6px); }
+
+  /* Founder */
+  .sl-founder-photo { max-width: 160px; }
+  .sl-founder-name  { font-size: 17px; }
+
+  /* Ціни */
+  .sl-price-amount  { font-size: 36px; }
+
+  /* Форма */
+  .form-container   { padding: 44px 0; }
+  button[type="submit"] { width: 100%; }
+}
+
+/* ── ≤ 480px  малі телефони (iPhone SE, старі Android) ── */
+@media (max-width: 480px) {
+  .sl-team-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .sl-member:last-child:nth-child(odd) { max-width: calc(50% - 5px); }
+
+  /* Hero stats — 1 колонка на дуже вузьких */
+  .sl-hero-side { grid-template-columns: 1fr; }
+  .sl-stat { border-right: none; padding: 10px 0; border-top: 1px solid var(--line); }
+  .sl-stat:first-child { border-top: none; }
+  .sl-stat:nth-child(even) { padding-left: 0; }
+  .sl-stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+
+  /* Swiper */
+  .card-wrapper { margin: 0 0 20px; padding: 0; }
   .card-list .card-item { max-width: 100%; width: 100%; }
   .card-wrapper .swiper-slides-button { display: none; }
+
+  /* Footer */
+  .sl-foot-bottom { flex-direction: column; gap: 6px; }
 }
 
 /* ─── utility: button-start legacy ─── */
