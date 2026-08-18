@@ -2,7 +2,7 @@
   "en": {
     "li1": "About",
     "li2": "Courses",
-    "li3": "Teachers",
+    "li3": "Founder",
     "li4": "Contacts",
     "li5": "Feedback",
 
@@ -91,44 +91,12 @@
     "course-duration-speakingClub": "Classes are held twice a week.",
     "apply-button-speaking": "Apply for this course",
 
-    "team": "Team",
-    "team-desc": "Ukrainian teachers and native speakers — together.",
+    "team": "Founder",
+    "team-desc": "The person behind Slovak Lab.",
     "nameFounder": "Iryna",
     "founder": "Founder",
     "aboutFounder": "I believe that language is a key to new opportunities, which is why we offer courses that help you speak Slovak with confidence, understand local traditions and culture, and adapt to life with native speakers. Our courses are tailored to the requirements of higher education in Slovakia and include thematic lessons related to student life.",
     "educationFounder": "Comenius University",
-    "bookleasson-founder": "Book a lesson",
-
-    "teacher1": "Polina",
-    "teacher": "Teacher",
-    "teacher-role-1": "Teacher",
-    "aboutTeacher1": "Interaction, practice, personal methods, and an individual approach. I will engage everyone and encourage them to speak without fear. Only a friendly atmosphere, support, persistent effort from both the teacher and the student, and ultimately achieving the desired goal.",
-    "eduTeacher1": "University of Presov",
-    "bookleasson": "Book a lesson",
-
-    "teacher2": "Pe'to",
-    "nativeSpeaker": "Native Speaker",
-    "aboutTeacher2": "I am an open and positive person who will not only teach you Slovak slang but also recommend great places to visit for a weekend in Slovakia. I'll share insights about real life in Slovakia and help you understand Slovaks (all the abbreviations, ambiguous words, and language constructions).",
-    "eduTeacher2": "Comenius University",
-    "bookleasson-peto": "Book a lesson",
-
-    "teacher3": "David",
-    "nativeSpeaker-david": "Native Speaker",
-    "aboutTeacher3": "I believe in the learning principle called 'learning through play.' I always strive to make learning with me fun and engaging, yet at the same time beneficial and effective. With each student, I gradually find out what they enjoy and tailor the teaching methods accordingly to suit them best.",
-    "eduTeacher3": "Comenius University",
-    "bookleasson-david": "Book a lesson",
-
-    "teacher4": "Alex",
-    "teacher-role-4": "Teacher",
-    "aboutTeacher4": "I am energetic, creative, and always open to new ideas. My lessons combine humor, interesting tasks, and engaging discussions. I always find an approach to each student and strive to make learning not only useful but also fun! I believe that everyone can unlock their full potential with the right support and inspiration.",
-    "eduTeacher4": "Comenius University",
-    "bookleasson-alex": "Book a lesson",
-
-    "teacher5": "Olena",
-    "teacher-role-5": "Teacher",
-    "aboutTeacher5": "I have around twenty years of teaching experience, including fifteen years in higher education institutions in Ukraine and four years in Slovak universities. My personal experience in learning foreign languages has shaped my own approach to teaching: clear explanations and systematic repetition based on motivation.",
-    "eduTeacher5": "Eastern European University of Economics and Management",
-    "bookleasson-olena": "Book a lesson",
 
     "whyUs": "Why Choose Us?",
     "whyAnsw1": "Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our interactive lessons are tailored to your level and schedule, helping you achieve your goals quickly and confidently. Join us and start speaking Slovak today!",
@@ -167,7 +135,7 @@
   "ukr": {
     "li1": "Про нас",
     "li2": "Курси",
-    "li3": "Вчителі",
+    "li3": "Засновниця",
     "li4": "Контакти",
     "li5": "Відгуки",
 
@@ -256,44 +224,12 @@
     "course-duration-speakingClub": "Заняття проводяться двічі на тиждень.",
     "apply-button-speaking": "Записатись на курс",
 
-    "team": "Команда",
-    "team-desc": "Українські викладачі та носії мови — разом.",
+    "team": "Засновниця",
+    "team-desc": "Людина, що стоїть за SlovakLab.",
     "nameFounder": "Ірина",
     "founder": "Засновниця",
     "aboutFounder": "Я вірю, що мова — це ключ до нових можливостей, тому ми пропонуємо курси, які допоможуть вам впевнено говорити словацькою, розуміти місцеві традиції та культуру, а також адаптуватися до життя серед словаків. Курс адаптований до вимог вищої освіти в Словаччині і включає тематичні заняття, що стосуються студентського життя.",
     "educationFounder": "Університет Коменського",
-    "bookleasson-founder": "Записатися на урок",
-
-    "teacher1": "Поліна",
-    "teacher": "Викладач",
-    "teacher-role-1": "Викладач",
-    "aboutTeacher1": "Інтерактив, практика, особисті методики, індивідуальний підхід. Зацікавлю кожного та заохочу говорити без страху. Лише дружня атмосфера, підтримка, наполеглива робота як вчителя так і учня (у нас все взаємно) та в результаті досягнення бажаної цілі.",
-    "eduTeacher1": "Пряшівський університет",
-    "bookleasson": "Записатися на урок",
-
-    "teacher2": "Петьо",
-    "nativeSpeaker": "Носій мови",
-    "aboutTeacher2": "Я відкритий і позитивний, навчу вас не тільки словацькому сленгу, а й порекомендую чудові місця для відпочинку на вихідних у Словаччині. Поділюся реаліями життя в Словаччині та допоможу зрозуміти словаків (усі скорочення, неоднозначні слова та мовні конструкції).",
-    "eduTeacher2": "Університет Коменського",
-    "bookleasson-peto": "Записатися на урок",
-
-    "teacher3": "Давід",
-    "nativeSpeaker-david": "Носій мови",
-    "aboutTeacher3": "Вірю в навчальний принцип під назвою «школа через гру». Тому завжди намагаюся, щоб навчання зі мною було цікавим і захопливим, але водночас корисним і ефективним. З кожним студентом поступово з'ясовую, що йому подобається, і відповідно підбираю навчальні методи, які найбільше йому підходять.",
-    "eduTeacher3": "Університет Коменського",
-    "bookleasson-david": "Записатися на урок",
-
-    "teacher4": "Олексій",
-    "teacher-role-4": "Викладач",
-    "aboutTeacher4": "Я енергійний, креативний та завжди готовий до нових ідей. Мої уроки — це поєднання гумору, цікавих завдань і захоплюючих дискусій. Я завжди знаходжу підхід до кожного студента і намагаюсь, щоб навчання було не тільки корисним, але й веселим! Вірю, що кожен може розкрити свій потенціал, якщо має підтримку та натхнення.",
-    "eduTeacher4": "Університет Коменського",
-    "bookleasson-alex": "Записатися на урок",
-
-    "teacher5": "Олена",
-    "teacher-role-5": "Викладач",
-    "aboutTeacher5": "Мій досвід викладання близько двадцяти років. З них п'ятнадцять — робота в вищих навчальних закладах України та чотири роки в ВНЗ Словаччини. Власний досвід вивчення іноземних мов сформував свій погляд на систему викладання: доступне пояснення та систематичне повторення основане на мотивації.",
-    "eduTeacher5": "Східноєвропейський університет економіки і менеджменту",
-    "bookleasson-olena": "Записатися на урок",
 
     "whyUs": "Чому SlovakLab?",
     "whyAnsw1": "Вивчайте словацьку мову з досвідченими викладачами, які акцентують увагу на практичних, реальних розмовних навичках. Наші інтерактивні уроки адаптовані до вашого рівня та розкладу, що допоможе швидко та впевнено досягти своїх цілей. Приєднуйтесь до нас і починайте говорити словацькою вже сьогодні!",
@@ -332,7 +268,7 @@
   "sk": {
     "li1": "O nás",
     "li2": "Kurzy",
-    "li3": "Učitelia",
+    "li3": "Zakladateľka",
     "li4": "Kontakty",
     "li5": "Spätná väzba",
 
@@ -421,44 +357,12 @@
     "course-duration-speakingClub": "Lekcie sa konajú dvakrát týždenne.",
     "apply-button-speaking": "Prihlásiť sa na kurz",
 
-    "team": "Tím",
-    "team-desc": "Ukrajinskí učitelia a rodení hovoriaci — spolu.",
+    "team": "Zakladateľka",
+    "team-desc": "Osoba, ktorá stojí za SlovakLab.",
     "nameFounder": "Iryna",
     "founder": "Zakladateľka",
     "aboutFounder": "Verím, že jazyk je kľúčom k novým príležitostiam, preto ponúkame kurzy, ktoré vám pomôžu sebavedomo hovoriť po slovensky, rozumieť miestnym tradíciám a kultúre, ako aj prispôsobiť sa životu medzi Slovákmi. Kurz je prispôsobený požiadavkám vysokoškolského vzdelávania na Slovensku a zahŕňa tematické hodiny týkajúce sa študentského života.",
     "educationFounder": "Univerzita Komenského",
-    "bookleasson-founder": "Rezervovať lekciu",
-
-    "teacher1": "Polina",
-    "teacher": "Učiteľ",
-    "teacher-role-1": "Učiteľ",
-    "aboutTeacher1": "Interaktívne vyučovanie, praktické cvičenia, vlastné metódy a prispôsobenie sa každému žiakovi. Dokážem zaujať každého a pomôcť mu prekonať strach z rozprávania. Priateľská atmosféra, vzájomná podpora a úsilie učiteľa aj študenta sú u nás kľúčové. Spoločne sa dopracujeme k vytúženému cieľu!",
-    "eduTeacher1": "Prešovská univerzita",
-    "bookleasson": "Rezervovať lekciu",
-
-    "teacher2": "Peťo",
-    "nativeSpeaker": "Rodený hovoriaci",
-    "aboutTeacher2": "Som otvorený a pozitívny človek, ktorý vás naučí nielen slovenský slang, ale aj odporučí skvelé miesta na víkend na Slovensku. Podelím sa o reálny život na Slovensku a pomôžem vám pochopiť Slovákov (všetky skratky, dvojzmyselné slová a jazykové konštrukcie).",
-    "eduTeacher2": "Univerzita Komenského",
-    "bookleasson-peto": "Rezervovať lekciu",
-
-    "teacher3": "Dávid",
-    "nativeSpeaker-david": "Rodený hovoriaci",
-    "aboutTeacher3": "Verím v učebný princíp nazývaný 'škola hrou'. Snažím sa teda vždy o to, aby učenie so mnou bolo zábavné a zaujímavé, no zároveň prínosné a efektívne. Pri každom študentovi sa snažím postupne zistiť, čo ho baví a podľa toho nastaviť učebné metódy, ktoré mu budú najviac vyhovovať.",
-    "eduTeacher3": "Univerzita Komenského",
-    "bookleasson-david": "Rezervovať lekciu",
-
-    "teacher4": "Alex",
-    "teacher-role-4": "Učiteľ",
-    "aboutTeacher4": "Som energický, kreatívny a vždy otvorený novým nápadom. Moje hodiny sú kombináciou humoru, zaujímavých úloh a pútavých diskusií. Vždy nájdem prístup k každému študentovi a snažím sa, aby učenie bolo nielen užitočné, ale aj zábavné! Verím, že každý môže odhaliť svoj plný potenciál s podporou a inšpiráciou.",
-    "eduTeacher4": "Univerzita Komenského",
-    "bookleasson-alex": "Rezervovať lekciu",
-
-    "teacher5": "Olena",
-    "teacher-role-5": "Učiteľ",
-    "aboutTeacher5": "Mám približne dvadsať rokov pedagogickej praxe, z toho pätnásť rokov na vysokých školách na Ukrajine a štyri roky na univerzitách na Slovensku. Moja vlastná skúsenosť s učením sa cudzích jazykov ovplyvnila môj prístup k vyučovaniu: zrozumiteľné vysvetlenie a systematické opakovanie založené na motivácii.",
-    "eduTeacher5": "Východoeurópska univerzita ekonómie a manažmentu",
-    "bookleasson-olena": "Rezervovať lekciu",
 
     "whyUs": "Prečo SlovakLab?",
     "whyAnsw1": "Učte sa slovenčinu so skúsenými učiteľmi, ktorí sa zameriavajú na praktické, reálne komunikačné schopnosti. Naše interaktívne hodiny sú prispôsobené vašej úrovni a rozvrhu, čo vám pomôže rýchlo a sebavedomo dosiahnuť vaše ciele. Pridajte sa k nám a začnite hovoriť po slovensky už dnes!",
