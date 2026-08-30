@@ -46,6 +46,23 @@
       j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-M3T38Q7D');</script>
 
+  <!-- Meta (Facebook) Pixel — base code, loads once per page, auto-fires PageView -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '835435028872316');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=835435028872316&ev=PageView&noscript=1" alt="" /></noscript>
+
   <!-- EmailJS defer -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
   <script>
@@ -835,6 +852,37 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
   <script src="scriptContact.js"></script>
+
+  <!-- Meta Pixel — ViewContent per course, fires once when a course detail section is actually scrolled into view -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof fbq !== 'function' || !('IntersectionObserver' in window)) return;
+
+      var courseSections = {
+        'target-section-beginner': 'Beginner',
+        'target-section-intermediate': 'Intermediate',
+        'target-section-advanced': 'Advanced',
+        'target-section-speaking': 'Speaking Club'
+      };
+      var seen = new Set();
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          var name = courseSections[entry.target.id];
+          if (!name || seen.has(entry.target.id)) return;
+          seen.add(entry.target.id);
+          fbq('track', 'ViewContent', { content_name: name, content_category: 'course' });
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.5 });
+
+      Object.keys(courseSections).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) observer.observe(el);
+      });
+    });
+  </script>
 
   <script>
     function showSidebar() {
