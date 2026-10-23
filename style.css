@@ -927,6 +927,8 @@ nav ul.sidebar {
   border-bottom: 1px solid var(--border);
   border-radius: var(--radius) var(--radius) 0 0;
 }
+/* Logo instead of a photo — no darkening gradient over it */
+.sl-uni-photo:has(img[src$="-logo.png"])::after { display: none; }
 .sl-uni-card h3 { font-size: clamp(20px, 1.8vw, 24px); margin: 0 32px 8px; }
 .sl-uni-card p { color: var(--text); font-size: 15px; line-height: 1.5; margin: 0 32px; }
 .sl-uni-credit {
