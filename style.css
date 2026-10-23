@@ -1056,7 +1056,7 @@ button[type="submit"]:disabled { opacity: .6; cursor: wait; }
    FAQ
    ════════════════════════════════════ */
 .questions {
-  max-width: 960px;
+  max-width: var(--wrap);
   margin: 0 auto;
   padding: 100px 32px;
 }
@@ -1080,10 +1080,16 @@ button[type="submit"]:disabled { opacity: .6; cursor: wait; }
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%239c9c9c' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2370befa' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  /* Two columns; items align to the top so an open answer doesn't stretch its neighbour */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+  align-items: start;
 }
+/* While every answer is closed, cards in a row share one height */
+#faqAccordion:not(:has(.accordion-collapse.show, .accordion-collapse.collapsing)) { align-items: stretch; }
+#faqAccordion .accordion-item { display: flex; flex-direction: column; }
+#faqAccordion .accordion-header { flex: 1 0 auto; margin: 0; }
 #faqAccordion .accordion-item {
   position: relative;
   background: var(--element-bg);
@@ -1100,6 +1106,8 @@ button[type="submit"]:disabled { opacity: .6; cursor: wait; }
   line-height: 1.4;
   color: var(--white);
   background: transparent;
+  height: 100%;
+  gap: 16px;
   padding: 24px 28px;
   border-radius: var(--radius);
   box-shadow: none;
@@ -1427,6 +1435,7 @@ body footer h5 {
   .sl-founder-photo { max-width: 280px; }
   .sl-foot-grid { grid-template-columns: 1fr; gap: 32px; }
   #target-section-sk-documents .sl-consult-checklist { grid-template-columns: 1fr; }
+  #faqAccordion { grid-template-columns: 1fr; }
 }
 
 /* ── ≤ 600px  phones ── */
