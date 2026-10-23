@@ -1029,6 +1029,7 @@ textarea {
   border-radius: var(--radius);
   transition: border-color .2s, box-shadow .2s;
 }
+textarea { resize: vertical; min-height: 96px; }
 input::placeholder, textarea::placeholder { color: var(--text); opacity: .6; }
 input:focus, select:focus, textarea:focus {
   outline: none;

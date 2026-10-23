@@ -105,6 +105,7 @@ function validateSkConsultForm(event) {
 
   const messengerInput = document.querySelector('input[name="sk-messenger"]:checked');
   const messenger = messengerInput ? messengerInput.value : "не вказано";
+  const notes = document.getElementById("sk-notes").value.trim();
 
   const params = {
     name:      name,
@@ -112,7 +113,9 @@ function validateSkConsultForm(event) {
     phone:     phone,
     childAge:  "",
     messenger: messenger,
-    message:   "Заявка на консультацію (блок «Навчання у Словаччині»). Бажаний месенджер: " + messenger + ".",
+    notes:     notes,
+    message:   "Заявка на консультацію (блок «Навчання у Словаччині»). Бажаний месенджер: " + messenger + "." +
+               (notes ? "\nКоментар: " + notes : ""),
     level:     "не вказано"
   };
 
