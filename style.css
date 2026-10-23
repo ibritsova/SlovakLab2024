@@ -85,7 +85,7 @@ img { display: block; max-width: 100%; }
 /* ─── Layout helpers ─── */
 .sl-wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 32px; }
 
-.sl-block { padding: 120px 0; }
+.sl-block { padding: 100px 0; }
 .sl-block--alt { background: var(--background); }
 
 .sl-block-head {
@@ -98,7 +98,7 @@ img { display: block; max-width: 100%; }
 .sl-block-head p { color: var(--text); font-size: 15px; line-height: 1.4; max-width: 56ch; }
 
 /* ─── Typography ─── */
-h1, h2, h3, h4, h5 {
+body :is(h1, h2, h3, h4, h5) {
   font-family: var(--font-head);
   font-weight: 400;
   line-height: 1.2;
@@ -123,7 +123,7 @@ h2:not(.accordion-header) {
   max-width: 100%;
   overflow-wrap: break-word;
 }
-h3 { font-size: clamp(22px, 2.4vw, 35px); }
+body h3 { font-size: clamp(22px, 2.4vw, 35px); }
 
 .sl-eyebrow {
   display: inline-flex;
@@ -520,196 +520,308 @@ nav ul.sidebar {
 }
 
 /* ════════════════════════════════════
+   SHARED — cards, glow line, badges, photos
+   ════════════════════════════════════ */
+.sl-price-card,
+.sl-admission-card,
+.sl-step,
+.sl-uni-card,
+.sl-quote,
+.sl-course,
+.sl-benefit,
+.bot-test-section,
+.sl-trial-cta,
+.info-courses,
+.form-container form,
+.success-message {
+  position: relative;
+  background: var(--element-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px;
+  transition: border-color .3s;
+}
+
+/* Thin glowing line on the top edge */
+.sl-price-card::before,
+.sl-admission-card::before,
+.sl-step::before,
+.sl-uni-card::before,
+.sl-quote::before,
+.sl-course::before,
+.sl-benefit::before,
+.bot-test-section::before,
+.sl-trial-cta::before,
+.info-courses::before,
+.form-container form::before,
+#faqAccordion .accordion-item::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: -1px; left: 12%; right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--blue), transparent);
+  pointer-events: none;
+}
+
+/* Round badges for numbers / icons / checkmarks */
+.sl-step-num,
+.sl-admission-num,
+.sl-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--button-bg);
+  border: 1px solid var(--border);
+  font-family: var(--font-num);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1;
+  color: var(--white);
+  transition: border-color .3s, background .3s, color .3s;
+}
+/* Active state — on card hover */
+.sl-step:hover .sl-step-num,
+.sl-admission-card:hover .sl-admission-num,
+.sl-course:hover .sl-arrow {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
+/* Checklists — every item gets a ✓ badge */
+.sl-consult-checklist,
+.bot-test-section .checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 28px;
+}
+.sl-consult-checklist p,
+.bot-test-section .checklist p {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--white);
+  text-align: left;
+}
+.sl-consult-checklist p::before,
+.bot-test-section .checklist p::before {
+  content: "✓";
+  flex: 0 0 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--blue-soft);
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  font-size: 18px;
+}
+
+/* Photos — rounded, bordered, darkened towards the bottom */
+.sl-sk-hero-photo,
+.sl-benefits-photo,
+.sl-founder-photo,
+.sl-uni-photo {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--button-bg);
+}
+.sl-sk-hero-photo::after,
+.sl-benefits-photo::after,
+.sl-founder-photo::after,
+.sl-uni-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0) 55%, rgba(10, 10, 10, .6) 100%);
+  pointer-events: none;
+}
+.sl-sk-hero-photo img,
+.sl-benefits-photo img,
+.sl-founder-photo img,
+.sl-uni-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ════════════════════════════════════
    GOALS STRIP
    ════════════════════════════════════ */
 .sl-goals {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .sl-goals-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   max-width: var(--wrap);
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 32px;
 }
 .sl-goal {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 20px 20px;
-  border-left: 1px solid var(--line);
-  font-size: 16px;
-  color: var(--ink-soft);
+  display: block;
+  padding: 28px 24px;
+  border-left: 1px solid var(--border);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text);
 }
 .sl-goal:first-child { border-left: none; padding-left: 0; }
-.sl-goal b { color: var(--ink); font-weight: 500; }
+.sl-goal b {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-head);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--white);
+}
 
 /* ════════════════════════════════════
-   COURSES GRID (hairline)
+   BOT TEST
    ════════════════════════════════════ */
-.sl-courses-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-.sl-course {
-  background: var(--paper);
-  padding: 28px 22px;
-  min-height: 200px;
+.bot-test-section {
+  padding: 64px 48px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: background .2s;
-  text-decoration: none;
-  color: var(--ink);
+  align-items: center;
 }
-.sl-course:hover { background: var(--accent-soft); }
-
-.sl-course-lvl {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--accent);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 8px;
-}
-.sl-course h3 {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: 25px;
-  letter-spacing: -.01em;
-  margin-bottom: 10px;
-}
-.sl-course .sl-course-meta {
-  font-size: 15px;
-  color: var(--ink-soft);
+.bot-test-section h2:not(.accordion-header) {
+  text-align: center;
   margin-bottom: 20px;
 }
-.sl-course .sl-arrow { font-size: 20px; color: var(--ink-soft); }
-
-/* ════════════════════════════════════
-   COURSE DETAIL SECTIONS (existing content)
-   ════════════════════════════════════ */
-.info-courses {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-top: 10px;
-  justify-content: center;
-}
-.nameCourse {
-  margin-top: 50px;
-  width: 350px;
-  text-align: center;
-}
-.nameCourse h2 {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(41px, 5.6vw, 63px);
-  font-style: italic;
-  color: var(--accent);
-  text-align: center;
-}
-.about { margin-bottom: 80px; width: 500px; }
-.about ul { list-style: none; padding: 0; }
-.about ul li { margin-bottom: 8px; }
-
-.describe-course-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin: 16px 0;
-  font-size: 17px;
-  color: var(--ink-soft);
-}
-.describe-course-item img { filter: brightness(0) opacity(.45); flex-shrink: 0; }
-
-.apply-course { display: flex; justify-content: center; align-items: center; margin-top: 24px; }
+.bot-test-section > p { font-size: 15px; color: var(--text); max-width: 60ch; margin: 0 0 8px; }
+.bot-test-section .checklist { margin: 28px 0; }
+.bot-test-section .note { color: var(--text); margin-bottom: 32px; }
 
 /* ════════════════════════════════════
    PRICING
    ════════════════════════════════════ */
-.sl-pricing { padding: 90px 0; background: var(--paper-2); }
+.sl-pricing { padding: 100px 0; background: var(--background); }
 
 .sl-prices-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 20px;
+  align-items: stretch;
 }
 .sl-price-card {
-  background: var(--paper);
-  padding: 32px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 300px;
+  padding: 40px;
 }
-.sl-price-card.featured { background: var(--ink); color: var(--paper); }
+.sl-price-card.featured {
+  border-color: var(--blue);
+  box-shadow: 0 0 40px rgba(112, 190, 250, .15);
+}
 
 .sl-price-name {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 20px;
 }
-.sl-price-card.featured .sl-price-name { color: #B9C3D6; }
+.sl-price-card.featured .sl-price-name { color: var(--blue); }
 
 .sl-price-amount {
-  font-family: 'Fraunces', serif;
-  font-size: 45px;
-  font-weight: 500;
-  margin-bottom: 24px;
   display: flex;
   align-items: baseline;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+  font-family: var(--font-num);
+  font-weight: 500;
+  font-size: clamp(32px, 2.9vw, 42px);
+  line-height: 1.1;
+  color: var(--white);
 }
+/* The translated price already includes its unit ("50€ / 8 занять"), so the
+   static, untranslated <small> next to it would repeat it — hide the duplicate. */
 .sl-price-amount small {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  display: none;
+  font-family: var(--font-body);
+  font-size: 15px;
   font-weight: 400;
-  color: var(--ink-soft);
+  color: var(--text);
 }
-.sl-price-card.featured .sl-price-amount small { color: #B9C3D6; }
 
-.sl-price-card ul { list-style: none; padding: 0; border-top: 1px solid var(--line); }
-.sl-price-card.featured ul { border-top-color: #33405A; }
+.sl-price-card ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border); }
 .sl-price-card li {
-  padding: 8px 0;
-  font-size: 16px;
-  color: var(--ink-soft);
-  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
 }
-.sl-price-card.featured li { color: #D7DCE6; border-bottom-color: #33405A; }
 .sl-price-card li:last-child { border-bottom: none; }
-
-.sl-price-card .sl-btn { margin-top: 24px; }
+.sl-price-card .sl-btn { margin-top: 28px; width: 100%; }
 
 /* ════════════════════════════════════
-   PROCESS STEPS
+   FOUNDER
    ════════════════════════════════════ */
-.sl-steps-grid {
+.sl-founder-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: 300px 1fr;
+  gap: 56px;
+  align-items: center;
 }
-.sl-step-num {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 34px;
-  color: var(--accent);
-  display: block;
-  margin-bottom: 10px;
+.sl-founder-photo { aspect-ratio: 3 / 4; }
+.sl-founder-photo img { object-position: top; }
+.sl-founder-name {
+  font-family: var(--font-head);
+  font-size: clamp(26px, 2.4vw, 35px);
+  line-height: 1.2;
+  color: var(--white);
 }
-.sl-step h3 { font-size: 19px; margin-bottom: 8px; }
-.sl-step p { color: var(--ink-soft); font-size: 15px; line-height: 1.5; }
+.sl-founder-role {
+  font-size: 14px;
+  color: var(--blue);
+  margin: 6px 0 24px;
+}
+.sl-founder-bio { font-size: 15px; color: var(--text); line-height: 1.6; max-width: 62ch; }
+
+/* Icon in a round badge: the circle is drawn behind the (inverted) PNG */
+.sl-founder-uni {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding-left: 70px;
+  margin-top: 28px;
+  font-size: 15px;
+  color: var(--white);
+}
+.sl-founder-uni::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 52px; height: 52px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--button-bg);
+  border: 1px solid var(--border);
+}
+.sl-founder-uni img {
+  position: absolute;
+  left: 16px; top: 50%;
+  width: 20px; height: 20px;
+  transform: translateY(-50%);
+  filter: brightness(0) invert(1);
+}
 
 /* ════════════════════════════════════
    ADMISSION SUPPORT
@@ -719,150 +831,465 @@ nav ul.sidebar {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.sl-admission-card {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 24px;
-}
-.sl-admission-num {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--accent);
-  letter-spacing: .06em;
-  display: block;
-  margin-bottom: 10px;
-}
-.sl-admission-card p { font-size: 16px; color: var(--ink); line-height: 1.5; margin: 0; }
+.sl-admission-num { margin-bottom: 28px; }
+.sl-admission-card p { font-size: 17px; color: var(--white); line-height: 1.4; margin: 0; }
+.sl-admission-card:hover,
+.sl-step:hover,
+.sl-uni-card:hover,
+.sl-course:hover { border-color: rgba(112, 190, 250, .35); }
 
 /* ════════════════════════════════════
-   SK EDUCATION — INTRO / BENEFITS / CONSULT
+   SK EDUCATION — INTRO
    ════════════════════════════════════ */
-.sl-sk-hero {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-}
-.sl-sk-hero p {
-  font-size: 17px;
-  color: var(--ink-soft);
-  line-height: 1.6;
-  margin: 16px 0 28px;
-}
-
-/* Hero variant with a photo — two columns instead of the centered block above */
+/* Heading spans the full width; text + CTA on the left, photo on the right */
 .sl-sk-hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 48px;
-  align-items: center;
-}
-.sl-sk-hero-grid .sl-sk-hero { max-width: none; margin: 0; text-align: left; }
-.sl-sk-hero-photo {
-  border-radius: var(--radius);
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-}
-.sl-sk-hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.sl-benefits-row {
-  display: grid;
-  grid-template-columns: 1fr .8fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto 1fr;
+  column-gap: 56px;
   align-items: start;
 }
-.sl-benefits-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: 720px;
-}
-.sl-benefit { border-left: 2px solid var(--accent); padding-left: 20px; }
-.sl-benefit h3 { font-size: 19px; margin-bottom: 6px; }
-.sl-benefit p { color: var(--ink-soft); font-size: 16px; line-height: 1.6; margin: 0; max-width: 60ch; }
-.sl-benefits-photo {
-  border-radius: var(--radius);
-  overflow: hidden;
-  aspect-ratio: 3 / 4;
-}
-.sl-benefits-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-.sl-sk-consult-desc {
-  text-align: center;
-  color: var(--ink-soft);
+.sl-sk-hero-grid .sl-sk-hero { display: contents; }
+.sl-sk-hero-grid .sl-sk-hero h2 { grid-column: 1 / -1; margin-bottom: 48px; }
+.sl-sk-hero-grid .sl-sk-hero p {
+  grid-column: 1;
   font-size: 17px;
-  line-height: 1.6;
-  margin: -20px 0 28px;
+  color: var(--text);
+  line-height: 1.5;
+  margin: 0 0 32px;
+  max-width: 48ch;
 }
-.sl-consult-checklist {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin: 0 0 28px;
+.sl-sk-hero-grid .sl-sk-hero .sl-btn { grid-column: 1; justify-self: start; }
+.sl-sk-hero-photo {
+  grid-column: 2;
+  grid-row: 2 / 5;
+  aspect-ratio: 4 / 3;
 }
-.sl-consult-checklist p { margin: 0; color: var(--ink-soft); font-size: 16px; }
-.sl-consult-checklist p::before { content: "✓  "; color: var(--accent); font-weight: 600; }
 
+/* ════════════════════════════════════
+   SK EDUCATION — BENEFITS
+   ════════════════════════════════════ */
+.sl-benefits-row {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 20px;
+  align-items: stretch;
+}
+.sl-benefits-list { display: flex; flex-direction: column; gap: 12px; }
+.sl-benefit { padding: 28px 32px; }
+.sl-benefit h3 { font-size: clamp(20px, 1.8vw, 24px); margin: 0 0 8px; }
+.sl-benefit p { color: var(--text); font-size: 15px; line-height: 1.5; margin: 0; }
+.sl-benefits-photo { min-height: 100%; }
+
+/* ════════════════════════════════════
+   STEPS (admission process + after application)
+   ════════════════════════════════════ */
+.sl-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.sl-step { display: flex; flex-direction: column; }
+.sl-step-num { margin-bottom: 28px; }
+.sl-step h3 { font-size: clamp(20px, 1.7vw, 24px); margin: 0 0 10px; }
+.sl-step p { color: var(--text); font-size: 15px; line-height: 1.5; margin: 0; }
+
+/* ════════════════════════════════════
+   SK EDUCATION — DOCUMENTS
+   ════════════════════════════════════ */
+#target-section-sk-documents .sl-consult-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+  margin-bottom: 28px;
+}
+#target-section-sk-documents .sl-consult-checklist p {
+  background: var(--element-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+}
+.sl-hero-note { color: var(--text); }
+
+/* ════════════════════════════════════
+   SK EDUCATION — UNIVERSITIES
+   ════════════════════════════════════ */
 .sl-uni-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-.sl-uni-card {
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 24px;
-  overflow: hidden;
-}
+.sl-uni-card { padding: 0 0 32px; overflow: visible; }
 .sl-uni-photo {
-  position: relative;
-  width: calc(100% + 48px);
-  margin: -24px -24px 16px;
-  padding-bottom: 56%;
-  background: var(--paper-2);
+  aspect-ratio: 16 / 9;
+  margin: 0 0 28px;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
-.sl-uni-photo img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.sl-uni-card h3 { font-size: 18px; margin-bottom: 6px; }
-.sl-uni-card p { color: var(--ink-soft); font-size: 15px; line-height: 1.5; margin: 0; }
+.sl-uni-card h3 { font-size: clamp(20px, 1.8vw, 24px); margin: 0 32px 8px; }
+.sl-uni-card p { color: var(--text); font-size: 15px; line-height: 1.5; margin: 0 32px; }
 .sl-uni-credit {
-  margin-top: 20px;
-  font-size: 12px;
-  color: var(--ink-soft);
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--text);
   line-height: 1.5;
 }
-.sl-uni-credit a { text-decoration: underline; text-underline-offset: 2px; }
+.sl-uni-credit a { color: var(--white); text-decoration: underline; text-underline-offset: 2px; }
+.sl-uni-credit a:hover { color: var(--blue); }
 
 /* ════════════════════════════════════
-   TRIAL LESSON CTA
+   WHY US + TESTIMONIALS
    ════════════════════════════════════ */
-.sl-trial-cta {
-  background: var(--accent-soft);
-  border-radius: var(--radius);
-  padding: 56px;
+.sl-why { display: flex; flex-direction: column; gap: 20px; position: sticky; top: calc(var(--nav-h) + 32px); }
+.sl-why p { font-size: 17px; color: var(--text); line-height: 1.6; margin: 0; }
+
+.sl-quotes-grid { display: grid; gap: 20px; }
+.sl-quotes-grid .sl-quote { margin-top: 0 !important; }   /* overrides inline spacing — the grid gap handles it */
+.sl-quote p {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--white);
+  margin: 0 0 24px;
+}
+.sl-quote .sl-who {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: var(--text);
+}
+.sl-who img {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+/* ════════════════════════════════════
+   FORMS
+   ════════════════════════════════════ */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+/* Consultation block: heading on top, checklist left, form card right */
+.form-container:has(> .sl-consult-checklist) {
+  max-width: var(--wrap);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+  grid-template-rows: auto auto auto 1fr;
+  column-gap: 56px;
+  align-items: start;
 }
-.sl-trial-text h2 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 16px; max-width: 12ch; }
-.sl-trial-text p { color: var(--ink-soft); font-size: 16px; line-height: 1.6; max-width: 38ch; margin: 0; }
+.form-container > h2:not(.accordion-header) { grid-column: 1 / -1; margin: 0 0 24px; }
+.form-container > p { grid-column: 1 / -1; }
+.form-container > .sl-consult-checklist { grid-column: 1; margin-top: 24px; }
+.form-container:has(> .sl-consult-checklist) > form,
+.form-container:has(> .sl-consult-checklist) > .success-message { grid-column: 2; grid-row: 3 / 5; margin-top: 24px; }
 
+.sl-sk-consult-desc {
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 60ch;
+  margin: 0 0 8px;
+}
+
+.form-container form { padding: 40px; }
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+}
+.required::after { content: " *"; color: var(--error); }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--white);
+  background: var(--button-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .2s, box-shadow .2s;
+}
+input::placeholder, textarea::placeholder { color: var(--text); opacity: .6; }
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-soft);
+}
+select option { background: var(--button-bg); color: var(--white); }
+
+button[type="submit"] { display: flex; width: 100%; margin: 12px 0 0; }
+button[type="submit"]:disabled { opacity: .6; cursor: wait; }
+
+.error { color: var(--error); font-size: 14px; margin: -10px 0 14px; }
+.error:empty { display: none; }
+
+.success-message {
+  display: none;
+  padding: 40px;
+  font-family: var(--font-head);
+  font-size: 22px;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--white);
+  border-color: var(--blue);
+  box-shadow: 0 0 40px rgba(112, 190, 250, .15);
+}
+.success-under { font-family: var(--font-body); font-size: 15px; margin-top: 12px; color: var(--text); }
+
+/* ════════════════════════════════════
+   FAQ
+   ════════════════════════════════════ */
+.questions {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 100px 32px;
+}
+.questions > h2.text-center {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 56px !important;
+  padding: 0 !important;
+  text-align: center;
+}
+#faqAccordion {
+  --bs-accordion-bg: var(--element-bg);
+  --bs-accordion-color: var(--text);
+  --bs-accordion-border-color: var(--border);
+  --bs-accordion-border-radius: var(--radius);
+  --bs-accordion-inner-border-radius: var(--radius);
+  --bs-accordion-btn-color: var(--white);
+  --bs-accordion-btn-bg: var(--element-bg);
+  --bs-accordion-active-color: var(--blue);
+  --bs-accordion-active-bg: var(--element-bg);
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%239c9c9c' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2370befa' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#faqAccordion .accordion-item {
+  position: relative;
+  background: var(--element-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: visible;
+}
+#faqAccordion .accordion-item::before { opacity: 0; transition: opacity .3s; }
+#faqAccordion .accordion-item:has(.accordion-button:not(.collapsed))::before { opacity: 1; }
+#faqAccordion .accordion-button {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--white);
+  background: transparent;
+  padding: 24px 28px;
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+#faqAccordion .accordion-button:not(.collapsed) { color: var(--blue); }
+#faqAccordion .accordion-button:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+#faqAccordion .accordion-body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  padding: 0 28px 24px;
+}
+
+/* ════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════ */
+footer {
+  background: var(--background);
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  padding: 72px 0 32px;
+}
+.sl-foot-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  max-width: var(--wrap);
+  margin: 0 auto 56px;
+  padding: 0 32px;
+}
+.sl-foot-logo {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.sl-foot-logo span { color: var(--blue); }
+.sl-foot-desc { font-size: 15px; color: var(--text); line-height: 1.5; max-width: 36ch; }
+
+body footer h5 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.sl-flinks a {
+  display: block;
+  width: fit-content;
+  color: var(--white);
+  font-size: 15px;
+  padding: 5px 0;
+  transition: color .2s;
+  overflow-wrap: anywhere;
+}
+.sl-flinks a:hover { color: var(--blue); }
+
+.sl-foot-bottom {
+  width: calc(100% - 64px);
+  max-width: calc(var(--wrap) - 64px);
+  margin: 0 auto;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* ════════════════════════════════════
+   COURSES PAGE — grid
+   ════════════════════════════════════ */
+.sl-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.sl-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 260px;
+  color: var(--white);
+  text-decoration: none;
+}
+.sl-course-lvl {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 5px 12px;
+  font-size: 14px;
+  color: var(--blue);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--button-bg);
+}
+.sl-course h3 { font-size: clamp(20px, 1.5vw, 24px); margin: 0 0 10px; }
+/* Detail cards follow the course grid directly — no double section gap */
+.sl-block:has(> .sl-wrap > .info-courses) { padding-top: 0; }
+.sl-course .sl-course-meta { font-size: 15px; color: var(--text); margin: 0; }
+.sl-course .sl-course-meta em { font-style: normal; color: var(--white); }
+
+/* ════════════════════════════════════
+   COURSES PAGE — detail cards
+   ════════════════════════════════════ */
+.info-courses.row {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+  margin: 0 0 20px;
+  padding: 48px;
+}
+.info-courses.row > .nameCourse,
+.info-courses.row > .about {
+  width: auto;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+  flex: none;
+}
+.info-courses.row > .nameCourse { order: 0; text-align: left; position: sticky; top: calc(var(--nav-h) + 32px); }
+.info-courses.row > .about { order: 1; }
+/* Course names are single long words ("Intermediate") — 100px won't fit a half-width card */
+.nameCourse h2:not(.accordion-header) {
+  font-size: clamp(36px, 4.6vw, 64px);
+  text-align: left;
+}
+.nameCourse h2 em { font-style: normal; }
+
+.about ul { list-style: none; padding: 0; margin: 0; }
+.describe-course-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding-left: 72px;
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.describe-course-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--button-bg);
+  border: 1px solid var(--border);
+}
+.describe-course-item img {
+  position: absolute;
+  left: 14px; top: 14px;
+  width: 24px; height: 24px;
+  filter: brightness(0) invert(1);
+  opacity: .9;
+}
+.apply-course { display: flex; justify-content: flex-start; margin-top: 28px; }
+.apply-course a { text-decoration: none; }
+
+/* ════════════════════════════════════
+   COURSES PAGE — trial lesson CTA
+   ════════════════════════════════════ */
+.sl-trial-cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 56px;
+  align-items: start;
+  padding: 56px;
+}
+.sl-trial-text { display: contents; }
+.sl-trial-text h2:not(.accordion-header) { grid-column: 1 / -1; margin: 0 0 40px; }
+.sl-trial-text p { grid-column: 1; color: var(--text); font-size: 17px; line-height: 1.5; margin: 0; max-width: 46ch; }
+.sl-trial-form { grid-column: 2; }
 .sl-trial-form input,
 .sl-trial-form select { margin-bottom: 14px; }
-.sl-trial-form button[type="submit"] { width: auto; display: inline-flex; margin: 8px 0 0; }
-.sl-trial-success { color: var(--accent); font-size: 15px; font-weight: 500; margin: 10px 0 0; }
+.sl-trial-form button[type="submit"] { width: 100%; margin: 8px 0 0; }
+.sl-trial-success { color: var(--blue); font-size: 15px; margin: 14px 0 0; }
 
-/* Messenger picker — horizontal pill toggle */
+/* Messenger picker — pill toggles */
 .sl-messenger-label {
   display: block;
   font-size: 14px;
-  color: var(--ink-soft);
-  margin-bottom: 8px;
+  color: var(--text);
+  margin: 4px 0 10px;
 }
 .sl-messenger-group {
   display: flex;
@@ -873,537 +1300,182 @@ nav ul.sidebar {
 .sl-messenger-group input[type="radio"] {
   position: absolute;
   opacity: 0;
-  width: 1px;
-  height: 1px;
+  width: 1px; height: 1px;
   pointer-events: none;
 }
 .sl-messenger-group label {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 0;
-  padding: 9px 18px;
-  border: 1px solid var(--line);
+  margin: 0;
+  padding: 10px 18px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--button-bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--ink-soft);
-  background: var(--paper);
   cursor: pointer;
   transition: background .2s, color .2s, border-color .2s;
 }
+.sl-messenger-group label:hover { color: var(--white); }
 .sl-messenger-group input[type="radio"]:checked + label {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--paper);
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-color: var(--blue);
 }
 .sl-messenger-group input[type="radio"]:focus-visible + label {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
 
 /* ════════════════════════════════════
-   TEAM
+   SCROLL REVEAL — pure CSS (scroll-driven animations).
+   Browsers without support simply show everything.
    ════════════════════════════════════ */
-.sl-team-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
+@keyframes sl-reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
 }
-.sl-photo {
-  width: 100%;
-  position: relative;
-  padding-bottom: 133.33%; /* 3:4 ratio — guaranteed equal height across all browsers */
-  height: 0;
-  background: var(--paper-2);
-  border: 1px solid var(--line);
-  overflow: hidden;
-  margin-bottom: 14px;
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .sl-block-head,
+    .bot-test-section,
+    .sl-founder-row,
+    .sl-goal,
+    .sl-price-card,
+    .sl-admission-card,
+    .sl-step,
+    .sl-uni-card,
+    .sl-quote,
+    .sl-benefit,
+    .sl-course,
+    .info-courses,
+    .sl-trial-cta,
+    .sl-sk-hero-grid,
+    .sl-benefits-photo,
+    .form-container > *,
+    #target-section-sk-documents .sl-consult-checklist p,
+    #faqAccordion .accordion-item {
+      animation: sl-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+    /* Stagger siblings in a row */
+    :is(.sl-goal, .sl-price-card, .sl-admission-card, .sl-step, .sl-uni-card, .sl-quote, .sl-benefit, .sl-course, #target-section-sk-documents .sl-consult-checklist p):nth-child(2) { animation-range: entry 6% entry 51%; }
+    :is(.sl-goal, .sl-price-card, .sl-admission-card, .sl-step, .sl-uni-card, .sl-quote, .sl-benefit, .sl-course, #target-section-sk-documents .sl-consult-checklist p):nth-child(3) { animation-range: entry 12% entry 57%; }
+    :is(.sl-goal, .sl-price-card, .sl-admission-card, .sl-step, .sl-uni-card, .sl-quote, .sl-benefit, .sl-course, #target-section-sk-documents .sl-consult-checklist p):nth-child(4) { animation-range: entry 18% entry 63%; }
+    :is(.sl-benefit, #target-section-sk-documents .sl-consult-checklist p):nth-child(5) { animation-range: entry 24% entry 69%; }
+  }
 }
-.sl-photo img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-}
-.sl-photo-placeholder {
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 36px;
-  color: var(--ink-soft);
-}
-/* Equal-height cards — button always at bottom */
-.sl-member {
-  display: flex;
-  flex-direction: column;
-  min-width: 0; /* prevent grid blowout — keeps both columns truly equal */
-}
-.sl-member > a:last-child { margin-top: auto; padding-top: 14px; }
-
-.sl-member h4 { font-size: 17px; font-weight: 600; font-family: 'Inter', sans-serif; }
-.sl-member .sl-role {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  margin: 4px 0 6px;
-}
-.sl-member .sl-uni { font-size: 14px; color: var(--ink-soft); }
-.sl-member .sl-btn { margin-top: 14px; font-size: 15px; padding: 9px 16px; }
-
-/* Founder highlight */
-.sl-founder-row {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 40px;
-  align-items: start;
-  padding: 40px 0;
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 48px;
-}
-.sl-founder-photo {
-  aspect-ratio: 3/4;
-  background: var(--paper-2);
-  border: 1px solid var(--line);
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.sl-founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.sl-founder-name { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; }
-.sl-founder-role {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  margin: 6px 0 16px;
-}
-.sl-founder-bio { font-size: 17px; color: var(--ink-soft); line-height: 1.7; max-width: 56ch; }
-.sl-founder-uni {
-  display: flex; align-items: center; gap: 8px;
-  margin-top: 16px; font-size: 15px; color: var(--ink-soft);
-}
-.sl-founder-uni img { filter: brightness(0) opacity(.4); }
-
-/* ════════════════════════════════════
-   TESTIMONIALS / FEEDBACK
-   ════════════════════════════════════ */
-.sl-quotes-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 36px;
-}
-.sl-quote {
-  border-left: 2px solid var(--accent);
-  padding-left: 20px;
-}
-.sl-quote p {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 19px;
-  line-height: 1.5;
-  margin-bottom: 14px;
-  color: var(--ink);
-}
-.sl-quote .sl-who {
-  font-size: 15px;
-  color: var(--ink-soft);
-  display: flex; align-items: center; gap: 10px;
-}
-.sl-who img {
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--line);
-}
-
-/* ════════════════════════════════════
-   WHY CHOOSE US
-   ════════════════════════════════════ */
-.sl-why { display: flex; flex-direction: column; gap: 12px; }
-.sl-why p { font-size: 17px; color: var(--ink-soft); line-height: 1.7; }
-
-/* ════════════════════════════════════
-   BOT TEST SECTION
-   ════════════════════════════════════ */
-.bot-test-section {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 48px 28px;
-  border: 1px solid var(--line);
-  text-align: center;
-  background: var(--paper);
-}
-.bot-test-section h2 {
-  font-size: 27px;
-  margin-bottom: 14px;
-  text-align: center;
-}
-.bot-test-section p { font-size: 17px; color: var(--ink-soft); margin: 8px 0; }
-.bot-test-section .checklist {
-  text-align: left;
-  margin: 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.bot-test-section .checklist p::before { content: "✓  "; color: var(--accent); font-weight: 600; }
-.bot-test-section .note { font-style: italic; color: var(--ink-soft); margin-bottom: 24px; }
-
-/* ════════════════════════════════════
-   CONTACT SECTION
-   ════════════════════════════════════ */
-.sl-contact-section {
-  padding: 60px 28px;
-  background: var(--paper-2);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-.sl-contact-inner {
-  max-width: 520px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-}
-.sl-contact-row {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 18px;
-}
-.sl-contact-row svg { flex-shrink: 0; }
-.sl-contact-row a { color: var(--ink); transition: color .2s; }
-.sl-contact-row a:hover { color: var(--accent); }
-.sl-social-row {
-  display: flex; gap: 24px; align-items: center;
-  margin-top: 16px;
-}
-.sl-social-row a { color: var(--ink-soft); transition: color .2s; }
-.sl-social-row a:hover { color: var(--accent); }
-.sl-social-row svg { fill: currentColor; }
-
-/* ════════════════════════════════════
-   FORM
-   ════════════════════════════════════ */
-.form-container {
-  padding: 80px 28px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.form-container h2 {
-  text-align: center;
-  margin-bottom: 36px;
-  margin-top: 0;
-}
-label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--ink);
-}
-.required::after { content: " *"; color: #C0392B; }
-
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 16px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  font-size: 16px;
-  font-family: 'Inter', sans-serif;
-  background: var(--paper);
-  color: var(--ink);
-  transition: border-color .2s;
-}
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-button[type="submit"] { display: flex; width: 50%; margin: 20px auto 60px; }
-
-.error { color: #C0392B; font-size: 14px; margin-top: -10px; margin-bottom: 12px; }
-.success-message {
-  display: none;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  color: var(--ink);
-  border: 1px solid var(--line);
-}
-.success-under { font-weight: 400; font-size: 16px; margin-top: 10px; color: var(--ink-soft); }
-
-/* ════════════════════════════════════
-   FAQ ACCORDION
-   ════════════════════════════════════ */
-.questions {
-  padding: 80px 0;
-  max-width: 780px;
-  margin: 0 auto;
-}
-.accordion-item {
-  border: none;
-  border-bottom: 1px solid var(--line);
-  background: transparent;
-}
-.accordion-item:first-of-type { border-top: 1px solid var(--line); }
-.accordion-button {
-  font-family: 'Inter', sans-serif;
-  font-size: 17px;
-  font-weight: 500 !important;
-  background: transparent !important;
-  color: var(--ink) !important;
-  padding: 18px 0;
-  box-shadow: none !important;
-}
-.accordion-button:not(.collapsed) { color: var(--accent) !important; }
-.accordion-button::after { filter: none; }
-.accordion-body {
-  font-size: 16px;
-  color: var(--ink-soft);
-  padding: 0 0 18px;
-  line-height: 1.7;
-}
-
-/* ════════════════════════════════════
-   FOOTER
-   ════════════════════════════════════ */
-footer {
-  background: var(--ink);
-  color: var(--paper);
-  padding: 60px 0 30px;
-}
-.sl-foot-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 40px;
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 28px;
-  margin-bottom: 48px;
-}
-.sl-foot-logo {
-  font-family: 'Fraunces', serif;
-  font-weight: 600;
-  font-size: 23px;
-  color: var(--paper);
-  letter-spacing: -.01em;
-  margin-bottom: 14px;
-}
-.sl-foot-logo span { color: #6B8FD4; font-style: italic; }
-.sl-foot-desc { font-size: 16px; color: #B9BDC0; line-height: 1.6; max-width: 32ch; }
-
-footer h5 {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: #8A9099;
-  margin-bottom: 14px;
-  font-weight: 400;
-}
-.sl-flinks a {
-  display: block;
-  color: #D7D9DA;
-  font-size: 16px;
-  padding: 5px 0;
-  transition: color .2s;
-}
-.sl-flinks a:hover { color: var(--accent-soft); }
-
-.sl-foot-bottom {
-  border-top: 1px solid #2C3236;
-  padding: 20px 28px 0;
-  max-width: var(--wrap);
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #767C81;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-/* ════════════════════════════════════
-   SWIPER overrides
-   ════════════════════════════════════ */
-.card-wrapper {
-  max-width: 1100px;
-  margin: 0 auto 35px;
-  padding: 20px 10px;
-  overflow: hidden;
-}
-.card-list .card-item { list-style: none; min-width: 300px; max-width: 335px; }
-.card-list .card-item .card-link {
-  user-select: none;
-  width: 100%;
-  display: block;
-  background: var(--paper-2);
-  padding: 18px;
-  border-radius: 0;
-  text-decoration: none;
-  border: 1px solid var(--line);
-  transition: background .2s;
-}
-.card-list .card-item .card-link:hover { background: var(--accent-soft); border-color: var(--accent); }
-.card-list .card-item .card-image {
-  width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
-}
-.card-list .card-link .badge {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: transparent;
-  padding: 10px 0 4px;
-  width: fit-content;
-  border-radius: 0;
-  margin: 0;
-}
-.card-list .card-link .course-details {
-  list-style: none;
-  font-size: 15px;
-  color: var(--ink-soft);
-  padding: 0;
-  margin: 4px 0 0;
-  width: auto;
-  max-height: none;
-  overflow: visible;
-}
-.card-list .card-link .card-button {
-  height: 30px; width: 30px;
-  color: var(--ink);
-  border-radius: 0;
-  margin: 20px 0 4px;
-  background: none;
-  border: 1px solid var(--ink);
-  transform: rotate(-45deg);
-  transition: background .2s, color .2s;
-}
-.card-list .card-link:hover .card-button { background: var(--ink); color: var(--paper); }
-.card-wrapper .swiper-pagination-bullet { background: var(--ink); opacity: .4; }
-.card-wrapper .swiper-pagination-bullet-active { opacity: 1; }
-.card-wrapper .swiper-slides-button { color: var(--ink); margin-top: -35px; }
 
 /* ════════════════════════════════════
    RESPONSIVE
    ════════════════════════════════════ */
 
-/* ── ≤ 860px  tablet / великий телефон ── */
-@media (max-width: 860px) {
-  /* Layout */
-  .why-quotes-row    { grid-template-columns: 1fr !important; gap: 36px !important; }
-  .sl-block          { padding: 56px 0; }
-  .sl-pricing        { padding: 56px 0; }
-  .questions         { padding: 56px 0; }
-
-
-  /* Goals */
-  .sl-goals-row { grid-template-columns: repeat(2, 1fr); }
-  .sl-goal { border-left: none; border-top: 1px solid var(--line); }
-  .sl-goal:nth-child(odd) { padding-left: 0; }
-
-  /* Grids */
+/* ── ≤ 1100px ── */
+@media (max-width: 1100px) {
+  .sl-steps-grid   { grid-template-columns: repeat(2, 1fr); }
   .sl-courses-grid { grid-template-columns: repeat(2, 1fr); }
-  .sl-prices-grid  { grid-template-columns: 1fr; }
-  .sl-quotes-grid  { grid-template-columns: 1fr; gap: 28px; }
-  .sl-foot-grid    { grid-template-columns: 1fr; gap: 28px; }
-  .sl-steps-grid      { grid-template-columns: repeat(2, 1fr); }
-  .sl-admission-grid  { grid-template-columns: 1fr; }
-  .sl-uni-grid        { grid-template-columns: 1fr; }
-  .sl-sk-hero-grid    { grid-template-columns: 1fr; gap: 28px; }
-  .sl-sk-hero-grid .sl-sk-hero { text-align: center; }
-  .sl-sk-hero-grid .sl-sk-hero-photo { order: -1; }
-  .sl-benefits-row    { grid-template-columns: 1fr; gap: 28px; }
-  .sl-benefits-photo  { aspect-ratio: 16 / 9; }
-  .sl-trial-cta       { grid-template-columns: 1fr; gap: 28px; padding: 36px 28px; }
-  .sl-trial-text h2, .sl-trial-text p { max-width: none; }
-
-  /* Team — 2 колонки, однаковий gap */
-  .sl-team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-  /* Остання непарна картка — по центру, ширина = колонка */
-  .sl-member:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 8px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Founder — обмежуємо ширину фото щоб не розтягувалось на весь екран */
-  .sl-founder-row { grid-template-columns: 1fr; }
-  .sl-founder-photo {
-    max-width: 200px;
-  }
-
-  /* Course detail */
-  .info-courses { flex-direction: column; }
-  .nameCourse, .about { width: 100%; padding: 0 20px; }
 }
 
-/* ── ≤ 800px  навігація — бургер ── */
+/* ── ≤ 960px  tablet (810) ── */
+@media (max-width: 960px) {
+  .sl-block, .sl-pricing { padding: 88px 0; }
+  .questions, .form-container { padding-top: 88px; padding-bottom: 88px; }
+  .sl-block-head { margin-bottom: 40px; }
+
+  .sl-prices-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+
+  .sl-goals-row { grid-template-columns: repeat(2, 1fr); }
+  .sl-goal { border-left: none; padding-left: 0; }
+  .sl-goal:nth-child(even) { border-left: 1px solid var(--border); padding-left: 24px; }
+  .sl-goal:nth-child(n+3) { border-top: 1px solid var(--border); }
+
+  .why-quotes-row { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .sl-why { position: static; }
+
+  .sl-sk-hero-grid { grid-template-columns: 1fr; grid-template-rows: none; }
+  .sl-sk-hero-grid .sl-sk-hero h2 { margin-bottom: 24px; }
+  .sl-sk-hero-photo { grid-column: 1; grid-row: auto; margin-top: 40px; aspect-ratio: 16 / 9; }
+
+  .sl-benefits-row { grid-template-columns: 1fr; }
+  .sl-benefits-photo { min-height: 0; aspect-ratio: 16 / 9; }
+
+  .form-container:has(> .sl-consult-checklist) { grid-template-columns: 1fr; grid-template-rows: none; }
+  .form-container > .sl-consult-checklist,
+  .form-container:has(> .sl-consult-checklist) > form,
+  .form-container:has(> .sl-consult-checklist) > .success-message { grid-column: 1; grid-row: auto; }
+
+  .sl-trial-cta { grid-template-columns: 1fr; grid-template-rows: none; padding: 40px; }
+  .sl-trial-text h2:not(.accordion-header) { margin-bottom: 20px; }
+  .sl-trial-text p { margin-bottom: 32px; max-width: none; }
+  .sl-trial-form { grid-column: 1; }
+
+  .info-courses.row { grid-template-columns: 1fr; gap: 28px; padding: 40px; }
+  .info-courses.row > .nameCourse { position: static; }
+}
+
+/* ── ≤ 800px  navigation → burger ── */
 @media (max-width: 800px) {
   .hideOnMobile { display: none; }
   .menu-button  { display: block; }
 }
 
-/* ── ≤ 600px  середні телефони ── */
+/* ── ≤ 760px ── */
+@media (max-width: 760px) {
+  .sl-admission-grid { grid-template-columns: 1fr; }
+  .sl-founder-row { grid-template-columns: 1fr; gap: 32px; }
+  .sl-founder-photo { max-width: 280px; }
+  .sl-foot-grid { grid-template-columns: 1fr; gap: 32px; }
+  #target-section-sk-documents .sl-consult-checklist { grid-template-columns: 1fr; }
+}
+
+/* ── ≤ 600px  phones ── */
 @media (max-width: 600px) {
-  .sl-wrap { padding: 0 16px; }
-  .sl-block { padding: 52px 0; }
-  .sl-pricing { padding: 52px 0; }
-  .questions { padding: 52px 0; }
+  .sl-block, .sl-pricing { padding: 64px 0; }
+  .questions, .form-container { padding: 64px 16px; }
+  .sl-goals-row { padding: 0 16px; }
+  .sl-foot-grid { padding-left: 16px; padding-right: 16px; }
+  .sl-foot-bottom { width: calc(100% - 32px); }
 
+  h2:not(.accordion-header) { letter-spacing: -1px; }
 
-  /* Goals — 1 колонка */
-  .sl-goals-row { grid-template-columns: 1fr; }
-  .sl-goal { border-left: none; border-top: 1px solid var(--line); padding: 14px 0; }
-  .sl-goal:first-child { border-top: none; }
+  .sl-price-card,
+  .sl-admission-card,
+  .sl-step,
+  .sl-quote,
+  .sl-course,
+  .sl-benefit,
+  .bot-test-section,
+  .sl-trial-cta,
+  .info-courses.row,
+  .form-container form,
+  .success-message { padding: 28px 24px; }
+  .sl-uni-card { padding: 0 0 28px; }
+  .sl-uni-card h3 { margin: 0 24px 8px; }
+  .sl-uni-card p { margin: 0 24px; }
 
-  /* Courses — 1 колонка */
-  .sl-courses-grid { grid-template-columns: 1fr; }
-  .sl-steps-grid   { grid-template-columns: 1fr; }
+  .sl-steps-grid, .sl-courses-grid, .sl-uni-grid { grid-template-columns: 1fr; }
+  .sl-course { min-height: 0; }
+  .sl-uni-photo { margin-bottom: 24px; }
 
-  /* Team — gap менший */
-  .sl-team-grid { gap: 12px; }
-  .sl-member:last-child:nth-child(odd) { max-width: calc(50% - 6px); }
+  .sl-sk-hero-grid .sl-sk-hero .sl-btn,
+  .bot-test-button,
+  .apply-course a,
+  .apply-course .button-start { width: 100%; }
 
-  /* Founder */
-  .sl-founder-photo { max-width: 160px; }
-  .sl-founder-name  { font-size: 17px; }
-
-  /* Ціни */
-  .sl-price-amount  { font-size: 36px; }
-
-  /* Форма — зберігаємо горизонтальний відступ щоб поля не впирались у краї */
-  .form-container   { padding: 44px 20px; }
-  button[type="submit"] { width: 100%; }
+  #faqAccordion .accordion-button { padding: 20px; font-size: 16px; }
+  #faqAccordion .accordion-body { padding: 0 20px 20px; }
 }
 
-/* ── ≤ 480px  малі телефони (iPhone SE, старі Android) ── */
+/* ── ≤ 480px  small phones ── */
 @media (max-width: 480px) {
-  .sl-team-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .sl-member:last-child:nth-child(odd) { max-width: calc(50% - 5px); }
+  .sl-goals-row { grid-template-columns: 1fr; }
+  .sl-goal,
+  .sl-goal:nth-child(even) { border-left: none; padding: 20px 0; }
+  .sl-goal:nth-child(n+2) { border-top: 1px solid var(--border); }
 
-
-  /* Swiper */
-  .card-wrapper { margin: 0 0 20px; padding: 0; }
-  .card-list .card-item { max-width: 100%; width: 100%; }
-  .card-wrapper .swiper-slides-button { display: none; }
-
-  /* Footer */
-  .sl-foot-bottom { flex-direction: column; gap: 6px; }
+  .sl-founder-photo { max-width: 220px; }
+  .sl-consult-checklist p::before,
+  .bot-test-section .checklist p::before { flex-basis: 52px; }
+  .sl-foot-bottom { flex-direction: column; }
 }
-
