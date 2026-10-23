@@ -98,50 +98,6 @@
     },
     {
       "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Slovak Language: Beginner Course",
-      "description": "Course for individuals with little to no prior experience in Slovak. Learn basic vocabulary, grammar, pronunciation, and everyday phrases.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
-      "courseMode": "online",
-      "educationalLevel": "Beginner",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Slovak Language: Intermediate Course",
-      "description": "For learners with foundational Slovak knowledge. Expand vocabulary, grammar, and conversational skills with a native speaker.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
-      "courseMode": "online",
-      "educationalLevel": "Intermediate",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Slovak Language: Advanced Course",
-      "description": "For students who speak Slovak well and want to master advanced grammar, idioms, and cultural nuances.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
-      "courseMode": "online",
-      "educationalLevel": "Advanced",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Course",
-      "name": "Slovak Language: Speaking Club",
-      "description": "Conversational practice club led by a native Slovak speaker. Discussions, vocabulary games, and real-life language scenarios.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
-      "courseMode": "online",
-      "educationalLevel": "Intermediate",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
         { "@type": "Question", "name": "Do you offer individual lessons?",
@@ -179,9 +135,8 @@
           </svg>
         </a>
       </li>
-      <li onclick="hideSidebar()"><a href="index.html" id="li1">Про нас</a></li>
-      <li onclick="hideSidebar()"><a href="#target-section-courses" id="li2">Курси</a></li>
-      <li onclick="hideSidebar()"><a href="#target-section-team" id="li3">Засновниця</a></li>
+      <li onclick="hideSidebar()"><a href="index.html" id="li1">Головна</a></li>
+      <li onclick="hideSidebar()"><a href="courses.html" id="li2">Курси</a></li>
       <li onclick="hideSidebar()"><a href="#target-section-apply" id="li4">Контакти</a></li>
       <li onclick="hideSidebar()"><a href="#target-section-feedback" id="li5">Відгуки</a></li>
     </ul>
@@ -191,9 +146,8 @@
       <li>
         <a href="#" class="nav-logo">Slovak<span>Lab</span></a>
       </li>
-      <li class="hideOnMobile"><a href="index.html" id="li1">Про нас</a></li>
-      <li class="hideOnMobile"><a href="#target-section-courses" id="li2">Курси</a></li>
-      <li class="hideOnMobile"><a href="#target-section-team" id="li3">Засновниця</a></li>
+      <li class="hideOnMobile"><a href="index.html" id="li1">Головна</a></li>
+      <li class="hideOnMobile"><a href="courses.html" id="li2">Курси</a></li>
       <li class="hideOnMobile"><a href="#target-section-apply" id="li4">Контакти</a></li>
       <li class="hideOnMobile"><a href="#target-section-feedback" id="li5">Відгуки</a></li>
       <li class="language">
@@ -226,9 +180,7 @@
           <span>курси словацької для українців</span>
         </div>
 
-        <h1>
-          <span>Привіт стає</span><br><span class="sk">Ahoj.</span>
-        </h1>
+        <h1 id="hero-kicker">Безкоштовна вища освіта в Словаччині — це реально</h1>
 
         <p class="sl-lead" id="hero-lead">
           Онлайн-курси словацької з носіями мови та українськими викладачами.
@@ -266,67 +218,6 @@
       <div class="sl-goal"><b id="p4">Подорожі</b>&nbsp;<span id="p4-desc">— розмовна словацька в дорозі</span></div>
     </div>
   </div>
-
-  <!-- ══════════════════════════════════
-       COURSES GRID
-       ══════════════════════════════════ -->
-  <section class="sl-block" id="target-section-courses">
-    <div class="sl-wrap">
-      <div class="sl-block-head">
-        <h2 id="courses">Курси</h2>
-        <p id="courses-desc">Від першого <em>ahoj</em> до вільної розмови про культуру, політику та побут.</p>
-      </div>
-
-      <!-- Hairline grid — cards link to detail sections below -->
-      <div class="sl-courses-grid">
-        <a href="#target-section-beginner" class="sl-course">
-          <div>
-            <span class="sl-course-lvl" id="level1">Beginner</span>
-            <h3 id="aboutBeginner">Beginner</h3>
-            <p class="sl-course-meta">
-              <span id="infolevel1">Без попередніх знань</span> &middot; <span id="infoDurationBeginner">1 рік</span>
-            </p>
-          </div>
-          <span class="sl-arrow">→</span>
-        </a>
-
-        <a href="#target-section-intermediate" class="sl-course">
-          <div>
-            <span class="sl-course-lvl" id="level2">Intermediate</span>
-            <h3 id="aboutIntermediate">Intermediate</h3>
-            <p class="sl-course-meta">
-              <span id="infolevel2">Базові знання мови</span> &middot; <span id="infoDurationIntermediate">2
-                роки</span>
-            </p>
-          </div>
-          <span class="sl-arrow">→</span>
-        </a>
-
-        <a href="#target-section-advanced" class="sl-course">
-          <div>
-            <span class="sl-course-lvl" id="level3">Advanced</span>
-            <h3 id="aboutAdvanced">Advanced</h3>
-            <p class="sl-course-meta">
-              <span id="infolevel3">Впевнене спілкування</span> &middot; <span id="infoDurationAdvanced">2 роки</span>
-            </p>
-          </div>
-          <span class="sl-arrow">→</span>
-        </a>
-
-        <a href="#target-section-speaking" class="sl-course">
-          <div>
-            <span class="sl-course-lvl" id="level4">Speaking</span>
-            <h3 id="aboutSpeakingClub">Speaking Club</h3>
-            <p class="sl-course-meta">
-              <span id="infolevel4">Розмовні навички</span> &middot; <span
-                id="infoDurationSpeakingClub">Необмежено</span>
-            </p>
-          </div>
-          <span class="sl-arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
 
   <!-- ══════════════════════════════════
        BOT TEST SECTION
@@ -417,214 +308,6 @@
   </section>
 
   <!-- ══════════════════════════════════
-       COURSE DETAIL SECTIONS
-       ══════════════════════════════════ -->
-  <section class="sl-block">
-    <div class="sl-wrap">
-
-      <!-- Beginner -->
-      <div class="row info-courses" id="target-section-beginner">
-        <div class="col-lg-6 order-lg-1 nameCourse">
-          <h2 id="aboutBeginner-detail"><em>Beginner</em></h2>
-        </div>
-        <div class="col-lg-6 order-lg-2 about">
-          <ul>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/level.png" class="small-icon" alt="Level icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-level-beginner">Course is designed for individuals with little to no prior experience
-                in the Slovak language</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="Course content icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-content-beginner">Participants will learn basic Slovak vocabulary, essential
-                grammatical structures, everyday phrases, proper pronunciation, and simple sentences.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="Teaching methods icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-methods-beginner">Interactive lessons, conversational practice and role-playing.
-                Multimedia resources enhance learning.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="Lesson recording icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-record-beginner">All sessions will be recorded, allowing students to review
-                materials.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="Teacher icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-teacher-beginner">The course is led by an experienced Ukrainian teacher only.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="Course duration icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-duration-beginner">The course runs for one year, with classes scheduled twice a
-                week.</span>
-            </li>
-          </ul>
-          <div class="apply-course">
-            <a href="#target-section-apply"><button class="button-start" id="apply-button-beginner">Записатись на
-                курс</button></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Intermediate -->
-      <div class="row info-courses" id="target-section-intermediate">
-        <div class="col-lg-6 order-lg-2 nameCourse">
-          <h2 id="aboutIntermediate-detail"><em>Intermediate</em></h2>
-        </div>
-        <div class="col-lg-6 order-lg-1 about">
-          <ul>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/level.png" class="small-icon" alt="Level icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-level-intermediate">For learners who have a foundational understanding of Slovak and
-                wish to expand their skills.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="Course content icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-content-intermediate">Students will learn more advanced grammar, increase vocabulary,
-                practice speaking, and learn about Slovak culture.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="Teaching methods icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-methods-intermediate">The course includes discussions, group activities, and real-life
-                scenarios.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="Lesson recording icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-recordings-intermediate">All sessions will be recorded, allowing students to review
-                materials.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="Teacher icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-teacher-intermediate">Led by an experienced Ukrainian teacher; from mid-course, lessons
-                include a native speaker.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="Course duration icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-duration-intermediate">Classes are held twice a week for one year.</span>
-            </li>
-          </ul>
-          <div class="apply-course">
-            <a href="#target-section-apply"><button class="button-start" id="apply-button-intermediate">Записатись на
-                курс</button></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Advanced -->
-      <div class="row info-courses" id="target-section-advanced">
-        <div class="col-lg-6 order-lg-1 nameCourse">
-          <h2 id="aboutAdvanced-detail"><em>Advanced</em></h2>
-        </div>
-        <div class="col-lg-6 order-lg-2 about">
-          <ul>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/level.png" class="small-icon" alt="Level icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-level-advanced">For students who already speak Slovak well and want to improve
-                further.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="Course content icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-content-advanced">Advanced grammar, idioms, and vocabulary. Discussions about culture
-                and current events.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="Teaching methods icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-methods-advanced">Classes involve discussions, presentations, and analysis of
-                texts.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="Lesson recording icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-recordings-advanced">All sessions will be recorded, allowing students to review
-                materials.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="Teacher icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-teacher-advanced">Led by an experienced Ukrainian teacher and a native Slovak
-                speaker.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="Course duration icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-duration-advanced">Classes are held twice a week for one year.</span>
-            </li>
-          </ul>
-          <div class="apply-course">
-            <a href="#target-section-apply"><button class="button-start" id="apply-button-advanced">Записатись на
-                курс</button></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Speaking Club -->
-      <div class="row info-courses" id="target-section-speaking">
-        <div class="col-lg-6 order-lg-2 nameCourse">
-          <h2 id="aboutSpeakingClub-detail"><em>Speaking Club</em></h2>
-        </div>
-        <div class="col-lg-6 order-lg-1 about">
-          <ul>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/level.png" class="small-icon" alt="Level icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-level-speakingClub">For students who already speak Slovak and want to build
-                confidence.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/human-brain.png" class="small-icon" alt="Course content icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-content-speakingClub">Conversations on various topics, vocabulary games, discussions of
-                movies and series, everyday language.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/methods.png" class="small-icon" alt="Teaching methods icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-methods-speakingClub">Interactive discussions and real-life scenarios to promote
-                speaking confidence.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/recording.png" class="small-icon" alt="Lesson recording icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-recordings-speakingClub">All sessions will be recorded, allowing students to review
-                materials.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/teacher.png" class="small-icon" alt="Teacher icon" loading="lazy" width="24"
-                height="24">
-              <span id="course-teacher-speakingClub">The course is led by a native Slovak speaker.</span>
-            </li>
-            <li class="describe-course-item">
-              <img src="DescribeCourseIcons/duration.png" class="small-icon" alt="Course duration icon" loading="lazy"
-                width="24" height="24">
-              <span id="course-duration-speakingClub">Classes are held twice a week.</span>
-            </li>
-          </ul>
-          <div class="apply-course">
-            <a href="#target-section-apply"><button class="button-start" id="apply-button-speaking">Записатись на
-                курс</button></a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
        TEAM
        ══════════════════════════════════ -->
   <section class="sl-block sl-block--alt" id="target-section-team">
@@ -659,6 +342,250 @@
   </section>
 
   <!-- ══════════════════════════════════
+       ADMISSION SUPPORT
+       ══════════════════════════════════ -->
+  <section class="sl-block" id="target-section-admission">
+    <div class="sl-wrap">
+      <div class="sl-block-head">
+        <h2 id="admission-title">Супровід вступу</h2>
+        <p id="admission-desc">Мовна підготовка — це лише частина шляху. У команді SlovakLab є куратори, які
+          супроводжують вступ від початку до кінця — від подання заявки до поселення в гуртожиток.</p>
+      </div>
+
+      <div class="sl-admission-grid">
+        <div class="sl-admission-card">
+          <span class="sl-admission-num">01</span>
+          <p id="admission-point1">Допомога з подачею заявки на вступ</p>
+        </div>
+        <div class="sl-admission-card">
+          <span class="sl-admission-num">02</span>
+          <p id="admission-point2">Супровід на всіх етапах процесу вступу</p>
+        </div>
+        <div class="sl-admission-card">
+          <span class="sl-admission-num">03</span>
+          <p id="admission-point3">Підтримка з поселенням у гуртожиток після зарахування</p>
+        </div>
+      </div>
+
+      <div style="margin-top:32px;">
+        <a href="#target-section-apply" class="sl-btn" id="admission-cta">Дізнатись більше про супровід вступу</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SK EDUCATION — INTRO
+       ══════════════════════════════════ -->
+  <section class="sl-block sl-block--alt" id="target-section-sk-hero">
+    <div class="sl-wrap sl-sk-hero-grid">
+      <div class="sl-sk-hero">
+        <h2 id="sk-hero-title">Вища освіта у Словаччині — ближче, ніж здається</h2>
+        <p id="sk-hero-desc">Державні виші Словаччини відкриті для випускників з України. Ми готуємо дитину мовно
+          та супроводжуємо на кожному кроці — від першого уроку словацької до зарахування.</p>
+        <a href="#target-section-sk-benefits" class="sl-btn" id="sk-hero-cta">Дізнатись, як це працює →</a>
+      </div>
+      <div class="sl-sk-hero-photo">
+        <img src="https://images.unsplash.com/photo-1568616388664-1e37d8376363?w=1200&q=80&auto=format&fit=crop"
+          alt="Братиславський Град, Словаччина" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SK EDUCATION — BENEFITS
+       ══════════════════════════════════ -->
+  <section class="sl-block" id="target-section-sk-benefits">
+    <div class="sl-wrap">
+      <div class="sl-block-head">
+        <h2 id="sk-benefits-title">Чому варто розглянути навчання у Словаччині</h2>
+      </div>
+
+      <div class="sl-benefits-row">
+        <div class="sl-benefits-list">
+          <div class="sl-benefit">
+            <h3 id="sk-benefit1-title">Вступ без додаткових іспитів</h3>
+            <p id="sk-benefit1-desc">Частина державних вишів зараховує за результатами атестата, без окремих
+              вступних випробувань — залежно від факультету.</p>
+          </div>
+          <div class="sl-benefit">
+            <h3 id="sk-benefit2-title">Дипломи визнаються в усьому ЄС</h3>
+            <p id="sk-benefit2-desc">Словацький диплом діє в усіх країнах Євросоюзу без додаткового
+              підтвердження.</p>
+          </div>
+          <div class="sl-benefit">
+            <h3 id="sk-benefit3-title">Дозвіл на проживання з правом на роботу</h3>
+            <p id="sk-benefit3-desc">Студенти отримують офіційний статус, що дозволяє легально працювати і
+              подорожувати країнами ЄС під час навчання.</p>
+          </div>
+          <div class="sl-benefit">
+            <h3 id="sk-benefit4-title">Словацька близька до української</h3>
+            <p id="sk-benefit4-desc">Завдяки спорідненості мов дитині простіше досягти впевненого рівня, ніж у
+              вивченні мов з нуля без спільного коріння.</p>
+          </div>
+          <div class="sl-benefit">
+            <h3 id="sk-benefit5-title">Спокійне і безпечне середовище</h3>
+            <p id="sk-benefit5-desc">Словаччина відома низьким рівнем злочинності та стабільним щоденним життям
+              для студентів.</p>
+          </div>
+        </div>
+        <div class="sl-benefits-photo">
+          <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?w=1200&q=80&auto=format&fit=crop"
+            alt="Студенти за навчанням" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SK EDUCATION — ADMISSION PROCESS
+       ══════════════════════════════════ -->
+  <section class="sl-block sl-block--alt" id="target-section-sk-process">
+    <div class="sl-wrap">
+      <div class="sl-block-head">
+        <h2 id="sk-process-title">Як проходить вступ до словацького вишу</h2>
+        <p id="sk-process-desc">Загальний шлях від першої консультації до зарахування — крок за кроком.</p>
+      </div>
+
+      <div class="sl-steps-grid">
+        <div class="sl-step">
+          <span class="sl-step-num">1</span>
+          <h3 id="sk-process1-title">Консультація та вибір програми</h3>
+          <p id="sk-process1-desc">Обговорюємо мету, факультет і виш, що підходять саме вашій дитині.</p>
+        </div>
+        <div class="sl-step">
+          <span class="sl-step-num">2</span>
+          <h3 id="sk-process2-title">Мовна підготовка та документи</h3>
+          <p id="sk-process2-desc">Паралельно з курсом словацької готуємо й перевіряємо потрібні документи.</p>
+        </div>
+        <div class="sl-step">
+          <span class="sl-step-num">3</span>
+          <h3 id="sk-process3-title">Подання заявки до вишу</h3>
+          <p id="sk-process3-desc">Подаємо заявку на вступ до обраного університету у визначені терміни.</p>
+        </div>
+        <div class="sl-step">
+          <span class="sl-step-num">4</span>
+          <h3 id="sk-process4-title">Зарахування та поселення</h3>
+          <p id="sk-process4-desc">Після зарахування допомагаємо з поселенням у гуртожиток і першими кроками в
+            новому місті.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SK EDUCATION — DOCUMENTS
+       ══════════════════════════════════ -->
+  <section class="sl-block" id="target-section-sk-documents">
+    <div class="sl-wrap">
+      <div class="sl-block-head">
+        <h2 id="sk-doc-title">Що потрібно для вступу</h2>
+        <p id="sk-doc-desc">Орієнтовний перелік документів для вступу до державного вишу Словаччини.</p>
+      </div>
+
+      <div class="sl-consult-checklist">
+        <p id="sk-doc-item1">Атестат про повну загальну середню освіту з додатком (оцінками)</p>
+        <p id="sk-doc-item2">Нострифікація або підтвердження еквівалентності документа про освіту — за вимогою
+          конкретного вишу</p>
+        <p id="sk-doc-item3">Закордонний паспорт</p>
+        <p id="sk-doc-item4">Фотографії встановленого зразка</p>
+        <p id="sk-doc-item5">Заява на вступ за формою обраного університету</p>
+      </div>
+      <p class="sl-hero-note" id="sk-doc-note" style="margin:0;">Точний перелік залежить від вишу та факультету —
+        уточнюємо його разом із куратором на консультації.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SK EDUCATION — POPULAR UNIVERSITIES
+       ══════════════════════════════════ -->
+  <section class="sl-block sl-block--alt" id="target-section-sk-universities">
+    <div class="sl-wrap">
+      <div class="sl-block-head">
+        <h2 id="sk-uni-title">Популярні виші серед українських студентів у Словаччині</h2>
+        <p id="sk-uni-desc">Кілька державних університетів, куди найчастіше вступають абітурієнти з України.</p>
+      </div>
+
+      <div class="sl-uni-grid">
+        <div class="sl-uni-card">
+          <div class="sl-uni-photo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Univerzita_Komensk%C3%A9ho.jpg/960px-Univerzita_Komensk%C3%A9ho.jpg"
+              alt="Історична будівля Університету Коменського в Братиславі" loading="lazy">
+          </div>
+          <h3 id="sk-uni1-title">Університет Коменського в Братиславі</h3>
+          <p id="sk-uni1-desc">Найбільший і найстаріший класичний університет Словаччини, з широким вибором
+            факультетів.</p>
+        </div>
+        <div class="sl-uni-card">
+          <div class="sl-uni-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/STU-Building.JPG/960px-STU-Building.JPG"
+              alt="Будівля факультету будівництва Словацького технічного університету в Братиславі" loading="lazy">
+          </div>
+          <h3 id="sk-uni2-title">Словацький технічний університет у Братиславі</h3>
+          <p id="sk-uni2-desc">Провідний технічний виш країни з інженерними та технічними програмами.</p>
+        </div>
+        <div class="sl-uni-card">
+          <div class="sl-uni-photo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Technical_University%2C_Kosice%2C_2018-05.jpg/960px-Technical_University%2C_Kosice%2C_2018-05.jpg"
+              alt="Кампус Технічного університету в Кошице" loading="lazy">
+          </div>
+          <h3 id="sk-uni3-title">Технічний університет у Кошице</h3>
+          <p id="sk-uni3-desc">Один із найбільших технічних університетів на сході Словаччини.</p>
+        </div>
+        <div class="sl-uni-card">
+          <div class="sl-uni-photo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Rektor%C3%A1t_UPJ%C5%A0.jpg/960px-Rektor%C3%A1t_UPJ%C5%A0.jpg"
+              alt="Будівля ректорату Університету Павла Йозефа Шафарика в Кошице" loading="lazy">
+          </div>
+          <h3 id="sk-uni4-title">Університет Павла Йозефа Шафарика в Кошице</h3>
+          <p id="sk-uni4-desc">Класичний університет зі сильними природничими та медичними факультетами.</p>
+        </div>
+      </div>
+
+      <p class="sl-uni-credit">Фото: Wikimedia Commons — Vladimir Kuric / Univerzita Komenského v Bratislave (<a
+          href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA
+          4.0</a>), Eston (public domain), Szilas (public domain), V0lkanic (<a
+          href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>).</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       SK EDUCATION — CONSULTATION FORM
+       ══════════════════════════════════ -->
+  <div class="form-container" id="target-section-sk-consult">
+    <h2 id="sk-consult-title">Готові зробити перший крок до навчання в Європі?</h2>
+    <p class="sl-sk-consult-desc" id="sk-consult-desc">Залиште контакт — куратор SlovakLab розповість, з чого
+      почати підготовку саме для вашої дитини.</p>
+
+    <div class="sl-consult-checklist">
+      <p id="sk-consult-point1">Безкоштовна консультація з куратором</p>
+      <p id="sk-consult-point2">Мовна підготовка від A1 до C1</p>
+      <p id="sk-consult-point3">Супровід вступу — від заявки до гуртожитку</p>
+    </div>
+
+    <form id="skConsultForm" name="skConsultForm" action="" method="post">
+      <label for="sk-name" id="sk-consult-fullName">Ім'я</label>
+      <input type="text" id="sk-name" name="sk-name" placeholder="Ваше ім'я">
+      <div class="error" id="skNameError"></div>
+
+      <label for="sk-phone" id="sk-consult-phone">Телефон</label>
+      <input type="tel" id="sk-phone" name="sk-phone" placeholder="+38 (0XX) XXX XX XX">
+      <div class="error" id="skPhoneError"></div>
+
+      <label for="sk-email" id="sk-consult-email">Email</label>
+      <input type="email" id="sk-email" name="sk-email" placeholder="smth@example.com">
+      <div class="error" id="skEmailError"></div>
+
+      <button type="submit" id="skConsultSendButton">Записатись на консультацію</button>
+    </form>
+    <div class="success-message" id="skConsultSuccess">
+      Дякуємо! Ми зв'яжемось із вами найближчим часом.
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
        WHY CHOOSE US + TESTIMONIALS
        ══════════════════════════════════ -->
   <section class="sl-block" id="target-section-feedback">
@@ -685,32 +612,67 @@
         <div class="sl-quotes-grid" style="grid-template-columns:1fr;">
 
           <div class="sl-quote">
-            <p id="comment1">"The teachers are fantastic! They explain everything clearly and make learning fun.
-              Highly recommend these courses."</p>
+            <p id="comment1">«Чудові викладачі! Вони все чітко пояснюють і роблять навчання цікавим. Дуже рекомендую
+              ці курси.»</p>
             <div class="sl-who">
-              <img src="FeedbackImg/Max.jpg" alt="Student Anastasia" loading="lazy" width="32" height="32">
-              <span id="person1">Anastasia</span>
+              <img src="FeedbackImg/Anastasia.jpg" alt="Student Anastasia" loading="lazy" width="32" height="32">
+              <span id="person1">Анастасія</span>
             </div>
           </div>
 
           <div class="sl-quote" style="margin-top:28px;">
-            <p id="comment2">"I'm very pleased with the SlovakLab courses. My son has made great progress thanks to
-              the skilled and supportive teachers. Highly recommend!"</p>
+            <p id="comment2">«Я дуже задоволений курсами SlovakLab. Мій син комфортно почуває себе у Словаччині
+              завдяки чудовим викладачам. Програма добре структурована та цікава — дуже рекомендую!»</p>
             <div class="sl-who">
               <img src="FeedbackImg/Georgy.jpg" alt="Student Georgy" loading="lazy" width="32" height="32">
-              <span id="person2">Georgy</span>
+              <span id="person2">Георгій</span>
             </div>
           </div>
 
           <div class="sl-quote" style="margin-top:28px;">
-            <p id="comment3">"These courses are perfect for beginners! The practical approach helped me use Slovak in
-              everyday situations quickly."</p>
+            <p id="comment3">«Я починав з нуля і завдяки спілкуванню з носієм мови дуже швидко вивчив мову. Уроки
+              дуже цікаві, саме практичний підхід допоміг мені швидко заговорити словацькою.»</p>
             <div class="sl-who">
-              <img src="FeedbackImg/Anastasia.jpg" alt="Student Max" loading="lazy" width="32" height="32">
-              <span id="person3">Max</span>
+              <img src="FeedbackImg/Max.jpg" alt="Student Max" loading="lazy" width="32" height="32">
+              <span id="person3">Максим</span>
             </div>
           </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       PROCESS STEPS
+       ══════════════════════════════════ -->
+  <section class="sl-block sl-block--alt" id="target-section-steps">
+    <div class="sl-wrap">
+      <div class="sl-block-head">
+        <h2 id="steps-title">Що відбувається після заявки?</h2>
+        <p id="steps-desc">Ніякої невідомості про наступні кроки.</p>
+      </div>
+
+      <div class="sl-steps-grid">
+        <div class="sl-step">
+          <span class="sl-step-num">1</span>
+          <h3 id="step1-title">Залишаєте заявку</h3>
+          <p id="step1-desc">Заповнюєте коротку форму на цій сторінці.</p>
+        </div>
+        <div class="sl-step">
+          <span class="sl-step-num">2</span>
+          <h3 id="step2-title">Ми зв'язуємось</h3>
+          <p id="step2-desc">Зв'яжемось із вами та допоможемо підібрати курс і групу.</p>
+        </div>
+        <div class="sl-step">
+          <span class="sl-step-num">3</span>
+          <h3 id="step3-title">Безкоштовний пробний урок</h3>
+          <p id="step3-desc">Ви пробуєте урок, перш ніж домовлятись про курс.</p>
+        </div>
+        <div class="sl-step">
+          <span class="sl-step-num">4</span>
+          <h3 id="step4-title">Старт навчання</h3>
+          <p id="step4-desc">Ви приєднуєтесь до групи (або індивідуального формату), і курс стартує.</p>
         </div>
       </div>
     </div>
@@ -724,7 +686,7 @@
     <form name="registrationForm" id="registrationForm" action="" method="post">
       <p class="success send-success"></p>
 
-      <label class="required" for="name" id="fullName">Повне ім'я</label>
+      <label class="required" for="name" id="fullName">Ім'я (батьків або дитини)</label>
       <input type="text" id="name" name="name" placeholder="Іваненко Іван">
       <div class="error" id="usernameError"></div>
 
@@ -735,6 +697,9 @@
       <label class="required" for="phone" id="phoneNumber">Номер телефону</label>
       <input type="tel" id="phone" name="phone" placeholder="+38 (0XX) XXX XX XX">
       <div class="error" id="phoneError"></div>
+
+      <label for="child-age" id="childAge">Клас / вік дитини (якщо записуєте дитину)</label>
+      <input type="text" id="child-age" name="child-age" placeholder="Наприклад: 9 клас, 15 років">
 
       <label for="level" class="required">
         <span id="selectlevel">Оберіть курс</span>
@@ -768,14 +733,14 @@
         <h2 class="accordion-header" id="headingOne">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            <span id="question1">Do you offer individual lessons?</span>
+            <span id="question1">Чи маєте індивідуальні уроки?</span>
           </button>
         </h2>
         <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
           data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            <span id="answer1">Yes! We offer individual lessons (15€/lesson), pair sessions (75€/8 lessons), and small
-              group classes of up to 6 people (50€/8 lessons). Choose the format that suits you best.</span>
+            <span id="answer1">Так! Ми пропонуємо індивідуальні заняття (15€/урок), парні заняття (75€/8 занять) та
+              групи до 6 осіб (50€/8 занять). Оберіть формат, який підходить саме вам.</span>
           </div>
         </div>
       </div>
@@ -784,14 +749,14 @@
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <span id="question2">What age groups do you teach?</span>
+            <span id="question2">Які вікові групи ви навчаєте?</span>
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
           data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            <span id="answer2">We have courses for both adults and children. Classes are divided into age-appropriate
-              groups to ensure a comfortable learning environment.</span>
+            <span id="answer2">Ми пропонуємо курси як для дорослих, так і для дітей-підлітків (13+ років). Заняття
+              проводяться у вікових групах, щоб забезпечити комфортне навчальне середовище.</span>
           </div>
         </div>
       </div>
@@ -800,14 +765,14 @@
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <span id="question3">What is the schedule for the classes?</span>
+            <span id="question3">Який розклад занять?</span>
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
           data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            <span id="answer3">The schedule is coordinated together with the entire group and the teacher to ensure it
-              works for everyone as much as possible.</span>
+            <span id="answer3">Розклад узгоджується разом з усією групою та викладачем, щоб максимально підходив усім
+              учасникам.</span>
           </div>
         </div>
       </div>
@@ -816,13 +781,13 @@
         <h2 class="accordion-header" id="headingFour">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            <span id="question4">How long does the lesson last?</span>
+            <span id="question4">Скільки триває урок?</span>
           </button>
         </h2>
         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
           data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            <span id="answer4">The lesson takes 90 minutes.</span>
+            <span id="answer4">Урок триває 90 хвилин.</span>
           </div>
         </div>
       </div>
@@ -831,14 +796,78 @@
         <h2 class="accordion-header" id="headingFive">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-            <span id="question5">What is the way the student should pay for classes?</span>
+            <span id="question5">Який спосіб оплати за заняття?</span>
           </button>
         </h2>
         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
           data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            <span id="answer5">Payment is made in advance: for 4 lessons, or for a full month according to the
-              schedule.</span>
+            <span id="answer5">Оплата здійснюється наперед: за 4 уроки або за повний місяць відповідно до
+              розкладу.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            <span id="question6">Чи можна вступити до державного вишу без вступних іспитів?</span>
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer6">Частина державних вишів Словаччини зараховує за результатами атестата — конкретні
+              умови залежать від факультету, тому ми допомагаємо перевірити їх заздалегідь.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            <span id="question7">Чи визнається словацький диплом в Україні та ЄС?</span>
+          </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer7">Так, словацький диплом визнається в усіх країнах ЄС; для визнання в Україні потрібна
+              процедура нострифікації.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+            <span id="question8">Чи можна поєднувати навчання з роботою?</span>
+          </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer8">Так, студентський статус у Словаччині дозволяє офіційно працювати під час навчання
+              на умовах, визначених законодавством країни.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            <span id="question9">Скільки часу займає підготовка до вступу?</span>
+          </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            <span id="answer9">Це залежить від початкового рівня словацької та обраного вишу — зазвичай мовна
+              підготовка триває від кількох місяців до року.</span>
           </div>
         </div>
       </div>
@@ -852,37 +881,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
   <script src="scriptContact.js"></script>
-
-  <!-- Meta Pixel — ViewContent per course, fires once when a course detail section is actually scrolled into view -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (typeof fbq !== 'function' || !('IntersectionObserver' in window)) return;
-
-      var courseSections = {
-        'target-section-beginner': 'Beginner',
-        'target-section-intermediate': 'Intermediate',
-        'target-section-advanced': 'Advanced',
-        'target-section-speaking': 'Speaking Club'
-      };
-      var seen = new Set();
-
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          var name = courseSections[entry.target.id];
-          if (!name || seen.has(entry.target.id)) return;
-          seen.add(entry.target.id);
-          fbq('track', 'ViewContent', { content_name: name, content_category: 'course' });
-          observer.unobserve(entry.target);
-        });
-      }, { threshold: 0.5 });
-
-      Object.keys(courseSections).forEach(function (id) {
-        var el = document.getElementById(id);
-        if (el) observer.observe(el);
-      });
-    });
-  </script>
 
   <script>
     function showSidebar() {
