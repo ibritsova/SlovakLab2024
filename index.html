@@ -552,40 +552,6 @@
   </section>
 
   <!-- ══════════════════════════════════
-       SK EDUCATION — CONSULTATION FORM
-       ══════════════════════════════════ -->
-  <div class="form-container" id="target-section-sk-consult">
-    <h2 id="sk-consult-title">Готові зробити перший крок до навчання в Європі?</h2>
-    <p class="sl-sk-consult-desc" id="sk-consult-desc">Залиште контакт — куратор SlovakLab розповість, з чого
-      почати підготовку саме для вашої дитини.</p>
-
-    <div class="sl-consult-checklist">
-      <p id="sk-consult-point1">Безкоштовна консультація з куратором</p>
-      <p id="sk-consult-point2">Мовна підготовка від A1 до C1</p>
-      <p id="sk-consult-point3">Супровід вступу — від заявки до гуртожитку</p>
-    </div>
-
-    <form id="skConsultForm" name="skConsultForm" action="" method="post">
-      <label for="sk-name" id="sk-consult-fullName">Ім'я</label>
-      <input type="text" id="sk-name" name="sk-name" placeholder="Ваше ім'я">
-      <div class="error" id="skNameError"></div>
-
-      <label for="sk-phone" id="sk-consult-phone">Телефон</label>
-      <input type="tel" id="sk-phone" name="sk-phone" placeholder="+38 (0XX) XXX XX XX">
-      <div class="error" id="skPhoneError"></div>
-
-      <label for="sk-email" id="sk-consult-email">Email</label>
-      <input type="email" id="sk-email" name="sk-email" placeholder="smth@example.com">
-      <div class="error" id="skEmailError"></div>
-
-      <button type="submit" id="skConsultSendButton">Записатись на консультацію</button>
-    </form>
-    <div class="success-message" id="skConsultSuccess">
-      Дякуємо! Ми зв'яжемось із вами найближчим часом.
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════
        WHY CHOOSE US + TESTIMONIALS
        ══════════════════════════════════ -->
   <section class="sl-block" id="target-section-feedback">
@@ -679,46 +645,36 @@
   </section>
 
   <!-- ══════════════════════════════════
-       FORM
+       SK EDUCATION — CONSULTATION FORM
        ══════════════════════════════════ -->
   <div class="form-container" id="target-section-apply">
-    <h2 id="registration-title">Записатись на курс SlovakLab</h2>
-    <form name="registrationForm" id="registrationForm" action="" method="post">
-      <p class="success send-success"></p>
+    <h2 id="sk-consult-title">Готові зробити перший крок до навчання в Європі?</h2>
+    <p class="sl-sk-consult-desc" id="sk-consult-desc">Залиште контакт — куратор SlovakLab розповість, з чого
+      почати підготовку саме для вашої дитини.</p>
 
-      <label class="required" for="name" id="fullName">Ім'я (батьків або дитини)</label>
-      <input type="text" id="name" name="name" placeholder="Іваненко Іван">
-      <div class="error" id="usernameError"></div>
+    <div class="sl-consult-checklist">
+      <p id="sk-consult-point1">Безкоштовна консультація з куратором</p>
+      <p id="sk-consult-point2">Мовна підготовка від A1 до C1</p>
+      <p id="sk-consult-point3">Супровід вступу — від заявки до гуртожитку</p>
+    </div>
 
-      <label for="email" class="required" id="emailAdress">Електронна пошта</label>
-      <input type="email" id="email" name="email" placeholder="smth@example.com">
-      <div class="error" id="emailError"></div>
+    <form id="skConsultForm" name="skConsultForm" action="" method="post">
+      <label for="sk-name" id="sk-consult-fullName">Ім'я</label>
+      <input type="text" id="sk-name" name="sk-name" placeholder="Ваше ім'я">
+      <div class="error" id="skNameError"></div>
 
-      <label class="required" for="phone" id="phoneNumber">Номер телефону</label>
-      <input type="tel" id="phone" name="phone" placeholder="+38 (0XX) XXX XX XX">
-      <div class="error" id="phoneError"></div>
+      <label for="sk-phone" id="sk-consult-phone">Телефон</label>
+      <input type="tel" id="sk-phone" name="sk-phone" placeholder="+38 (0XX) XXX XX XX">
+      <div class="error" id="skPhoneError"></div>
 
-      <label for="child-age" id="childAge">Клас / вік дитини (якщо записуєте дитину)</label>
-      <input type="text" id="child-age" name="child-age" placeholder="Наприклад: 9 клас, 15 років">
+      <label for="sk-email" id="sk-consult-email">Email</label>
+      <input type="email" id="sk-email" name="sk-email" placeholder="smth@example.com">
+      <div class="error" id="skEmailError"></div>
 
-      <label for="level" class="required">
-        <span id="selectlevel">Оберіть курс</span>
-      </label>
-      <select id="level" name="level" required>
-        <option value="beginner">Beginner</option>
-        <option value="intermediate">Intermediate</option>
-        <option value="advanced">Advanced</option>
-        <option value="speaking-club">Speaking Club</option>
-      </select>
-
-      <label for="notes" id="additional">Додаткова інформація</label>
-      <textarea id="notes" name="notes" rows="4" placeholder="Будь-які додаткові побажання..."></textarea>
-
-      <button type="submit" id="sendButton">Надіслати</button>
+      <button type="submit" id="skConsultSendButton">Записатись на консультацію</button>
     </form>
-    <div class="success-message" id="successMessage">
-      Вашу заявку успішно надіслано. Дякуємо!
-      <div class="success-under" id="message2">Ми зв'яжемося з вами протягом 2 днів.</div>
+    <div class="success-message" id="skConsultSuccess">
+      Дякуємо! Ми зв'яжемось із вами найближчим часом.
     </div>
   </div>
 
