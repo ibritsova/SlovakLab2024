@@ -4,77 +4,8 @@ function t(key, fallback) {
   return (i18n && i18n.dict && i18n.dict[key]) || fallback;
 }
 
-function validateForm(event) {
-  event.preventDefault();
-
-  // Clear previous errors
-  document.getElementById("usernameError").textContent = "";
-  document.getElementById("emailError").textContent  = "";
-  document.getElementById("phoneError").textContent  = "";
-
-  let valid = true;
-
-  const username = document.getElementById("name").value.trim();
-  if (!username) {
-    document.getElementById("usernameError").textContent = t("form-err-name", "Введіть ваше ім'я.");
-    valid = false;
-  }
-
-  const email = document.getElementById("email").value.trim();
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  if (!emailPattern.test(email)) {
-    document.getElementById("emailError").textContent = t("form-err-email", "Введіть коректну email-адресу.");
-    valid = false;
-  }
-
-  // Allow spaces, dashes, parentheses — strip them before checking digits
-  const phone = document.getElementById("phone").value.trim();
-  const phoneDigits = phone.replace(/[\s\-().+]/g, "");
-  if (!/^\d{7,15}$/.test(phoneDigits)) {
-    document.getElementById("phoneError").textContent = t("form-err-phone", "Введіть коректний номер телефону.");
-    valid = false;
-  }
-
-  if (!valid) return;
-
-  const sendButton = document.getElementById("sendButton");
-  const sendLabel = sendButton.textContent;
-  sendButton.disabled = true;
-  sendButton.textContent = t("form-sending", "Надсилаємо…");
-
-  const childAgeField = document.getElementById("child-age");
-
-  const params = {
-    name:     username,
-    email:    email,
-    phone:    phone,
-    childAge: childAgeField ? childAgeField.value.trim() : "",
-    message:  document.getElementById("notes").value,
-    level:    document.getElementById("level").value
-  };
-
-  emailjs.send("service_jgex8hj", "template_w7m91ya", params)
-    .then(function (response) {
-      console.log("Email sent successfully", response);
-
-      // Facebook Pixel conversion event
-      if (typeof fbq === "function") fbq("track", "Lead");
-
-      document.getElementById("registrationForm").classList.add("form-hidden");
-      document.getElementById("registration-title").classList.add("form-hidden");
-      document.getElementById("successMessage").style.display = "block";
-      history.pushState(null, "", "#thank-you");
-    })
-    .catch(function (err) {
-      console.error("EmailJS error:", err);
-      sendButton.disabled = false;
-      sendButton.textContent = sendLabel;
-      alert(t("form-send-error", "Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com") + "\n\n" + JSON.stringify(err));
-    });
-}
-
-// "Навчання у Словаччині" consultation form — same send logic and Lead
-// event as the main form, minimal field set (name, phone, email only).
+// "Навчання у Словаччині" consultation form — sends via EmailJS and fires
+// the Meta Pixel Lead event; fields: name, phone, email, messenger, comment.
 function validateSkConsultForm(event) {
   event.preventDefault();
 
@@ -131,7 +62,7 @@ function validateSkConsultForm(event) {
     .then(function (response) {
       console.log("SK consult lead sent successfully", response);
 
-      // Facebook Pixel conversion event — same Lead event as the main form
+      // Facebook Pixel conversion event
       if (typeof fbq === "function") fbq("track", "Lead");
 
       document.getElementById("skConsultForm").classList.add("form-hidden");
@@ -146,7 +77,7 @@ function validateSkConsultForm(event) {
 }
 
 // Trial-lesson CTA on the courses page — same send logic and Lead event as
-// the main form, minimal field set (name, phone, course of interest).
+// the consultation form, minimal field set (name, phone, course of interest).
 function validateTrialForm(event) {
   event.preventDefault();
 
@@ -193,7 +124,7 @@ function validateTrialForm(event) {
     .then(function (response) {
       console.log("Trial lesson lead sent successfully", response);
 
-      // Facebook Pixel conversion event — same Lead event as the main form
+      // Facebook Pixel conversion event
       if (typeof fbq === "function") fbq("track", "Lead");
 
       document.getElementById("trialForm").classList.add("form-hidden");
@@ -209,9 +140,6 @@ function validateTrialForm(event) {
 
 // Single event listener — no onclick needed on the button
 document.addEventListener("DOMContentLoaded", function () {
-  const registrationForm = document.getElementById("registrationForm");
-  if (registrationForm) registrationForm.addEventListener("submit", validateForm);
-
   const skConsultForm = document.getElementById("skConsultForm");
   if (skConsultForm) skConsultForm.addEventListener("submit", validateSkConsultForm);
 

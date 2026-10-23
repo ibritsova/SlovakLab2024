@@ -25,15 +25,6 @@
   --radius:     10px;
   --wrap:       1240px;
   --nav-h:      64px;
-
-  /* Legacy aliases — older rules below still reference these names */
-  --paper:       var(--background);
-  --paper-2:     var(--background);
-  --ink:         var(--white);
-  --ink-soft:    var(--text);
-  --accent:      var(--blue);
-  --accent-soft: var(--blue-soft);
-  --line:        var(--border);
 }
 
 /* Bootstrap loads after this file and redefines its variables on :root —
@@ -973,14 +964,11 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
 /* ════════════════════════════════════
    FORMS
    ════════════════════════════════════ */
+/* Consultation block: heading on top, checklist left, form card right */
 .form-container {
-  max-width: 600px;
+  max-width: var(--wrap);
   margin: 0 auto;
   padding: 100px 32px;
-}
-/* Consultation block: heading on top, checklist left, form card right */
-.form-container:has(> .sl-consult-checklist) {
-  max-width: var(--wrap);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto 1fr;
@@ -990,8 +978,8 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
 .form-container > h2:not(.accordion-header) { grid-column: 1 / -1; margin: 0 0 24px; }
 .form-container > p { grid-column: 1 / -1; }
 .form-container > .sl-consult-checklist { grid-column: 1; margin-top: 24px; }
-.form-container:has(> .sl-consult-checklist) > form,
-.form-container:has(> .sl-consult-checklist) > .success-message { grid-column: 2; grid-row: 3 / 5; margin-top: 24px; }
+.form-container > form,
+.form-container > .success-message { grid-column: 2; grid-row: 3 / 5; margin-top: 24px; }
 
 .sl-sk-consult-desc {
   color: var(--text);
@@ -1010,7 +998,6 @@ form label {
   font-weight: 400;
   color: var(--text);
 }
-.required::after { content: " *"; color: var(--error); }
 
 input[type="text"],
 input[type="email"],
@@ -1106,7 +1093,6 @@ form label.sl-radio {
   border-color: var(--blue);
   box-shadow: 0 0 40px rgba(112, 190, 250, .15);
 }
-.success-under { font-family: var(--font-body); font-size: 15px; margin-top: 12px; color: var(--text); }
 
 /* ════════════════════════════════════
    FAQ
@@ -1464,10 +1450,10 @@ body footer h5 {
   .sl-benefits-row { grid-template-columns: 1fr; }
   .sl-benefits-photo { min-height: 0; aspect-ratio: 16 / 9; }
 
-  .form-container:has(> .sl-consult-checklist) { grid-template-columns: 1fr; grid-template-rows: none; }
+  .form-container { grid-template-columns: 1fr; grid-template-rows: none; }
   .form-container > .sl-consult-checklist,
-  .form-container:has(> .sl-consult-checklist) > form,
-  .form-container:has(> .sl-consult-checklist) > .success-message { grid-column: 1; grid-row: auto; }
+  .form-container > form,
+  .form-container > .success-message { grid-column: 1; grid-row: auto; }
 
   .sl-trial-cta { grid-template-columns: 1fr; grid-template-rows: none; padding: 40px; }
   .sl-trial-text h2:not(.accordion-header) { margin-bottom: 20px; }

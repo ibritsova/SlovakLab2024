@@ -1,7 +1,0 @@
-/* styleLoading.css — keeps only scroll + sidebar transition used by script.js */
-html { scroll-behavior: smooth; }
-
-/* Sidebar open/close transition */
-nav ul.sidebar {
-  transition: opacity .25s ease, visibility .25s ease;
-}
