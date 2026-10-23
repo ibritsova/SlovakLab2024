@@ -13,7 +13,7 @@
     '.sl-benefits-photo',
     // the success message is display:none until the form is sent — never hide it
     '.form-container > *:not(.success-message)',
-    '#target-section-sk-documents .sl-consult-checklist p', '#faqAccordion .accordion-item'
+    '#target-section-sk-documents .sl-consult-checklist p', '#faqAccordion .sl-faq-item'
   ].join(',');
 
   // Containers that only need .is-visible to trigger their inner details

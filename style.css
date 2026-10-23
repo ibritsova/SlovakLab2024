@@ -24,24 +24,6 @@
   --nav-h:      64px;
 }
 
-/* Bootstrap loads after this file and redefines its variables on :root —
-   html:root has higher specificity, so these win. */
-html:root {
-  color-scheme: dark;
-  --bs-body-bg: var(--background);
-  --bs-body-color: var(--text);
-  --bs-body-font-family: var(--font-body);
-  --bs-body-font-size: 15px;
-  --bs-body-line-height: 1.4;
-  --bs-heading-color: var(--white);
-  --bs-emphasis-color: var(--white);
-  --bs-link-color: var(--white);
-  --bs-link-color-rgb: 255, 255, 255;
-  --bs-link-hover-color: var(--blue);
-  --bs-link-hover-color-rgb: 112, 190, 250;
-  --bs-border-color: var(--border);
-}
-
 /* Smooth-floating hue for the shimmer border on buttons */
 @property --sl-angle {
   syntax: '<angle>';
@@ -67,6 +49,8 @@ html body {
 
 body a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
+img, svg { vertical-align: middle; }
+p { margin: 0 0 1rem; }  /* the spacing Bootstrap's reboot used to provide */
 
 ::selection { background: var(--blue); color: var(--background); }
 
@@ -95,7 +79,7 @@ body :is(h1, h2, h3, h4, h5) {
 
 /* Section headings: white → blue gradient text */
 h1,
-h2:not(.accordion-header) {
+h2 {
   background: linear-gradient(90deg, var(--white) 0%, var(--white) 35%, var(--blue) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -103,7 +87,7 @@ h2:not(.accordion-header) {
   color: var(--white);
 }
 
-h2:not(.accordion-header),
+h2,
 .sl-block-head h1 {
   font-size: clamp(38px, 6.4vw, 100px);
   letter-spacing: -1.5px;
@@ -543,7 +527,7 @@ nav ul.sidebar {
 .sl-trial-cta::before,
 .info-courses::before,
 .form-container form::before,
-#faqAccordion .accordion-item::before {
+#faqAccordion .sl-faq-item::before {
   content: '';
   position: absolute;
   z-index: 2;
@@ -730,7 +714,7 @@ nav ul.sidebar {
   flex-direction: column;
   align-items: center;
 }
-.bot-test-section h2:not(.accordion-header) {
+.bot-test-section h2 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -1009,7 +993,7 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
   column-gap: 56px;
   align-items: start;
 }
-.form-container > h2:not(.accordion-header) { grid-column: 1 / -1; margin: 0 0 24px; }
+.form-container > h2 { grid-column: 1 / -1; margin: 0 0 24px; }
 .form-container > p { grid-column: 1 / -1; }
 .form-container > .sl-consult-checklist { grid-column: 1; margin-top: 24px; }
 .form-container > form,
@@ -1144,18 +1128,6 @@ form label.sl-radio {
   text-align: center;
 }
 #faqAccordion {
-  --bs-accordion-bg: var(--element-bg);
-  --bs-accordion-color: var(--text);
-  --bs-accordion-border-color: var(--border);
-  --bs-accordion-border-radius: var(--radius);
-  --bs-accordion-inner-border-radius: var(--radius);
-  --bs-accordion-btn-color: var(--white);
-  --bs-accordion-btn-bg: var(--element-bg);
-  --bs-accordion-active-color: var(--blue);
-  --bs-accordion-active-bg: var(--element-bg);
-  --bs-accordion-btn-focus-box-shadow: none;
-  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%239c9c9c' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
-  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2370befa' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   /* Two columns; items align to the top so an open answer doesn't stretch its neighbour */
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1163,34 +1135,52 @@ form label.sl-radio {
   align-items: start;
 }
 /* While every answer is closed, cards in a row share one height */
-#faqAccordion:not(:has(.accordion-collapse.show, .accordion-collapse.collapsing)) { align-items: stretch; }
-#faqAccordion .accordion-item { display: flex; flex-direction: column; }
-#faqAccordion .accordion-header { flex: 1 0 auto; margin: 0; }
-#faqAccordion .accordion-item {
+#faqAccordion:not(:has(details[open])) { align-items: stretch; }
+.sl-faq-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: var(--element-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow: visible;
 }
-#faqAccordion .accordion-item::before { opacity: 0; transition: opacity .3s; }
-#faqAccordion .accordion-item:has(.accordion-button:not(.collapsed))::before { opacity: 1; }
-#faqAccordion .accordion-button {
+.sl-faq-item::before { opacity: 0; transition: opacity .3s; }
+.sl-faq-item[open]::before { opacity: 1; }
+.sl-faq-item summary {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px;
   font-family: var(--font-body);
   font-size: 17px;
   font-weight: 500;
   line-height: 1.4;
   color: var(--white);
-  background: transparent;
-  height: 100%;
-  gap: 16px;
-  padding: 24px 28px;
   border-radius: var(--radius);
-  box-shadow: none;
+  cursor: pointer;
+  list-style: none;
+  transition: color .2s;
 }
-#faqAccordion .accordion-button:not(.collapsed) { color: var(--blue); }
-#faqAccordion .accordion-button:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
-#faqAccordion .accordion-body {
+.sl-faq-item summary::-webkit-details-marker { display: none; }
+.sl-faq-item summary span { flex: 1; }
+/* Chevron */
+.sl-faq-item summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%239c9c9c' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e") center / contain no-repeat;
+  transition: transform .25s ease;
+}
+.sl-faq-item[open] summary { color: var(--blue); }
+.sl-faq-item[open] summary::after {
+  transform: rotate(180deg);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%2370befa' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+}
+.sl-faq-item summary:hover { color: var(--blue); }
+.sl-faq-item summary:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+.sl-faq-answer {
   font-size: 15px;
   line-height: 1.6;
   color: var(--text);
@@ -1310,8 +1300,13 @@ body footer h5 {
 }
 .info-courses.row > .nameCourse { order: 0; text-align: left; position: sticky; top: calc(var(--nav-h) + 32px); }
 .info-courses.row > .about { order: 1; }
+/* Alternate sides on wide screens (order-lg-* classes in the markup) */
+@media (min-width: 992px) {
+  .info-courses.row > .order-lg-1 { order: 1; }
+  .info-courses.row > .order-lg-2 { order: 2; }
+}
 /* Course names are single long words ("Intermediate") — 100px won't fit a half-width card */
-.nameCourse h2:not(.accordion-header) {
+.nameCourse h2 {
   font-size: clamp(36px, 4.6vw, 64px);
   text-align: left;
 }
@@ -1360,7 +1355,7 @@ body footer h5 {
   padding: 56px;
 }
 .sl-trial-text { display: contents; }
-.sl-trial-text h2:not(.accordion-header) { grid-column: 1 / -1; margin: 0 0 40px; }
+.sl-trial-text h2 { grid-column: 1 / -1; margin: 0 0 40px; }
 .sl-trial-text p { grid-column: 1; color: var(--text); font-size: 17px; line-height: 1.5; margin: 0; max-width: 46ch; }
 .sl-trial-form { grid-column: 2; }
 .sl-trial-form input,
@@ -1537,7 +1532,7 @@ nav::after {
   .form-container > .success-message { grid-column: 1; grid-row: auto; }
 
   .sl-trial-cta { grid-template-columns: 1fr; grid-template-rows: none; padding: 40px; }
-  .sl-trial-text h2:not(.accordion-header) { margin-bottom: 20px; }
+  .sl-trial-text h2 { margin-bottom: 20px; }
   .sl-trial-text p { margin-bottom: 32px; max-width: none; }
   .sl-trial-form { grid-column: 1; }
 
@@ -1570,7 +1565,7 @@ nav::after {
   .sl-foot-grid { padding-left: 16px; padding-right: 16px; }
   .sl-foot-bottom { width: calc(100% - 32px); }
 
-  h2:not(.accordion-header), .sl-block-head h1 { letter-spacing: -1px; }
+  h2, .sl-block-head h1 { letter-spacing: -1px; }
 
   .sl-price-card,
   .sl-admission-card,
@@ -1596,8 +1591,8 @@ nav::after {
   .apply-course a,
   .apply-course .button-start { width: 100%; }
 
-  #faqAccordion .accordion-button { padding: 20px; font-size: 16px; }
-  #faqAccordion .accordion-body { padding: 0 20px 20px; }
+  .sl-faq-item summary { padding: 20px; font-size: 16px; }
+  .sl-faq-answer { padding: 0 20px 20px; }
 }
 
 /* ── ≤ 480px  small phones ── */
