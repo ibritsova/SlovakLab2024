@@ -789,7 +789,7 @@ nav ul.sidebar {
    ════════════════════════════════════ */
 .sl-founder-row {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: clamp(260px, 36vw, 440px) 1fr;
   gap: 56px;
   align-items: center;
 }
@@ -1559,7 +1559,7 @@ nav::after {
 @media (max-width: 760px) {
   .sl-admission-grid { grid-template-columns: 1fr; }
   .sl-founder-row { grid-template-columns: 1fr; gap: 32px; }
-  .sl-founder-photo { max-width: 280px; }
+  .sl-founder-photo { max-width: 400px; }
   .sl-foot-grid { grid-template-columns: 1fr; gap: 32px; }
   #target-section-sk-documents .sl-consult-checklist { grid-template-columns: 1fr; }
   #faqAccordion { grid-template-columns: 1fr; }
@@ -1606,7 +1606,7 @@ nav::after {
 
 /* ── ≤ 480px  small phones ── */
 @media (max-width: 480px) {
-  .sl-founder-photo { max-width: 220px; }
+  .sl-founder-photo { max-width: 340px; }
   .sl-consult-checklist p::before,
   .bot-test-section .checklist p::before { flex-basis: 52px; }
   .sl-foot-bottom { flex-direction: column; }
