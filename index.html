@@ -6,17 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO ═══ -->
-  <title id="page-title-index">Slovak Lab — онлайн-курси словацької мови для українців</title>
+  <title id="page-title-index">Курси словацької для вступу до вишів Словаччини | SlovakLab</title>
   <meta name="description"
-    content="Slovak Lab — онлайн-школа словацької для українців. Курси від A1 до C1 з носіями та досвідченими викладачами, малі групи, гнучкий розклад. Запишіться на безкоштовний урок!" />
-  <meta name="keywords" content="курси словацької, словацька мова онлайн, Slovak Lab, словацька для українців" />
+    content="Онлайн-курси словацької для вступників з України: рівень B1–C1, носії мови та українські викладачі, супровід вступу до державних вишів. Безкоштовна консультація." />
 
-  <!-- ═══ Canonical + hreflang ═══ -->
+  <!-- ═══ Canonical + hreflang (EN/SK are client-side translations of the same URL) ═══ -->
   <link rel="canonical" href="https://slovaklab.com/" />
   <link rel="alternate" hreflang="uk" href="https://slovaklab.com/" />
-  <link rel="alternate" hreflang="en" href="https://slovaklab.com/" />
-  <link rel="alternate" hreflang="sk" href="https://slovaklab.com/" />
   <link rel="alternate" hreflang="x-default" href="https://slovaklab.com/" />
+
+  <!-- ═══ Open Graph (link previews in Facebook, Telegram, Viber…) ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SlovakLab" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:url" content="https://slovaklab.com/" />
+  <meta property="og:title" content="Курси словацької для вступу до вишів Словаччини" />
+  <meta property="og:description" content="Мовна підготовка до рівня B1–C1 і супровід вступу до державних вишів Словаччини — від заявки до гуртожитку. Безкоштовна консультація." />
+  <meta property="og:image" content="https://slovaklab.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="SlovakLab — курси словацької для вступу до вишів Словаччини" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- ═══ Favicons ═══ -->
   <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
@@ -25,6 +35,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="slovaklab" />
   <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+  <!-- ═══ Fonts (linked here instead of @import so they start loading right away) ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Inter+Tight:wght@500&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
   <link rel="stylesheet" href="style.css" />
@@ -76,11 +94,19 @@
     {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
-      "name": "Slovak Lab",
-      "url": "https://slovaklab.com",
+      "@id": "https://slovaklab.com/#organization",
+      "name": "SlovakLab",
+      "alternateName": "Slovak Lab",
+      "url": "https://slovaklab.com/",
       "logo": "https://slovaklab.com/my-favicon/web-app-manifest-512x512.png",
-      "description": "Онлайн-школа словацької мови для українців. Курси від A1 до C1 з носіями та досвідченими викладачами.",
+      "image": "https://slovaklab.com/og-image.jpg",
+      "description": "Онлайн-курси словацької мови для майбутніх вступників з України: підготовка до рівня B1–C1 і супровід вступу до державних вишів Словаччини.",
       "email": "slovakklab@gmail.com",
+      "knowsLanguage": [
+        "uk",
+        "sk",
+        "en"
+      ],
       "sameAs": [
         "https://www.instagram.com/slovaklab",
         "https://t.me/slovaklab"
@@ -88,18 +114,90 @@
     },
     {
       "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SlovakLab",
+      "url": "https://slovaklab.com/",
+      "inLanguage": "uk",
+      "publisher": {
+        "@id": "https://slovaklab.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Do you offer individual lessons?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes! We offer individual lessons (15€/lesson), pair sessions (75€/8 lessons), and small group classes of up to 6 people (50€/8 lessons)." }},
-        { "@type": "Question", "name": "What age groups do you teach?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We have courses for both adults and children. Classes are divided into age-appropriate groups." }},
-        { "@type": "Question", "name": "What is the schedule for the classes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The schedule is coordinated with the entire group and the teacher." }},
-        { "@type": "Question", "name": "How long does the lesson last?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The lesson takes 90 minutes." }},
-        { "@type": "Question", "name": "How do students pay for classes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Payment is made in advance: for 4 lessons or for a full month according to the schedule." }}
+        {
+          "@type": "Question",
+          "name": "Чи маєте індивідуальні уроки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так! Ми пропонуємо індивідуальні заняття (15€/урок), парні заняття (75€/8 занять) та групи до 6 осіб (50€/8 занять). Оберіть формат, який підходить саме вам."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Які вікові групи ви навчаєте?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ми пропонуємо курси як для дорослих, так і для дітей-підлітків (13+ років). Заняття проводяться у вікових групах, щоб забезпечити комфортне навчальне середовище."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Який розклад занять?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Розклад узгоджується разом з усією групою та викладачем, щоб максимально підходив усім учасникам."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Скільки триває урок?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Урок триває 90 хвилин."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Який спосіб оплати за заняття?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Оплата здійснюється наперед: за 4 уроки або за повний місяць відповідно до розкладу."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи можна вступити до державного вишу без вступних іспитів?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Частина державних вишів Словаччини зараховує за результатами атестата — конкретні умови залежать від факультету, тому ми допомагаємо перевірити їх заздалегідь."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи визнається словацький диплом в Україні та ЄС?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так, словацький диплом визнається в усіх країнах ЄС; для визнання в Україні потрібна процедура нострифікації."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Чи можна поєднувати навчання з роботою?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Так, студентський статус у Словаччині дозволяє офіційно працювати під час навчання на умовах, визначених законодавством країни."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Скільки часу займає підготовка до вступу?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Це залежить від початкового рівня словацької та обраного вишу — зазвичай мовна підготовка триває від кількох місяців до року."
+          }
+        }
       ]
     }
   ]
@@ -830,6 +928,7 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
+  <script src="tracking.js"></script>
   <script src="script.js"></script>
   <script src="scriptContact.js"></script>
   <script src="animations.js"></script>

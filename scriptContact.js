@@ -4,6 +4,37 @@ function t(key, fallback) {
   return (i18n && i18n.dict && i18n.dict[key]) || fallback;
 }
 
+const META_PIXEL_ID = "835435028872316";
+
+// Which ad brought the visitor (saved by tracking.js), as one line for the email
+function adSource() {
+  const a = typeof window.slAttribution === "function" ? window.slAttribution() : {};
+  const parts = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
+    .filter(key => a[key]).map(key => key + "=" + a[key]);
+  if (a.fbclid) parts.push("fbclid (Meta Ads)");
+  if (a.gclid) parts.push("gclid (Google Ads)");
+  return parts.length ? parts.join(", ") : "прямий захід / невідомо";
+}
+
+// Successful lead → GTM (GA4 / Google Ads) + Meta Pixel with advanced matching.
+// The Pixel hashes email/phone in the browser before sending them.
+function reportLead(formName, email, phone) {
+  const eventId = "lead-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: "generate_lead", form_name: formName, event_id: eventId });
+
+  if (typeof fbq === "function") {
+    const userData = {};
+    if (email) userData.em = email.trim().toLowerCase();
+    const digits = (phone || "").replace(/\D/g, "");
+    if (digits) userData.ph = digits;
+    fbq("init", META_PIXEL_ID, userData);
+    // eventID lets a future Conversions API setup deduplicate this event
+    fbq("track", "Lead", { content_name: formName, content_category: "lead_form" }, { eventID: eventId });
+  }
+}
+
 // "Навчання у Словаччині" consultation form — sends via EmailJS and fires
 // the Meta Pixel Lead event; fields: name, phone, email, messenger, comment.
 function validateSkConsultForm(event) {
@@ -53,8 +84,10 @@ function validateSkConsultForm(event) {
     childAge:  "",
     messenger: messenger,
     notes:     notes,
+    source:    adSource(),
     message:   "Заявка на консультацію (блок «Навчання у Словаччині»). Бажаний месенджер: " + messenger + "." +
-               (notes ? "\nКоментар: " + notes : ""),
+               (notes ? "\nКоментар: " + notes : "") +
+               "\nДжерело: " + adSource(),
     level:     "не вказано"
   };
 
@@ -62,8 +95,7 @@ function validateSkConsultForm(event) {
     .then(function (response) {
       console.log("SK consult lead sent successfully", response);
 
-      // Facebook Pixel conversion event
-      if (typeof fbq === "function") fbq("track", "Lead");
+      reportLead("consultation", email, phone);
 
       document.getElementById("skConsultForm").classList.add("form-hidden");
       document.getElementById("skConsultSuccess").style.display = "block";
@@ -116,7 +148,9 @@ function validateTrialForm(event) {
     phone:     phone,
     childAge:  "",
     messenger: messenger,
-    message:   "Заявка на пробний урок (сторінка курсів). Бажаний месенджер: " + messenger + ".",
+    source:    adSource(),
+    message:   "Заявка на пробний урок (сторінка курсів). Бажаний месенджер: " + messenger + "." +
+               "\nДжерело: " + adSource(),
     level:     course || "не вказано"
   };
 
@@ -124,8 +158,7 @@ function validateTrialForm(event) {
     .then(function (response) {
       console.log("Trial lesson lead sent successfully", response);
 
-      // Facebook Pixel conversion event
-      if (typeof fbq === "function") fbq("track", "Lead");
+      reportLead("trial_lesson", "", phone);
 
       document.getElementById("trialForm").classList.add("form-hidden");
       document.getElementById("trialFormSuccess").hidden = false;

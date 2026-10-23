@@ -6,17 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO ═══ -->
-  <title id="page-title-courses">Курси словацької мови — Slovak Lab</title>
+  <title id="page-title-courses">Курси словацької мови онлайн: від A1 до C1 і Speaking Club | SlovakLab</title>
   <meta name="description"
     content="Курси словацької мови Slovak Lab: Beginner, Intermediate, Advanced та Speaking Club. Малі групи, носії мови та досвідчені викладачі, гнучкий розклад. Оберіть свій рівень і запишіться на безкоштовний урок!" />
-  <meta name="keywords" content="курси словацької, словацька мова онлайн, Slovak Lab, словацька для українців" />
 
-  <!-- ═══ Canonical + hreflang ═══ -->
+  <!-- ═══ Canonical + hreflang (EN/SK are client-side translations of the same URL) ═══ -->
   <link rel="canonical" href="https://slovaklab.com/courses.html" />
   <link rel="alternate" hreflang="uk" href="https://slovaklab.com/courses.html" />
-  <link rel="alternate" hreflang="en" href="https://slovaklab.com/courses.html" />
-  <link rel="alternate" hreflang="sk" href="https://slovaklab.com/courses.html" />
   <link rel="alternate" hreflang="x-default" href="https://slovaklab.com/courses.html" />
+
+  <!-- ═══ Open Graph (link previews in Facebook, Telegram, Viber…) ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SlovakLab" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:url" content="https://slovaklab.com/courses.html" />
+  <meta property="og:title" content="Курси словацької мови онлайн — SlovakLab" />
+  <meta property="og:description" content="Beginner, Intermediate, Advanced і Speaking Club з носієм мови. Групи до 6 осіб, запис уроків, безкоштовний пробний урок." />
+  <meta property="og:image" content="https://slovaklab.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="SlovakLab — курси словацької для вступу до вишів Словаччини" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- ═══ Favicons ═══ -->
   <link rel="icon" type="image/png" href="/my-favicon/favicon-96x96.png" sizes="96x96" />
@@ -25,6 +35,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/my-favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="slovaklab" />
   <link rel="manifest" href="/my-favicon/site.webmanifest" />
+
+  <!-- ═══ Fonts (linked here instead of @import so they start loading right away) ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Inter+Tight:wght@500&display=swap" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
   <link rel="stylesheet" href="style.css" />
@@ -71,50 +89,137 @@
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "Slovak Language: Beginner Course",
-      "description": "Course for individuals with little to no prior experience in Slovak. Learn basic vocabulary, grammar, pronunciation, and everyday phrases.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
+      "name": "Курс словацької мови Beginner (A1–A2)",
+      "description": "Курс призначений для тих, хто не має досвіду у вивченні словацької мови. Підходить як дорослим, так і підліткам-абітурієнтам (13+ років) — групи формуються за віком. Студенти вивчать базові слова та словосполучення, основні граматичні структури, щоденні фрази для повсякденних ситуацій, правильну вимову та побудову простих речень.",
       "url": "https://slovaklab.com/courses.html#target-section-beginner",
-      "courseMode": "online",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "SlovakLab",
+        "sameAs": "https://slovaklab.com/"
+      },
       "educationalLevel": "Beginner",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
+      "inLanguage": [
+        "uk",
+        "sk"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseSchedule": {
+          "@type": "Schedule",
+          "duration": "PT3H",
+          "repeatFrequency": "Weekly",
+          "repeatCount": 52
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "50",
+        "priceCurrency": "EUR",
+        "description": "Групові заняття: 50€ за 8 занять"
+      }
     },
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "Slovak Language: Intermediate Course",
-      "description": "For learners with foundational Slovak knowledge. Expand vocabulary, grammar, and conversational skills with a native speaker.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
+      "name": "Курс словацької мови Intermediate (B1–B2)",
+      "description": "Для тих, хто має базові знання словацької мови та бажає їх розширити. Підходить як дорослим, так і підліткам-абітурієнтам (13+ років) — групи формуються за віком. Студенти вивчатимуть складнішу граматику, розширять словниковий запас, практикуватимуть розмовні навички та ознайомляться з культурою Словаччини.",
       "url": "https://slovaklab.com/courses.html#target-section-intermediate",
-      "courseMode": "online",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "SlovakLab",
+        "sameAs": "https://slovaklab.com/"
+      },
       "educationalLevel": "Intermediate",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
+      "inLanguage": [
+        "uk",
+        "sk"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseSchedule": {
+          "@type": "Schedule",
+          "duration": "PT3H",
+          "repeatFrequency": "Weekly",
+          "repeatCount": 52
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "50",
+        "priceCurrency": "EUR",
+        "description": "Групові заняття: 50€ за 8 занять"
+      }
     },
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "Slovak Language: Advanced Course",
-      "description": "For students who speak Slovak well and want to master advanced grammar, idioms, and cultural nuances.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
+      "name": "Курс словацької мови Advanced (C1–C2)",
+      "description": "Для студентів, які вже добре володіють словацькою мовою та хочуть удосконалити свої знання. Підходить як дорослим, так і підліткам-абітурієнтам (13+ років) — групи формуються за віком. Студенти вивчатимуть складну граматику, ідіоми, сленг, словацькі скорочення та поповнюватимуть словниковий запас. Також курс включає обговорення культури та актуальних подій.",
       "url": "https://slovaklab.com/courses.html#target-section-advanced",
-      "courseMode": "online",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "SlovakLab",
+        "sameAs": "https://slovaklab.com/"
+      },
       "educationalLevel": "Advanced",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
+      "inLanguage": [
+        "uk",
+        "sk"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseSchedule": {
+          "@type": "Schedule",
+          "duration": "PT3H",
+          "repeatFrequency": "Weekly",
+          "repeatCount": 52
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "50",
+        "priceCurrency": "EUR",
+        "description": "Групові заняття: 50€ за 8 занять"
+      }
     },
     {
       "@context": "https://schema.org",
       "@type": "Course",
-      "name": "Slovak Language: Speaking Club",
-      "description": "Conversational practice club led by a native Slovak speaker. Discussions, vocabulary games, and real-life language scenarios.",
-      "provider": { "@type": "EducationalOrganization", "name": "Slovak Lab", "url": "https://slovaklab.com" },
+      "name": "Курс словацької мови Speaking Club",
+      "description": "Для студентів, які вже добре володіють словацькою мовою та хочуть покращити свої навички. Підходить як дорослим, так і підліткам-абітурієнтам (13+ років) — групи формуються за віком. Учасники братимуть участь у бесідах на різні теми, практикуватимуть словниковий запас, гратимуть в ігри та обговорюватимуть популярні фільми й серіали. Вони також вивчать мову, що використовується в побутовому житті.",
       "url": "https://slovaklab.com/courses.html#target-section-speaking",
-      "courseMode": "online",
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "SlovakLab",
+        "sameAs": "https://slovaklab.com/"
+      },
       "educationalLevel": "Intermediate",
-      "inLanguage": "sk",
-      "offers": { "@type": "Offer", "price": "50", "priceCurrency": "EUR" }
+      "inLanguage": [
+        "uk",
+        "sk"
+      ],
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "courseMode": "Online",
+        "courseSchedule": {
+          "@type": "Schedule",
+          "duration": "PT3H",
+          "repeatFrequency": "Weekly"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": "50",
+        "priceCurrency": "EUR",
+        "description": "Групові заняття: 50€ за 8 занять"
+      }
     }
   ]
   </script>
@@ -177,7 +282,7 @@
   <section class="sl-block" id="target-section-courses" style="padding-top:56px;">
     <div class="sl-wrap">
       <div class="sl-block-head">
-        <h2 id="courses">Курси</h2>
+        <h1 id="courses">Курси</h1>
         <p id="courses-desc">Від першого <em>ahoj</em> до вільної розмови про культуру, політику та побут.</p>
       </div>
 
@@ -496,6 +601,7 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
+  <script src="tracking.js"></script>
   <script src="script.js"></script>
   <script src="scriptContact.js"></script>
   <script src="animations.js"></script>

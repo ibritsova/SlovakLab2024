@@ -3,9 +3,6 @@
    Fonts: Play · Switzer · Inter Tight
    ══════════════════════════════════════ */
 
-@import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Inter+Tight:wght@500&display=swap");
-@import url("https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap");
-
 /* ─── Tokens ─── */
 :root {
   --background: rgb(10, 10, 10);
@@ -106,7 +103,8 @@ h2:not(.accordion-header) {
   color: var(--white);
 }
 
-h2:not(.accordion-header) {
+h2:not(.accordion-header),
+.sl-block-head h1 {
   font-size: clamp(38px, 6.4vw, 100px);
   letter-spacing: -1.5px;
   text-align: left;
@@ -1572,7 +1570,7 @@ nav::after {
   .sl-foot-grid { padding-left: 16px; padding-right: 16px; }
   .sl-foot-bottom { width: calc(100% - 32px); }
 
-  h2:not(.accordion-header) { letter-spacing: -1px; }
+  h2:not(.accordion-header), .sl-block-head h1 { letter-spacing: -1px; }
 
   .sl-price-card,
   .sl-admission-card,
