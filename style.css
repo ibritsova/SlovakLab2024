@@ -594,6 +594,7 @@ nav ul.sidebar {
 }
 .sl-consult-checklist p,
 .bot-test-section .checklist p {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 18px;
@@ -605,17 +606,25 @@ nav ul.sidebar {
 }
 .sl-consult-checklist p::before,
 .bot-test-section .checklist p::before {
-  content: "✓";
+  content: '';
   flex: 0 0 52px;
   height: 52px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
   background: var(--blue-soft);
   border: 1px solid var(--blue);
-  color: var(--blue);
+}
+.sl-consult-checklist p::after,
+.bot-test-section .checklist p::after {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 52px;
+  margin-top: -13px;
   font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--blue);
 }
 
 /* Photos — rounded, bordered, darkened towards the bottom */
@@ -655,31 +664,63 @@ nav ul.sidebar {
 .sl-goals {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
 }
 .sl-goals-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: var(--wrap);
   margin: 0 auto;
   padding: 0 32px;
 }
 .sl-goal {
-  display: block;
-  padding: 28px 24px;
-  border-left: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 26px 28px;
   font-size: 15px;
   line-height: 1.4;
   color: var(--text);
 }
-.sl-goal:first-child { border-left: none; padding-left: 0; }
+.sl-goal::before {
+  content: '';
+  flex-shrink: 0;
+  align-self: center;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 10px var(--blue);
+}
 .sl-goal b {
-  display: block;
-  margin-bottom: 4px;
   font-family: var(--font-head);
   font-weight: 400;
   font-size: 22px;
   color: var(--white);
+  white-space: nowrap;
 }
+/* Marquee: the row is duplicated by animations.js; each copy is at least
+   as wide as the screen and slides by its own width, so the loop is seamless. */
+.sl-goals.is-marquee {
+  display: flex;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.sl-goals.is-marquee .sl-goals-row {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  min-width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  animation: sl-marquee 45s linear infinite;
+}
+.sl-goals.is-marquee .sl-goal { white-space: nowrap; }
+.sl-goals.is-marquee:hover .sl-goals-row { animation-play-state: paused; }
+@keyframes sl-marquee { to { transform: translateX(-100%); } }
 
 /* ════════════════════════════════════
    BOT TEST
@@ -898,6 +939,7 @@ nav ul.sidebar {
   gap: 12px 20px;
   margin-bottom: 28px;
 }
+#target-section-sk-documents .sl-consult-checklist p::after { left: 24px; }
 #target-section-sk-documents .sl-consult-checklist p {
   background: var(--element-bg);
   border: 1px solid var(--border);
@@ -1372,43 +1414,95 @@ body footer h5 {
 }
 
 /* ════════════════════════════════════
-   SCROLL REVEAL — pure CSS (scroll-driven animations).
-   Browsers without support simply show everything.
+   ANIMATIONS
+   animations.js adds html.sl-anim (only when the visitor allows motion)
+   and .is-visible to elements as they scroll into view.
+   Without JS or with reduced motion everything is simply shown.
    ════════════════════════════════════ */
-@keyframes sl-reveal {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: none; }
+
+/* Reveal: fade + rise, staggered between siblings via --sl-delay */
+html.sl-anim .sl-reveal {
+  transition:
+    opacity .7s ease var(--sl-delay, 0ms),
+    transform .7s cubic-bezier(.2, .7, .2, 1) var(--sl-delay, 0ms),
+    border-color .3s,
+    box-shadow .3s;
 }
-@media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    .sl-block-head,
-    .bot-test-section,
-    .sl-founder-row,
-    .sl-goal,
-    .sl-price-card,
-    .sl-admission-card,
-    .sl-step,
-    .sl-uni-card,
-    .sl-quote,
-    .sl-benefit,
-    .sl-course,
-    .info-courses,
-    .sl-trial-cta,
-    .sl-sk-hero-grid,
-    .sl-benefits-photo,
-    .form-container > *,
-    #target-section-sk-documents .sl-consult-checklist p,
-    #faqAccordion .accordion-item {
-      animation: sl-reveal linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 45%;
-    }
-    /* Stagger siblings in a row */
-    :is(.sl-goal, .sl-price-card, .sl-admission-card, .sl-step, .sl-uni-card, .sl-quote, .sl-benefit, .sl-course, #target-section-sk-documents .sl-consult-checklist p):nth-child(2) { animation-range: entry 6% entry 51%; }
-    :is(.sl-goal, .sl-price-card, .sl-admission-card, .sl-step, .sl-uni-card, .sl-quote, .sl-benefit, .sl-course, #target-section-sk-documents .sl-consult-checklist p):nth-child(3) { animation-range: entry 12% entry 57%; }
-    :is(.sl-goal, .sl-price-card, .sl-admission-card, .sl-step, .sl-uni-card, .sl-quote, .sl-benefit, .sl-course, #target-section-sk-documents .sl-consult-checklist p):nth-child(4) { animation-range: entry 18% entry 63%; }
-    :is(.sl-benefit, #target-section-sk-documents .sl-consult-checklist p):nth-child(5) { animation-range: entry 24% entry 69%; }
-  }
+html.sl-anim .sl-reveal:not(.is-visible) { opacity: 0; transform: translateY(20px); }
+
+/* Ticks draw in from left to right, one after another */
+html.sl-anim :is(.sl-consult-checklist, .bot-test-section .checklist) p::after {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path .45s ease;
+}
+html.sl-anim :is(.sl-consult-checklist, .bot-test-section .checklist).is-visible p::after { clip-path: inset(0 0 0 0); }
+html.sl-anim :is(.sl-consult-checklist, .bot-test-section .checklist) p:nth-child(1)::after { transition-delay: .25s; }
+html.sl-anim :is(.sl-consult-checklist, .bot-test-section .checklist) p:nth-child(2)::after { transition-delay: .45s; }
+html.sl-anim :is(.sl-consult-checklist, .bot-test-section .checklist) p:nth-child(3)::after { transition-delay: .65s; }
+html.sl-anim :is(.sl-consult-checklist, .bot-test-section .checklist) p:nth-child(4)::after { transition-delay: .85s; }
+html.sl-anim :is(.sl-consult-checklist, .bot-test-section .checklist) p:nth-child(5)::after { transition-delay: 1.05s; }
+
+/* Step / admission numbers light up one by one */
+@keyframes sl-badge-glow {
+  0%, 100% { border-color: var(--border); background: var(--button-bg); color: var(--white); box-shadow: none; }
+  40%      { border-color: var(--blue); background: var(--blue-soft); color: var(--blue); box-shadow: 0 0 24px rgba(112, 190, 250, .35); }
+}
+html.sl-anim :is(.sl-steps-grid, .sl-admission-grid).is-visible :is(.sl-step-num, .sl-admission-num) {
+  animation: sl-badge-glow 1.2s ease-in-out both;
+}
+html.sl-anim :is(.sl-steps-grid, .sl-admission-grid).is-visible > :nth-child(1) :is(.sl-step-num, .sl-admission-num) { animation-delay: .3s; }
+html.sl-anim :is(.sl-steps-grid, .sl-admission-grid).is-visible > :nth-child(2) :is(.sl-step-num, .sl-admission-num) { animation-delay: .7s; }
+html.sl-anim :is(.sl-steps-grid, .sl-admission-grid).is-visible > :nth-child(3) :is(.sl-step-num, .sl-admission-num) { animation-delay: 1.1s; }
+html.sl-anim :is(.sl-steps-grid, .sl-admission-grid).is-visible > :nth-child(4) :is(.sl-step-num, .sl-admission-num) { animation-delay: 1.5s; }
+
+/* Photos settle from a slight zoom (fill backwards, so the hover zoom still works afterwards) */
+@keyframes sl-photo-in { from { transform: scale(1.12); } to { transform: scale(1); } }
+html.sl-anim :is(.sl-sk-hero-photo, .sl-benefits-photo, .sl-founder-photo, .sl-uni-photo):not(.is-visible) img { transform: scale(1.12); }
+html.sl-anim :is(.sl-sk-hero-photo, .sl-benefits-photo, .sl-founder-photo, .sl-uni-photo).is-visible img {
+  animation: sl-photo-in 1.4s cubic-bezier(.2, .7, .2, 1) backwards;
+}
+
+/* Light sweep across the hero heading every few seconds */
+@keyframes sl-shine {
+  0%        { background-position: 160% 0, 0 0; }
+  35%, 100% { background-position: -60% 0, 0 0; }
+}
+.sl-hero h1 {
+  background-image:
+    linear-gradient(110deg, transparent 40%, rgba(255, 255, 255, .85) 50%, transparent 60%),
+    linear-gradient(90deg, var(--white) 0%, var(--white) 40%, var(--blue) 100%);
+  background-size: 250% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  animation: sl-shine 6s ease-in-out 1.2s infinite;
+}
+
+/* Main CTA breathes with a soft blue glow */
+@keyframes sl-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(112, 190, 250, .45); }
+  70%  { box-shadow: 0 0 0 14px rgba(112, 190, 250, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(112, 190, 250, 0); }
+}
+#button-start { animation: sl-pulse 2.4s ease-out infinite; }
+#button-start:hover { animation: sl-spin 2.4s linear infinite, sl-pulse 2.4s ease-out infinite; }
+
+/* Scroll progress — thin line along the bottom of the nav (scale set by animations.js) */
+nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue), rgba(112, 190, 250, .4));
+  box-shadow: 0 0 10px rgba(112, 190, 250, .6);
+  transform: scaleX(var(--sl-progress, 0));
+  transform-origin: left;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sl-hero h1, #button-start, #button-start:hover { animation: none; }
+  nav::after { display: none; }
 }
 
 /* ════════════════════════════════════
@@ -1428,11 +1522,6 @@ body footer h5 {
   .sl-block-head { margin-bottom: 40px; }
 
   .sl-prices-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
-
-  .sl-goals-row { grid-template-columns: repeat(2, 1fr); }
-  .sl-goal { border-left: none; padding-left: 0; }
-  .sl-goal:nth-child(even) { border-left: 1px solid var(--border); padding-left: 24px; }
-  .sl-goal:nth-child(n+3) { border-top: 1px solid var(--border); }
 
   .why-quotes-row { grid-template-columns: 1fr !important; gap: 40px !important; }
   .sl-why { position: static; }
@@ -1479,6 +1568,7 @@ body footer h5 {
   .sl-block, .sl-pricing { padding: 64px 0; }
   .questions, .form-container { padding: 64px 16px; }
   .sl-goals-row { padding: 0 16px; }
+  .sl-goal { padding: 18px 14px; }
   .sl-foot-grid { padding-left: 16px; padding-right: 16px; }
   .sl-foot-bottom { width: calc(100% - 32px); }
 
@@ -1514,11 +1604,6 @@ body footer h5 {
 
 /* ── ≤ 480px  small phones ── */
 @media (max-width: 480px) {
-  .sl-goals-row { grid-template-columns: 1fr; }
-  .sl-goal,
-  .sl-goal:nth-child(even) { border-left: none; padding: 20px 0; }
-  .sl-goal:nth-child(n+2) { border-top: 1px solid var(--border); }
-
   .sl-founder-photo { max-width: 220px; }
   .sl-consult-checklist p::before,
   .bot-test-section .checklist p::before { flex-basis: 52px; }

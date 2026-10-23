@@ -18,6 +18,12 @@ function applyTranslations(translations, language) {
         if (value) element.textContent = value;
     });
 
+    // Copies of id'd elements (e.g. the duplicated goals marquee) carry data-i18n="key"
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const value = dict[element.getAttribute('data-i18n')];
+        if (value) element.textContent = value;
+    });
+
     // Attributes textContent can't reach: data-i18n-<attr>="key"
     I18N_ATTRS.forEach(attr => {
         document.querySelectorAll(`[data-i18n-${attr}]`).forEach(element => {
