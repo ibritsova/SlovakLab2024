@@ -1,3 +1,9 @@
+// Form messages follow the language picked in the switcher (dictionary set by script.js)
+function t(key, fallback) {
+  const i18n = window.slI18n;
+  return (i18n && i18n.dict && i18n.dict[key]) || fallback;
+}
+
 function validateForm(event) {
   event.preventDefault();
 
@@ -10,14 +16,14 @@ function validateForm(event) {
 
   const username = document.getElementById("name").value.trim();
   if (!username) {
-    document.getElementById("usernameError").textContent = "Введіть ваше ім'я.";
+    document.getElementById("usernameError").textContent = t("form-err-name", "Введіть ваше ім'я.");
     valid = false;
   }
 
   const email = document.getElementById("email").value.trim();
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (!emailPattern.test(email)) {
-    document.getElementById("emailError").textContent = "Введіть коректну email-адресу.";
+    document.getElementById("emailError").textContent = t("form-err-email", "Введіть коректну email-адресу.");
     valid = false;
   }
 
@@ -25,15 +31,16 @@ function validateForm(event) {
   const phone = document.getElementById("phone").value.trim();
   const phoneDigits = phone.replace(/[\s\-().+]/g, "");
   if (!/^\d{7,15}$/.test(phoneDigits)) {
-    document.getElementById("phoneError").textContent = "Введіть коректний номер телефону.";
+    document.getElementById("phoneError").textContent = t("form-err-phone", "Введіть коректний номер телефону.");
     valid = false;
   }
 
   if (!valid) return;
 
   const sendButton = document.getElementById("sendButton");
+  const sendLabel = sendButton.textContent;
   sendButton.disabled = true;
-  sendButton.textContent = "Надсилаємо…";
+  sendButton.textContent = t("form-sending", "Надсилаємо…");
 
   const childAgeField = document.getElementById("child-age");
 
@@ -61,8 +68,8 @@ function validateForm(event) {
     .catch(function (err) {
       console.error("EmailJS error:", err);
       sendButton.disabled = false;
-      sendButton.textContent = "Надіслати";
-      alert("Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com\n\nДеталі: " + JSON.stringify(err));
+      sendButton.textContent = sendLabel;
+      alert(t("form-send-error", "Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com") + "\n\n" + JSON.stringify(err));
     });
 }
 
@@ -79,29 +86,30 @@ function validateSkConsultForm(event) {
 
   const name = document.getElementById("sk-name").value.trim();
   if (!name) {
-    document.getElementById("skNameError").textContent = "Введіть ваше ім'я.";
+    document.getElementById("skNameError").textContent = t("form-err-name", "Введіть ваше ім'я.");
     valid = false;
   }
 
   const email = document.getElementById("sk-email").value.trim();
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
   if (!emailPattern.test(email)) {
-    document.getElementById("skEmailError").textContent = "Введіть коректну email-адресу.";
+    document.getElementById("skEmailError").textContent = t("form-err-email", "Введіть коректну email-адресу.");
     valid = false;
   }
 
   const phone = document.getElementById("sk-phone").value.trim();
   const phoneDigits = phone.replace(/[\s\-().+]/g, "");
   if (!/^\d{7,15}$/.test(phoneDigits)) {
-    document.getElementById("skPhoneError").textContent = "Введіть коректний номер телефону.";
+    document.getElementById("skPhoneError").textContent = t("form-err-phone", "Введіть коректний номер телефону.");
     valid = false;
   }
 
   if (!valid) return;
 
   const sendButton = document.getElementById("skConsultSendButton");
+  const sendLabel = sendButton.textContent;
   sendButton.disabled = true;
-  sendButton.textContent = "Надсилаємо…";
+  sendButton.textContent = t("form-sending", "Надсилаємо…");
 
   const messengerInput = document.querySelector('input[name="sk-messenger"]:checked');
   const messenger = messengerInput ? messengerInput.value : "не вказано";
@@ -132,8 +140,8 @@ function validateSkConsultForm(event) {
     .catch(function (err) {
       console.error("EmailJS error (SK consult form):", err);
       sendButton.disabled = false;
-      sendButton.textContent = "Записатись на консультацію";
-      alert("Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com\n\nДеталі: " + JSON.stringify(err));
+      sendButton.textContent = sendLabel;
+      alert(t("form-send-error", "Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com") + "\n\n" + JSON.stringify(err));
     });
 }
 
@@ -149,22 +157,23 @@ function validateTrialForm(event) {
 
   const name = document.getElementById("trial-name").value.trim();
   if (!name) {
-    document.getElementById("trialNameError").textContent = "Введіть ваше ім'я.";
+    document.getElementById("trialNameError").textContent = t("form-err-name", "Введіть ваше ім'я.");
     valid = false;
   }
 
   const phone = document.getElementById("trial-phone").value.trim();
   const phoneDigits = phone.replace(/[\s\-().+]/g, "");
   if (!/^\d{7,15}$/.test(phoneDigits)) {
-    document.getElementById("trialPhoneError").textContent = "Введіть коректний номер телефону.";
+    document.getElementById("trialPhoneError").textContent = t("form-err-phone", "Введіть коректний номер телефону.");
     valid = false;
   }
 
   if (!valid) return;
 
   const sendButton = document.getElementById("trialSendButton");
+  const sendLabel = sendButton.textContent;
   sendButton.disabled = true;
-  sendButton.textContent = "Надсилаємо…";
+  sendButton.textContent = t("form-sending", "Надсилаємо…");
 
   const course = document.getElementById("trial-course").value;
   const messengerInput = document.querySelector('input[name="trial-messenger"]:checked');
@@ -193,8 +202,8 @@ function validateTrialForm(event) {
     .catch(function (err) {
       console.error("EmailJS error (trial form):", err);
       sendButton.disabled = false;
-      sendButton.textContent = "Відправити";
-      alert("Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com\n\nДеталі: " + JSON.stringify(err));
+      sendButton.textContent = sendLabel;
+      alert(t("form-send-error", "Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com") + "\n\n" + JSON.stringify(err));
     });
 }
 
