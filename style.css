@@ -954,12 +954,6 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
   font-size: 14px;
   color: var(--text);
 }
-.sl-who img {
-  width: 52px; height: 52px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--border);
-}
 
 /* ════════════════════════════════════
    FORMS
