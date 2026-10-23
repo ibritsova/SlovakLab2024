@@ -929,6 +929,12 @@ nav ul.sidebar {
 }
 /* Logo instead of a photo — no darkening gradient over it */
 .sl-uni-photo:has(img[src$="-logo.png"])::after { display: none; }
+/* Cards link to the university's official site */
+a.sl-uni-card { display: block; color: inherit; text-decoration: none; }
+a.sl-uni-card:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.sl-uni-photo img { transition: transform .5s ease; }
+a.sl-uni-card:hover .sl-uni-photo img { transform: scale(1.04); }
+a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
 .sl-uni-card h3 { font-size: clamp(20px, 1.8vw, 24px); margin: 0 32px 8px; }
 .sl-uni-card p { color: var(--text); font-size: 15px; line-height: 1.5; margin: 0 32px; }
 
