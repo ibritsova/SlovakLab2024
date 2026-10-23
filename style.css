@@ -1007,6 +1007,15 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
   margin: 0 0 8px;
 }
 
+/* Blue glow behind the application form */
+.form-container form,
+.form-container > .success-message {
+  border-color: rgba(112, 190, 250, .35);
+  box-shadow:
+    0 0 40px rgba(112, 190, 250, .18),
+    0 0 120px 10px rgba(112, 190, 250, .16),
+    0 0 260px 60px rgba(112, 190, 250, .10);
+}
 .form-container form { padding: 40px; }
 
 form label {
