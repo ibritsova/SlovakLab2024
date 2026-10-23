@@ -1040,6 +1040,57 @@ select option { background: var(--button-bg); color: var(--white); }
 button[type="submit"] { display: flex; width: 100%; margin: 12px 0 0; }
 button[type="submit"]:disabled { opacity: .6; cursor: wait; }
 
+/* Messenger choice — round radio buttons */
+.sl-radio-group { border: 0; padding: 0; margin: 4px 0 22px; min-width: 0; }
+.sl-radio-group legend {
+  float: none;
+  width: auto;
+  padding: 0;
+  margin: 0 0 12px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text);
+}
+.sl-radio-options { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+form label.sl-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 15px;
+  color: var(--white);
+  cursor: pointer;
+}
+.sl-radio input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--text);   /* --border is too faint for an empty radio */
+  background: var(--button-bg);
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+}
+.sl-radio input[type="radio"]::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+  transform: scale(0);
+  transition: transform .15s ease;
+}
+.sl-radio:hover input[type="radio"] { border-color: var(--blue); }
+.sl-radio input[type="radio"]:checked { border-color: var(--blue); background: var(--blue-soft); }
+.sl-radio input[type="radio"]:checked::before { transform: scale(1); }
+.sl-radio input[type="radio"]:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
 .error { color: var(--error); font-size: 14px; margin: -10px 0 14px; }
 .error:empty { display: none; }
 

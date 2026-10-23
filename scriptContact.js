@@ -103,13 +103,17 @@ function validateSkConsultForm(event) {
   sendButton.disabled = true;
   sendButton.textContent = "Надсилаємо…";
 
+  const messengerInput = document.querySelector('input[name="sk-messenger"]:checked');
+  const messenger = messengerInput ? messengerInput.value : "не вказано";
+
   const params = {
-    name:     name,
-    email:    email,
-    phone:    phone,
-    childAge: "",
-    message:  "Заявка на консультацію (блок «Навчання у Словаччині»).",
-    level:    "не вказано"
+    name:      name,
+    email:     email,
+    phone:     phone,
+    childAge:  "",
+    messenger: messenger,
+    message:   "Заявка на консультацію (блок «Навчання у Словаччині»). Бажаний месенджер: " + messenger + ".",
+    level:     "не вказано"
   };
 
   emailjs.send("service_jgex8hj", "template_w7m91ya", params)

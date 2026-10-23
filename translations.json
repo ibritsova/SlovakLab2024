@@ -185,6 +185,7 @@
     "sk-consult-fullName": "Name",
     "sk-consult-phone": "Phone",
     "sk-consult-email": "Email",
+    "sk-consult-messenger": "Preferred messenger",
     "skConsultSendButton": "Book a consultation",
 
     "sk-process-title": "How admission to a Slovak university works",
@@ -411,6 +412,7 @@
     "sk-consult-fullName": "Ім'я",
     "sk-consult-phone": "Телефон",
     "sk-consult-email": "Email",
+    "sk-consult-messenger": "Зручний месенджер",
     "skConsultSendButton": "Записатись на консультацію",
 
     "sk-process-title": "Як проходить вступ до словацького вишу",
@@ -637,6 +639,7 @@
     "sk-consult-fullName": "Meno",
     "sk-consult-phone": "Telefón",
     "sk-consult-email": "Email",
+    "sk-consult-messenger": "Preferovaný messenger",
     "skConsultSendButton": "Prihlásiť sa na konzultáciu",
 
     "sk-process-title": "Ako prebieha prijatie na slovenskú vysokú školu",
