@@ -931,14 +931,6 @@ nav ul.sidebar {
 .sl-uni-photo:has(img[src$="-logo.png"])::after { display: none; }
 .sl-uni-card h3 { font-size: clamp(20px, 1.8vw, 24px); margin: 0 32px 8px; }
 .sl-uni-card p { color: var(--text); font-size: 15px; line-height: 1.5; margin: 0 32px; }
-.sl-uni-credit {
-  margin-top: 24px;
-  font-size: 13px;
-  color: var(--text);
-  line-height: 1.5;
-}
-.sl-uni-credit a { color: var(--white); text-decoration: underline; text-underline-offset: 2px; }
-.sl-uni-credit a:hover { color: var(--blue); }
 
 /* ════════════════════════════════════
    WHY US + TESTIMONIALS
