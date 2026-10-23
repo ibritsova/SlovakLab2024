@@ -845,13 +845,13 @@ nav ul.sidebar {
 .sl-sk-hero-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto 1fr;
   column-gap: 56px;
   align-items: start;
 }
 .sl-sk-hero-grid .sl-sk-hero { display: contents; }
 .sl-sk-hero-grid .sl-sk-hero h2 { grid-column: 1 / -1; margin-bottom: 48px; }
-.sl-sk-hero-grid .sl-sk-hero p {
+.sl-sk-hero-grid .sl-sk-hero > p {
   grid-column: 1;
   font-size: 17px;
   color: var(--text);
@@ -859,12 +859,16 @@ nav ul.sidebar {
   margin: 0 0 32px;
   max-width: 48ch;
 }
+.sl-sk-hero-grid .sl-sk-hero .sl-consult-checklist { grid-column: 1; margin: 0 0 36px; }
 .sl-sk-hero-grid .sl-sk-hero .sl-btn { grid-column: 1; justify-self: start; }
+/* Photo fills the full height of the text column next to it */
 .sl-sk-hero-photo {
   grid-column: 2;
-  grid-row: 2 / 5;
-  aspect-ratio: 4 / 3;
+  grid-row: 2 / 6;
+  align-self: stretch;
+  min-height: 360px;
 }
+.sl-sk-hero-photo img { position: absolute; inset: 0; }
 
 /* ════════════════════════════════════
    SK EDUCATION — BENEFITS
@@ -1403,7 +1407,7 @@ body footer h5 {
 
   .sl-sk-hero-grid { grid-template-columns: 1fr; grid-template-rows: none; }
   .sl-sk-hero-grid .sl-sk-hero h2 { margin-bottom: 24px; }
-  .sl-sk-hero-photo { grid-column: 1; grid-row: auto; margin-top: 40px; aspect-ratio: 16 / 9; }
+  .sl-sk-hero-photo { grid-column: 1; grid-row: auto; margin-top: 40px; aspect-ratio: 16 / 9; min-height: 0; }
 
   .sl-benefits-row { grid-template-columns: 1fr; }
   .sl-benefits-photo { min-height: 0; aspect-ratio: 16 / 9; }

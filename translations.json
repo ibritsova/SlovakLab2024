@@ -157,7 +157,12 @@
     "admission-cta": "Learn more about admission support",
 
     "sk-hero-title": "Higher education in Slovakia — closer than it seems",
-    "sk-hero-desc": "Public universities in Slovakia are open to graduates from Ukraine. We prepare your child in the language and support every step — from the very first Slovak lesson to enrollment.",
+    "sk-hero-desc": "Public universities in Slovakia are open to graduates from Ukraine. We take care of language preparation and the paperwork, so your child can focus on studying.",
+    "sk-hero-point1": "We teach Slovak from scratch to the level required for admission (B1–C1)",
+    "sk-hero-point2": "Lessons combine Ukrainian teachers and native speakers",
+    "sk-hero-point3": "We help choose a university and faculty that fit your child's goals",
+    "sk-hero-point4": "We prepare and check the admission documents",
+    "sk-hero-point5": "We support you from the application to moving into the dormitory",
     "sk-hero-cta": "See how it works →",
 
     "sk-benefits-title": "Why consider studying in Slovakia",
@@ -378,7 +383,12 @@
     "admission-cta": "Дізнатись більше про супровід вступу",
 
     "sk-hero-title": "Вища освіта у Словаччині — ближче, ніж здається",
-    "sk-hero-desc": "Державні виші Словаччини відкриті для випускників з України. Ми готуємо дитину мовно та супроводжуємо на кожному кроці — від першого уроку словацької до зарахування.",
+    "sk-hero-desc": "Державні виші Словаччини відкриті для випускників з України. Ми беремо на себе мовну підготовку та організаційні питання, щоб ваша дитина могла зосередитись на навчанні.",
+    "sk-hero-point1": "Навчаємо словацької з нуля до рівня, потрібного для вступу (B1–C1)",
+    "sk-hero-point2": "Поєднуємо уроки з українськими викладачами та носіями мови",
+    "sk-hero-point3": "Допомагаємо обрати виш і факультет під цілі дитини",
+    "sk-hero-point4": "Готуємо й перевіряємо документи для вступу",
+    "sk-hero-point5": "Супроводжуємо від подання заявки до поселення в гуртожиток",
     "sk-hero-cta": "Дізнатись, як це працює →",
 
     "sk-benefits-title": "Чому варто розглянути навчання у Словаччині",
@@ -599,7 +609,12 @@
     "admission-cta": "Zistiť viac o sprievode prijímacím konaním",
 
     "sk-hero-title": "Vysokoškolské štúdium na Slovensku — bližšie, než sa zdá",
-    "sk-hero-desc": "Verejné vysoké školy na Slovensku sú otvorené pre absolventov z Ukrajiny. Jazykovo pripravíme vaše dieťa a sprevádzame ho na každom kroku — od prvej lekcie slovenčiny až po zápis.",
+    "sk-hero-desc": "Verejné vysoké školy na Slovensku sú otvorené pre absolventov z Ukrajiny. Jazykovú prípravu aj organizačné záležitosti berieme na seba, aby sa vaše dieťa mohlo sústrediť na učenie.",
+    "sk-hero-point1": "Učíme slovenčinu od nuly až po úroveň potrebnú na prijatie (B1–C1)",
+    "sk-hero-point2": "Spájame lekcie s ukrajinskými učiteľmi a rodenými hovoriacimi",
+    "sk-hero-point3": "Pomáhame vybrať vysokú školu a fakultu podľa cieľov dieťaťa",
+    "sk-hero-point4": "Pripravujeme a kontrolujeme dokumenty na prijatie",
+    "sk-hero-point5": "Sprevádzame od podania prihlášky až po ubytovanie na internáte",
     "sk-hero-cta": "Zistiť, ako to funguje →",
 
     "sk-benefits-title": "Prečo zvážiť štúdium na Slovensku",
