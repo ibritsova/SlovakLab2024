@@ -8,7 +8,7 @@
   // Blocks that fade + rise in as they enter the viewport
   const REVEAL = [
     '.sl-block-head', '.bot-test-section', '.sl-founder-row',
-    '.sl-price-card', '.sl-admission-card', '.sl-step', '.sl-uni-card', '.sl-quote',
+    '.sl-price-card', '.sl-step', '.sl-uni-card', '.sl-quote',
     '.sl-benefit', '.sl-course', '.info-courses', '.sl-trial-cta', '.sl-sk-hero-grid',
     '.sl-benefits-photo',
     // the success message is display:none until the form is sent — never hide it
@@ -20,7 +20,7 @@
   // (ticks drawing in, numbers lighting up, photos settling)
   const DETAIL = [
     '.sl-consult-checklist', '.bot-test-section .checklist',
-    '.sl-steps-grid', '.sl-admission-grid',
+    '.sl-steps-grid',
     '.sl-sk-hero-photo', '.sl-benefits-photo', '.sl-founder-photo', '.sl-uni-photo'
   ].join(',');
 
