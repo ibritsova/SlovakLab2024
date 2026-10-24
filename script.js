@@ -1,6 +1,6 @@
 //LANGUAGES
 async function loadTranslations() {
-    const response = await fetch('translations.json?v=20261024');
+    const response = await fetch('translations.json?v=20261024b');
     return response.json();
 }
 
