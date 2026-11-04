@@ -8,7 +8,9 @@
 
   const hashOf = dialog => '#' + dialog.id.replace('modal-', '') + '-lessons';
   const byHash = hash => dialogs.find(d => hashOf(d) === hash);
-  const RETURN_HASH = '#prices';
+  // The prices block the pop-ups belong to (#prices on the home page, #formats on Курси)
+  const home = dialog => dialog.closest('#prices, #formats');
+  const homeHash = dialog => (home(dialog) ? '#' + home(dialog).id : location.pathname);
 
   // true while the open pop-up's hash entry was pushed by us (so Back can pop it)
   let pushed = false;
@@ -31,7 +33,7 @@
     hide(dialog);
     if (location.hash !== hashOf(dialog)) return;
     if (pushed) history.back();
-    else history.replaceState(null, '', RETURN_HASH);
+    else history.replaceState(null, '', homeHash(dialog));
     pushed = false;
   };
 
@@ -69,7 +71,7 @@
     const wanted = byHash(location.hash);
     dialogs.forEach(d => { if (d !== wanted) hide(d); });
     if (wanted) {
-      document.getElementById('prices')?.scrollIntoView({ behavior: 'instant' });
+      home(wanted)?.scrollIntoView({ behavior: 'instant' });
       show(wanted);
     } else {
       pushed = false;

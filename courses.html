@@ -284,6 +284,8 @@
         <p id="courses-desc">Від першого <em>ahoj</em> до вільної розмови про культуру, політику та побут.</p>
       </div>
 
+      <div class="sl-step-label"><span>1</span><h2 id="courses-step-level">Оберіть рівень</h2></div>
+
       <!-- Hairline grid — cards link to detail sections below -->
       <div class="sl-courses-grid">
         <a href="#target-section-beginner" class="sl-course">
@@ -331,6 +333,135 @@
           <span class="sl-arrow">→</span>
         </a>
       </div>
+
+      <!-- Step 2: the same formats & prices as on the home page -->
+      <div class="sl-formats" id="formats">
+        <div class="sl-step-label"><span>2</span><h2 id="courses-step-format">Оберіть формат</h2></div>
+        <p class="sl-formats-desc" id="courses-format-desc">Кожен рівень можна проходити в будь-якому з трьох форматів.</p>
+
+      <div class="sl-prices-grid">
+
+        <!-- Group -->
+        <div class="sl-price-card">
+          <div>
+            <div class="sl-price-name" id="pricing-group-title">Групові заняття</div>
+            <div class="sl-price-amount">
+              <span id="pricing-group-price">50€</span>
+              <small>/ 8 занять</small>
+            </div>
+            <ul>
+              <li id="pricing-group-duration">Тривалість уроку: 90 хв</li>
+              <li id="pricing-group-teacher">Український та словацький викладач</li>
+              <li id="pricing-group-recording">Запис усіх уроків</li>
+              <li id="pricing-group-size">Група до 6 осіб</li>
+            </ul>
+          </div>
+          <button type="button" class="sl-btn" data-modal="modal-group" data-i18n="pricing-more">Детальніше</button>
+        </div>
+
+        <!-- Pair — featured -->
+        <div class="sl-price-card featured">
+          <div>
+            <div class="sl-price-name" id="pricing-pair-title">Парні заняття</div>
+            <div class="sl-price-amount">
+              <span id="pricing-pair-price">75€</span>
+              <small>/ 8 занять</small>
+            </div>
+            <ul>
+              <li id="pricing-pair-duration">Тривалість уроку: 90 хв</li>
+              <li id="pricing-pair-teacher">Лише український викладач</li>
+              <li id="pricing-pair-recording">Запис уроків</li>
+              <li id="pricing-pair-schedule">Гнучкий графік вдвох</li>
+            </ul>
+          </div>
+          <button type="button" class="sl-btn" data-modal="modal-pair" data-i18n="pricing-more">Детальніше</button>
+        </div>
+
+        <!-- Individual -->
+        <div class="sl-price-card">
+          <div>
+            <div class="sl-price-name" id="pricing-individual-title">Індивідуальні заняття</div>
+            <div class="sl-price-amount">
+              <span id="pricing-individual-price">15€</span>
+              <small>/ урок</small>
+            </div>
+            <ul>
+              <li id="pricing-individual-duration">Тривалість уроку: 60 хв</li>
+              <li id="pricing-individual-teacher">Український або словацький викладач</li>
+              <li id="pricing-individual-recording">Запис уроку</li>
+              <li id="pricing-individual-pace">Темп під себе</li>
+            </ul>
+          </div>
+          <button type="button" class="sl-btn" data-modal="modal-individual" data-i18n="pricing-more">Детальніше</button>
+        </div>
+
+      </div>
+
+      <!-- Course details pop-ups (opened by the "Детальніше" buttons, see modals.js) -->
+      <dialog class="sl-modal" id="modal-group" aria-labelledby="modal-group-title">
+        <div class="sl-modal-box">
+          <button type="button" class="sl-modal-close" data-close aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
+          <h3 id="modal-group-title" data-i18n="pricing-group-title">Групові заняття</h3>
+          <p class="sl-modal-meta"><span data-i18n="pricing-group-price">50€ / 8 занять</span> · <span data-i18n="pricing-group-duration">Тривалість уроку: 90 хв</span></p>
+          <div class="sl-modal-body">
+            <ul class="sl-modal-features">
+              <li><b data-i18n="modal-f-schedule-title">Зручний графік</b><span data-i18n="modal-f-schedule-twice">Заняття двічі на тиждень у зручний для вас час.</span></li>
+              <li><b data-i18n="modal-f-live-title">Живе спілкування</b><span data-i18n="modal-f-live-desc">Живе спілкування з викладачем з першого уроку.</span></li>
+              <li><b data-i18n="modal-f-materials-title">Навчальні матеріали</b><span data-i18n="modal-f-materials-desc">Всі матеріали вже включені у вартість курсу.</span></li>
+              <li><b data-i18n="modal-f-small-title">Малі групи</b><span data-i18n="modal-f-small-desc">Групи до 6 осіб.</span></li>
+              <li><b data-i18n="modal-f-levels-title">Групи за рівнями</b><span data-i18n="modal-f-levels-desc">Формуємо групи відповідно до рівня знань — ви навчаєтесь з людьми свого рівня.</span></li>
+              <li><b data-i18n="modal-f-monthly-title">Старт щомісяця</b><span data-i18n="modal-f-monthly-desc">Нові групи запускаються щомісяця — не потрібно довго чекати.</span></li>
+            </ul>
+          </div>
+          <div class="sl-modal-actions">
+            <a href="#target-section-trial" class="sl-btn" data-close data-i18n="apply-btn">Записатись →</a>
+          </div>
+        </div>
+      </dialog>
+      <dialog class="sl-modal" id="modal-pair" aria-labelledby="modal-pair-title">
+        <div class="sl-modal-box">
+          <button type="button" class="sl-modal-close" data-close aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
+          <h3 id="modal-pair-title" data-i18n="pricing-pair-title">Парні заняття</h3>
+          <p class="sl-modal-meta"><span data-i18n="pricing-pair-price">75€ / 8 занять</span> · <span data-i18n="pricing-pair-duration">Тривалість уроку: 90 хв</span></p>
+          <div class="sl-modal-body">
+            <ul class="sl-modal-features">
+              <li><b data-i18n="modal-f-schedule-title">Зручний графік</b><span data-i18n="modal-f-schedule-twice">Заняття двічі на тиждень у зручний для вас час.</span></li>
+              <li><b data-i18n="modal-f-live-title">Живе спілкування</b><span data-i18n="modal-f-live-desc">Живе спілкування з викладачем з першого уроку.</span></li>
+              <li><b data-i18n="modal-f-materials-title">Навчальні матеріали</b><span data-i18n="modal-f-materials-desc">Всі матеріали вже включені у вартість курсу.</span></li>
+            </ul>
+            <div class="sl-promo">
+              <span class="sl-promo-badge">−10%</span>
+              <div>
+                <b data-i18n="modal-promo-title">Займайтеся разом із другом</b>
+                <p><span data-i18n="modal-promo-text">Приходьте на парні заняття з другом — і ви обоє отримаєте знижку 10% на перший місяць навчання за промокодом</span> <span class="sl-promo-code">Friends</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="sl-modal-actions">
+            <a href="#target-section-trial" class="sl-btn" data-close data-i18n="apply-btn">Записатись →</a>
+          </div>
+        </div>
+      </dialog>
+      <dialog class="sl-modal" id="modal-individual" aria-labelledby="modal-individual-title">
+        <div class="sl-modal-box">
+          <button type="button" class="sl-modal-close" data-close aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
+          <h3 id="modal-individual-title" data-i18n="pricing-individual-title">Індивідуальні заняття</h3>
+          <p class="sl-modal-meta"><span data-i18n="pricing-individual-price">15€ / урок</span> · <span data-i18n="pricing-individual-duration">Тривалість уроку: 60 хв</span></p>
+          <div class="sl-modal-body">
+            <ul class="sl-modal-features">
+              <li><b data-i18n="modal-f-schedule-title">Зручний графік</b><span data-i18n="modal-f-schedule-any">Заняття у зручний для вас час.</span></li>
+              <li><b data-i18n="modal-f-live-title">Живе спілкування</b><span data-i18n="modal-f-live-desc">Живе спілкування з викладачем з першого уроку.</span></li>
+              <li><b data-i18n="modal-f-materials-title">Навчальні матеріали</b><span data-i18n="modal-f-materials-desc">Всі матеріали вже включені у вартість курсу.</span></li>
+              <li><b data-i18n="modal-f-approach-title">Індивідуальний підхід</b><span data-i18n="modal-f-approach-desc">Наші викладачі гарантують індивідуальний підхід до кожного студента.</span></li>
+              <li><b data-i18n="modal-f-adaptive-title">Адаптивна програма</b><span data-i18n="modal-f-adaptive-desc">Підберемо план навчання під ваш поточний рівень словацької.</span></li>
+            </ul>
+          </div>
+          <div class="sl-modal-actions">
+            <a href="#target-section-trial" class="sl-btn" data-close data-i18n="apply-btn">Записатись →</a>
+          </div>
+        </div>
+      </dialog>
+    </div>
     </div>
   </section>
 
@@ -551,7 +682,7 @@
   <!-- ══════════════════════════════════
        TRIAL LESSON CTA
        ══════════════════════════════════ -->
-  <section class="sl-block">
+  <section class="sl-block" id="target-section-trial">
     <div class="sl-wrap">
       <div class="sl-trial-cta">
         <div class="sl-trial-text">
@@ -603,6 +734,7 @@
   <script src="script.js?v=20261105"></script>
   <script src="scriptContact.js?v=20261105"></script>
   <script src="animations.js?v=20261105"></script>
+  <script src="modals.js?v=20261105"></script>
 
   <!-- Meta Pixel — ViewContent per course, fires once when a course detail section is actually scrolled into view -->
   <script>
