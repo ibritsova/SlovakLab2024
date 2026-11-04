@@ -1136,7 +1136,7 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 52px;
+  padding: 0 16px;
   overflow: hidden;
   background:
     linear-gradient(100deg, transparent 30%, rgba(255, 170, 70, .22) 50%, transparent 70%) 0 0 / 250% 100% no-repeat,
@@ -1210,21 +1210,6 @@ html.has-bf-bar { scroll-padding-top: calc(var(--nav-h) + var(--bf-bar-h)); }
 .sl-bf-bar-cta-text { display: inline; }
 .sl-bf-bar-arrow { display: none; }
 .sl-bf-bar-link:hover .sl-bf-bar-cta { background: rgba(255, 138, 42, .25); border-color: var(--bf-amber); }
-.sl-bf-bar-close {
-  position: absolute;
-  right: 12px; top: 50%;
-  transform: translateY(-50%);
-  width: 30px; height: 30px;
-  padding: 0;
-  font: 400 20px/1 var(--font-body);
-  color: #ffd29a;
-  background: transparent;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.sl-bf-bar-close:hover { color: var(--white); background: rgba(255, 138, 42, .2); }
-.sl-bf-bar-close:focus-visible,
 .sl-bf-bar-link:focus-visible { outline: 2px solid var(--bf-orange); outline-offset: 2px; }
 @media (max-width: 900px) {
   .sl-bf-bar-text { display: none; }
@@ -1232,7 +1217,7 @@ html.has-bf-bar { scroll-padding-top: calc(var(--nav-h) + var(--bf-bar-h)); }
 }
 @media (max-width: 600px) {
   :root { --bf-bar-h: 44px; }
-  .sl-bf-bar { padding: 0 40px 0 10px; justify-content: flex-start; }
+  .sl-bf-bar { padding: 0 10px; }
   .sl-bf-bar-link { gap: 8px; font-size: 13px; }
   .sl-bf-bar-tag { padding: 4px 8px; font-size: 0; gap: 0; }   /* pumpkin only */
   .sl-bf-bar-pumpkin { font-size: 15px; }
