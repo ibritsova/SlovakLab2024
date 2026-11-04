@@ -950,6 +950,8 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
    BLACK FRIDAY PROMO — pumpkins light up on hover
    ════════════════════════════════════ */
 .sl-bf { --bf-orange: #ff8a2a; --bf-amber: #ffc46b; padding: 40px 0 100px; }
+/* Land below the nav with room for the bats over the card's top edge */
+#black-friday { padding-top: 72px; }
 .sl-bf-card {
   position: relative;
   display: grid;
