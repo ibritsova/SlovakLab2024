@@ -50,6 +50,7 @@ html body {
 body a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 img, svg { vertical-align: middle; }
+[hidden] { display: none !important; }  /* never let a component's display rule un-hide it */
 p { margin: 0 0 1rem; }  /* the spacing Bootstrap's reboot used to provide */
 
 ::selection { background: var(--blue); color: var(--background); }
@@ -1150,8 +1151,8 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
   60%, 100% { background-position: -40% 0, 0 0, 0 0; }
 }
 /* While the bar is shown, the nav sticks just below it and anchors land below both */
-body:has(#bf-bar-wrap:not([hidden])) nav { top: var(--bf-bar-h); }
-html:has(#bf-bar-wrap:not([hidden])) { scroll-padding-top: calc(var(--nav-h) + var(--bf-bar-h)); }
+html.has-bf-bar nav { top: var(--bf-bar-h); }   /* class set by promo.js (works without :has) */
+html.has-bf-bar { scroll-padding-top: calc(var(--nav-h) + var(--bf-bar-h)); }
 
 .sl-bf-bar-link {
   display: flex;

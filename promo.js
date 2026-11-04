@@ -12,6 +12,7 @@
   const endPromo = () => {
     if (section) section.hidden = true;
     if (bar) bar.hidden = true;
+    document.documentElement.classList.remove('has-bf-bar');
   };
   if (Date.now() >= ENDS_AT) { endPromo(); return; }
 
@@ -20,6 +21,7 @@
     let closed = false;
     try { closed = localStorage.getItem(BAR_CLOSED_KEY) === '1'; } catch (e) { /* storage unavailable */ }
     bar.hidden = closed;
+    document.documentElement.classList.toggle('has-bf-bar', !closed);
     // The bar now sits above the nav: re-align a section opened by link (#black-friday …) below both
     if (!closed && location.hash.length > 1) {
       const target = document.getElementById(location.hash.slice(1));
@@ -27,6 +29,7 @@
     }
     bar.querySelector('.sl-bf-bar-close').addEventListener('click', () => {
       bar.hidden = true;
+      document.documentElement.classList.remove('has-bf-bar');
       try { localStorage.setItem(BAR_CLOSED_KEY, '1'); } catch (e) { /* storage unavailable */ }
     });
     bar.querySelector('.sl-bf-bar-link').addEventListener('click', () => {
