@@ -1067,6 +1067,100 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
 .sl-bf-terms li::before { content: '•'; position: absolute; left: 0; color: var(--bf-orange); }
 .sl-bf .sl-bf-cta:hover { box-shadow: 0 0 28px rgba(255, 138, 42, .3); }
 
+/* Countdown */
+.sl-bf-countdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin: 0 0 22px;
+}
+.sl-bf-countdown-label { font-size: 14px; color: var(--text); }
+.sl-bf-countdown-boxes { display: flex; gap: 8px; }
+.sl-bf-countdown-boxes > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 58px;
+  padding: 8px 6px 6px;
+  font-size: 11px;
+  color: var(--text);
+  background: var(--button-bg);
+  border: 1px solid rgba(255, 138, 42, .35);
+  border-radius: 8px;
+}
+.sl-bf-countdown-boxes b {
+  font-family: var(--font-num);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1;
+  color: var(--bf-amber);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Old → new prices */
+.sl-bf-prices {
+  margin: 4px 0 22px;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+.sl-bf-prices li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.sl-bf-fmt { flex: 1 1 140px; font-size: 15px; color: var(--white); }
+.sl-bf-prices s { font-family: var(--font-num); font-size: 15px; color: var(--text); opacity: .7; }
+.sl-bf-prices b {
+  font-family: var(--font-num);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--bf-amber);
+}
+.sl-bf-prices small { min-width: 80px; font-size: 13px; color: var(--text); }
+
+/* Announcement bar above the nav */
+.sl-bf-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 8px 48px;
+  background: linear-gradient(90deg, #1a0d02, #3a1a04 50%, #1a0d02);
+  border-bottom: 1px solid rgba(255, 138, 42, .45);
+}
+.sl-bf-bar-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  color: #ffd29a;
+  transition: color .2s;
+}
+.sl-bf-bar-link:hover { color: var(--white); }
+.sl-bf-bar-close {
+  position: absolute;
+  right: 12px; top: 50%;
+  transform: translateY(-50%);
+  width: 28px; height: 28px;
+  padding: 0;
+  font: 400 20px/1 var(--font-body);
+  color: #ffd29a;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.sl-bf-bar-close:hover { color: var(--white); background: rgba(255, 138, 42, .15); }
+.sl-bf-bar-close:focus-visible,
+.sl-bf-bar-link:focus-visible { outline: 2px solid var(--bf-orange, #ff8a2a); outline-offset: 2px; }
+.sl-bf-bar { --bf-orange: #ff8a2a; }
+
 /* Photos: the lit copy fades in over the unlit one */
 .sl-bf-visual { position: relative; z-index: 1; }
 .sl-bf-scene,
@@ -1120,6 +1214,11 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
   .sl-bf-card { padding: 36px 20px 32px; }
   .sl-bf-code { flex-wrap: wrap; }
   .sl-bf-eyebrow { font-size: 11px; letter-spacing: .02em; border-radius: 14px; }
+  .sl-bf-countdown-boxes > span { min-width: 0; flex: 1; }
+  .sl-bf-countdown-boxes { width: 100%; }
+  .sl-bf-countdown-boxes b { font-size: 20px; }
+  .sl-bf-bar { padding: 8px 40px 8px 16px; }
+  .sl-bf-bar-link { font-size: 13px; }
   .sl-bf-bat--1 { width: 70px; top: -36px; right: 6%; }
   .sl-bf-bat--2 { right: 40%; }
   .sl-bf-bat--3 { display: none; }

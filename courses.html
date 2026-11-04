@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261105c" />
+  <link rel="stylesheet" href="style.css?v=20261106" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -227,6 +227,12 @@
   <!-- GTM noscript -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SFKJQN9" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Black Friday announcement bar (shown by promo.js until the offer ends; can be closed) -->
+  <div class="sl-bf-bar" id="bf-bar-wrap" hidden>
+    <a href="/#black-friday" class="sl-bf-bar-link"><span aria-hidden="true">🎃</span> <span data-i18n="bf-bar">Black Friday: −15% на перший місяць · до 30.11 →</span></a>
+    <button type="button" class="sl-bf-bar-close" aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
+  </div>
 
   <!-- ══════════════════════════════════
        NAVIGATION
@@ -730,11 +736,12 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261105c"></script>
-  <script src="script.js?v=20261105c"></script>
-  <script src="scriptContact.js?v=20261105c"></script>
-  <script src="animations.js?v=20261105c"></script>
-  <script src="modals.js?v=20261105c"></script>
+  <script src="tracking.js?v=20261106"></script>
+  <script src="script.js?v=20261106"></script>
+  <script src="scriptContact.js?v=20261106"></script>
+  <script src="animations.js?v=20261106"></script>
+  <script src="modals.js?v=20261106"></script>
+  <script src="promo.js?v=20261106"></script>
 
   <!-- Meta Pixel — ViewContent per course, fires once when a course detail section is actually scrolled into view -->
   <script>
