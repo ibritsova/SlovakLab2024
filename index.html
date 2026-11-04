@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261104b" />
+  <link rel="stylesheet" href="style.css?v=20261105" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -209,14 +209,14 @@
     <!-- Mobile sidebar -->
     <ul class="sidebar">
       <li onclick="hideSidebar()">
-        <a href="#">
+        <a href="#" role="button" aria-label="Закрити меню" data-i18n-aria-label="aria-close" onclick="event.preventDefault()">
           <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 96 960 960" width="22">
             <path
               d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
           </svg>
         </a>
       </li>
-      <li onclick="hideSidebar()"><a href="index.html" id="li1">Головна</a></li>
+      <li onclick="hideSidebar()"><a href="/" id="li1">Головна</a></li>
       <li onclick="hideSidebar()"><a href="courses.html" id="li2">Курси</a></li>
       <li onclick="hideSidebar()"><a href="#target-section-apply" id="li4">Контакти</a></li>
       <li onclick="hideSidebar()"><a href="#target-section-feedback" id="li5">Відгуки</a></li>
@@ -225,9 +225,9 @@
     <!-- Desktop nav bar -->
     <ul class="normal">
       <li>
-        <a href="#" class="nav-logo">Slovak<span>Lab</span></a>
+        <a href="/" class="nav-logo">Slovak<span>Lab</span></a>
       </li>
-      <li class="hideOnMobile"><a href="index.html" id="li1">Головна</a></li>
+      <li class="hideOnMobile"><a href="/" id="li1">Головна</a></li>
       <li class="hideOnMobile"><a href="courses.html" id="li2">Курси</a></li>
       <li class="hideOnMobile"><a href="#target-section-apply" id="li4">Контакти</a></li>
       <li class="hideOnMobile"><a href="#target-section-feedback" id="li5">Відгуки</a></li>
@@ -239,7 +239,7 @@
         </select>
       </li>
       <li class="menu-button" onclick="showSidebar()">
-        <a href="#">
+        <a href="#" role="button" aria-label="Меню" onclick="event.preventDefault()">
           <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24">
             <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
           </svg>
@@ -822,11 +822,11 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261104b"></script>
-  <script src="script.js?v=20261104b"></script>
-  <script src="scriptContact.js?v=20261104b"></script>
-  <script src="animations.js?v=20261104b"></script>
-  <script src="modals.js?v=20261104b"></script>
+  <script src="tracking.js?v=20261105"></script>
+  <script src="script.js?v=20261105"></script>
+  <script src="scriptContact.js?v=20261105"></script>
+  <script src="animations.js?v=20261105"></script>
+  <script src="modals.js?v=20261105"></script>
 
   <script>
     function showSidebar() {
