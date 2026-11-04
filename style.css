@@ -1123,31 +1123,97 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
 }
 .sl-bf-prices small { min-width: 80px; font-size: 13px; color: var(--text); }
 
-/* Announcement bar above the nav */
+/* Announcement bar: sticky above the nav while the offer runs */
+:root { --bf-bar-h: 48px; }
 .sl-bf-bar {
-  position: relative;
+  --bf-orange: #ff8a2a;
+  --bf-amber: #ffc46b;
+  position: sticky;
+  top: 0;
+  z-index: 99;  /* below the nav, so its mobile menu panel covers the bar */
+  height: var(--bf-bar-h);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 40px;
-  padding: 8px 48px;
-  background: linear-gradient(90deg, #1a0d02, #3a1a04 50%, #1a0d02);
-  border-bottom: 1px solid rgba(255, 138, 42, .45);
+  padding: 0 52px;
+  overflow: hidden;
+  background:
+    linear-gradient(100deg, transparent 30%, rgba(255, 170, 70, .22) 50%, transparent 70%) 0 0 / 250% 100% no-repeat,
+    radial-gradient(ellipse 40% 140% at 50% 120%, rgba(255, 120, 20, .35), transparent 70%),
+    linear-gradient(90deg, #120700, #2a1203 50%, #120700);
+  border-bottom: 1px solid rgba(255, 138, 42, .6);
+  box-shadow: 0 6px 24px rgba(255, 120, 20, .18);
+  animation: sl-bar-sweep 5s ease-in-out infinite;
 }
+@keyframes sl-bar-sweep {
+  0%       { background-position: 140% 0, 0 0, 0 0; }
+  60%, 100% { background-position: -40% 0, 0 0, 0 0; }
+}
+/* While the bar is shown, the nav sticks just below it and anchors land below both */
+body:has(#bf-bar-wrap:not([hidden])) nav { top: var(--bf-bar-h); }
+html:has(#bf-bar-wrap:not([hidden])) { scroll-padding-top: calc(var(--nav-h) + var(--bf-bar-h)); }
+
 .sl-bf-bar-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.35;
-  text-align: center;
-  color: #ffd29a;
-  transition: color .2s;
+  white-space: nowrap;
+  color: #ffe3c2;
 }
-.sl-bf-bar-link:hover { color: var(--white); }
+.sl-bf-bar-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #160800;
+  background: linear-gradient(180deg, var(--bf-amber), var(--bf-orange));
+  border-radius: 999px;
+  box-shadow: 0 0 18px rgba(255, 138, 42, .55);
+}
+.sl-bf-bar-pumpkin { display: inline-block; animation: sl-pumpkin-glow 2.4s ease-in-out infinite; }
+@keyframes sl-pumpkin-glow {
+  0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 220, 120, .6)); transform: rotate(-6deg); }
+  50%      { filter: drop-shadow(0 0 8px rgba(255, 200, 80, 1)); transform: rotate(6deg); }
+}
+.sl-bf-bar-text, .sl-bf-bar-short { overflow: hidden; text-overflow: ellipsis; }
+.sl-bf-bar-short { display: none; }
+.sl-bf-bar-timer {
+  padding: 4px 10px;
+  font-family: var(--font-num);
+  font-size: 14px;
+  color: var(--bf-amber);
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(255, 138, 42, .45);
+  border-radius: 6px;
+  font-variant-numeric: tabular-nums;
+}
+.sl-bf-bar-timer b { font-weight: 500; }
+.sl-bf-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--white);
+  border: 1px solid rgba(255, 196, 107, .6);
+  border-radius: 999px;
+  transition: background .2s, border-color .2s;
+}
+.sl-bf-bar-cta-text { display: inline; }
+.sl-bf-bar-arrow { display: none; }
+.sl-bf-bar-link:hover .sl-bf-bar-cta { background: rgba(255, 138, 42, .25); border-color: var(--bf-amber); }
 .sl-bf-bar-close {
   position: absolute;
   right: 12px; top: 50%;
   transform: translateY(-50%);
-  width: 28px; height: 28px;
+  width: 30px; height: 30px;
   padding: 0;
   font: 400 20px/1 var(--font-body);
   color: #ffd29a;
@@ -1156,10 +1222,27 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
   border-radius: 50%;
   cursor: pointer;
 }
-.sl-bf-bar-close:hover { color: var(--white); background: rgba(255, 138, 42, .15); }
+.sl-bf-bar-close:hover { color: var(--white); background: rgba(255, 138, 42, .2); }
 .sl-bf-bar-close:focus-visible,
-.sl-bf-bar-link:focus-visible { outline: 2px solid var(--bf-orange, #ff8a2a); outline-offset: 2px; }
-.sl-bf-bar { --bf-orange: #ff8a2a; }
+.sl-bf-bar-link:focus-visible { outline: 2px solid var(--bf-orange); outline-offset: 2px; }
+@media (max-width: 900px) {
+  .sl-bf-bar-text { display: none; }
+  .sl-bf-bar-short { display: inline; }
+}
+@media (max-width: 600px) {
+  :root { --bf-bar-h: 44px; }
+  .sl-bf-bar { padding: 0 40px 0 10px; justify-content: flex-start; }
+  .sl-bf-bar-link { gap: 8px; font-size: 13px; }
+  .sl-bf-bar-tag { padding: 4px 8px; font-size: 0; gap: 0; }   /* pumpkin only */
+  .sl-bf-bar-pumpkin { font-size: 15px; }
+  .sl-bf-bar-timer { padding: 3px 7px; font-size: 13px; }
+  .sl-bf-bar-cta { padding: 0; border: none; }
+  .sl-bf-bar-cta-text { display: none; }
+  .sl-bf-bar-arrow { display: inline; font-size: 16px; color: var(--bf-amber); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sl-bf-bar, .sl-bf-bar-pumpkin { animation: none; }
+}
 
 /* Photos: the lit copy fades in over the unlit one */
 .sl-bf-visual { position: relative; z-index: 1; }
@@ -1217,8 +1300,6 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
   .sl-bf-countdown-boxes > span { min-width: 0; flex: 1; }
   .sl-bf-countdown-boxes { width: 100%; }
   .sl-bf-countdown-boxes b { font-size: 20px; }
-  .sl-bf-bar { padding: 8px 40px 8px 16px; }
-  .sl-bf-bar-link { font-size: 13px; }
   .sl-bf-bat--1 { width: 70px; top: -36px; right: 6%; }
   .sl-bf-bat--2 { right: 40%; }
   .sl-bf-bat--3 { display: none; }

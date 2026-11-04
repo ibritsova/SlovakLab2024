@@ -20,6 +20,11 @@
     let closed = false;
     try { closed = localStorage.getItem(BAR_CLOSED_KEY) === '1'; } catch (e) { /* storage unavailable */ }
     bar.hidden = closed;
+    // The bar now sits above the nav: re-align a section opened by link (#black-friday …) below both
+    if (!closed && location.hash.length > 1) {
+      const target = document.getElementById(location.hash.slice(1));
+      if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: 'instant' }));
+    }
     bar.querySelector('.sl-bf-bar-close').addEventListener('click', () => {
       bar.hidden = true;
       try { localStorage.setItem(BAR_CLOSED_KEY, '1'); } catch (e) { /* storage unavailable */ }
@@ -30,19 +35,20 @@
     });
   }
 
-  // Countdown
-  const boxes = {};
-  document.querySelectorAll('[data-countdown] [data-cd]').forEach(el => { boxes[el.getAttribute('data-cd')] = el; });
-  if (boxes.d) {
+  // Countdown (in the promo section and in the bar)
+  const boxes = { d: [], h: [], m: [], s: [] };
+  document.querySelectorAll('[data-cd]').forEach(el => { boxes[el.getAttribute('data-cd')].push(el); });
+  if (boxes.d.length) {
+    const set = (list, value) => list.forEach(el => { el.textContent = value; });
     const pad = n => String(n).padStart(2, '0');
     const tick = () => {
       const left = ENDS_AT - Date.now();
       if (left <= 0) { endPromo(); clearInterval(timer); return; }
       const s = Math.floor(left / 1000);
-      boxes.d.textContent = Math.floor(s / 86400);
-      boxes.h.textContent = pad(Math.floor(s / 3600) % 24);
-      boxes.m.textContent = pad(Math.floor(s / 60) % 60);
-      boxes.s.textContent = pad(s % 60);
+      set(boxes.d, Math.floor(s / 86400));
+      set(boxes.h, pad(Math.floor(s / 3600) % 24));
+      set(boxes.m, pad(Math.floor(s / 60) % 60));
+      set(boxes.s, pad(s % 60));
     };
     const timer = setInterval(tick, 1000);
     tick();

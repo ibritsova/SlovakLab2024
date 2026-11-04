@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261106" />
+  <link rel="stylesheet" href="style.css?v=20261106b" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -228,9 +228,15 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5SFKJQN9" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- Black Friday announcement bar (shown by promo.js until the offer ends; can be closed) -->
+  <!-- Black Friday announcement bar: sticky above the nav, shown by promo.js until the offer ends; can be closed -->
   <div class="sl-bf-bar" id="bf-bar-wrap" hidden>
-    <a href="/#black-friday" class="sl-bf-bar-link"><span aria-hidden="true">🎃</span> <span data-i18n="bf-bar">Black Friday: −15% на перший місяць · до 30.11 →</span></a>
+    <a href="/#black-friday" class="sl-bf-bar-link">
+      <span class="sl-bf-bar-tag"><span class="sl-bf-bar-pumpkin" aria-hidden="true">🎃</span> Black Friday</span>
+      <span class="sl-bf-bar-text" data-i18n="bf-bar-text">−15% на перший місяць · промокод BlackLab</span>
+      <span class="sl-bf-bar-short" data-i18n="bf-bar-short">−15% · BlackLab</span>
+      <span class="sl-bf-bar-timer"><b data-cd="d">--</b><span data-i18n="bf-d-short">д</span> <b data-cd="h">--</b>:<b data-cd="m">--</b>:<b data-cd="s">--</b></span>
+      <span class="sl-bf-bar-cta"><span class="sl-bf-bar-cta-text" data-i18n="bf-bar-cta">Отримати знижку →</span><span class="sl-bf-bar-arrow" aria-hidden="true">→</span></span>
+    </a>
     <button type="button" class="sl-bf-bar-close" aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
   </div>
 
@@ -736,12 +742,12 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261106"></script>
-  <script src="script.js?v=20261106"></script>
-  <script src="scriptContact.js?v=20261106"></script>
-  <script src="animations.js?v=20261106"></script>
-  <script src="modals.js?v=20261106"></script>
-  <script src="promo.js?v=20261106"></script>
+  <script src="tracking.js?v=20261106b"></script>
+  <script src="script.js?v=20261106b"></script>
+  <script src="scriptContact.js?v=20261106b"></script>
+  <script src="animations.js?v=20261106b"></script>
+  <script src="modals.js?v=20261106b"></script>
+  <script src="promo.js?v=20261106b"></script>
 
   <!-- Meta Pixel — ViewContent per course, fires once when a course detail section is actually scrolled into view -->
   <script>
