@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261105" />
+  <link rel="stylesheet" href="style.css?v=20261105b" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -457,6 +457,46 @@
   </section>
 
   <!-- ══════════════════════════════════
+       BLACK FRIDAY PROMO (hidden automatically after data-until, see promo.js)
+       ══════════════════════════════════ -->
+  <section class="sl-bf" id="black-friday" data-until="2026-12-01T00:00:00+01:00">
+    <div class="sl-wrap">
+      <div class="sl-bf-card">
+        <img class="sl-bf-web" src="Promo/web.webp" alt="" width="520" height="455" loading="lazy">
+        <img class="sl-bf-bat sl-bf-bat--1" src="Promo/bat.webp" alt="" width="300" height="235" loading="lazy">
+        <img class="sl-bf-bat sl-bf-bat--2" src="Promo/bat.webp" alt="" width="300" height="235" loading="lazy">
+        <img class="sl-bf-bat sl-bf-bat--3" src="Promo/bat.webp" alt="" width="300" height="235" loading="lazy">
+
+        <div class="sl-bf-text">
+          <div class="sl-bf-eyebrow" id="bf-eyebrow">Black Friday · тільки до 30 листопада</div>
+          <h2 id="bf-title">−15% на перший місяць навчання</h2>
+          <p class="sl-bf-desc" id="bf-text">Найкращий час почати вчити словацьку — зараз. Для нових студентів SlovakLab діє знижка 15% на перший місяць занять у будь-якому форматі: груповому, парному чи індивідуальному.</p>
+          <div class="sl-bf-code"><span id="bf-code-label">Промокод</span><b>BlackLab</b></div>
+          <ul class="sl-bf-terms">
+            <li id="bf-term1">Діє для нових студентів на перший місяць занять.</li>
+            <li id="bf-term2">Назвіть промокод у формі заявки або куратору.</li>
+            <li id="bf-term3">Не сумується з іншими знижками.</li>
+            <li id="bf-term4">Пропозиція діє до 30 листопада 2026 року.</li>
+          </ul>
+          <a href="#target-section-apply" class="sl-btn sl-bf-cta" id="bf-cta">Отримати знижку →</a>
+        </div>
+
+        <!-- Two copies of each photo: carved faces dark, then lit on hover -->
+        <div class="sl-bf-visual" aria-hidden="true">
+          <div class="sl-bf-scene">
+            <img src="Promo/pumpkins-unlit.webp" alt="" width="736" height="660" loading="lazy">
+            <img class="sl-bf-lit" src="Promo/pumpkins-lit.webp" alt="" width="736" height="660" loading="lazy">
+          </div>
+          <div class="sl-bf-pumpkin">
+            <img src="Promo/pumpkin-unlit.webp" alt="" width="420" height="424" loading="lazy">
+            <img class="sl-bf-lit" src="Promo/pumpkin-lit.webp" alt="" width="420" height="424" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
        TEAM
        ══════════════════════════════════ -->
   <section class="sl-block sl-block--alt" id="target-section-team">
@@ -822,11 +862,12 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261105"></script>
-  <script src="script.js?v=20261105"></script>
-  <script src="scriptContact.js?v=20261105"></script>
-  <script src="animations.js?v=20261105"></script>
-  <script src="modals.js?v=20261105"></script>
+  <script src="tracking.js?v=20261105b"></script>
+  <script src="script.js?v=20261105b"></script>
+  <script src="scriptContact.js?v=20261105b"></script>
+  <script src="animations.js?v=20261105b"></script>
+  <script src="modals.js?v=20261105b"></script>
+  <script src="promo.js?v=20261105b"></script>
 
   <script>
     function showSidebar() {

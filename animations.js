@@ -10,7 +10,7 @@
     '.sl-block-head', '.bot-test-section', '.sl-founder-row',
     '.sl-price-card', '.sl-step', '.sl-uni-card', '.sl-quote',
     '.sl-benefit', '.sl-course', '.info-courses', '.sl-trial-cta', '.sl-sk-hero-grid',
-    '.sl-benefits-photo',
+    '.sl-benefits-photo', '.sl-bf-card',
     // the success message is display:none until the form is sent — never hide it
     '.form-container > *:not(.success-message)',
     '#target-section-sk-documents .sl-consult-checklist p', '#faqAccordion .sl-faq-item'
