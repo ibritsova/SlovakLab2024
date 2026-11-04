@@ -348,7 +348,7 @@
               <li id="pricing-group-size">Група до 6 осіб</li>
             </ul>
           </div>
-          <a href="#target-section-apply" class="sl-btn" id="apply-btn">Записатись →</a>
+          <button type="button" class="sl-btn" data-modal="modal-group" data-i18n="pricing-more">Детальніше</button>
         </div>
 
         <!-- Pair — featured -->
@@ -366,7 +366,7 @@
               <li id="pricing-pair-schedule">Гнучкий графік вдвох</li>
             </ul>
           </div>
-          <a href="#target-section-apply" class="sl-btn" id="apply-btn">Записатись →</a>
+          <button type="button" class="sl-btn" data-modal="modal-pair" data-i18n="pricing-more">Детальніше</button>
         </div>
 
         <!-- Individual -->
@@ -384,10 +384,51 @@
               <li id="pricing-individual-pace">Темп під себе</li>
             </ul>
           </div>
-          <a href="#target-section-apply" class="sl-btn" id="apply-btn">Записатись →</a>
+          <button type="button" class="sl-btn" data-modal="modal-individual" data-i18n="pricing-more">Детальніше</button>
         </div>
 
       </div>
+
+      <!-- Course details pop-ups (opened by the "Детальніше" buttons, see modals.js) -->
+      <dialog class="sl-modal" id="modal-group" aria-labelledby="modal-group-title">
+        <div class="sl-modal-box">
+          <button type="button" class="sl-modal-close" data-close aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
+          <h3 id="modal-group-title" data-i18n="pricing-group-title">Групові заняття</h3>
+          <p class="sl-modal-meta"><span data-i18n="pricing-group-price">50€ / 8 занять</span> · <span data-i18n="pricing-group-duration">Тривалість уроку: 90 хв</span></p>
+          <div class="sl-modal-body">
+            <p data-i18n="modal-placeholder">Детальна інформація про цей формат з'явиться тут найближчим часом.</p>
+          </div>
+          <div class="sl-modal-actions">
+            <a href="#target-section-apply" class="sl-btn" data-close data-i18n="apply-btn">Записатись →</a>
+          </div>
+        </div>
+      </dialog>
+      <dialog class="sl-modal" id="modal-pair" aria-labelledby="modal-pair-title">
+        <div class="sl-modal-box">
+          <button type="button" class="sl-modal-close" data-close aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
+          <h3 id="modal-pair-title" data-i18n="pricing-pair-title">Парні заняття</h3>
+          <p class="sl-modal-meta"><span data-i18n="pricing-pair-price">75€ / 8 занять</span> · <span data-i18n="pricing-pair-duration">Тривалість уроку: 90 хв</span></p>
+          <div class="sl-modal-body">
+            <p data-i18n="modal-placeholder">Детальна інформація про цей формат з'явиться тут найближчим часом.</p>
+          </div>
+          <div class="sl-modal-actions">
+            <a href="#target-section-apply" class="sl-btn" data-close data-i18n="apply-btn">Записатись →</a>
+          </div>
+        </div>
+      </dialog>
+      <dialog class="sl-modal" id="modal-individual" aria-labelledby="modal-individual-title">
+        <div class="sl-modal-box">
+          <button type="button" class="sl-modal-close" data-close aria-label="Закрити" data-i18n-aria-label="aria-close">&times;</button>
+          <h3 id="modal-individual-title" data-i18n="pricing-individual-title">Індивідуальні заняття</h3>
+          <p class="sl-modal-meta"><span data-i18n="pricing-individual-price">15€ / урок</span> · <span data-i18n="pricing-individual-duration">Тривалість уроку: 60 хв</span></p>
+          <div class="sl-modal-body">
+            <p data-i18n="modal-placeholder">Детальна інформація про цей формат з'явиться тут найближчим часом.</p>
+          </div>
+          <div class="sl-modal-actions">
+            <a href="#target-section-apply" class="sl-btn" data-close data-i18n="apply-btn">Записатись →</a>
+          </div>
+        </div>
+      </dialog>
     </div>
   </section>
 
@@ -761,6 +802,7 @@
   <script src="script.js?v=20261104"></script>
   <script src="scriptContact.js?v=20261104"></script>
   <script src="animations.js?v=20261104"></script>
+  <script src="modals.js?v=20261104"></script>
 
   <script>
     function showSidebar() {
