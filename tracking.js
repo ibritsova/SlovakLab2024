@@ -1,6 +1,7 @@
 // Marketing helpers shared by both pages:
 //  - remembers which ad brought the visitor (UTM tags, fbclid, gclid) so leads can be attributed
 //  - reports clicks on the level-test bot and contact links to GTM (dataLayer) and Meta Pixel
+//  - GTM events: cta_click (hero button), form_start / form_abandon, time_on_site (15/30/60 s)
 (function () {
   const PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
   const STORE_KEY = 'slovaklab-attribution';
@@ -54,4 +55,47 @@
         ['track', 'Contact', { content_name: channel }]);
     }
   });
+
+  // Main hero button ("Записатись на пробний урок")
+  const heroCta = document.getElementById('button-start');
+  if (heroCta) {
+    heroCta.addEventListener('click', () => window.slTrack('cta_click', { cta_name: 'hero_free_lesson' }));
+  }
+
+  // Forms: form_start on the first field the visitor fills in; form_abandon if they then
+  // leave the page (or switch away from the tab) without a successful send (generate_lead)
+  const FORMS = { skConsultForm: 'consultation', trialForm: 'trial_lesson' };
+  const started = {};
+  const lastField = {};
+  Object.keys(FORMS).forEach(id => {
+    const form = document.getElementById(id);
+    if (!form) return;
+    form.addEventListener('input', event => {
+      lastField[id] = event.target.name || event.target.id;
+      if (started[id]) return;
+      started[id] = true;
+      window.slTrack('form_start', { form_name: FORMS[id] });
+    });
+  });
+  const leadSent = () => (window.dataLayer || []).some(item => item && item.event === 'generate_lead');
+  let abandonReported = false;
+  const reportAbandon = () => {
+    if (abandonReported || leadSent()) return;
+    const id = Object.keys(started).find(key => started[key]);
+    if (!id) return;
+    abandonReported = true;
+    window.slTrack('form_abandon', { form_name: FORMS[id], last_field: lastField[id] || '' });
+  };
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') reportAbandon(); });
+  window.addEventListener('pagehide', reportAbandon);
+
+  // Time on site: 15 / 30 / 60 seconds, counted only while the tab is actually visible
+  const MARKS = [15, 30, 60];
+  let visibleSeconds = 0;
+  const clock = setInterval(() => {
+    if (document.visibilityState !== 'visible') return;
+    visibleSeconds++;
+    if (MARKS.includes(visibleSeconds)) window.slTrack('time_on_site', { engaged_seconds: visibleSeconds });
+    if (visibleSeconds >= MARKS[MARKS.length - 1]) clearInterval(clock);
+  }, 1000);
 })();
