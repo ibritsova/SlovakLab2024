@@ -181,7 +181,7 @@
     "sk-consult-point3": "Admission support — from application to dormitory",
     "sk-consult-fullName": "Name",
     "sk-consult-phone": "Phone",
-    "sk-consult-email": "Email",
+    "sk-consult-email": "Email (optional)",
     "sk-consult-messenger": "Preferred messenger",
     "sk-consult-notes": "Comment",
     "skConsultSendButton": "Book a consultation",
@@ -260,7 +260,11 @@
     "form-err-email": "Please enter a valid email address.",
     "form-err-phone": "Please enter a valid phone number.",
     "form-sending": "Sending…",
-    "form-send-error": "Sending failed. Please try again or email us at slovakklab@gmail.com"
+    "form-send-error": "Sending failed. Please try again or email us at slovakklab@gmail.com",
+    "pricing-group-per": "6.25€",
+    "pricing-pair-per": "9.38€",
+    "pricing-per-lesson": "per lesson",
+    "pricing-individual-per": "No subscription — pay per lesson"
   },
   "ukr": {
     "li1": "Головна",
@@ -444,7 +448,7 @@
     "sk-consult-point3": "Супровід вступу — від заявки до гуртожитку",
     "sk-consult-fullName": "Ім'я",
     "sk-consult-phone": "Телефон",
-    "sk-consult-email": "Email",
+    "sk-consult-email": "Email (необов'язково)",
     "sk-consult-messenger": "Зручний месенджер",
     "sk-consult-notes": "Коментар",
     "skConsultSendButton": "Записатись на консультацію",
@@ -523,7 +527,11 @@
     "form-err-email": "Введіть коректну email-адресу.",
     "form-err-phone": "Введіть коректний номер телефону.",
     "form-sending": "Надсилаємо…",
-    "form-send-error": "Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com"
+    "form-send-error": "Помилка відправки. Спробуйте ще раз або напишіть нам на email: slovakklab@gmail.com",
+    "pricing-group-per": "6,25€",
+    "pricing-pair-per": "9,38€",
+    "pricing-per-lesson": "за заняття",
+    "pricing-individual-per": "Без абонементу — оплата за кожен урок"
   },
   "sk": {
     "li1": "Domov",
@@ -707,7 +715,7 @@
     "sk-consult-point3": "Sprievod prijímacím konaním — od prihlášky po internát",
     "sk-consult-fullName": "Meno",
     "sk-consult-phone": "Telefón",
-    "sk-consult-email": "Email",
+    "sk-consult-email": "Email (nepovinné)",
     "sk-consult-messenger": "Preferovaný messenger",
     "sk-consult-notes": "Komentár",
     "skConsultSendButton": "Prihlásiť sa na konzultáciu",
@@ -786,6 +794,10 @@
     "form-err-email": "Zadajte platnú e-mailovú adresu.",
     "form-err-phone": "Zadajte platné telefónne číslo.",
     "form-sending": "Odosielame…",
-    "form-send-error": "Odoslanie zlyhalo. Skúste to znova alebo nám napíšte na slovakklab@gmail.com"
+    "form-send-error": "Odoslanie zlyhalo. Skúste to znova alebo nám napíšte na slovakklab@gmail.com",
+    "pricing-group-per": "6,25€",
+    "pricing-pair-per": "9,38€",
+    "pricing-per-lesson": "za lekciu",
+    "pricing-individual-per": "Bez predplatného — platíte za každú lekciu"
   }
 }

@@ -52,9 +52,10 @@ function validateSkConsultForm(event) {
     valid = false;
   }
 
+  // Email is optional (phone + messenger are enough to get in touch), but if given it must be valid
   const email = document.getElementById("sk-email").value.trim();
   const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  if (!emailPattern.test(email)) {
+  if (email && !emailPattern.test(email)) {
     document.getElementById("skEmailError").textContent = t("form-err-email", "Введіть коректну email-адресу.");
     valid = false;
   }
