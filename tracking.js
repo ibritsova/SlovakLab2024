@@ -1,7 +1,7 @@
 // Marketing helpers shared by both pages:
 //  - remembers which ad brought the visitor (UTM tags, fbclid, gclid) so leads can be attributed
 //  - reports clicks on the level-test bot and contact links to GTM (dataLayer) and Meta Pixel
-//  - GTM events: cta_click (hero button), form_start / form_abandon, time_on_site (15/30/60 s)
+//  - GTM events: cta_click (hero button), form_start / form_abandon / form_resume, time_on_site (15/30/60 s)
 (function () {
   const PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
   const STORE_KEY = 'slovaklab-attribution';
@@ -63,22 +63,28 @@
   }
 
   // Forms: form_start on the first field the visitor fills in; form_abandon if they then
-  // leave the page (or switch away from the tab) without a successful send (generate_lead)
+  // leave the page (or switch away from the tab) without a successful send (generate_lead);
+  // form_resume if they come back and type again after that — so real abandons = abandon − resume
   const FORMS = { skConsultForm: 'consultation', trialForm: 'trial_lesson' };
   const started = {};
   const lastField = {};
+  let abandonReported = false;
   Object.keys(FORMS).forEach(id => {
     const form = document.getElementById(id);
     if (!form) return;
     form.addEventListener('input', event => {
       lastField[id] = event.target.name || event.target.id;
+      if (abandonReported) {
+        // Back after a tab switch: undo the abandon, and report again if they leave once more
+        abandonReported = false;
+        window.slTrack('form_resume', { form_name: FORMS[id] });
+      }
       if (started[id]) return;
       started[id] = true;
       window.slTrack('form_start', { form_name: FORMS[id] });
     });
   });
   const leadSent = () => (window.dataLayer || []).some(item => item && item.event === 'generate_lead');
-  let abandonReported = false;
   const reportAbandon = () => {
     if (abandonReported || leadSent()) return;
     const id = Object.keys(started).find(key => started[key]);
