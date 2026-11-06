@@ -36,12 +36,11 @@ function reportLead(formName, email, phone) {
 }
 
 // "Навчання у Словаччині" consultation form — sends via EmailJS and fires
-// the Meta Pixel Lead event; fields: name, phone, email, messenger, comment.
+// the Meta Pixel Lead event; fields: name, phone, messenger, comment.
 function validateSkConsultForm(event) {
   event.preventDefault();
 
   document.getElementById("skNameError").textContent = "";
-  document.getElementById("skEmailError").textContent = "";
   document.getElementById("skPhoneError").textContent = "";
 
   let valid = true;
@@ -49,14 +48,6 @@ function validateSkConsultForm(event) {
   const name = document.getElementById("sk-name").value.trim();
   if (!name) {
     document.getElementById("skNameError").textContent = t("form-err-name", "Введіть ваше ім'я.");
-    valid = false;
-  }
-
-  // Email is optional (phone + messenger are enough to get in touch), but if given it must be valid
-  const email = document.getElementById("sk-email").value.trim();
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  if (email && !emailPattern.test(email)) {
-    document.getElementById("skEmailError").textContent = t("form-err-email", "Введіть коректну email-адресу.");
     valid = false;
   }
 
@@ -80,7 +71,7 @@ function validateSkConsultForm(event) {
 
   const params = {
     name:      name,
-    email:     email,
+    email:     "",
     phone:     phone,
     childAge:  "",
     messenger: messenger,
@@ -96,7 +87,7 @@ function validateSkConsultForm(event) {
     .then(function (response) {
       console.log("SK consult lead sent successfully", response);
 
-      reportLead("consultation", email, phone);
+      reportLead("consultation", "", phone);
 
       document.getElementById("skConsultForm").classList.add("form-hidden");
       document.getElementById("skConsultSuccess").style.display = "block";
