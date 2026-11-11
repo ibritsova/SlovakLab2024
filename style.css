@@ -731,10 +731,28 @@ nav ul.sidebar {
   color: var(--white);
 }
 .bot-test-aside .bot-test-button { align-self: flex-start; }
+/* The Telegram button is always lit: blue border + the same soft pulse as the hero CTA */
+#bot-btn {
+  background:
+    linear-gradient(var(--button-bg), var(--button-bg)) padding-box,
+    linear-gradient(var(--blue), var(--blue)) border-box;
+  box-shadow: 0 0 24px rgba(112, 190, 250, .25);
+  animation: sl-pulse 2.4s ease-out infinite;
+}
+#bot-btn:hover { animation: sl-spin 2.4s linear infinite, sl-pulse 2.4s ease-out infinite; }
+.bot-test-hint {
+  margin: -16px 0 0;
+  font-size: 14px;
+  color: var(--text);
+  opacity: .75;
+}
 
 @media (max-width: 900px) {
   .bot-test-section { grid-template-columns: 1fr; gap: 32px; }
   .bot-test-aside { padding: 32px 0 0; border-left: none; border-top: 1px solid var(--border); }
+}
+@media (max-width: 600px) {
+  .bot-test-hint { text-align: center; }
 }
 
 /* ════════════════════════════════════
@@ -2079,7 +2097,7 @@ nav::after {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sl-hero h1, #button-start, #button-start:hover { animation: none; }
+  .sl-hero h1, #button-start, #button-start:hover, #bot-btn, #bot-btn:hover { animation: none; }
   nav::after { display: none; }
 }
 

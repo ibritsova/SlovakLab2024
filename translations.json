@@ -225,7 +225,7 @@
     "bot-point1": "Find out your level: from A1 to C1",
     "bot-point2": "Free",
     "bot-point3": "Simple — right in Telegram",
-    "bot-note": "🧠 The perfect first step if you're not sure which course to start with.",
+    "bot-note": "The perfect first step if you're not sure which course to start with.",
     "bot-btn": "Take the test in Telegram →",
     "pricing-desc": "Choose the format that fits your pace and budget.",
     "pricing-group-size": "Groups of up to 6 people",
@@ -262,7 +262,8 @@
     "pricing-group-per": "6.25€",
     "pricing-pair-per": "9.38€",
     "pricing-per-lesson": "per lesson",
-    "pricing-individual-per": "No subscription — pay per lesson"
+    "pricing-individual-per": "No subscription — pay per lesson",
+    "bot-hint": "Free · 10 minutes · instant result"
   },
   "ukr": {
     "li1": "Головна",
@@ -490,7 +491,7 @@
     "bot-point1": "Дізнайтесь свій рівень: від A1 до C1",
     "bot-point2": "Безкоштовно",
     "bot-point3": "Просто — прямо в Telegram",
-    "bot-note": "🧠 Це ідеальний перший крок, якщо ви ще не знаєте, з якого курсу почати.",
+    "bot-note": "Це ідеальний перший крок, якщо ви ще не знаєте, з якого курсу почати.",
     "bot-btn": "Пройти тест в Telegram →",
     "pricing-desc": "Оберіть формат, що підходить вашому темпу та бюджету.",
     "pricing-group-size": "Група до 6 осіб",
@@ -527,7 +528,8 @@
     "pricing-group-per": "6,25€",
     "pricing-pair-per": "9,38€",
     "pricing-per-lesson": "за заняття",
-    "pricing-individual-per": "Без абонементу — оплата за кожен урок"
+    "pricing-individual-per": "Без абонементу — оплата за кожен урок",
+    "bot-hint": "Безкоштовно · 10 хвилин · результат одразу"
   },
   "sk": {
     "li1": "Domov",
@@ -755,7 +757,7 @@
     "bot-point1": "Zistite svoju úroveň: od A1 po C1",
     "bot-point2": "Zadarmo",
     "bot-point3": "Jednoducho — priamo v Telegrame",
-    "bot-note": "🧠 Ideálny prvý krok, ak ešte neviete, ktorým kurzom začať.",
+    "bot-note": "Ideálny prvý krok, ak ešte neviete, ktorým kurzom začať.",
     "bot-btn": "Urobiť test v Telegrame →",
     "pricing-desc": "Vyberte si formát, ktorý vyhovuje vášmu tempu a rozpočtu.",
     "pricing-group-size": "Skupina do 6 osôb",
@@ -792,6 +794,7 @@
     "pricing-group-per": "6,25€",
     "pricing-pair-per": "9,38€",
     "pricing-per-lesson": "za lekciu",
-    "pricing-individual-per": "Bez predplatného — platíte za každú lekciu"
+    "pricing-individual-per": "Bez predplatného — platíte za každú lekciu",
+    "bot-hint": "Zadarmo · 10 minút · výsledok hneď"
   }
 }
