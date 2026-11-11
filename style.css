@@ -843,7 +843,7 @@ nav ul.sidebar {
 .sl-price-card .sl-btn { margin-top: 28px; width: 100%; }
 
 /* Course details pop-up */
-html:has(dialog.sl-modal[open]) { overflow: hidden; }
+html:has(dialog.sl-modal[open], dialog.sl-lightbox[open]) { overflow: hidden; }
 .sl-modal {
   width: min(640px, calc(100% - 32px));
   max-width: none;
@@ -1537,18 +1537,118 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
 .sl-why { display: flex; flex-direction: column; gap: 20px; position: sticky; top: calc(var(--nav-h) + 32px); }
 .sl-why p { font-size: 17px; color: var(--text); line-height: 1.6; margin: 0; }
 
-.sl-quotes-grid { display: grid; gap: 20px; }
-.sl-quotes-grid .sl-quote { margin-top: 0 !important; }   /* overrides inline spacing — the grid gap handles it */
-.sl-quote p {
-  font-size: 17px;
-  line-height: 1.5;
-  color: var(--white);
-  margin: 0 0 24px;
-}
-.sl-quote .sl-who {
+/* Review screenshots: a swipeable strip on every screen (slider.js adds ‹ › and dots) */
+.sl-reviews-col { min-width: 0; }
+.sl-reviews-label { margin: 0; font-size: 14px; color: var(--blue); }
+.sl-swipe--always {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  gap: 16px;
+  padding: 16px 0 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.sl-swipe--always::-webkit-scrollbar { display: none; }
+.sl-review {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: zoom-in;
+  scroll-snap-align: start;
+  transition: border-color .3s, box-shadow .3s;
+}
+.sl-review img {
+  display: block;
+  height: 480px;
+  width: auto;
+  max-width: min(84vw, 520px);
+  object-fit: contain;
+}
+.sl-review:hover,
+.sl-review:focus-visible { border-color: var(--blue); box-shadow: 0 0 30px rgba(112, 190, 250, .18); outline: none; }
+/* "Open large" badge in the corner */
+.sl-review::after {
+  content: '⤢';
+  position: absolute;
+  right: 10px; bottom: 10px;
+  display: grid;
+  place-items: center;
+  width: 34px; height: 34px;
+  font-size: 16px;
+  color: var(--white);
+  background: rgba(10, 10, 10, .75);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  transition: border-color .3s, color .3s;
+}
+.sl-review:hover::after { border-color: var(--blue); color: var(--blue); }
+
+.sl-slider-nav { display: flex; align-items: center; justify-content: center; gap: 16px; }
+.sl-slider-nav .sl-slider-dots { display: flex; margin: 0; }
+.sl-slider-arrow {
+  display: grid;
+  place-items: center;
+  width: 40px; height: 40px;
+  padding: 0 0 3px;
+  font: 400 24px/1 var(--font-body);
+  color: var(--white);
+  background: var(--button-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color .2s, border-color .2s, background .2s, opacity .2s;
+}
+.sl-slider-arrow:hover:not(:disabled) { color: var(--blue); border-color: var(--blue); background: var(--blue-soft); }
+.sl-slider-arrow:disabled { opacity: .35; cursor: default; }
+
+/* Large view of one review */
+.sl-lightbox {
+  width: 100vw; height: 100vh;
+  max-width: none; max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.sl-lightbox[open] { display: grid; place-items: center; }
+.sl-lightbox::backdrop { background: rgba(0, 0, 0, .94); }
+.sl-lightbox img {
+  max-width: min(92vw, 900px);
+  max-height: 84vh;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  animation: sl-fade-in .25s ease;
+}
+.sl-lightbox-close,
+.sl-lightbox-nav {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  width: 46px; height: 46px;
+  padding: 0 0 3px;
+  font: 400 28px/1 var(--font-body);
+  color: var(--white);
+  background: rgba(20, 20, 20, .85);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color .2s, border-color .2s;
+}
+.sl-lightbox-close:hover,
+.sl-lightbox-nav:hover { color: var(--blue); border-color: var(--blue); }
+.sl-lightbox-close { top: 20px; right: 20px; }
+.sl-lightbox-nav { top: 50%; transform: translateY(-50%); }
+.sl-lightbox-prev { left: 20px; }
+.sl-lightbox-next { right: 20px; }
+.sl-lightbox-count {
+  position: fixed;
+  bottom: 20px; left: 50%;
+  transform: translateX(-50%);
   font-size: 14px;
   color: var(--text);
 }
@@ -2255,6 +2355,13 @@ nav::after {
   .sl-courses-grid.sl-swipe > * { flex-basis: 70%; }
   .sl-course-details > * { flex-basis: 90%; }
   .sl-wrap.sl-swipe { margin: 0; }
+  .sl-reviews.sl-swipe > * { flex: 0 0 auto; }
+  .sl-review img { height: 420px; }
+  .sl-lightbox-nav { top: auto; bottom: 14px; transform: none; width: 42px; height: 42px; }
+  .sl-lightbox-prev { left: calc(50% - 90px); }
+  .sl-lightbox-next { right: calc(50% - 90px); }
+  .sl-lightbox-count { bottom: 26px; }
+  .sl-lightbox img { max-height: 76vh; }
   .sl-slider-dots { display: flex; margin-top: 4px; }
 
   /* Application form: heading, short list and the whole form fit on one screen */

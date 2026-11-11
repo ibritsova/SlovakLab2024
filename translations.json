@@ -129,12 +129,6 @@
     "whyUs": "Why SlovakLab?",
     "whyAnsw1": "Learn Slovak with experienced instructors who focus on practical, real-life conversational skills. Our interactive lessons are tailored to your level and schedule, helping you achieve your goals quickly and confidently. Join us and start speaking Slovak today!",
     "whyAnsw2": "Whether you're preparing for work, study, or travel, our structured yet flexible approach helps you achieve your goals quickly and confidently. Join us today and take the first step towards mastering Slovak!",
-    "comment1": "The teachers are fantastic! They explain everything clearly and make learning fun. Highly recommend these courses.",
-    "person1": "Anastasia",
-    "comment2": "I'm very pleased with the SlovakLab courses. My son feels comfortable in Slovakia thanks to the wonderful teachers. The program is well-structured and engaging — I highly recommend it!",
-    "person2": "Georgy",
-    "comment3": "I started from scratch and, thanks to lessons with a native speaker, learned the language very quickly. The lessons are really interesting, and the practical approach helped me start speaking Slovak fast.",
-    "person3": "Max",
     "FreqAskedquestions": "Frequently Asked Questions",
     "question1": "Do you offer individual lessons?",
     "answer1": "Yes! We offer individual lessons (15€/lesson), pair sessions (75€/8 lessons), and small group classes of up to 6 people (50€/8 lessons). Choose the format that suits you best.",
@@ -271,7 +265,10 @@
     "answer10-p2": "Some of our teachers work with universities or have taught at educational institutions in Slovakia.",
     "answer10-p3-t": "Careful selection.",
     "answer10-p3": "Knowledge alone is not enough for us: we look for people who explain complex things simply, support students and work towards results.",
-    "answer10-goal": "Our goal is for you not just to learn grammar, but to feel confident in real conversations and when studying in Slovak."
+    "answer10-goal": "Our goal is for you not just to learn grammar, but to feel confident in real conversations and when studying in Slovak.",
+    "reviews-label": "What students and parents say",
+    "aria-prev": "Previous review",
+    "aria-next": "Next review"
   },
   "ukr": {
     "li1": "Головна",
@@ -403,12 +400,6 @@
     "whyUs": "Чому SlovakLab?",
     "whyAnsw1": "Вивчайте словацьку мову з досвідченими викладачами, які акцентують увагу на практичних, реальних розмовних навичках. Наші інтерактивні уроки адаптовані до вашого рівня та розкладу, що допоможе швидко та впевнено досягти своїх цілей. Приєднуйтесь до нас і починайте говорити словацькою вже сьогодні!",
     "whyAnsw2": "Незалежно від того, чи готуєтесь ви до роботи, навчання або подорожей, наша структурована, але гнучка методика допоможе вам швидко та впевнено досягти своїх цілей. Приєднуйтесь до нас уже сьогодні та зробіть перший крок до вивчення словацької мови!",
-    "comment1": "Чудові викладачі! Вони все чітко пояснюють і роблять навчання цікавим. Дуже рекомендую ці курси.",
-    "person1": "Анастасія",
-    "comment2": "Я дуже задоволений курсами SlovakLab. Мій син комфортно почуває себе у Словаччині завдяки чудовим викладачам. Програма добре структурована та цікава — дуже рекомендую!",
-    "person2": "Георгій",
-    "comment3": "Я починав з нуля і завдяки спілкуванню з носієм мови дуже швидко вивчив мову. Уроки дуже цікаві, саме практичний підхід допоміг мені швидко заговорити словацькою.",
-    "person3": "Максим",
     "FreqAskedquestions": "Часті запитання",
     "question1": "Чи маєте індивідуальні уроки?",
     "answer1": "Так! Ми пропонуємо індивідуальні заняття (15€/урок), парні заняття (75€/8 занять) та групи до 6 осіб (50€/8 занять). Оберіть формат, який підходить саме вам.",
@@ -545,7 +536,10 @@
     "answer10-p2": "Частина викладачів співпрацює з університетами або викладала в освітніх установах Словаччини.",
     "answer10-p3-t": "Ретельний відбір.",
     "answer10-p3": "Для нас важливі не лише знання, а й уміння пояснювати складне просто, підтримувати студентів і працювати на результат.",
-    "answer10-goal": "Наша мета: щоб ви не просто вивчили граматику, а почувалися впевнено в реальному спілкуванні та навчанні словацькою мовою."
+    "answer10-goal": "Наша мета: щоб ви не просто вивчили граматику, а почувалися впевнено в реальному спілкуванні та навчанні словацькою мовою.",
+    "reviews-label": "Що кажуть студенти та батьки",
+    "aria-prev": "Попередній відгук",
+    "aria-next": "Наступний відгук"
   },
   "sk": {
     "li1": "Domov",
@@ -677,12 +671,6 @@
     "whyUs": "Prečo SlovakLab?",
     "whyAnsw1": "Učte sa slovenčinu so skúsenými učiteľmi, ktorí sa zameriavajú na praktické, reálne komunikačné schopnosti. Naše interaktívne hodiny sú prispôsobené vašej úrovni a rozvrhu, čo vám pomôže rýchlo a sebavedomo dosiahnuť vaše ciele. Pridajte sa k nám a začnite hovoriť po slovensky už dnes!",
     "whyAnsw2": "Či už sa pripravujete na prácu, štúdium alebo cestovanie, naša štruktúrovaná, no flexibilná metodika vám pomôže rýchlo a sebavedomo dosiahnuť vaše ciele. Pridajte sa k nám už dnes a urobte prvý krok k osvojeniu si slovenčiny!",
-    "comment1": "Úžasní učitelia! Všetko jasne vysvetlia a robia učenie zábavným. Veľmi odporúčam tieto kurzy.",
-    "person1": "Anastasia",
-    "comment2": "Som veľmi spokojný s kurzami SlovakLab. Môj syn sa cíti pohodlne na Slovensku vďaka skvelým učiteľom. Program je dobre štruktúrovaný a zaujímavý — veľmi odporúčam!",
-    "person2": "Georgy",
-    "comment3": "Začínal som od nuly a vďaka hodinám s rodeným hovorcom som veľmi rýchlo zvládol jazyk. Hodiny sú veľmi zaujímavé a praktický prístup mi pomohol rýchlo rozprávať po slovensky.",
-    "person3": "Maxim",
     "FreqAskedquestions": "Často kladené otázky",
     "question1": "Ponúkate individuálne lekcie?",
     "answer1": "Áno! Ponúkame individuálne lekcie (15€/lekcia), párové lekcie (75€/8 lekcií) a malé skupiny do 6 osôb (50€/8 lekcií). Vyberte si formát, ktorý vám vyhovuje najviac.",
@@ -819,6 +807,9 @@
     "answer10-p2": "Časť lektorov spolupracuje s univerzitami alebo učila vo vzdelávacích inštitúciách na Slovensku.",
     "answer10-p3-t": "Starostlivý výber.",
     "answer10-p3": "Nestačia nám len vedomosti: hľadáme ľudí, ktorí vedia jednoducho vysvetliť zložité veci, podporiť študentov a pracovať na výsledku.",
-    "answer10-goal": "Naším cieľom je, aby ste sa nielen naučili gramatiku, ale cítili sa isto v skutočnej komunikácii aj pri štúdiu v slovenčine."
+    "answer10-goal": "Naším cieľom je, aby ste sa nielen naučili gramatiku, ale cítili sa isto v skutočnej komunikácii aj pri štúdiu v slovenčine.",
+    "reviews-label": "Čo hovoria študenti a rodičia",
+    "aria-prev": "Predchádzajúca recenzia",
+    "aria-next": "Ďalšia recenzia"
   }
 }
