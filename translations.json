@@ -267,7 +267,8 @@
     "answer10-goal": "Our goal is for you not just to learn grammar, but to feel confident in real conversations and when studying in Slovak.",
     "reviews-label": "What students and parents say",
     "aria-prev": "Previous review",
-    "aria-next": "Next review"
+    "aria-next": "Next review",
+    "chat-toggle": "Message us"
   },
   "ukr": {
     "li1": "Головна",
@@ -537,7 +538,8 @@
     "answer10-goal": "Наша мета: щоб ви не просто вивчили граматику, а почувалися впевнено в реальному спілкуванні та навчанні словацькою мовою.",
     "reviews-label": "Що кажуть студенти та батьки",
     "aria-prev": "Попередній відгук",
-    "aria-next": "Наступний відгук"
+    "aria-next": "Наступний відгук",
+    "chat-toggle": "Напишіть нам"
   },
   "sk": {
     "li1": "Domov",
@@ -807,6 +809,7 @@
     "answer10-goal": "Naším cieľom je, aby ste sa nielen naučili gramatiku, ale cítili sa isto v skutočnej komunikácii aj pri štúdiu v slovenčine.",
     "reviews-label": "Čo hovoria študenti a rodičia",
     "aria-prev": "Predchádzajúca recenzia",
-    "aria-next": "Ďalšia recenzia"
+    "aria-next": "Ďalšia recenzia",
+    "chat-toggle": "Napíšte nám"
   }
 }

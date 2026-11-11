@@ -36,6 +36,7 @@
     if (href.startsWith('mailto:')) return 'email';
     if (href.includes('instagram.com')) return 'instagram';
     if (href.includes('t.me/')) return 'telegram';
+    if (href.includes('wa.me/')) return 'whatsapp';
     return null;
   };
 

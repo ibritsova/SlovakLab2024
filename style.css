@@ -2428,3 +2428,101 @@ nav::after {
   .sl-founder-uni::before { width: 40px; height: 40px; }
   .sl-founder-uni img { left: 10px; }
 }
+
+/* ════════════════════════════════════
+   FLOATING MESSENGER BUTTON (messenger.js)
+   ════════════════════════════════════ */
+.sl-chat {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  z-index: 98;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.sl-chat-toggle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 58px; height: 58px;
+  padding: 0;
+  color: #fff;
+  background: linear-gradient(180deg, #8cccff, var(--blue));
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .45), 0 0 24px rgba(112, 190, 250, .45);
+  cursor: pointer;
+  transition: transform .2s;
+}
+.sl-chat-toggle:hover { transform: scale(1.06); }
+.sl-chat-toggle:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
+/* Soft ring that keeps pulsing until the menu has been opened */
+.sl-chat-toggle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: sl-pulse 2.4s ease-out infinite;
+}
+.sl-chat.is-open .sl-chat-toggle::before { animation: none; }
+.sl-chat-toggle svg { width: 26px; height: 26px; grid-area: 1 / 1; transition: opacity .2s, transform .2s; }
+.sl-chat-ico-open { fill: none; stroke: #0a0a0a; stroke-width: 1.8; stroke-linejoin: round; }
+.sl-chat-ico-open circle { fill: #0a0a0a; stroke: none; }
+.sl-chat-ico-close { fill: none; stroke: #0a0a0a; stroke-width: 2.2; stroke-linecap: round; opacity: 0; transform: rotate(-90deg); }
+.sl-chat.is-open .sl-chat-ico-open { opacity: 0; transform: rotate(90deg); }
+.sl-chat.is-open .sl-chat-ico-close { opacity: 1; transform: none; }
+
+/* "Напишіть нам" label next to the button (laptops) */
+.sl-chat-hint {
+  position: absolute;
+  right: 70px; bottom: 15px;
+  padding: 6px 12px;
+  font-size: 13px;
+  white-space: nowrap;
+  color: var(--white);
+  background: var(--element-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  pointer-events: none;
+  transition: opacity .2s;
+}
+.sl-chat.is-open .sl-chat-hint { opacity: 0; }
+
+.sl-chat-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity .2s, transform .2s, visibility .2s;
+}
+.sl-chat.is-open .sl-chat-menu { opacity: 1; visibility: visible; transform: none; }
+.sl-chat-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px 10px 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .45);
+  transition: transform .2s, filter .2s;
+}
+.sl-chat-link:hover { transform: translateX(-3px); filter: brightness(1.08); }
+.sl-chat-link svg { width: 22px; height: 22px; fill: currentColor; }
+.sl-chat-tg { background: #2aabee; }
+.sl-chat-wa { background: #25d366; }
+
+@media (max-width: 600px) {
+  .sl-chat { right: 16px; bottom: 16px; }
+  .sl-chat-toggle { width: 54px; height: 54px; }
+  .sl-chat-hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sl-chat-toggle::before { animation: none; }
+}
