@@ -704,20 +704,38 @@ nav ul.sidebar {
 /* ════════════════════════════════════
    BOT TEST
    ════════════════════════════════════ */
+/* Two columns: title, description and checklist on the left; the nudge and the button on the right */
 .bot-test-section {
   padding: 64px 48px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+.bot-test-section h2 { margin-bottom: 20px; font-size: clamp(32px, 3.6vw, 52px); }
+.bot-test-main > p { font-size: 15px; color: var(--text); max-width: 60ch; margin: 0 0 8px; }
+.bot-test-section .checklist { margin: 28px 0 0; }
+.bot-test-aside {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding-left: 48px;
+  border-left: 1px solid var(--border);
 }
-.bot-test-section h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.bot-test-section .note {
+  margin: 0;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.45;
+  color: var(--white);
 }
-.bot-test-section > p { font-size: 15px; color: var(--text); max-width: 60ch; margin: 0 0 8px; }
-.bot-test-section .checklist { margin: 28px 0; }
-.bot-test-section .note { color: var(--text); margin-bottom: 32px; }
+.bot-test-aside .bot-test-button { align-self: flex-start; }
+
+@media (max-width: 900px) {
+  .bot-test-section { grid-template-columns: 1fr; gap: 32px; }
+  .bot-test-aside { padding: 32px 0 0; border-left: none; border-top: 1px solid var(--border); }
+}
 
 /* ════════════════════════════════════
    PRICING
