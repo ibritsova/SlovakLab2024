@@ -1534,7 +1534,8 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
 /* ════════════════════════════════════
    WHY US + TESTIMONIALS
    ════════════════════════════════════ */
-.sl-why { display: flex; flex-direction: column; gap: 20px; position: sticky; top: calc(var(--nav-h) + 32px); }
+/* Vertically centred against the reviews strip next to it */
+.sl-why { display: flex; flex-direction: column; gap: 20px; align-self: center; }
 .sl-why p { font-size: 17px; color: var(--text); line-height: 1.6; margin: 0; }
 
 /* Review screenshots: a swipeable strip on every screen (slider.js adds ‹ › and dots) */
