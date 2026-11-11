@@ -1519,6 +1519,19 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
 .sl-uni-card h3 { font-size: clamp(20px, 1.8vw, 24px); margin: 0 32px 8px; }
 .sl-uni-card p { color: var(--text); font-size: 15px; line-height: 1.5; margin: 0 32px; }
 
+/* Dots under the universities strip — only shown on phones, where the strip scrolls */
+.sl-slider-dots { display: none; justify-content: center; gap: 8px; margin-top: 18px; }
+.sl-slider-dots button {
+  width: 8px; height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--border);
+  cursor: pointer;
+  transition: width .3s, background .3s;
+}
+.sl-slider-dots button.is-active { width: 24px; background: var(--blue); }
+
 /* ════════════════════════════════════
    WHY US + TESTIMONIALS
    ════════════════════════════════════ */
@@ -2197,7 +2210,23 @@ nav::after {
   .sl-uni-card h3 { margin: 0 24px 8px; }
   .sl-uni-card p { margin: 0 24px; }
 
-  .sl-steps-grid, .sl-courses-grid, .sl-uni-grid { grid-template-columns: 1fr; }
+  .sl-steps-grid, .sl-courses-grid { grid-template-columns: 1fr; }
+
+  /* Universities: a swipeable strip; the next card peeks in so it's clear there is more */
+  .sl-uni-grid {
+    display: flex;
+    gap: 14px;
+    margin: 0 -16px;
+    padding: 4px 16px 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 16px;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .sl-uni-grid::-webkit-scrollbar { display: none; }
+  .sl-uni-grid > .sl-uni-card { flex: 0 0 84%; scroll-snap-align: start; }
+  .sl-slider-dots { display: flex; }
   .sl-course { min-height: 0; }
   .sl-uni-photo { margin-bottom: 24px; }
 
