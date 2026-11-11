@@ -1536,6 +1536,7 @@ a.sl-uni-card h3::after { content: " ↗"; color: var(--blue); }
    ════════════════════════════════════ */
 /* Vertically centred against the reviews strip next to it */
 .sl-why { display: flex; flex-direction: column; gap: 20px; align-self: center; }
+.sl-why h2 { margin: 0 0 4px; font-size: clamp(38px, 4.2vw, 64px); }
 .sl-why p { font-size: 17px; color: var(--text); line-height: 1.6; margin: 0; }
 
 /* Review screenshots: a swipeable strip on every screen (slider.js adds ‹ › and dots) */
