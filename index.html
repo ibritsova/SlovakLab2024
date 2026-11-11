@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261111o" />
+  <link rel="stylesheet" href="style.css?v=20261111p" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -623,6 +623,48 @@
   </section>
 
   <!-- ══════════════════════════════════
+       SK EDUCATION — CONSULTATION FORM
+       ══════════════════════════════════ -->
+  <div class="form-container" id="target-section-apply">
+    <h2 id="sk-consult-title">Готові зробити перший крок до навчання в Європі?</h2>
+    <p class="sl-sk-consult-desc" id="sk-consult-desc">Залиште контакт — куратор SlovakLab розповість, з чого
+      почати підготовку саме для вашої дитини.</p>
+
+    <div class="sl-consult-checklist">
+      <p id="sk-consult-point1">Безкоштовна консультація з куратором</p>
+      <p id="sk-consult-point2">Мовна підготовка від A1 до C1</p>
+      <p id="sk-consult-point3">Супровід вступу — від заявки до гуртожитку</p>
+    </div>
+
+    <form id="skConsultForm" name="skConsultForm" action="" method="post">
+      <label for="sk-name" id="sk-consult-fullName">Ім'я</label>
+      <input type="text" id="sk-name" name="sk-name" placeholder="Ваше ім'я" data-i18n-placeholder="ph-sk-name">
+      <div class="error" id="skNameError"></div>
+
+      <label for="sk-phone" id="sk-consult-phone">Телефон</label>
+      <input type="tel" id="sk-phone" name="sk-phone" placeholder="+38 (0XX) XXX XX XX">
+      <div class="error" id="skPhoneError"></div>
+
+      <fieldset class="sl-radio-group">
+        <legend id="sk-consult-messenger">Зручний месенджер</legend>
+        <div class="sl-radio-options">
+          <label class="sl-radio"><input type="radio" name="sk-messenger" value="Telegram" checked> Telegram</label>
+          <label class="sl-radio"><input type="radio" name="sk-messenger" value="Viber"> Viber</label>
+          <label class="sl-radio"><input type="radio" name="sk-messenger" value="WhatsApp"> WhatsApp</label>
+        </div>
+      </fieldset>
+
+      <label for="sk-notes" id="sk-consult-notes">Коментар</label>
+      <textarea id="sk-notes" name="sk-notes" rows="3" placeholder="Наприклад: хочу на пробний урок…" data-i18n-placeholder="ph-sk-notes"></textarea>
+
+      <button type="submit" id="skConsultSendButton">Записатись на консультацію</button>
+    </form>
+    <div class="success-message" id="skConsultSuccess">
+      Дякуємо! Ми зв'яжемось із вами найближчим часом.
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════
        TEAM
        ══════════════════════════════════ -->
   <section class="sl-block sl-block--alt" id="target-section-team">
@@ -788,48 +830,6 @@
   </section>
 
   <!-- ══════════════════════════════════
-       SK EDUCATION — CONSULTATION FORM
-       ══════════════════════════════════ -->
-  <div class="form-container" id="target-section-apply">
-    <h2 id="sk-consult-title">Готові зробити перший крок до навчання в Європі?</h2>
-    <p class="sl-sk-consult-desc" id="sk-consult-desc">Залиште контакт — куратор SlovakLab розповість, з чого
-      почати підготовку саме для вашої дитини.</p>
-
-    <div class="sl-consult-checklist">
-      <p id="sk-consult-point1">Безкоштовна консультація з куратором</p>
-      <p id="sk-consult-point2">Мовна підготовка від A1 до C1</p>
-      <p id="sk-consult-point3">Супровід вступу — від заявки до гуртожитку</p>
-    </div>
-
-    <form id="skConsultForm" name="skConsultForm" action="" method="post">
-      <label for="sk-name" id="sk-consult-fullName">Ім'я</label>
-      <input type="text" id="sk-name" name="sk-name" placeholder="Ваше ім'я" data-i18n-placeholder="ph-sk-name">
-      <div class="error" id="skNameError"></div>
-
-      <label for="sk-phone" id="sk-consult-phone">Телефон</label>
-      <input type="tel" id="sk-phone" name="sk-phone" placeholder="+38 (0XX) XXX XX XX">
-      <div class="error" id="skPhoneError"></div>
-
-      <fieldset class="sl-radio-group">
-        <legend id="sk-consult-messenger">Зручний месенджер</legend>
-        <div class="sl-radio-options">
-          <label class="sl-radio"><input type="radio" name="sk-messenger" value="Telegram" checked> Telegram</label>
-          <label class="sl-radio"><input type="radio" name="sk-messenger" value="Viber"> Viber</label>
-          <label class="sl-radio"><input type="radio" name="sk-messenger" value="WhatsApp"> WhatsApp</label>
-        </div>
-      </fieldset>
-
-      <label for="sk-notes" id="sk-consult-notes">Коментар</label>
-      <textarea id="sk-notes" name="sk-notes" rows="3" placeholder="Наприклад: хочу на пробний урок…" data-i18n-placeholder="ph-sk-notes"></textarea>
-
-      <button type="submit" id="skConsultSendButton">Записатись на консультацію</button>
-    </form>
-    <div class="success-message" id="skConsultSuccess">
-      Дякуємо! Ми зв'яжемось із вами найближчим часом.
-    </div>
-  </div>
-
-  <!-- ══════════════════════════════════
        FAQ
        ══════════════════════════════════ -->
   <div class="questions sl-wrap" id="FQA">
@@ -906,14 +906,14 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261111o"></script>
-  <script src="script.js?v=20261111o"></script>
-  <script src="scriptContact.js?v=20261111o"></script>
-  <script src="animations.js?v=20261111o"></script>
-  <script src="modals.js?v=20261111o"></script>
-  <script src="promo.js?v=20261111o"></script>
-  <script src="slider.js?v=20261111o"></script>
-  <script src="reviews.js?v=20261111o"></script>
+  <script src="tracking.js?v=20261111p"></script>
+  <script src="script.js?v=20261111p"></script>
+  <script src="scriptContact.js?v=20261111p"></script>
+  <script src="animations.js?v=20261111p"></script>
+  <script src="modals.js?v=20261111p"></script>
+  <script src="promo.js?v=20261111p"></script>
+  <script src="slider.js?v=20261111p"></script>
+  <script src="reviews.js?v=20261111p"></script>
 
   <script>
     function showSidebar() {
