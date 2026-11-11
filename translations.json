@@ -263,7 +263,16 @@
     "pricing-pair-per": "9.38€",
     "pricing-per-lesson": "per lesson",
     "pricing-individual-per": "No subscription — pay per lesson",
-    "bot-hint": "Free · 10 minutes · instant result"
+    "bot-hint": "Free · 10 minutes · instant result",
+    "question10": "Who are your teachers?",
+    "answer10-intro": "Our classes are taught by qualified teachers of Slovak. Here is what they have in common:",
+    "answer10-p1-t": "Relevant education.",
+    "answer10-p1": "A degree in the field and hands-on experience teaching foreigners.",
+    "answer10-p2-t": "Experience in Slovakia.",
+    "answer10-p2": "Some of our teachers work with universities or have taught at educational institutions in Slovakia.",
+    "answer10-p3-t": "Careful selection.",
+    "answer10-p3": "Knowledge alone is not enough for us: we look for people who explain complex things simply, support students and work towards results.",
+    "answer10-goal": "Our goal is for you not just to learn grammar, but to feel confident in real conversations and when studying in Slovak."
   },
   "ukr": {
     "li1": "Головна",
@@ -529,7 +538,16 @@
     "pricing-pair-per": "9,38€",
     "pricing-per-lesson": "за заняття",
     "pricing-individual-per": "Без абонементу — оплата за кожен урок",
-    "bot-hint": "Безкоштовно · 10 хвилин · результат одразу"
+    "bot-hint": "Безкоштовно · 10 хвилин · результат одразу",
+    "question10": "Хто ваші викладачі?",
+    "answer10-intro": "У нас викладають кваліфіковані викладачі словацької мови. Ось що їх об'єднує:",
+    "answer10-p1-t": "Профільна освіта.",
+    "answer10-p1": "Фахова підготовка та практичний досвід роботи з іноземцями.",
+    "answer10-p2-t": "Досвід у Словаччині.",
+    "answer10-p2": "Частина викладачів співпрацює з університетами або викладала в освітніх установах Словаччини.",
+    "answer10-p3-t": "Ретельний відбір.",
+    "answer10-p3": "Для нас важливі не лише знання, а й уміння пояснювати складне просто, підтримувати студентів і працювати на результат.",
+    "answer10-goal": "Наша мета: щоб ви не просто вивчили граматику, а почувалися впевнено в реальному спілкуванні та навчанні словацькою мовою."
   },
   "sk": {
     "li1": "Domov",
@@ -795,6 +813,15 @@
     "pricing-pair-per": "9,38€",
     "pricing-per-lesson": "za lekciu",
     "pricing-individual-per": "Bez predplatného — platíte za každú lekciu",
-    "bot-hint": "Zadarmo · 10 minút · výsledok hneď"
+    "bot-hint": "Zadarmo · 10 minút · výsledok hneď",
+    "question10": "Kto sú vaši lektori?",
+    "answer10-intro": "Učia u nás kvalifikovaní lektori slovenčiny. Čo ich spája:",
+    "answer10-p1-t": "Odborné vzdelanie.",
+    "answer10-p1": "Vzdelanie v odbore a praktické skúsenosti s výučbou cudzincov.",
+    "answer10-p2-t": "Skúsenosti na Slovensku.",
+    "answer10-p2": "Časť lektorov spolupracuje s univerzitami alebo učila vo vzdelávacích inštitúciách na Slovensku.",
+    "answer10-p3-t": "Starostlivý výber.",
+    "answer10-p3": "Nestačia nám len vedomosti: hľadáme ľudí, ktorí vedia jednoducho vysvetliť zložité veci, podporiť študentov a pracovať na výsledku.",
+    "answer10-goal": "Naším cieľom je, aby ste sa nielen naučili gramatiku, ale cítili sa isto v skutočnej komunikácii aj pri štúdiu v slovenčine."
   }
 }

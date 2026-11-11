@@ -1757,6 +1757,20 @@ form label.sl-radio {
   color: var(--text);
   padding: 0 28px 24px;
 }
+.sl-faq-answer p { margin: 0 0 12px; }
+.sl-faq-answer p:last-child { margin-bottom: 0; }
+.sl-faq-list { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 8px; }
+.sl-faq-list li { position: relative; padding-left: 20px; }
+.sl-faq-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px; top: .62em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 8px rgba(112, 190, 250, .6);
+}
+.sl-faq-list b { color: var(--white); font-weight: 500; }
 
 /* ════════════════════════════════════
    FOOTER
