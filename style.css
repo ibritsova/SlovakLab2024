@@ -1094,7 +1094,6 @@ html:has(dialog.sl-modal[open]) { overflow: hidden; }
   -webkit-background-clip: text;
           background-clip: text;
 }
-.sl-bf-desc { font-size: 16px; line-height: 1.6; color: var(--text); max-width: 56ch; }
 .sl-bf-code {
   display: inline-flex;
   align-items: center;
