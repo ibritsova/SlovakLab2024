@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261111s" />
+  <link rel="stylesheet" href="style.css?v=20261111t" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -659,6 +659,7 @@
       <textarea id="sk-notes" name="sk-notes" rows="3" placeholder="Наприклад: хочу на пробний урок…" data-i18n-placeholder="ph-sk-notes"></textarea>
 
       <button type="submit" id="skConsultSendButton">Записатись на консультацію</button>
+      <p class="sl-form-hint" data-i18n="form-hint">Відповімо протягом дня в обраному месенджері</p>
     </form>
     <div class="success-message" id="skConsultSuccess">
       Дякуємо! Ми зв'яжемось із вами найближчим часом.
@@ -904,6 +905,9 @@
     <div class="sl-lightbox-count"></div>
   </dialog>
 
+  <!-- Phones: "sign up" button pinned to the bottom of the screen; hidden on the first screen and while the form is in view (messenger.js) -->
+  <a href="#target-section-apply" class="sl-sticky-cta" id="sl-sticky-cta" data-i18n="button-start" aria-hidden="true" tabindex="-1">Записатись на безкоштовний урок</a>
+
   <!-- Floating "write to us" button: Telegram / WhatsApp (messenger.js) -->
   <div class="sl-chat" id="sl-chat">
     <div class="sl-chat-menu" id="sl-chat-menu">
@@ -926,15 +930,15 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261111s"></script>
-  <script src="script.js?v=20261111s"></script>
-  <script src="scriptContact.js?v=20261111s"></script>
-  <script src="animations.js?v=20261111s"></script>
-  <script src="modals.js?v=20261111s"></script>
-  <script src="promo.js?v=20261111s"></script>
-  <script src="messenger.js?v=20261111s"></script>
-  <script src="slider.js?v=20261111s"></script>
-  <script src="reviews.js?v=20261111s"></script>
+  <script src="tracking.js?v=20261111t"></script>
+  <script src="script.js?v=20261111t"></script>
+  <script src="scriptContact.js?v=20261111t"></script>
+  <script src="animations.js?v=20261111t"></script>
+  <script src="modals.js?v=20261111t"></script>
+  <script src="promo.js?v=20261111t"></script>
+  <script src="messenger.js?v=20261111t"></script>
+  <script src="slider.js?v=20261111t"></script>
+  <script src="reviews.js?v=20261111t"></script>
 
   <script>
     function showSidebar() {

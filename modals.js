@@ -37,6 +37,28 @@
     pushed = false;
   };
 
+  // One line per format in the application form's comment ("Цікавлять парні заняття.");
+  // choosing another format replaces the earlier line instead of adding a second one
+  const notes = document.getElementById('sk-notes');
+  const FORMAT_NOTES = {
+    'notes-group': 'Цікавлять групові заняття.',
+    'notes-pair': 'Цікавлять парні заняття.',
+    'notes-individual': 'Цікавлять індивідуальні заняття.'
+  };
+  let formatLine = '';
+  const noteFormat = dialog => {
+    if (!notes) return;
+    const key = 'notes-' + dialog.id.replace('modal-', '');
+    const dict = (window.slI18n && window.slI18n.dict) || {};
+    const line = dict[key] || FORMAT_NOTES[key];
+    if (!line) return;
+    let text = notes.value;
+    if (formatLine && text.includes(formatLine)) text = text.replace(formatLine, line);
+    else if (!text.includes(line)) text = text ? text.trim() + '\n' + line : line;
+    notes.value = text;
+    formatLine = line;
+  };
+
   document.querySelectorAll('[data-modal]').forEach(button => {
     const dialog = document.getElementById(button.getAttribute('data-modal'));
     if (!dialog) return;
@@ -53,10 +75,12 @@
     dialog.addEventListener('cancel', event => { event.preventDefault(); dismiss(dialog); });
 
     // "Записатись": swap the pop-up's URL for the form's and scroll there
+    // (and note the chosen format in the form's comment, the way the promo code is)
     dialog.querySelectorAll('.sl-modal-actions a[href^="#"]').forEach(link => {
       link.addEventListener('click', event => {
         event.preventDefault();
         const hash = link.getAttribute('href');
+        noteFormat(dialog);
         hide(dialog);
         history.replaceState(null, '', hash);
         pushed = false;

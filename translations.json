@@ -268,7 +268,11 @@
     "reviews-label": "What students and parents say",
     "aria-prev": "Previous review",
     "aria-next": "Next review",
-    "chat-toggle": "Message us"
+    "chat-toggle": "Message us",
+    "form-hint": "We will reply within a day in the messenger you choose",
+    "notes-group": "Interested in group lessons.",
+    "notes-pair": "Interested in pair lessons.",
+    "notes-individual": "Interested in individual lessons."
   },
   "ukr": {
     "li1": "Головна",
@@ -539,7 +543,11 @@
     "reviews-label": "Що кажуть студенти та батьки",
     "aria-prev": "Попередній відгук",
     "aria-next": "Наступний відгук",
-    "chat-toggle": "Напишіть нам"
+    "chat-toggle": "Напишіть нам",
+    "form-hint": "Відповімо протягом дня в обраному месенджері",
+    "notes-group": "Цікавлять групові заняття.",
+    "notes-pair": "Цікавлять парні заняття.",
+    "notes-individual": "Цікавлять індивідуальні заняття."
   },
   "sk": {
     "li1": "Domov",
@@ -810,6 +818,10 @@
     "reviews-label": "Čo hovoria študenti a rodičia",
     "aria-prev": "Predchádzajúca recenzia",
     "aria-next": "Ďalšia recenzia",
-    "chat-toggle": "Napíšte nám"
+    "chat-toggle": "Napíšte nám",
+    "form-hint": "Odpovieme do jedného dňa vo zvolenom messengeri",
+    "notes-group": "Zaujímajú ma skupinové lekcie.",
+    "notes-pair": "Zaujímajú ma párové lekcie.",
+    "notes-individual": "Zaujímajú ma individuálne lekcie."
   }
 }

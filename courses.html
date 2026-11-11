@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261111s" />
+  <link rel="stylesheet" href="style.css?v=20261111t" />
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -734,12 +734,16 @@
           </select>
 
           <button type="submit" id="trialSendButton">Відправити</button>
+          <p class="sl-form-hint" data-i18n="form-hint">Відповімо протягом дня в обраному месенджері</p>
           <p class="sl-trial-success" id="trialFormSuccess" hidden>Дякуємо! Ми зв'яжемось із вами найближчим
             часом.</p>
         </form>
       </div>
     </div>
   </section>
+
+  <!-- Phones: "sign up" button pinned to the bottom of the screen; hidden on the first screen and while the form is in view (messenger.js) -->
+  <a href="#target-section-trial" class="sl-sticky-cta" id="sl-sticky-cta" data-i18n="button-start" aria-hidden="true" tabindex="-1">Записатись на безкоштовний урок</a>
 
   <!-- Floating "write to us" button: Telegram / WhatsApp (messenger.js) -->
   <div class="sl-chat" id="sl-chat">
@@ -763,14 +767,14 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261111s"></script>
-  <script src="script.js?v=20261111s"></script>
-  <script src="scriptContact.js?v=20261111s"></script>
-  <script src="animations.js?v=20261111s"></script>
-  <script src="modals.js?v=20261111s"></script>
-  <script src="promo.js?v=20261111s"></script>
-  <script src="messenger.js?v=20261111s"></script>
-  <script src="slider.js?v=20261111s"></script>
+  <script src="tracking.js?v=20261111t"></script>
+  <script src="script.js?v=20261111t"></script>
+  <script src="scriptContact.js?v=20261111t"></script>
+  <script src="animations.js?v=20261111t"></script>
+  <script src="modals.js?v=20261111t"></script>
+  <script src="promo.js?v=20261111t"></script>
+  <script src="messenger.js?v=20261111t"></script>
+  <script src="slider.js?v=20261111t"></script>
 
   <!-- Meta Pixel — ViewContent per course, fires once when a course detail section is actually scrolled into view -->
   <script>

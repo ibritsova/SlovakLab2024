@@ -2526,3 +2526,36 @@ nav::after {
 @media (prefers-reduced-motion: reduce) {
   .sl-chat-toggle::before { animation: none; }
 }
+
+/* Hint under the forms' send buttons */
+.sl-form-hint { margin: 10px 0 0; font-size: 13px; text-align: center; color: var(--text); opacity: .8; }
+
+/* Phones: "sign up" button pinned to the bottom, left of the messenger button (messenger.js) */
+.sl-sticky-cta { display: none; }
+@media (max-width: 600px) {
+  .sl-sticky-cta {
+    position: fixed;
+    left: 16px; right: 82px; bottom: 16px;
+    z-index: 97;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    padding: 0 16px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #0a0a0a;
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(180deg, #8cccff, var(--blue));
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .5), 0 0 24px rgba(112, 190, 250, .35);
+    opacity: 0;
+    transform: translateY(calc(100% + 24px));
+    pointer-events: none;
+    transition: opacity .25s, transform .25s;
+  }
+  .sl-sticky-cta.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+  /* Room at the very bottom so the pinned buttons don't cover the footer's last line */
+  #contacts-footer { padding-bottom: 80px; }
+}
