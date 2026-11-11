@@ -45,7 +45,32 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261111t" />
+  <link rel="stylesheet" href="style.css?v=20261111u" />
+
+  <!-- Consent Mode v2: analytics and ads stay off until the visitor chooses in the cookie banner (consent.js).
+       Must run before Google Tag Manager. A choice made earlier is restored from localStorage. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    (function () {
+      var saved = null;
+      try { saved = JSON.parse(localStorage.getItem('slovaklab-consent')); } catch (e) { /* storage unavailable */ }
+      var analytics = saved && saved.analytics ? 'granted' : 'denied';
+      var marketing = saved && saved.marketing ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        analytics_storage: analytics,
+        ad_storage: marketing,
+        ad_user_data: marketing,
+        ad_personalization: marketing,
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+      window.slConsent = saved;
+    })();
+  </script>
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -54,7 +79,7 @@
       j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-5SFKJQN9');</script>
 
-  <!-- Meta (Facebook) Pixel — base code, loads once per page, auto-fires PageView -->
+  <!-- Meta (Facebook) Pixel — base code, loads once per page, auto-fires PageView (sent only with ads consent) -->
   <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
@@ -65,11 +90,11 @@
       t.src = v; s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    // No data goes to Meta until the visitor allows ads cookies (consent.js grants it)
+    fbq('consent', window.slConsent && window.slConsent.marketing ? 'grant' : 'revoke');
     fbq('init', '835435028872316');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=835435028872316&ev=PageView&noscript=1" alt="" /></noscript>
 
   <!-- EmailJS defer -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
@@ -735,6 +760,7 @@
 
           <button type="submit" id="trialSendButton">Відправити</button>
           <p class="sl-form-hint" data-i18n="form-hint">Відповімо протягом дня в обраному месенджері</p>
+          <p class="sl-form-consent"><span data-i18n="consent-text">Натискаючи кнопку, ви погоджуєтеся з обробкою персональних даних відповідно до</span> <a href="/privacy/" data-i18n="consent-link">Політики конфіденційності</a></p>
           <p class="sl-trial-success" id="trialFormSuccess" hidden>Дякуємо! Ми зв'яжемось із вами найближчим
             часом.</p>
         </form>
@@ -764,17 +790,35 @@
     </button>
   </div>
 
+  <!-- Cookie banner (consent.js). Shown on the first visit; "Налаштування cookies" in the footer reopens it -->
+  <div class="sl-cookie" id="sl-cookie" role="dialog" aria-labelledby="cookie-title" hidden>
+    <p class="sl-cookie-title" id="cookie-title" data-i18n="cookie-title">Ми використовуємо cookies</p>
+    <p class="sl-cookie-text"><span data-i18n="cookie-text">Вони допомагають нам розуміти, що на сайті працює, і показувати доречну рекламу. Ви можете погодитися на все, залишити лише необхідні або вибрати самостійно.</span> <a href="/privacy/" data-i18n="cookie-more">Детальніше</a></p>
+    <div class="sl-cookie-options" hidden>
+      <label class="sl-cookie-opt"><input type="checkbox" checked disabled> <span><b data-i18n="cookie-necessary">Необхідні</b><small data-i18n="cookie-necessary-desc">Мова сайту та ваш вибір щодо cookies. Завжди увімкнені.</small></span></label>
+      <label class="sl-cookie-opt"><input type="checkbox" name="analytics"> <span><b data-i18n="cookie-analytics">Аналітика</b><small data-i18n="cookie-analytics-desc">Google Analytics: які сторінки й кнопки корисні відвідувачам.</small></span></label>
+      <label class="sl-cookie-opt"><input type="checkbox" name="marketing"> <span><b data-i18n="cookie-marketing">Реклама</b><small data-i18n="cookie-marketing-desc">Google Ads і Meta: вимірювання та персоналізація реклами.</small></span></label>
+    </div>
+    <div class="sl-cookie-actions">
+      <button type="button" class="sl-btn" data-cookie="all" data-i18n="cookie-accept">Прийняти всі</button>
+      <button type="button" class="sl-btn" data-cookie="necessary" data-i18n="cookie-reject">Лише необхідні</button>
+      <button type="button" class="sl-btn-ghost" data-cookie="settings" data-i18n="cookie-settings">Налаштувати</button>
+      <button type="button" class="sl-btn" data-cookie="save" data-i18n="cookie-save" hidden>Зберегти вибір</button>
+    </div>
+  </div>
+
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="tracking.js?v=20261111t"></script>
-  <script src="script.js?v=20261111t"></script>
-  <script src="scriptContact.js?v=20261111t"></script>
-  <script src="animations.js?v=20261111t"></script>
-  <script src="modals.js?v=20261111t"></script>
-  <script src="promo.js?v=20261111t"></script>
-  <script src="messenger.js?v=20261111t"></script>
-  <script src="slider.js?v=20261111t"></script>
+  <script src="consent.js?v=20261111u"></script>
+  <script src="tracking.js?v=20261111u"></script>
+  <script src="script.js?v=20261111u"></script>
+  <script src="scriptContact.js?v=20261111u"></script>
+  <script src="animations.js?v=20261111u"></script>
+  <script src="modals.js?v=20261111u"></script>
+  <script src="promo.js?v=20261111u"></script>
+  <script src="messenger.js?v=20261111u"></script>
+  <script src="slider.js?v=20261111u"></script>
 
   <!-- Meta Pixel — ViewContent per course, fires once when a course detail section is actually scrolled into view -->
   <script>
@@ -848,6 +892,7 @@
     <div class="sl-foot-bottom">
       <span id="foot-copyright">© 2026 SlovakLab. Всі права захищені.</span>
       <span>slovakklab@gmail.com</span>
+      <span class="sl-foot-legal"><a href="/privacy/" data-i18n="foot-privacy">Політика конфіденційності</a> · <a href="#" data-cookie-open data-i18n="foot-cookies">Налаштування cookies</a></span>
     </div>
   </footer>
 

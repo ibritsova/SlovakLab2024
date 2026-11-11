@@ -6,7 +6,10 @@
   const PARAMS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
   const STORE_KEY = 'slovaklab-attribution';
 
-  // Last ad touch wins: overwrite only when the URL actually carries campaign parameters
+  // Last ad touch wins: overwrite only when the URL actually carries campaign parameters.
+  // It is kept in the browser only with ads consent (consent.js calls slAttributionSave);
+  // without it, it lives in memory for this page view and still reaches a lead sent from here.
+  let pending = null;
   try {
     const query = new URLSearchParams(window.location.search);
     const found = {};
@@ -17,11 +20,18 @@
     if (Object.keys(found).length) {
       found.landing_page = window.location.pathname;
       found.first_seen = new Date().toISOString();
-      localStorage.setItem(STORE_KEY, JSON.stringify(found));
+      pending = found;
     }
-  } catch (e) { /* storage unavailable — attribution is best effort */ }
+  } catch (e) { /* attribution is best effort */ }
+
+  window.slAttributionSave = function () {
+    if (!pending) return;
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(pending)); } catch (e) { /* storage unavailable */ }
+  };
+  if (window.slConsent && window.slConsent.marketing) window.slAttributionSave();
 
   window.slAttribution = function () {
+    if (pending) return pending;
     try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (e) { return {}; }
   };
 

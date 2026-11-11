@@ -2,6 +2,31 @@
 <html lang="uk">
 
 <head>
+  <!-- Consent Mode v2: analytics and ads stay off until the visitor chooses in the cookie banner (consent.js).
+       Must run before Google Tag Manager. A choice made earlier is restored from localStorage. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    (function () {
+      var saved = null;
+      try { saved = JSON.parse(localStorage.getItem('slovaklab-consent')); } catch (e) { /* storage unavailable */ }
+      var analytics = saved && saved.analytics ? 'granted' : 'denied';
+      var marketing = saved && saved.marketing ? 'granted' : 'denied';
+      gtag('consent', 'default', {
+        analytics_storage: analytics,
+        ad_storage: marketing,
+        ad_user_data: marketing,
+        ad_personalization: marketing,
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+      window.slConsent = saved;
+    })();
+  </script>
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -23,7 +48,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Inter+Tight:wght@500&display=swap" />
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
   <!-- Absolute paths: GitHub Pages serves this page for any missing URL, including nested ones -->
-  <link rel="stylesheet" href="/style.css?v=20261111t" />
+  <link rel="stylesheet" href="/style.css?v=20261111u" />
 </head>
 
 <body>
