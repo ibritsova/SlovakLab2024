@@ -2728,7 +2728,7 @@ html.has-bf-bar .sl-majors-side { top: calc(var(--nav-h) + var(--bf-bar-h) + 24p
 /* Difficulty map: entry → to the right, study ↑ upwards */
 .sl-map { padding: 18px 20px; background: var(--element-bg); border: 1px solid var(--border); border-radius: var(--radius); }
 .sl-map-title { margin: 0 0 12px; font-family: var(--font-head); font-size: 18px; color: var(--white); }
-.sl-map-frame { display: grid; grid-template-columns: 18px 1fr; grid-template-rows: 1fr auto; gap: 6px; }
+.sl-map-frame { display: grid; grid-template-columns: 18px minmax(0, 1fr); grid-template-rows: 1fr auto; gap: 6px; }
 .sl-map-axis { font-size: 11px; color: var(--text); white-space: nowrap; }
 .sl-map-axis--y { grid-row: 1; writing-mode: vertical-rl; transform: rotate(180deg); text-align: left; align-self: end; }
 .sl-map-axis--x { grid-column: 2; text-align: right; }
@@ -2859,10 +2859,10 @@ html.has-bf-bar .sl-majors-side { top: calc(var(--nav-h) + var(--bf-bar-h) + 24p
 }
 @media (max-width: 900px) {
   .sl-majors { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .sl-majors-side { position: static; grid-template-columns: 1fr 1fr; align-items: start; }
+  .sl-majors-side { position: static; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
 }
 @media (max-width: 600px) {
-  .sl-majors-side { grid-template-columns: 1fr; }
+  .sl-majors-side { grid-template-columns: minmax(0, 1fr); }
   /* Chips scroll sideways instead of wrapping into many rows */
   .sl-majors-filters { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 12px; padding: 0 16px 4px; scrollbar-width: none; }
   .sl-majors-filters::-webkit-scrollbar { display: none; }
