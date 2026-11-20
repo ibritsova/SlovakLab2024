@@ -2659,7 +2659,11 @@ body .sl-legal h3 { margin: 20px 0 8px; font-size: 18px; color: var(--white); }
   background: var(--element-bg);
   border: 1px solid rgba(112, 190, 250, .35);
   border-radius: var(--radius);
-  box-shadow: 0 0 40px rgba(112, 190, 250, .08);
+  /* Same blue glow as the application form */
+  box-shadow:
+    0 0 40px rgba(112, 190, 250, .18),
+    0 0 120px 10px rgba(112, 190, 250, .16),
+    0 0 260px 60px rgba(112, 190, 250, .10);
 }
 .sl-pdf-title { margin: 0 0 4px; font-family: var(--font-head); font-size: 20px; color: var(--white); }
 .sl-pdf-desc { margin: 0; font-size: 14px; color: var(--text); }
