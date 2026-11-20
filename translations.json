@@ -289,7 +289,10 @@
     "cookie-settings": "Customise",
     "cookie-save": "Save my choice",
     "foot-privacy": "Privacy Policy",
-    "foot-cookies": "Cookie settings"
+    "foot-cookies": "Cookie settings",
+    "pdf-title": "Full list of admission support services and prices",
+    "pdf-desc": "From the first consultation to moving into the dorm and getting a residence permit, all in one file (in Ukrainian).",
+    "pdf-btn": "Download .pdf"
   },
   "ukr": {
     "li1": "Головна",
@@ -581,7 +584,10 @@
     "cookie-settings": "Налаштувати",
     "cookie-save": "Зберегти вибір",
     "foot-privacy": "Політика конфіденційності",
-    "foot-cookies": "Налаштування cookies"
+    "foot-cookies": "Налаштування cookies",
+    "pdf-title": "Детальний перелік послуг і вартість супроводу вступу",
+    "pdf-desc": "Від консультації до заселення в гуртожиток і отримання ВНЖ — усе в одному файлі.",
+    "pdf-btn": "Завантажити .pdf"
   },
   "sk": {
     "li1": "Domov",
@@ -873,6 +879,9 @@
     "cookie-settings": "Nastaviť",
     "cookie-save": "Uložiť výber",
     "foot-privacy": "Ochrana osobných údajov",
-    "foot-cookies": "Nastavenia cookies"
+    "foot-cookies": "Nastavenia cookies",
+    "pdf-title": "Podrobný zoznam služieb a cena sprevádzania pri prijatí",
+    "pdf-desc": "Od konzultácie po ubytovanie na internáte a získanie pobytu, všetko v jednom súbore (v ukrajinčine).",
+    "pdf-btn": "Stiahnuť .pdf"
   }
 }

@@ -60,6 +60,11 @@
       window.slTrack('level_test_click', { link_url: href }, ['trackCustom', 'StartLevelTest']);
       return;
     }
+    // Services & prices PDF
+    if (/\.pdf($|\?)/i.test(href)) {
+      window.slTrack('pdf_download', { file_name: href.split('/').pop() });
+      return;
+    }
     const channel = contactChannel(href);
     if (channel) {
       window.slTrack('contact_click', { contact_channel: channel, link_url: href },

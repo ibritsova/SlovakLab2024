@@ -2647,3 +2647,32 @@ body .sl-legal h3 { margin: 20px 0 8px; font-size: 18px; color: var(--white); }
 .sl-legal th { color: var(--white); font-weight: 500; background: var(--button-bg); }
 .sl-legal tr:last-child td { border-bottom: none; }
 .sl-legal-back { margin-top: 40px !important; }
+
+/* Admission services PDF — download strip under the admission steps */
+.sl-pdf {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: var(--element-bg);
+  border: 1px solid rgba(112, 190, 250, .35);
+  border-radius: var(--radius);
+  box-shadow: 0 0 40px rgba(112, 190, 250, .08);
+}
+.sl-pdf-title { margin: 0 0 4px; font-family: var(--font-head); font-size: 20px; color: var(--white); }
+.sl-pdf-desc { margin: 0; font-size: 14px; color: var(--text); }
+.sl-pdf-btn {
+  flex: 0 0 auto;
+  background:
+    linear-gradient(var(--button-bg), var(--button-bg)) padding-box,
+    linear-gradient(var(--blue), var(--blue)) border-box;
+  box-shadow: 0 0 24px rgba(112, 190, 250, .2);
+}
+.sl-pdf-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 600px) {
+  .sl-pdf { flex-direction: column; align-items: stretch; padding: 20px; margin-top: 20px; }
+  .sl-pdf-title { font-size: 18px; }
+  .sl-pdf-btn { width: 100%; }
+}
