@@ -10,7 +10,7 @@
   <meta name="description"
     content="Онлайн-курси словацької для вступників з України: рівень B1–C1, носії мови та українські викладачі, супровід вступу до державних вишів. Безкоштовна консультація." />
 
-  <!-- ═══ Canonical + hreflang (EN/SK are client-side translations of the same URL) ═══ -->
+  <!-- ═══ Canonical + hreflang (the Russian version is a client-side translation of the same URL) ═══ -->
   <link rel="canonical" href="https://slovaklab.com/" />
   <link rel="alternate" hreflang="uk" href="https://slovaklab.com/" />
   <link rel="alternate" hreflang="x-default" href="https://slovaklab.com/" />
@@ -45,7 +45,7 @@
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" />
 
   <!-- ═══ Stylesheets ═══ -->
-  <link rel="stylesheet" href="style.css?v=20261120e" />
+  <link rel="stylesheet" href="style.css?v=20261120g" />
 
   <!-- Consent Mode v2: analytics and ads stay off until the visitor chooses in the cookie banner (consent.js).
        Must run before Google Tag Manager. A choice made earlier is restored from localStorage. -->
@@ -276,10 +276,9 @@
       <li class="hideOnMobile"><a href="#target-section-apply" id="li4">Контакти</a></li>
       <li class="hideOnMobile"><a href="#target-section-feedback" id="li5">Відгуки</a></li>
       <li class="language">
-        <select id="languageSwitcher">
+        <select id="languageSwitcher" aria-label="Мова / Язык">
           <option value="ukr">UKR</option>
-          <option value="en">EN</option>
-          <option value="sk">SK</option>
+          <option value="ru">RU</option>
         </select>
       </li>
       <li class="menu-button" onclick="showSidebar()">
@@ -789,7 +788,7 @@
           <p class="sl-pdf-title" data-i18n="pdf-title">Детальний перелік послуг і вартість супроводу вступу</p>
           <p class="sl-pdf-desc" data-i18n="pdf-desc">Від консультації до заселення в гуртожиток і отримання ВНЖ — усе в одному файлі.</p>
         </div>
-        <a href="Docs/SlovakLab-vstup-UA.pdf" download="SlovakLab — супровід вступу.pdf" class="sl-btn sl-pdf-btn" id="pdf-download">
+        <a href="Docs/SlovakLab-vstup-UA.pdf" data-i18n-href="pdf-vstup-href" data-i18n-download="pdf-vstup-file" download="SlovakLab — супровід вступу.pdf" class="sl-btn sl-pdf-btn" id="pdf-download">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
           <span data-i18n="pdf-btn">Завантажити .pdf</span>
         </a>
@@ -895,7 +894,7 @@
                 <span class="sl-map-q sl-map-q--tr" data-i18n="majors-q-tr">Складно і вступити, і вчитися</span>
                 <span class="sl-map-q sl-map-q--bl" data-i18n="majors-q-bl">Легко вступити, легко вчитися</span>
                 <span class="sl-map-q sl-map-q--br" data-i18n="majors-q-br">Складно вступити, легше вчитися</span>
-                <div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="5" data-group="tech" title="Інформатика та IT">5</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="2" data-group="med" title="Фармація">2</button><button type="button" class="sl-map-dot" data-major="3" data-group="med" title="Ветеринарія">3</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="1" data-group="med" title="Медицина">1</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="6" data-group="tech" title="Електротехніка та робототехніка">6</button><button type="button" class="sl-map-dot" data-major="7" data-group="tech" title="Машинобудування та автомобілебудування">7</button><button type="button" class="sl-map-dot" data-major="8" data-group="tech" title="Будівництво">8</button><button type="button" class="sl-map-dot" data-major="10" data-group="tech" title="Хімія та харчові технології">10</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="9" data-group="tech" title="Архітектура та дизайн">9</button><button type="button" class="sl-map-dot" data-major="13" data-group="econ" title="Право">13</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="11" data-group="tech" title="Транспорт і логістика">11</button><button type="button" class="sl-map-dot" data-major="18" data-group="nature" title="Агрономія, екологія та ліс">18</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="12" data-group="econ" title="Економіка та менеджмент">12</button><button type="button" class="sl-map-dot" data-major="16" data-group="hum" title="Філологія та переклад">16</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="4" data-group="med" title="Медсестринство та охорона здоров&#x27;я">4</button><button type="button" class="sl-map-dot" data-major="17" data-group="hum" title="Медіа, журналістика та міжнародні відносини">17</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="14" data-group="hum" title="Психологія">14</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="19" data-group="art" title="Мистецтво">19</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="15" data-group="hum" title="Педагогіка">15</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-major="20" data-group="art" title="Спорт">20</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div>
+                <div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-5-name" data-major="5" data-group="tech" title="Інформатика та IT">5</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-2-name" data-major="2" data-group="med" title="Фармація">2</button><button type="button" class="sl-map-dot" data-i18n-title="major-3-name" data-major="3" data-group="med" title="Ветеринарія">3</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-1-name" data-major="1" data-group="med" title="Медицина">1</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-6-name" data-major="6" data-group="tech" title="Електротехніка та робототехніка">6</button><button type="button" class="sl-map-dot" data-i18n-title="major-7-name" data-major="7" data-group="tech" title="Машинобудування та автомобілебудування">7</button><button type="button" class="sl-map-dot" data-i18n-title="major-8-name" data-major="8" data-group="tech" title="Будівництво">8</button><button type="button" class="sl-map-dot" data-i18n-title="major-10-name" data-major="10" data-group="tech" title="Хімія та харчові технології">10</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-9-name" data-major="9" data-group="tech" title="Архітектура та дизайн">9</button><button type="button" class="sl-map-dot" data-i18n-title="major-13-name" data-major="13" data-group="econ" title="Право">13</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-11-name" data-major="11" data-group="tech" title="Транспорт і логістика">11</button><button type="button" class="sl-map-dot" data-i18n-title="major-18-name" data-major="18" data-group="nature" title="Агрономія, екологія та ліс">18</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-12-name" data-major="12" data-group="econ" title="Економіка та менеджмент">12</button><button type="button" class="sl-map-dot" data-i18n-title="major-16-name" data-major="16" data-group="hum" title="Філологія та переклад">16</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-4-name" data-major="4" data-group="med" title="Медсестринство та охорона здоров&#x27;я">4</button><button type="button" class="sl-map-dot" data-i18n-title="major-17-name" data-major="17" data-group="hum" title="Медіа, журналістика та міжнародні відносини">17</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-14-name" data-major="14" data-group="hum" title="Психологія">14</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-19-name" data-major="19" data-group="art" title="Мистецтво">19</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-15-name" data-major="15" data-group="hum" title="Педагогіка">15</button></div><div class="sl-map-cell"><button type="button" class="sl-map-dot" data-i18n-title="major-20-name" data-major="20" data-group="art" title="Спорт">20</button></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div><div class="sl-map-cell"></div>
               </div>
               <span class="sl-map-axis sl-map-axis--x" data-i18n="majors-map-x">Складність вступу →</span>
             </div>
@@ -905,10 +904,10 @@
 
         <!-- Right: filters, sorting and the 20 majors -->
         <div class="sl-majors-main">
-          <div class="sl-majors-filters" role="group" aria-label="Групи напрямів">
+          <div class="sl-majors-filters" role="group" aria-label="Групи напрямів" data-i18n-aria-label="majors-filters-aria">
             <button type="button" class="sl-chip is-active" data-filter="all" data-i18n="majors-all">Усі напрями</button><button type="button" class="sl-chip" data-filter="med" data-group="med"><span data-i18n="majors-g-med">Медицина та здоров&#x27;я</span></button><button type="button" class="sl-chip" data-filter="tech" data-group="tech"><span data-i18n="majors-g-tech">IT, техніка та інженерія</span></button><button type="button" class="sl-chip" data-filter="econ" data-group="econ"><span data-i18n="majors-g-econ">Економіка та право</span></button><button type="button" class="sl-chip" data-filter="hum" data-group="hum"><span data-i18n="majors-g-hum">Гуманітарні та соціальні науки</span></button><button type="button" class="sl-chip" data-filter="nature" data-group="nature"><span data-i18n="majors-g-nature">Природа та аграрні науки</span></button><button type="button" class="sl-chip" data-filter="art" data-group="art"><span data-i18n="majors-g-art">Творчі напрями та спорт</span></button>
           </div>
-          <div class="sl-majors-sort" role="group" aria-label="Сортування">
+          <div class="sl-majors-sort" role="group" aria-label="Сортування" data-i18n-aria-label="majors-sort-aria">
             <span data-i18n="majors-sort">Сортувати:</span>
             <button type="button" class="sl-sort is-active" data-sort="n" data-i18n="majors-sort-n">за групами</button>
             <button type="button" class="sl-sort" data-sort="entry" data-i18n="majors-sort-entry">легше вступити</button>
@@ -919,340 +918,340 @@
             <summary>
               <span class="sl-major-num">1</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Медицина</span>
+                <span class="sl-major-name" data-i18n="major-1-name">Медицина</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 5/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="5" aria-label="5/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 5/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="5" aria-label="5/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>загальна медицина, стоматологія</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>LF UK (Братислава), JLF UK (Мартин), LF UPJŠ (Кошице)</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>вступний тест з біології та хімії + тест загальних здібностей</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-1-spec">загальна медицина, стоматологія</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-1-where">LF UK (Братислава), JLF UK (Мартин), LF UPJŠ (Кошице)</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-1-how">вступний тест з біології та хімії + тест загальних здібностей</dd>
               </dl>
-              <p class="sl-major-note">6 років без поділу на бакалавра й магістра. Для тих, хто готовий багато вчити й любить біологію та хімію.</p>
+              <p class="sl-major-note" data-i18n="major-1-note">6 років без поділу на бакалавра й магістра. Для тих, хто готовий багато вчити й любить біологію та хімію.</p>
             </div>
           </details>
           <details class="sl-major" id="major-2" data-group="med" data-entry="4" data-study="5" data-n="2">
             <summary>
               <span class="sl-major-num">2</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Фармація</span>
+                <span class="sl-major-name" data-i18n="major-2-name">Фармація</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 4/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 5/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="5" aria-label="5/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>фармація (провізор)</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FaF UK (Братислава)</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>зазвичай іспит або оцінювання з хімії та біології</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-2-spec">фармація (провізор)</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-2-where">FaF UK (Братислава)</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-2-how">зазвичай іспит або оцінювання з хімії та біології</dd>
               </dl>
-              <p class="sl-major-note">5 років. Багато хімії. Підходить тим, кому цікаві ліки, аптека, лабораторія.</p>
+              <p class="sl-major-note" data-i18n="major-2-note">5 років. Багато хімії. Підходить тим, кому цікаві ліки, аптека, лабораторія.</p>
             </div>
           </details>
           <details class="sl-major" id="major-3" data-group="med" data-entry="4" data-study="5" data-n="3">
             <summary>
               <span class="sl-major-num">3</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Ветеринарія</span>
+                <span class="sl-major-name" data-i18n="major-3-name">Ветеринарія</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 4/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 5/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="5" aria-label="5/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>ветеринарна медицина, гігієна харчових продуктів</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>UVLF (Кошице)</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>вступний іспит з біології та хімії</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-3-spec">ветеринарна медицина, гігієна харчових продуктів</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-3-where">UVLF (Кошице)</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-3-how">вступний іспит з біології та хімії</dd>
               </dl>
-              <p class="sl-major-note">6 років. Для тих, хто любить тварин і не боїться анатомії та практики.</p>
+              <p class="sl-major-note" data-i18n="major-3-note">6 років. Для тих, хто любить тварин і не боїться анатомії та практики.</p>
             </div>
           </details>
           <details class="sl-major" id="major-4" data-group="med" data-entry="3" data-study="3" data-n="4">
             <summary>
               <span class="sl-major-num">4</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Медсестринство та охорона здоров&#x27;я</span>
+                <span class="sl-major-name" data-i18n="major-4-name">Медсестринство та охорона здоров&#x27;я</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 3/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>медсестринство, акушерство, фізіотерапія, громадське здоров&#x27;я, лабораторні методи</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>JLF UK, UPJŠ, Трнавський університет, PU Прешов, UKF Нитра</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>часто тест або співбесіда, на деяких — за оцінками</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-4-spec">медсестринство, акушерство, фізіотерапія, громадське здоров&#x27;я, лабораторні методи</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-4-where">JLF UK, UPJŠ, Трнавський університет, PU Прешов, UKF Нитра</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-4-how">часто тест або співбесіда, на деяких — за оцінками</dd>
               </dl>
-              <p class="sl-major-note">3 роки бакалаврату. Багато практики в лікарнях, затребувані професії.</p>
+              <p class="sl-major-note" data-i18n="major-4-note">3 роки бакалаврату. Багато практики в лікарнях, затребувані професії.</p>
             </div>
           </details>
           <details class="sl-major" id="major-5" data-group="tech" data-entry="3" data-study="5" data-n="5">
             <summary>
               <span class="sl-major-num">5</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Інформатика та IT</span>
+                <span class="sl-major-name" data-i18n="major-5-name">Інформатика та IT</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 3/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 5/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="5" aria-label="5/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>інформатика, програмна інженерія, кібербезпека, штучний інтелект, прикладна інформатика</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FIIT STU, FEI STU, FMFI UK, FRI UNIZA, FEI TUKE</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>часто без іспиту за оцінками або результатами матури; інакше — тест з математики / інформатики</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-5-spec">інформатика, програмна інженерія, кібербезпека, штучний інтелект, прикладна інформатика</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-5-where">FIIT STU, FEI STU, FMFI UK, FRI UNIZA, FEI TUKE</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-5-how">часто без іспиту за оцінками або результатами матури; інакше — тест з математики / інформатики</dd>
               </dl>
-              <p class="sl-major-note">Для тих, хто дружить з математикою і логікою. Перший курс через математику вважається одним із найважчих.</p>
+              <p class="sl-major-note" data-i18n="major-5-note">Для тих, хто дружить з математикою і логікою. Перший курс через математику вважається одним із найважчих.</p>
             </div>
           </details>
           <details class="sl-major" id="major-6" data-group="tech" data-entry="2" data-study="4" data-n="6">
             <summary>
               <span class="sl-major-num">6</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Електротехніка та робототехніка</span>
+                <span class="sl-major-name" data-i18n="major-6-name">Електротехніка та робототехніка</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 2/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 4/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>електротехніка, робототехніка й кібернетика, автоматизація, енергетика</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FEI STU, FEI TUKE, FEIT UNIZA</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>переважно без іспиту за оцінками; на деяких програмах — тест</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-6-spec">електротехніка, робототехніка й кібернетика, автоматизація, енергетика</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-6-where">FEI STU, FEI TUKE, FEIT UNIZA</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-6-how">переважно без іспиту за оцінками; на деяких програмах — тест</dd>
               </dl>
-              <p class="sl-major-note">Потрібні фізика й математика. Великий попит на ринку праці.</p>
+              <p class="sl-major-note" data-i18n="major-6-note">Потрібні фізика й математика. Великий попит на ринку праці.</p>
             </div>
           </details>
           <details class="sl-major" id="major-7" data-group="tech" data-entry="2" data-study="4" data-n="7">
             <summary>
               <span class="sl-major-num">7</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Машинобудування та автомобілебудування</span>
+                <span class="sl-major-name" data-i18n="major-7-name">Машинобудування та автомобілебудування</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 2/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 4/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>машинобудування, автомобільна техніка, мехатроніка, виробничі технології</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>SjF STU, SjF TUKE, SjF UNIZA</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>переважно без іспиту за оцінками</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-7-spec">машинобудування, автомобільна техніка, мехатроніка, виробничі технології</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-7-where">SjF STU, SjF TUKE, SjF UNIZA</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-7-how">переважно без іспиту за оцінками</dd>
               </dl>
-              <p class="sl-major-note">Словаччина — один із найбільших виробників авто на душу населення: багато роботи після навчання.</p>
+              <p class="sl-major-note" data-i18n="major-7-note">Словаччина — один із найбільших виробників авто на душу населення: багато роботи після навчання.</p>
             </div>
           </details>
           <details class="sl-major" id="major-8" data-group="tech" data-entry="2" data-study="4" data-n="8">
             <summary>
               <span class="sl-major-num">8</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Будівництво</span>
+                <span class="sl-major-name" data-i18n="major-8-name">Будівництво</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 2/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 4/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>будівництво, геодезія, водне господарство, управління будівництвом</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>SvF STU, SvF UNIZA, SvF TUKE</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>переважно без іспиту за оцінками</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-8-spec">будівництво, геодезія, водне господарство, управління будівництвом</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-8-where">SvF STU, SvF UNIZA, SvF TUKE</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-8-how">переважно без іспиту за оцінками</dd>
               </dl>
-              <p class="sl-major-note">Багато математики, механіки та креслення в перші роки.</p>
+              <p class="sl-major-note" data-i18n="major-8-note">Багато математики, механіки та креслення в перші роки.</p>
             </div>
           </details>
           <details class="sl-major" id="major-9" data-group="tech" data-entry="4" data-study="4" data-n="9">
             <summary>
               <span class="sl-major-num">9</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Архітектура та дизайн</span>
+                <span class="sl-major-name" data-i18n="major-9-name">Архітектура та дизайн</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 4/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 4/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>архітектура, урбанізм, дизайн інтер&#x27;єру, промисловий дизайн</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FA STU, FU TUKE</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>творчий іспит: малювання, портфоліо, просторове мислення</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-9-spec">архітектура, урбанізм, дизайн інтер&#x27;єру, промисловий дизайн</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-9-where">FA STU, FU TUKE</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-9-how">творчий іспит: малювання, портфоліо, просторове мислення</dd>
               </dl>
-              <p class="sl-major-note">Потрібні художні здібності. Багато проєктів і роботи вночі перед здачею.</p>
+              <p class="sl-major-note" data-i18n="major-9-note">Потрібні художні здібності. Багато проєктів і роботи вночі перед здачею.</p>
             </div>
           </details>
           <details class="sl-major" id="major-10" data-group="tech" data-entry="2" data-study="4" data-n="10">
             <summary>
               <span class="sl-major-num">10</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Хімія та харчові технології</span>
+                <span class="sl-major-name" data-i18n="major-10-name">Хімія та харчові технології</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 2/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 4/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>хімічна технологія, харчові технології, біотехнології, хімія</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FCHPT STU, PriF UK</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>переважно без іспиту за оцінками</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-10-spec">хімічна технологія, харчові технології, біотехнології, хімія</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-10-where">FCHPT STU, PriF UK</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-10-how">переважно без іспиту за оцінками</dd>
               </dl>
-              <p class="sl-major-note">Для тих, хто любить лабораторію. Хімія та математика в перші роки складні.</p>
+              <p class="sl-major-note" data-i18n="major-10-note">Для тих, хто любить лабораторію. Хімія та математика в перші роки складні.</p>
             </div>
           </details>
           <details class="sl-major" id="major-11" data-group="tech" data-entry="1" data-study="3" data-n="11">
             <summary>
               <span class="sl-major-num">11</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Транспорт і логістика</span>
+                <span class="sl-major-name" data-i18n="major-11-name">Транспорт і логістика</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 1/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="1" aria-label="1/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>логістика, залізничний і автомобільний транспорт, авіація, пошта та телекомунікації</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FPEDAS UNIZA, PEDAS, SjF UNIZA</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>переважно без іспиту</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-11-spec">логістика, залізничний і автомобільний транспорт, авіація, пошта та телекомунікації</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-11-where">FPEDAS UNIZA, PEDAS, SjF UNIZA</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-11-how">переважно без іспиту</dd>
               </dl>
-              <p class="sl-major-note">Практичний напрям з добрим працевлаштуванням, особливо в Жиліні.</p>
+              <p class="sl-major-note" data-i18n="major-11-note">Практичний напрям з добрим працевлаштуванням, особливо в Жиліні.</p>
             </div>
           </details>
           <details class="sl-major" id="major-12" data-group="econ" data-entry="2" data-study="3" data-n="12">
             <summary>
               <span class="sl-major-num">12</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Економіка та менеджмент</span>
+                <span class="sl-major-name" data-i18n="major-12-name">Економіка та менеджмент</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 2/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>економіка, фінанси, бухгалтерія, менеджмент, маркетинг, міжнародна торгівля, туризм</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>EU v Bratislave, EkF TUKE, FPEDAS UNIZA, UMB, SPU</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>переважно без іспиту за оцінками; на деяких програмах — тест</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-12-spec">економіка, фінанси, бухгалтерія, менеджмент, маркетинг, міжнародна торгівля, туризм</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-12-where">EU v Bratislave, EkF TUKE, FPEDAS UNIZA, UMB, SPU</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-12-how">переважно без іспиту за оцінками; на деяких програмах — тест</dd>
               </dl>
-              <p class="sl-major-note">Найпопулярніший напрям. Помірна складність, але потрібна математика й статистика.</p>
+              <p class="sl-major-note" data-i18n="major-12-note">Найпопулярніший напрям. Помірна складність, але потрібна математика й статистика.</p>
             </div>
           </details>
           <details class="sl-major" id="major-13" data-group="econ" data-entry="4" data-study="4" data-n="13">
             <summary>
               <span class="sl-major-num">13</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Право</span>
+                <span class="sl-major-name" data-i18n="major-13-name">Право</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 4/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 4/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>право, публічне управління</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>PraF UK, PraF UPJŠ, PraF TU Trnava, PraF UMB</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>часто тест: історія, суспільствознавство, загальні здібності</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-13-spec">право, публічне управління</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-13-where">PraF UK, PraF UPJŠ, PraF TU Trnava, PraF UMB</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-13-how">часто тест: історія, суспільствознавство, загальні здібності</dd>
               </dl>
-              <p class="sl-major-note">Бакалавр + магістр. Дуже багато читання й запам&#x27;ятовування, словацька має бути на високому рівні.</p>
+              <p class="sl-major-note" data-i18n="major-13-note">Бакалавр + магістр. Дуже багато читання й запам&#x27;ятовування, словацька має бути на високому рівні.</p>
             </div>
           </details>
           <details class="sl-major" id="major-14" data-group="hum" data-entry="4" data-study="3" data-n="14">
             <summary>
               <span class="sl-major-num">14</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Психологія</span>
+                <span class="sl-major-name" data-i18n="major-14-name">Психологія</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 4/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="4" aria-label="4/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>психологія, соціальна робота</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FiF UK, FiF TU Trnava, FiF UPJŠ, FiF PU</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>на психологію зазвичай вступний тест, конкурс високий</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-14-spec">психологія, соціальна робота</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-14-where">FiF UK, FiF TU Trnava, FiF UPJŠ, FiF PU</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-14-how">на психологію зазвичай вступний тест, конкурс високий</dd>
               </dl>
-              <p class="sl-major-note">Цікаво, але багато статистики та наукових методів. Для роботи психологом потрібна магістратура.</p>
+              <p class="sl-major-note" data-i18n="major-14-note">Цікаво, але багато статистики та наукових методів. Для роботи психологом потрібна магістратура.</p>
             </div>
           </details>
           <details class="sl-major" id="major-15" data-group="hum" data-entry="2" data-study="2" data-n="15">
             <summary>
               <span class="sl-major-num">15</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Педагогіка</span>
+                <span class="sl-major-name" data-i18n="major-15-name">Педагогіка</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 2/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 2/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>вчитель (комбінації предметів), дошкільна педагогіка, спеціальна педагогіка</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>PdF UK, PdF UKF, PdF UMB, PdF PU</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>часто без іспиту або співбесіда / творча частина</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-15-spec">вчитель (комбінації предметів), дошкільна педагогіка, спеціальна педагогіка</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-15-where">PdF UK, PdF UKF, PdF UMB, PdF PU</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-15-how">часто без іспиту або співбесіда / творча частина</dd>
               </dl>
-              <p class="sl-major-note">Помірне навантаження, багато педагогічної практики в школах.</p>
+              <p class="sl-major-note" data-i18n="major-15-note">Помірне навантаження, багато педагогічної практики в школах.</p>
             </div>
           </details>
           <details class="sl-major" id="major-16" data-group="hum" data-entry="2" data-study="3" data-n="16">
             <summary>
               <span class="sl-major-num">16</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Філологія та переклад</span>
+                <span class="sl-major-name" data-i18n="major-16-name">Філологія та переклад</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 2/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>словацька, англійська, німецька та інші мови, переклад і усний переклад, історія, філософія</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FiF UK, FiF UKF, FiF UPJŠ, FiF UMB, FF PU</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>часто без іспиту; на окремих програмах — мовний тест</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-16-spec">словацька, англійська, німецька та інші мови, переклад і усний переклад, історія, філософія</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-16-where">FiF UK, FiF UKF, FiF UPJŠ, FiF UMB, FF PU</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-16-how">часто без іспиту; на окремих програмах — мовний тест</dd>
               </dl>
-              <p class="sl-major-note">Багато читання. Знання кількох мов — велика перевага.</p>
+              <p class="sl-major-note" data-i18n="major-16-note">Багато читання. Знання кількох мов — велика перевага.</p>
             </div>
           </details>
           <details class="sl-major" id="major-17" data-group="hum" data-entry="3" data-study="3" data-n="17">
             <summary>
               <span class="sl-major-num">17</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Медіа, журналістика та міжнародні відносини</span>
+                <span class="sl-major-name" data-i18n="major-17-name">Медіа, журналістика та міжнародні відносини</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 3/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>журналістика, маркетингові комунікації, міжнародні відносини, політологія</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FSEV UK, FiF UK, FMK UCM Трнава, FPVaMV UMB</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>часто тест загальних знань або співбесіда</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-17-spec">журналістика, маркетингові комунікації, міжнародні відносини, політологія</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-17-where">FSEV UK, FiF UK, FMK UCM Трнава, FPVaMV UMB</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-17-how">часто тест загальних знань або співбесіда</dd>
               </dl>
-              <p class="sl-major-note">Потрібна дуже добра словацька та інтерес до новин і суспільства.</p>
+              <p class="sl-major-note" data-i18n="major-17-note">Потрібна дуже добра словацька та інтерес до новин і суспільства.</p>
             </div>
           </details>
           <details class="sl-major" id="major-18" data-group="nature" data-entry="1" data-study="3" data-n="18">
             <summary>
               <span class="sl-major-num">18</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Агрономія, екологія та ліс</span>
+                <span class="sl-major-name" data-i18n="major-18-name">Агрономія, екологія та ліс</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 1/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="1" aria-label="1/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>агрономія, садівництво, екологія, лісове господарство, деревообробка</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>SPU Нитра, TU Зволен, FPV UMB</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>переважно без іспиту</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-18-spec">агрономія, садівництво, екологія, лісове господарство, деревообробка</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-18-where">SPU Нитра, TU Зволен, FPV UMB</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-18-how">переважно без іспиту</dd>
               </dl>
-              <p class="sl-major-note">Простіший вступ, багато практики на природі й у лабораторіях.</p>
+              <p class="sl-major-note" data-i18n="major-18-note">Простіший вступ, багато практики на природі й у лабораторіях.</p>
             </div>
           </details>
           <details class="sl-major" id="major-19" data-group="art" data-entry="5" data-study="3" data-n="19">
             <summary>
               <span class="sl-major-num">19</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Мистецтво</span>
+                <span class="sl-major-name" data-i18n="major-19-name">Мистецтво</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 5/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="5" aria-label="5/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 3/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>акторство, режисура, музика, образотворче мистецтво, графічний дизайн</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>VŠMU, VŠVU (Братислава), Академія мистецтв (Банська-Бистриця)</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>творчі (талант) іспити в кілька турів, дуже мало місць</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-19-spec">акторство, режисура, музика, образотворче мистецтво, графічний дизайн</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-19-where">VŠMU, VŠVU (Братислава), Академія мистецтв (Банська-Бистриця)</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-19-how">творчі (талант) іспити в кілька турів, дуже мало місць</dd>
               </dl>
-              <p class="sl-major-note">Головне — талант і підготовлене портфоліо. Вчитися цікаво, але потрібна самодисципліна.</p>
+              <p class="sl-major-note" data-i18n="major-19-note">Головне — талант і підготовлене портфоліо. Вчитися цікаво, але потрібна самодисципліна.</p>
             </div>
           </details>
           <details class="sl-major" id="major-20" data-group="art" data-entry="3" data-study="2" data-n="20">
             <summary>
               <span class="sl-major-num">20</span>
               <span class="sl-major-head">
-                <span class="sl-major-name">Спорт</span>
+                <span class="sl-major-name" data-i18n="major-20-name">Спорт</span>
                 <span class="sl-major-rates"><span class="sl-rate sl-rate--entry" title="Вступ: 3/5"><span class="sl-rate-label" data-i18n="majors-entry">Вступ</span><span class="sl-dots" data-v="3" aria-label="3/5"><i></i><i></i><i></i><i></i><i></i></span></span><span class="sl-rate sl-rate--study" title="Навчання: 2/5"><span class="sl-rate-label" data-i18n="majors-study">Навчання</span><span class="sl-dots" data-v="2" aria-label="2/5"><i></i><i></i><i></i><i></i><i></i></span></span></span>
               </span>
             </summary>
             <div class="sl-major-body">
               <dl>
-                <dt data-i18n="majors-spec">Спеціальності</dt><dd>тренерство, фізична культура, спортивний менеджмент</dd>
-                <dt data-i18n="majors-where">Де вчитися</dt><dd>FTVŠ UK, PdF/FŠ різних університетів</dd>
-                <dt data-i18n="majors-how">Як вступають</dt><dd>фізичні нормативи та тест</dd>
+                <dt data-i18n="majors-spec">Спеціальності</dt><dd data-i18n="major-20-spec">тренерство, фізична культура, спортивний менеджмент</dd>
+                <dt data-i18n="majors-where">Де вчитися</dt><dd data-i18n="major-20-where">FTVŠ UK, PdF/FŠ різних університетів</dd>
+                <dt data-i18n="majors-how">Як вступають</dt><dd data-i18n="major-20-how">фізичні нормативи та тест</dd>
               </dl>
-              <p class="sl-major-note">Для активних і спортивних. Теорії менше, ніж на інших напрямах.</p>
+              <p class="sl-major-note" data-i18n="major-20-note">Для активних і спортивних. Теорії менше, ніж на інших напрямах.</p>
             </div>
           </details>
           </div>
@@ -1263,7 +1262,7 @@
         <p class="sl-majors-disclaimer" id="majors-disclaimer">Оцінки складності — експертна думка SlovakLab для українського абітурієнта, який вчиться словацькою мовою. Конкурс і умови вступу відрізняються між університетами (у Братиславі зазвичай складніше, ніж у регіонах) і можуть змінюватися щороку. Актуальні умови — на сайті факультету в розділі «Prijímacie konanie».</p>
         <div class="sl-majors-actions">
           <a href="#target-section-apply" class="sl-btn" id="majors-cta">Підібрати спеціальність на консультації →</a>
-          <a href="Docs/SlovakLab-specialnosti-UA.pdf" download="SlovakLab — напрями та спеціальності.pdf" class="sl-btn-ghost sl-pdf-btn">
+          <a href="Docs/SlovakLab-specialnosti-UA.pdf" data-i18n-href="pdf-majors-href" data-i18n-download="pdf-majors-file" download="SlovakLab — напрями та спеціальності.pdf" class="sl-btn-ghost sl-pdf-btn">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
             <span data-i18n="majors-pdf">Завантажити гід .pdf</span>
           </a>
@@ -1388,17 +1387,17 @@
   <!-- ══════════════════════════════════
        SCRIPTS
        ══════════════════════════════════ -->
-  <script src="consent.js?v=20261120e"></script>
-  <script src="tracking.js?v=20261120e"></script>
-  <script src="script.js?v=20261120e"></script>
-  <script src="scriptContact.js?v=20261120e"></script>
-  <script src="animations.js?v=20261120e"></script>
-  <script src="modals.js?v=20261120e"></script>
-  <script src="promo.js?v=20261120e"></script>
-  <script src="messenger.js?v=20261120e"></script>
-  <script src="slider.js?v=20261120e"></script>
-  <script src="reviews.js?v=20261120e"></script>
-  <script src="majors.js?v=20261120e"></script>
+  <script src="consent.js?v=20261120g"></script>
+  <script src="tracking.js?v=20261120g"></script>
+  <script src="script.js?v=20261120g"></script>
+  <script src="scriptContact.js?v=20261120g"></script>
+  <script src="animations.js?v=20261120g"></script>
+  <script src="modals.js?v=20261120g"></script>
+  <script src="promo.js?v=20261120g"></script>
+  <script src="messenger.js?v=20261120g"></script>
+  <script src="slider.js?v=20261120g"></script>
+  <script src="reviews.js?v=20261120g"></script>
+  <script src="majors.js?v=20261120g"></script>
 
   <script>
     function showSidebar() {

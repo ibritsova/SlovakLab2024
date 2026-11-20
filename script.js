@@ -1,12 +1,12 @@
 //LANGUAGES
 async function loadTranslations() {
-    const response = await fetch('translations.json?v=20261120e');
+    const response = await fetch('translations.json?v=20261120g');
     return response.json();
 }
 
 const LANG_STORAGE_KEY = 'slovaklab-lang';
-const HTML_LANG = { ukr: 'uk', en: 'en', sk: 'sk' };
-const I18N_ATTRS = ['placeholder', 'alt', 'aria-label'];
+const HTML_LANG = { ukr: 'uk', ru: 'ru' };
+const I18N_ATTRS = ['placeholder', 'alt', 'aria-label', 'title', 'href', 'download'];
 
 function applyTranslations(translations, language) {
     const dict = translations[language];
