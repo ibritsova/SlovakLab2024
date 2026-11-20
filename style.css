@@ -2738,6 +2738,7 @@ html.has-bf-bar .sl-majors-side { top: calc(var(--nav-h) + var(--bf-bar-h) + 24p
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   aspect-ratio: 1;
+  padding: 42px 0;   /* room for the quadrant labels above and below the dots */
   border-left: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background:
@@ -2747,10 +2748,10 @@ html.has-bf-bar .sl-majors-side { top: calc(var(--nav-h) + var(--bf-bar-h) + 24p
 .sl-map-q {
   position: absolute;
   max-width: 46%;
-  font-size: 9.5px;
-  line-height: 1.25;
+  font-size: 12px;
+  line-height: 1.3;
   color: var(--text);
-  opacity: .55;
+  opacity: .7;
   pointer-events: none;
 }
 .sl-map-q--tl { top: 4px; left: 6px; }
