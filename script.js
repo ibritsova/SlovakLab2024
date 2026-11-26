@@ -1,6 +1,6 @@
 //LANGUAGES
 async function loadTranslations() {
-    const response = await fetch('translations.json?v=20261120g');
+    const response = await fetch('translations.json?v=20261126a');
     return response.json();
 }
 
@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Restore the language picked on a previous page (falls back to Ukrainian)
     let savedLanguage = null;
     try { savedLanguage = localStorage.getItem(LANG_STORAGE_KEY); } catch (e) { /* storage unavailable */ }
+    // ?lang=ru in the link (e.g. ads for Russian keywords) wins and is remembered for the next pages
+    const urlLang = new URLSearchParams(location.search).get('lang');
+    if (urlLang && translations[urlLang]) {
+        savedLanguage = urlLang;
+        try { localStorage.setItem(LANG_STORAGE_KEY, urlLang); } catch (e) { /* storage unavailable */ }
+    }
     let currentLanguage = translations[savedLanguage] ? savedLanguage : 'ukr';
     languageSwitcher.value = currentLanguage;
     applyTranslations(translations, currentLanguage);
