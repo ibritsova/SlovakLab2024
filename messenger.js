@@ -22,8 +22,15 @@
   if (!cta || !form) return;
 
   let formInView = false;
+  const heroCta = document.getElementById('button-start');
+  const cookie = document.getElementById('sl-cookie');
+  // While the cookie banner is up, the hero's button may be hidden behind it — then this one shows above the banner
+  const heroCovered = () => {
+    if (!heroCta || !cookie || cookie.hidden) return false;
+    return heroCta.getBoundingClientRect().bottom > cookie.getBoundingClientRect().top - 4;
+  };
   const update = () => {
-    const show = window.scrollY > window.innerHeight * 0.7 && !formInView;
+    const show = (window.scrollY > window.innerHeight * 0.7 || heroCovered()) && !formInView;
     cta.classList.toggle('is-visible', show);
     // Hidden button stays out of the keyboard order and away from screen readers
     cta.setAttribute('aria-hidden', String(!show));
@@ -36,6 +43,8 @@
     }).observe(form);
   }
   window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  document.addEventListener('sl-cookie-change', update);
   update();
 
   cta.addEventListener('click', () => {

@@ -61,15 +61,23 @@
     showSettings(!!withSettings);
     banner.hidden = false;
     document.documentElement.classList.add('has-cookie-banner');
+    changed();
   };
   const close = () => {
     banner.hidden = true;
     document.documentElement.classList.remove('has-cookie-banner');
+    changed();
   };
+  // The banner's height (for the "sign up" button above it) + a note to messenger.js
+  const changed = () => {
+    document.documentElement.style.setProperty('--cookie-h', banner.hidden ? '0px' : banner.offsetHeight + 'px');
+    document.dispatchEvent(new Event('sl-cookie-change'));
+  };
+  window.addEventListener('resize', () => { if (!banner.hidden) changed(); });
 
   button('all').addEventListener('click', () => apply({ analytics: true, marketing: true }));
   button('necessary').addEventListener('click', () => apply({ analytics: false, marketing: false }));
-  button('settings').addEventListener('click', () => showSettings(true));
+  button('settings').addEventListener('click', () => { showSettings(true); changed(); });
   button('save').addEventListener('click', () => apply({ analytics: boxes.analytics.checked, marketing: boxes.marketing.checked }));
 
   // Delegated: the footer comes after this script in the page

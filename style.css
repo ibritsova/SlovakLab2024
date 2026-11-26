@@ -2875,31 +2875,32 @@ html.has-bf-bar .sl-majors-side { top: calc(var(--nav-h) + var(--bf-bar-h) + 24p
   .sl-map-dot { width: 24px; height: 24px; font-size: 10px; }
 }
 
-/* Phones: the cookie banner is a slim strip at the bottom (short text, two buttons in a row,
-   "Налаштувати" as a small link); the full text and the options appear only in the settings view */
+/* Phones: the cookie banner is a slim strip at the bottom: one short line, then
+   "accept all" | "necessary only" | ⚙ (settings) in a single row. The full text and the
+   options appear only in the settings view. */
 .sl-cookie-short { display: none; }
 @media (max-width: 600px) {
   .sl-cookie {
     left: 0; right: 0; bottom: 0;
     max-height: 80vh;
-    padding: 12px 14px calc(10px + env(safe-area-inset-bottom));
-    border-radius: 16px 16px 0 0;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    border-radius: 14px 14px 0 0;
     border-bottom: none;
   }
   .sl-cookie:not(.is-settings) .sl-cookie-title { display: none; }
   .sl-cookie:not(.is-settings) .sl-cookie-text [data-i18n="cookie-text"] { display: none; }
   .sl-cookie:not(.is-settings) .sl-cookie-short { display: inline; }
-  .sl-cookie-text { margin: 0 0 10px; font-size: 13px; line-height: 1.4; }
-  .sl-cookie-actions { gap: 6px; }
-  .sl-cookie-actions button { padding: 10px 8px; font-size: 13px; }
+  .sl-cookie-text { margin: 0 0 8px; font-size: 12px; line-height: 1.35; }
+  .sl-cookie-actions button { padding: 9px 6px; font-size: 13px; }
+  .sl-cookie:not(.is-settings) .sl-cookie-actions { grid-template-columns: 1fr 1fr 40px; gap: 6px; }
   .sl-cookie:not(.is-settings) .sl-cookie-actions [data-cookie="settings"] {
-    padding: 4px 0 0;
-    font-size: 12px;
-    color: var(--text);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    background: none;
-    border: none;
-    box-shadow: none;
+    grid-column: auto;
+    padding: 0;
+    font-size: 0;          /* the label stays for screen readers via aria-label; a gear is shown */
   }
+  .sl-cookie:not(.is-settings) .sl-cookie-actions [data-cookie="settings"]::before { content: '⚙'; font-size: 18px; color: var(--text); }
+
+  /* While the banner is up, a "sign up" button sits right above it whenever the hero button
+     is hidden behind the banner (messenger.js decides; --cookie-h comes from consent.js) */
+  html.has-cookie-banner .sl-sticky-cta { visibility: visible; right: 16px; bottom: calc(var(--cookie-h, 0px) + 10px); }
 }
