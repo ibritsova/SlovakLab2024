@@ -50,6 +50,7 @@
 
   const showSettings = on => {
     options.hidden = !on;
+    banner.classList.toggle('is-settings', on);   // phones: full text and title only in this view
     button('settings').hidden = on;
     button('save').hidden = !on;
   };

@@ -429,7 +429,8 @@
     "pdf-majors-href": "Docs/SlovakLab-specialnosti-UA.pdf",
     "pdf-majors-file": "SlovakLab — напрями та спеціальності.pdf",
     "majors-filters-aria": "Групи напрямів",
-    "majors-sort-aria": "Сортування"
+    "majors-sort-aria": "Сортування",
+    "cookie-text-short": "Ми використовуємо cookies для аналітики та реклами."
   },
   "ru": {
     "li1": "Главная",
@@ -861,6 +862,7 @@
     "pdf-majors-href": "Docs/SlovakLab-specialnosti-RU.pdf",
     "pdf-majors-file": "SlovakLab — направления и специальности.pdf",
     "majors-filters-aria": "Группы направлений",
-    "majors-sort-aria": "Сортировка"
+    "majors-sort-aria": "Сортировка",
+    "cookie-text-short": "Мы используем cookies для аналитики и рекламы."
   }
 }
